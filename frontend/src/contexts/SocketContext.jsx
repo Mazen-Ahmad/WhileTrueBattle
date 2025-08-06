@@ -18,10 +18,12 @@ export const SocketProvider = ({ children }) => {
   const { user, token } = useAuth();
 
   useEffect(() => {
-    if (token && user) {
-      const newSocket = io('http://localhost:5000', {
-        auth: { token },
-      });
+  if (token && user) {
+    const socketUrl = process.env.REACT_APP_SOCKET_URL || 'http://localhost:5000';
+    
+    const newSocket = io(socketUrl, {
+      auth: { token },
+    });
 
       newSocket.on('connect', () => {
         console.log('Connected to server');
