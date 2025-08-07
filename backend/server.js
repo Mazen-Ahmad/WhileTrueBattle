@@ -43,9 +43,18 @@ app.use(cors({
 // Rate limiting
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100 // limit each IP to 100 requests per windowMs
+  max: 500, // Increased from 100 to 500
+  skip: (req) => {
+    // Skip rate limiting for health and keep-alive endpoints
+    return req.path === '/api/health' || req.path === '/keep-alive';
+  }
 });
 app.use(limiter);
+
+
+app.get('/keep-alive', (req, res) => {
+  res.json({ status: 'alive', timestamp: new Date().toISOString() });
+});
 
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
