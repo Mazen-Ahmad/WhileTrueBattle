@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* You can add custom styles below */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +9,242 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Line clamp utility for truncating text */
+.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Custom scrollbar for better UX */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e0 transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #cbd5e0;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #a0aec0;
+}
+
+/* Problem statement formatting */
+.problem-statement {
+  line-height: 1.7;
+}
+
+.problem-statement p {
+  margin-bottom: 1rem;
+}
+
+.problem-statement code {
+  background-color: #f7fafc;
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+
+/* Sample test case styling */
+.sample-test-case {
+  position: relative;
+  overflow-x: auto;
+}
+
+.sample-test-case:hover {
+  background-color: #f9fafb;
+}
+
+/* Status indicators */
+.status-solved {
+  background: linear-gradient(45deg, #10b981, #059669);
+  color: white;
+}
+
+.status-attempted {
+  background: linear-gradient(45deg, #f59e0b, #d97706);
+  color: white;
+}
+
+.status-unsolved {
+  background: linear-gradient(45deg, #6b7280, #4b5563);
+  color: white;
+}
+
+/* Difficulty badges */
+.difficulty-easy {
+  background: linear-gradient(45deg, #10b981, #34d399);
+  color: white;
+}
+
+.difficulty-medium {
+  background: linear-gradient(45deg, #3b82f6, #60a5fa);
+  color: white;
+}
+
+.difficulty-hard {
+  background: linear-gradient(45deg, #f59e0b, #fbbf24);
+  color: white;
+}
+
+.difficulty-expert {
+  background: linear-gradient(45deg, #ef4444, #f87171);
+  color: white;
+}
+
+/* Animation for problem selection */
+.problem-card {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.problem-card:hover {
+  transform: translateY(-1px);
+}
+
+.problem-card.selected {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Editor section improvements */
+.editor-header {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.language-tab {
+  transition: all 0.2s ease;
+}
+
+.language-tab:hover {
+  transform: translateY(-1px);
+}
+
+.language-tab.active {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Results section styling */
+.result-success {
+  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+  border-left: 4px solid #10b981;
+}
+
+.result-error {
+  background: linear-gradient(135deg, #fef2f2 0%, #fecaca 100%);
+  border-left: 4px solid #ef4444;
+}
+
+/* Monaco Editor container improvements */
+.monaco-editor-container {
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+}
+
+/* Problem header gradient */
+.problem-header-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Glassmorphism effect for cards */
+.glass-card {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, 
+              transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Focus styles for better accessibility */
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Custom button hover effects */
+.btn-hover-lift:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Loading spinner animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Problem difficulty color coding */
+.rating-800-1200 {
+  color: #059669;
+  background-color: #d1fae5;
+}
+
+.rating-1200-1600 {
+  color: #1d4ed8;
+  background-color: #dbeafe;
+}
+
+.rating-1600-2000 {
+  color: #d97706;
+  background-color: #fed7aa;
+}
+
+.rating-2000-plus {
+  color: #dc2626;
+  background-color: #fecaca;
 }

@@ -1,9 +1,40 @@
 const express = require('express');
 const Contest = require('../models/Contest');
 const Room = require('../models/Room');
+const Problem = require('../models/Problem');
 const auth = require('../middleware/auth');
-const codeforcesService = require('../services/codeforcesService');
 const router = express.Router();
+
+// Helper function to get problems from database
+const getProblemsFromDatabase = async (count, difficulty) => {
+  try {
+    const ranges = {
+      '800-1200': { min: 800, max: 1200 },
+      '1200-1600': { min: 1200, max: 1600 },
+      '1600-2000': { min: 1600, max: 2000 },
+      '2000+': { min: 2000, max: 5000 }
+    };
+
+    const range = ranges[difficulty] || ranges['800-1200'];
+    
+    // Fetch problems from database with rating filter
+    const problems = await Problem.aggregate([
+      {
+        $match: {
+          rating: { $gte: range.min, $lte: range.max },
+          verified: true,
+          qualityScore: { $gte: 3 } // Only get quality problems
+        }
+      },
+      { $sample: { size: count } } // Random sampling
+    ]);
+
+    return problems;
+  } catch (error) {
+    console.error('Error fetching problems from database:', error);
+    throw new Error('Failed to fetch problems from database');
+  }
+};
 
 // Start contest
 router.post('/start/:roomCode', auth, async (req, res) => {
@@ -34,13 +65,13 @@ router.post('/start/:roomCode', auth, async (req, res) => {
       return res.status(400).json({ message: 'Contest already started for this room' });
     }
 
-    // Fetch problems from Codeforces
-    const problems = await codeforcesService.getContestProblems(
+    // Fetch problems from database instead of Codeforces API
+    const problems = await getProblemsFromDatabase(
       room.settings.questionsCount,
       room.settings.difficulty
     );
 
-    // Create contest
+    // Create contest with properly formatted problems
     const contest = new Contest({
       roomId: room._id,
       participants: room.participants.map(p => ({
@@ -49,22 +80,17 @@ router.post('/start/:roomCode', auth, async (req, res) => {
         finalScore: 0,
         questionsCompleted: 0
       })),
-      problems: problems.map(p => ({
-        id: `${p.contestId}${p.index}`,
+      problems: problems.map((p, index) => ({
+        id: p._id.toString(),
         name: p.name,
         difficulty: p.rating?.toString() || 'Unknown',
-        tags: p.tags || [],
-        timeLimit: 2000, // 2 seconds default
-        memoryLimit: 256, // 256 MB default
-        statement: `Solve problem: ${p.name}`,
-        inputFormat: 'Input format will be provided',
-        outputFormat: 'Output format will be provided',
-        sampleTests: [
-          {
-            input: '3\n1 2 3',
-            output: '6'
-          }
-        ]
+        tags: [], // You can add tags if available in your schema
+        timeLimit: p.timeLimit || 2000,
+        memoryLimit: p.memoryLimit || 256,
+        statement: p.statement,
+        inputFormat: p.inputFormat,
+        outputFormat: p.outputFormat,
+        sampleTests: p.sampleTests || []
       })),
       startTime: new Date(),
       endTime: new Date(Date.now() + room.settings.timeLimit * 60 * 1000),
