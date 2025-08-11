@@ -8,7 +8,7 @@ const CodeEditor = ({ problem, onSubmit, contestActive }) => {
   const [submitting, setSubmitting] = useState(false);
   const [testResults, setTestResults] = useState(null);
   const [error, setError] = useState('');
-  const [showFullStatement, setShowFullStatement] = useState(false);
+  const [showProblemDetails, setShowProblemDetails] = useState(false);
   const editorRef = useRef(null);
 
   const languageTemplates = {
@@ -112,101 +112,97 @@ public class Solution {
 
   return (
     <div className="bg-white rounded-lg shadow-md h-full flex flex-col">
-      {/* Problem Header */}
-      <div className="p-6 border-b border-gray-200 bg-gradient-to-r from-blue-50 to-indigo-50">
-        <div className="flex justify-between items-start mb-4">
-          <h2 className="text-2xl font-bold text-gray-900 leading-tight">
+      {/* Compact Problem Header */}
+      <div className="p-4 border-b border-gray-200 bg-gradient-to-r from-blue-50 to-indigo-50">
+        <div className="flex justify-between items-center mb-2">
+          <h2 className="text-lg font-bold text-gray-900 truncate">
             {problem.name}
           </h2>
-          <div className="flex items-center space-x-2">
-            <span className={`px-3 py-1 rounded-full text-sm font-semibold border ${getDifficultyColor(problem.difficulty)}`}>
+          <div className="flex items-center space-x-2 flex-shrink-0">
+            <span className={`px-2 py-1 rounded-full text-xs font-semibold border ${getDifficultyColor(problem.difficulty)}`}>
               {problem.difficulty}
             </span>
-            <div className="text-sm text-gray-600">
-              {problem.timeLimit}ms / {problem.memoryLimit}MB
-            </div>
+            <Button
+              size="small"
+              variant="outline"
+              onClick={() => setShowProblemDetails(!showProblemDetails)}
+              className="text-xs px-2 py-1"
+            >
+              {showProblemDetails ? 'Hide' : 'Details'}
+            </Button>
           </div>
         </div>
 
-        {/* Problem Statement */}
-        <div className="mb-6">
-          <h3 className="text-lg font-semibold text-gray-800 mb-3">Problem Statement</h3>
-          <div className="bg-white rounded-lg p-4 border border-gray-200">
-            <div className={`text-gray-700 leading-relaxed ${!showFullStatement ? 'line-clamp-4' : ''}`}>
-              {formatStatement(problem.statement)}
-            </div>
-            {problem.statement.length > 200 && (
-              <button
-                onClick={() => setShowFullStatement(!showFullStatement)}
-                className="mt-2 text-blue-600 hover:text-blue-800 text-sm font-medium"
-              >
-                {showFullStatement ? 'Show less' : 'Show more'}
-              </button>
-            )}
-          </div>
+        <div className="flex items-center justify-between text-sm text-gray-600">
+          <span>⏱️ {problem.timeLimit}ms • 💾 {problem.memoryLimit}MB</span>
         </div>
 
-        {/* Input/Output Format */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-          <div>
-            <h4 className="font-semibold text-gray-800 mb-2 flex items-center">
-              <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
-              Input Format
-            </h4>
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 text-sm text-gray-700">
-              {formatStatement(problem.inputFormat)}
-            </div>
-          </div>
-          
-          <div>
-            <h4 className="font-semibold text-gray-800 mb-2 flex items-center">
-              <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-              Output Format
-            </h4>
-            <div className="bg-green-50 border border-green-200 rounded-lg p-3 text-sm text-gray-700">
-              {formatStatement(problem.outputFormat)}
-            </div>
-          </div>
-        </div>
-
-        {/* Sample Test Cases */}
-        {problem.sampleTests && problem.sampleTests.length > 0 && (
-          <div className="space-y-4">
-            {problem.sampleTests.slice(0, 2).map((test, index) => (
-              <div key={index} className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <h4 className="font-semibold text-gray-800 mb-2">
-                    Sample Input {index + 1}:
-                  </h4>
-                  <pre className="bg-gray-100 border border-gray-300 rounded-lg p-3 text-sm font-mono overflow-x-auto">
-{test.input}
-                  </pre>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-800 mb-2">
-                    Sample Output {index + 1}:
-                  </h4>
-                  <pre className="bg-gray-100 border border-gray-300 rounded-lg p-3 text-sm font-mono overflow-x-auto">
-{test.output}
-                  </pre>
+        {/* Collapsible Problem Details */}
+        {showProblemDetails && (
+          <div className="mt-4 max-h-60 overflow-y-auto custom-scrollbar">
+            <div className="space-y-3">
+              {/* Problem Statement */}
+              <div>
+                <h4 className="font-semibold text-gray-800 mb-2">Problem Statement</h4>
+                <div className="bg-white rounded p-3 border text-sm text-gray-700 leading-relaxed">
+                  {formatStatement(problem.statement)}
                 </div>
               </div>
-            ))}
+
+              {/* Input/Output Format */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-1 text-sm">Input Format</h4>
+                  <div className="bg-blue-50 border border-blue-200 rounded p-2 text-xs text-gray-700">
+                    {formatStatement(problem.inputFormat)}
+                  </div>
+                </div>
+                
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-1 text-sm">Output Format</h4>
+                  <div className="bg-green-50 border border-green-200 rounded p-2 text-xs text-gray-700">
+                    {formatStatement(problem.outputFormat)}
+                  </div>
+                </div>
+              </div>
+
+              {/* Sample Test Cases */}
+              {problem.sampleTests && problem.sampleTests.length > 0 && (
+                <div className="space-y-2">
+                  {problem.sampleTests.slice(0, 1).map((test, index) => (
+                    <div key={index} className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                      <div>
+                        <h4 className="font-semibold text-gray-800 mb-1 text-sm">Sample Input:</h4>
+                        <pre className="bg-gray-100 border rounded p-2 text-xs font-mono overflow-x-auto">
+{test.input}
+                        </pre>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-gray-800 mb-1 text-sm">Sample Output:</h4>
+                        <pre className="bg-gray-100 border rounded p-2 text-xs font-mono overflow-x-auto">
+{test.output}
+                        </pre>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
         )}
       </div>
 
-      {/* Editor Section */}
+      {/* Editor Section - Takes up most space */}
       <div className="flex-1 flex flex-col min-h-0">
         {/* Language Selector and Submit Button */}
-        <div className="p-4 border-b border-gray-200 flex justify-between items-center bg-gray-50">
+        <div className="p-3 border-b border-gray-200 flex justify-between items-center bg-gray-50">
           <div className="flex space-x-2">
             {Object.entries(languageConfig).map(([key, config]) => (
               <button
                 key={key}
                 onClick={() => handleLanguageChange(key)}
                 className={`
-                  px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200
+                  px-3 py-1.5 rounded text-sm font-medium transition-all duration-200
                   ${language === key 
                     ? 'bg-blue-600 text-white shadow-md' 
                     : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-300'
@@ -223,14 +219,14 @@ public class Solution {
             loading={submitting}
             disabled={!contestActive}
             variant="primary"
-            size="medium"
-            className="px-6"
+            size="small"
+            className="px-4"
           >
-            {submitting ? 'Submitting...' : 'Submit Solution'}
+            {submitting ? 'Submitting...' : 'Submit'}
           </Button>
         </div>
 
-        {/* Monaco Editor */}
+        {/* Monaco Editor - Main area */}
         <div className="flex-1 min-h-0">
           <Editor
             height="100%"
@@ -254,42 +250,38 @@ public class Solution {
           />
         </div>
 
-        {/* Results/Error Section */}
+        {/* Results/Error Section - Fixed height */}
         {(testResults || error) && (
-          <div className="p-4 border-t border-gray-200 bg-gray-50">
+          <div className="p-3 border-t border-gray-200 bg-gray-50 max-h-24 overflow-y-auto">
             {error && (
-              <div className="bg-red-50 border-l-4 border-red-400 p-4 rounded-r-lg mb-3">
+              <div className="bg-red-50 border-l-4 border-red-400 p-3 rounded-r">
                 <div className="flex">
                   <div className="flex-shrink-0">
-                    <svg className="h-5 w-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
+                    <svg className="h-4 w-4 text-red-400" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <div className="ml-3">
-                    <p className="text-red-700 font-medium">Submission Error</p>
-                    <p className="text-red-600 text-sm">{error}</p>
+                  <div className="ml-2">
+                    <p className="text-sm text-red-700 font-medium">Error</p>
+                    <p className="text-xs text-red-600">{error}</p>
                   </div>
                 </div>
               </div>
             )}
             
             {testResults && (
-              <div className="bg-green-50 border-l-4 border-green-400 p-4 rounded-r-lg">
+              <div className="bg-green-50 border-l-4 border-green-400 p-3 rounded-r">
                 <div className="flex">
                   <div className="flex-shrink-0">
-                    <svg className="h-5 w-5 text-green-400" viewBox="0 0 20 20" fill="currentColor">
+                    <svg className="h-4 w-4 text-green-400" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <div className="ml-3 flex-1">
-                    <p className="text-green-700 font-medium">Submission Successful!</p>
-                    <div className="mt-2 flex justify-between items-center">
-                      <span className="text-green-600 text-sm">
-                        Problems Completed: <span className="font-semibold">{testResults.questionsCompleted}</span>
-                      </span>
-                      <span className="text-green-600 text-sm">
-                        Score: <span className="font-semibold">{testResults.submission?.score?.total?.toFixed(1) || 'N/A'}</span>
-                      </span>
+                  <div className="ml-2 flex-1">
+                    <p className="text-sm text-green-700 font-medium">Submitted Successfully!</p>
+                    <div className="flex justify-between items-center text-xs text-green-600">
+                      <span>Problems: {testResults.questionsCompleted}</span>
+                      <span>Score: {testResults.submission?.score?.total?.toFixed(1) || 'N/A'}</span>
                     </div>
                   </div>
                 </div>
