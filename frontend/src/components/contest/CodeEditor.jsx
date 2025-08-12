@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import Editor from '@monaco-editor/react';
 import Button from '../common/Button';
+import { formatProblemText } from '../../utils/textFormatter';
 
 const CodeEditor = ({ problem, onSubmit, contestActive }) => {
   const [language, setLanguage] = useState('cpp');
@@ -95,12 +96,8 @@ public class Solution {
   };
 
   const formatStatement = (statement) => {
-    // Convert LaTeX math notation to readable format
-    return statement
-      .replace(/\$\$\$(.*?)\$\$\$/g, '$1')
-      .replace(/\$\$(.*?)\$\$/g, '$1')
-      .replace(/\$(.*?)\$/g, '$1');
-  };
+  return formatProblemText(statement);
+};
 
   if (!problem) {
     return (
@@ -144,25 +141,25 @@ public class Solution {
               {/* Problem Statement */}
               <div>
                 <h4 className="font-semibold text-gray-800 mb-2">Problem Statement</h4>
-                <div className="bg-white rounded p-3 border text-sm text-gray-700 leading-relaxed">
-                  {formatStatement(problem.statement)}
-                </div>
+                <div className="text-gray-300 leading-relaxed whitespace-pre-line bg-gray-800 p-4 rounded-lg">
+  {formatProblemText(problem.statement)}
+</div>
               </div>
 
               {/* Input/Output Format */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-1 text-sm">Input Format</h4>
-                  <div className="bg-blue-50 border border-blue-200 rounded p-2 text-xs text-gray-700">
-                    {formatStatement(problem.inputFormat)}
-                  </div>
+                  <div className="text-gray-300 whitespace-pre-line bg-gray-800 p-4 rounded-lg">
+  {formatProblemText(problem.inputFormat)}
+</div>
                 </div>
                 
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-1 text-sm">Output Format</h4>
-                  <div className="bg-green-50 border border-green-200 rounded p-2 text-xs text-gray-700">
-                    {formatStatement(problem.outputFormat)}
-                  </div>
+                  <div className="text-gray-300 whitespace-pre-line bg-gray-800 p-4 rounded-lg">
+  {formatProblemText(problem.outputFormat)}
+</div>
                 </div>
               </div>
 
