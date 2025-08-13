@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../common/Button';
 
-const ContestHeader = ({ contest, timeLeft, onBackToHome }) => {
+const ContestHeader = ({ contest, timeLeft, onEndContest, onBackToHome, userFinished, waitingForOthers }) => {
   const formatTime = (seconds) => {
     const hours = Math.floor(seconds / 3600);
     const minutes = Math.floor((seconds % 3600) / 60);
@@ -14,9 +14,9 @@ const ContestHeader = ({ contest, timeLeft, onBackToHome }) => {
   };
 
   const getTimeColor = () => {
-    if (timeLeft > 300) return 'text-green-600'; // > 5 minutes
-    if (timeLeft > 60) return 'text-yellow-600';  // > 1 minute
-    return 'text-red-600'; // < 1 minute
+    if (timeLeft > 300) return 'text-green-600';
+    if (timeLeft > 60) return 'text-yellow-600';
+    return 'text-red-600';
   };
 
   return (
@@ -57,9 +57,46 @@ const ContestHeader = ({ contest, timeLeft, onBackToHome }) => {
               <div className="text-xs text-gray-500">Problems</div>
             </div>
 
-            <Button variant="outline" size="small" onClick={onBackToHome}>
-              Exit Contest
-            </Button>
+            {/* Action Buttons */}
+            <div className="flex space-x-2">
+              {userFinished ? (
+                waitingForOthers ? (
+                  <div className="flex space-x-2">
+                    <span className="text-sm text-yellow-600 px-3 py-2 bg-yellow-50 rounded">
+                      Waiting for opponent...
+                    </span>
+                    <Button 
+                      variant="danger" 
+                      size="small" 
+                      onClick={() => onEndContest(true)}
+                    >
+                      Forfeit
+                    </Button>
+                  </div>
+                ) : (
+                  <Button variant="outline" size="small" onClick={onBackToHome}>
+                    View Results
+                  </Button>
+                )
+              ) : (
+                <div className="flex space-x-2">
+                  <Button 
+                    variant="primary" 
+                    size="small" 
+                    onClick={() => onEndContest(false)}
+                  >
+                    End Contest
+                  </Button>
+                  <Button 
+                    variant="danger" 
+                    size="small" 
+                    onClick={() => onEndContest(true)}
+                  >
+                    Forfeit
+                  </Button>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>

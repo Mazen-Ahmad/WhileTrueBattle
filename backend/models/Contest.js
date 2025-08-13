@@ -20,13 +20,14 @@ const contestSchema = new mongoose.Schema({
         passed: Number,
         total: Number,
         executionTime: Number,
-        memoryUsed: Number
+        memoryUsed: Number,
+        verdict: String
       },
       score: {
-        timeComplexity: Number,
-        codeQuality: Number,
         correctness: Number,
         timeEfficiency: Number,
+        memoryEfficiency: Number,
+        codeQuality: Number,
         total: Number
       }
     }],
@@ -37,6 +38,15 @@ const contestSchema = new mongoose.Schema({
     questionsCompleted: {
       type: Number,
       default: 0
+    },
+    finished: {
+      type: Boolean,
+      default: false
+    },
+    finishTime: Date,
+    forfeited: {
+      type: Boolean,
+      default: false
     }
   }],
   problems: [{
@@ -56,7 +66,7 @@ const contestSchema = new mongoose.Schema({
   }],
   startTime: Date,
   endTime: Date,
-  duration: Number, // in minutes
+  duration: Number,
   status: {
     type: String,
     enum: ['scheduled', 'active', 'completed'],
