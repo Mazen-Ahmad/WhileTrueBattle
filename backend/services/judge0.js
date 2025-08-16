@@ -5,6 +5,9 @@ class Judge0Service {
     this.apiUrl = process.env.JUDGE0_API_URL || 'https://judge0-ce.p.rapidapi.com';
     this.apiKey = process.env.JUDGE0_API_KEY; // RapidAPI key
     this.apiHost = process.env.JUDGE0_API_HOST || 'judge0-ce.p.rapidapi.com';
+    if (!this.apiKey) {
+      console.error('Judge0 API key is missing! Please set JUDGE0_API_KEY in .env');
+    }
   }
 
   // Language mappings
