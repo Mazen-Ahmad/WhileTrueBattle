@@ -7,9 +7,10 @@ const CodeEditor = ({ problem, onSubmit, contestActive }) => {
   const [language, setLanguage] = useState('cpp');
   const [code, setCode] = useState('');
   const [submitting, setSubmitting] = useState(false);
-  const [testResults, setTestResults] = useState(null);
+  const [executionResults, setExecutionResults] = useState(null);
   const [error, setError] = useState('');
   const [showProblemDetails, setShowProblemDetails] = useState(false);
+  const [testResults, setTestResults] = useState(null);
   const editorRef = useRef(null);
 
   const languageTemplates = {
@@ -40,9 +41,9 @@ public class Solution {
   };
 
   const languageConfig = {
-    cpp: { id: 'cpp', name: 'C++', monacoLang: 'cpp' },
-    java: { id: 'java', name: 'Java', monacoLang: 'java' },
-    python: { id: 'python', name: 'Python', monacoLang: 'python' }
+    cpp: { id: 'cpp', name: 'C++', monacoLang: 'cpp', judge0Id: 54 },
+    java: { id: 'java', name: 'Java', monacoLang: 'java', judge0Id: 62 },
+    python: { id: 'python', name: 'Python', monacoLang: 'python', judge0Id: 71 }
   };
 
   React.useEffect(() => {
@@ -54,6 +55,7 @@ public class Solution {
   const handleLanguageChange = (newLanguage) => {
     setLanguage(newLanguage);
     setCode(languageTemplates[newLanguage]);
+    setExecutionResults(null);
     setTestResults(null);
     setError('');
   };
@@ -66,10 +68,19 @@ public class Solution {
 
     setSubmitting(true);
     setError('');
+    setExecutionResults(null);
+    setTestResults(null);
     
     try {
       const result = await onSubmit(code, language);
-      setTestResults(result);
+      
+      if (result.executionResults) {
+        setExecutionResults(result.executionResults);
+      }
+      
+      if (result.testResults) {
+        setTestResults(result);
+      }
     } catch (err) {
       setError(err.message);
     } finally {
@@ -95,9 +106,55 @@ public class Solution {
     return 'bg-red-100 text-red-800 border-red-300';
   };
 
-  const formatStatement = (statement) => {
-  return formatProblemText(statement);
-};
+  const getStatusIcon = (status) => {
+    switch (status?.description || status) {
+      case 'Accepted':
+      case 'AC':
+        return '✅';
+      case 'Wrong Answer':
+      case 'WA':
+        return '❌';
+      case 'Time Limit Exceeded':
+      case 'TLE':
+        return '⏰';
+      case 'Memory Limit Exceeded':
+      case 'MLE':
+        return '💾';
+      case 'Compilation Error':
+      case 'CE':
+        return '🔧';
+      case 'Runtime Error':
+      case 'RE':
+        return '💥';
+      default:
+        return '⚠️';
+    }
+  };
+
+  const getStatusColor = (status) => {
+    switch (status?.description || status) {
+      case 'Accepted':
+      case 'AC':
+        return 'text-green-600 bg-green-50 border-green-200';
+      case 'Wrong Answer':
+      case 'WA':
+        return 'text-red-600 bg-red-50 border-red-200';
+      case 'Time Limit Exceeded':
+      case 'TLE':
+        return 'text-yellow-600 bg-yellow-50 border-yellow-200';
+      case 'Memory Limit Exceeded':
+      case 'MLE':
+        return 'text-purple-600 bg-purple-50 border-purple-200';
+      case 'Compilation Error':
+      case 'CE':
+        return 'text-orange-600 bg-orange-50 border-orange-200';
+      case 'Runtime Error':
+      case 'RE':
+        return 'text-pink-600 bg-pink-50 border-pink-200';
+      default:
+        return 'text-gray-600 bg-gray-50 border-gray-200';
+    }
+  };
 
   if (!problem) {
     return (
@@ -142,8 +199,8 @@ public class Solution {
               <div>
                 <h4 className="font-semibold text-gray-800 mb-2">Problem Statement</h4>
                 <div className="text-gray-300 leading-relaxed whitespace-pre-line bg-gray-800 p-4 rounded-lg">
-  {formatProblemText(problem.statement)}
-</div>
+                  {formatProblemText(problem.statement)}
+                </div>
               </div>
 
               {/* Input/Output Format */}
@@ -151,15 +208,15 @@ public class Solution {
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-1 text-sm">Input Format</h4>
                   <div className="text-gray-300 whitespace-pre-line bg-gray-800 p-4 rounded-lg">
-  {formatProblemText(problem.inputFormat)}
-</div>
+                    {formatProblemText(problem.inputFormat)}
+                  </div>
                 </div>
                 
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-1 text-sm">Output Format</h4>
                   <div className="text-gray-300 whitespace-pre-line bg-gray-800 p-4 rounded-lg">
-  {formatProblemText(problem.outputFormat)}
-</div>
+                    {formatProblemText(problem.outputFormat)}
+                  </div>
                 </div>
               </div>
 
@@ -219,7 +276,7 @@ public class Solution {
             size="small"
             className="px-4"
           >
-            {submitting ? 'Submitting...' : 'Submit'}
+            {submitting ? 'Running...' : 'Submit'}
           </Button>
         </div>
 
@@ -247,11 +304,11 @@ public class Solution {
           />
         </div>
 
-        {/* Results/Error Section - Fixed height */}
-        {(testResults || error) && (
-          <div className="p-3 border-t border-gray-200 bg-gray-50 max-h-24 overflow-y-auto">
+        {/* Results/Error Section - Expandable */}
+        {(executionResults || testResults || error) && (
+          <div className="border-t border-gray-200 bg-gray-50">
             {error && (
-              <div className="bg-red-50 border-l-4 border-red-400 p-3 rounded-r">
+              <div className="p-3 bg-red-50 border-l-4 border-red-400">
                 <div className="flex">
                   <div className="flex-shrink-0">
                     <svg className="h-4 w-4 text-red-400" viewBox="0 0 20 20" fill="currentColor">
@@ -266,21 +323,91 @@ public class Solution {
               </div>
             )}
             
-            {testResults && (
-              <div className="bg-green-50 border-l-4 border-green-400 p-3 rounded-r">
-                <div className="flex">
-                  <div className="flex-shrink-0">
-                    <svg className="h-4 w-4 text-green-400" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div className="ml-2 flex-1">
-                    <p className="text-sm text-green-700 font-medium">Submitted Successfully!</p>
-                    <div className="flex justify-between items-center text-xs text-green-600">
-                      <span>Problems: {testResults.questionsCompleted}</span>
-                      <span>Score: {testResults.submission?.score?.total?.toFixed(1) || 'N/A'}</span>
+            {/* Execution Results */}
+            {executionResults && (
+              <div className="max-h-80 overflow-y-auto">
+                {executionResults.map((result, index) => (
+                  <div key={index} className={`p-3 border-b border-gray-200 ${getStatusColor(result.status)}`}>
+                    <div className="flex items-center justify-between mb-2">
+                      <h4 className="font-semibold text-sm flex items-center">
+                        {getStatusIcon(result.status)} Test Case {index + 1}
+                        <span className={`ml-2 px-2 py-1 rounded text-xs font-medium border ${getStatusColor(result.status)}`}>
+                          {result.status?.description || 'Unknown'}
+                        </span>
+                      </h4>
+                      {result.time && (
+                        <span className="text-xs text-gray-600">
+                          Time: {result.time}s | Memory: {result.memory || 'N/A'} KB
+                        </span>
+                      )}
                     </div>
+                    
+                    {/* Input */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-2 text-xs">
+                      <div>
+                        <p className="font-medium text-gray-700 mb-1">Input:</p>
+                        <pre className="bg-white p-2 rounded border overflow-x-auto max-h-20">
+{result.input}
+                        </pre>
+                      </div>
+                      
+                      {/* Expected Output */}
+                      <div>
+                        <p className="font-medium text-gray-700 mb-1">Expected:</p>
+                        <pre className="bg-white p-2 rounded border overflow-x-auto max-h-20">
+{result.expectedOutput}
+                        </pre>
+                      </div>
+                      
+                      {/* Actual Output */}
+                      <div>
+                        <p className="font-medium text-gray-700 mb-1">Your Output:</p>
+                        <pre className="bg-white p-2 rounded border overflow-x-auto max-h-20">
+{result.stdout || result.stderr || 'No output'}
+                        </pre>
+                      </div>
+                    </div>
+
+                    {/* Compilation Error */}
+                    {result.compile_output && (
+                      <div className="mt-2">
+                        <p className="font-medium text-gray-700 mb-1">Compilation Error:</p>
+                        <pre className="bg-red-100 p-2 rounded border text-red-800 text-xs overflow-x-auto max-h-32">
+{result.compile_output}
+                        </pre>
+                      </div>
+                    )}
+
+                    {/* Runtime Error */}
+                    {result.stderr && (
+                      <div className="mt-2">
+                        <p className="font-medium text-gray-700 mb-1">Runtime Error:</p>
+                        <pre className="bg-red-100 p-2 rounded border text-red-800 text-xs overflow-x-auto max-h-32">
+{result.stderr}
+                        </pre>
+                      </div>
+                    )}
                   </div>
+                ))}
+              </div>
+            )}
+            
+            {/* Overall Results Summary */}
+            {testResults && (
+              <div className="p-3 bg-blue-50 border-l-4 border-blue-400">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-sm text-blue-700 font-medium">Submission Complete!</p>
+                    <p className="text-xs text-blue-600">
+                      Tests Passed: {testResults.testsPassed}/{testResults.totalTests} | 
+                      Score: {testResults.submission?.score?.total?.toFixed(1) || 'N/A'}
+                    </p>
+                  </div>
+                  {testResults.allTestsPassed && (
+                    <div className="text-green-600">
+                      🎉 All tests passed!
+                    </div>
+                  )}
                 </div>
               </div>
             )}
