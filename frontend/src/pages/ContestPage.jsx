@@ -26,13 +26,14 @@ const ContestPage = ({ roomCode, onBackToHome }) => {
     try {
       const response = await api.get(`/contests/${roomCode}`);
       const contestData = response.data.contest;
-      setContest(contestData);
       
+      setContest(contestData);
+
       // Check user status
       const userParticipant = contestData.participants.find(
         p => p.user._id === user.id
       );
-      
+
       if (userParticipant) {
         setUserFinished(userParticipant.finished || userParticipant.forfeited);
         
@@ -40,10 +41,10 @@ const ContestPage = ({ roomCode, onBackToHome }) => {
         const othersFinished = contestData.participants
           .filter(p => p.user._id !== user.id)
           .every(p => p.finished || p.forfeited);
-        
+          
         setWaitingForOthers(userParticipant.finished && !othersFinished);
       }
-      
+
       if (contestData.problems.length > 0 && !selectedProblem) {
         setSelectedProblem(contestData.problems[0]);
       }
@@ -141,7 +142,7 @@ const ContestPage = ({ roomCode, onBackToHome }) => {
   const handleEndContest = async (forfeit = false) => {
     try {
       const response = await api.post(`/contests/end/${roomCode}`, { forfeit });
-      
+
       if (socket) {
         socket.emit('participant-finished', {
           roomCode,
@@ -156,7 +157,7 @@ const ContestPage = ({ roomCode, onBackToHome }) => {
         setUserFinished(true);
         setWaitingForOthers(response.data.waitingForOthers);
       }
-      
+
       fetchContest();
     } catch (err) {
       setError(err.response?.data?.message || 'Failed to end contest');
@@ -165,38 +166,41 @@ const ContestPage = ({ roomCode, onBackToHome }) => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <LoadingSpinner size="large" />
+      <div className="min-h-screen flex items-center justify-center">
+        <LoadingSpinner />
       </div>
     );
   }
 
   if (error) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <div className="text-red-600 mb-4">{error}</div>
+          <h2 className="text-xl font-bold text-red-600 mb-2">Error</h2>
+          <p className="text-gray-600 mb-4">{error}</p>
           <Button onClick={onBackToHome}>Back to Home</Button>
         </div>
       </div>
     );
   }
 
+  // Show results when contest is completed
   if (contestStatus === 'completed') {
     return (
-      <ContestResults 
-        contest={contest} 
-        onBackToHome={onBackToHome}
-        currentUser={user}
-      />
+      <div className="min-h-screen bg-gray-100">
+        <ContestResults 
+          contest={contest} 
+          onBackToHome={onBackToHome}
+        />
+      </div>
     );
   }
 
-  // Waiting screen
+  // Show waiting screen when user finished but others haven't
   if (userFinished && waitingForOthers) {
     return (
-      <div className="min-h-screen bg-gray-50">
-        <ContestHeader 
+      <div className="min-h-screen bg-gray-100">
+        <ContestHeader
           contest={contest}
           timeLeft={timeLeft}
           onEndContest={handleEndContest}
@@ -204,25 +208,46 @@ const ContestPage = ({ roomCode, onBackToHome }) => {
           userFinished={userFinished}
           waitingForOthers={waitingForOthers}
         />
-        
-        <div className="flex items-center justify-center h-[calc(100vh-200px)]">
-          <div className="text-center bg-white rounded-lg shadow-lg p-8 max-w-md">
-            <div className="text-6xl mb-4">⏳</div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
-              Contest Submitted!
-            </h2>
+        <div className="flex items-center justify-center h-screen">
+          <div className="text-center bg-white p-8 rounded-lg shadow-lg max-w-md">
+            <div className="mb-4">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
+                <svg
+                  className="w-8 h-8 text-blue-600 animate-spin"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                  ></circle>
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <h2 className="text-xl font-bold text-gray-900 mb-2">Contest Finished!</h2>
             <p className="text-gray-600 mb-6">
               You've finished the contest. Waiting for your opponent to complete their submission.
             </p>
-            <div className="space-y-3">
+            <div className="space-y-2">
               <Button
-                variant="danger"
                 onClick={() => handleEndContest(true)}
+                variant="danger"
+                size="small"
                 className="w-full"
               >
-                Forfeit Contest (Opponent Wins)
+                Force End Contest
               </Button>
-              <p className="text-sm text-gray-500">
+              <p className="text-xs text-gray-500">
                 Or wait for them to finish naturally
               </p>
             </div>
@@ -232,9 +257,10 @@ const ContestPage = ({ roomCode, onBackToHome }) => {
     );
   }
 
+  // Main contest interface
   return (
-    <div className="min-h-screen bg-gray-50">
-      <ContestHeader 
+    <div className="min-h-screen bg-gray-100">
+      <ContestHeader
         contest={contest}
         timeLeft={timeLeft}
         onEndContest={handleEndContest}
@@ -242,21 +268,23 @@ const ContestPage = ({ roomCode, onBackToHome }) => {
         userFinished={userFinished}
         waitingForOthers={waitingForOthers}
       />
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 h-[calc(100vh-200px)]">
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div className="grid grid-cols-12 gap-6 h-[calc(100vh-10rem)]">
           {/* Problems List */}
-          <div className="lg:col-span-1">
+          <div className="col-span-3">
             <ProblemsList
-              problems={contest.problems}
+              problems={contest?.problems || []}
               selectedProblem={selectedProblem}
               onSelectProblem={setSelectedProblem}
-              userSubmissions={contest.participants.find(p => p.user._id === user.id)?.submissions || []}
+              userSubmissions={contest?.participants
+                .find(p => p.user._id === user.id)
+                ?.submissions || []}
             />
           </div>
 
           {/* Code Editor */}
-          <div className="lg:col-span-3">
+          <div className="col-span-9">
             <CodeEditor
               problem={selectedProblem}
               onSubmit={handleCodeSubmit}

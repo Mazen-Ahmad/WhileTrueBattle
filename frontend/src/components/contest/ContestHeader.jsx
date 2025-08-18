@@ -28,7 +28,11 @@ const ContestHeader = ({ contest, timeLeft, onEndContest, onBackToHome, userFini
               Contest Arena
             </h1>
             <span className="text-sm text-gray-500">
-              Room: <span className="font-mono font-bold">{contest?.roomId}</span>
+              {contest && (
+                <>
+                  Room: <span className="font-mono font-bold">{contest.roomId}</span>
+                </>
+              )}
             </span>
           </div>
 
@@ -41,61 +45,44 @@ const ContestHeader = ({ contest, timeLeft, onEndContest, onBackToHome, userFini
               <div className="text-xs text-gray-500">Time Left</div>
             </div>
 
-            {/* Participants */}
-            <div className="text-center">
-              <div className="text-lg font-bold text-blue-600">
-                {contest?.participants?.length || 0}
+            {/* Participant count */}
+            {contest && (
+              <div className="text-center">
+                <div className="text-lg font-bold text-gray-700">
+                  {contest.participants.length}/2
+                </div>
+                <div className="text-xs text-gray-500">Participants</div>
               </div>
-              <div className="text-xs text-gray-500">Participants</div>
-            </div>
+            )}
 
-            {/* Problems */}
-            <div className="text-center">
-              <div className="text-lg font-bold text-purple-600">
-                {contest?.problems?.length || 0}
-              </div>
-              <div className="text-xs text-gray-500">Problems</div>
-            </div>
-
-            {/* Action Buttons */}
-            <div className="flex space-x-2">
-              {userFinished ? (
-                waitingForOthers ? (
-                  <div className="flex space-x-2">
-                    <span className="text-sm text-yellow-600 px-3 py-2 bg-yellow-50 rounded">
-                      Waiting for opponent...
-                    </span>
-                    <Button 
-                      variant="danger" 
-                      size="small" 
-                      onClick={() => onEndContest(true)}
-                    >
-                      Forfeit
-                    </Button>
-                  </div>
-                ) : (
-                  <Button variant="outline" size="small" onClick={onBackToHome}>
-                    View Results
-                  </Button>
-                )
-              ) : (
-                <div className="flex space-x-2">
-                  <Button 
-                    variant="primary" 
-                    size="small" 
+            {/* Action buttons */}
+            <div className="flex items-center space-x-2">
+              {!userFinished && !waitingForOthers && (
+                <>
+                  <Button
                     onClick={() => onEndContest(false)}
+                    variant="primary"
+                    size="small"
                   >
-                    End Contest
+                    Finish Contest
                   </Button>
-                  <Button 
-                    variant="danger" 
-                    size="small" 
+                  <Button
                     onClick={() => onEndContest(true)}
+                    variant="danger"
+                    size="small"
                   >
                     Forfeit
                   </Button>
-                </div>
+                </>
               )}
+              
+              <Button
+                onClick={onBackToHome}
+                variant="secondary"
+                size="small"
+              >
+                Back to Home
+              </Button>
             </div>
           </div>
         </div>

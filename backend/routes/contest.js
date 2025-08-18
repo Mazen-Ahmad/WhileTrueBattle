@@ -4,6 +4,7 @@ const Room = require('../models/Room');
 const Problem = require('../models/Problem');
 const auth = require('../middleware/auth');
 const judge0Service = require('../services/judge0');
+
 const router = express.Router();
 
 // Helper function to get problems from database
@@ -17,7 +18,7 @@ const getProblemsFromDatabase = async (count, difficulty) => {
     };
 
     const range = ranges[difficulty] || ranges['800-1200'];
-    
+
     // Fetch problems from database with rating filter
     const problems = await Problem.aggregate([
       {
@@ -41,11 +42,11 @@ const getProblemsFromDatabase = async (count, difficulty) => {
 router.post('/start/:roomCode', auth, async (req, res) => {
   try {
     const { roomCode } = req.params;
-    
+
     // Find room and verify user is participant
     const room = await Room.findOne({ roomCode })
       .populate('participants.user', 'username email');
-    
+
     if (!room) {
       return res.status(404).json({ message: 'Room not found' });
     }
@@ -122,8 +123,8 @@ router.post('/start/:roomCode', auth, async (req, res) => {
 router.get('/:roomCode', auth, async (req, res) => {
   try {
     const { roomCode } = req.params;
-    
     const room = await Room.findOne({ roomCode });
+
     if (!room) {
       return res.status(404).json({ message: 'Room not found' });
     }
@@ -188,8 +189,8 @@ router.post('/submit/:roomCode', auth, async (req, res) => {
     try {
       // Execute code with Judge0
       const testResults = await judge0Service.runTestCases(
-        code, 
-        language, 
+        code,
+        language,
         problem.sampleTests || []
       );
 
@@ -221,12 +222,12 @@ router.post('/submit/:roomCode', auth, async (req, res) => {
 
       // Add submission to participant
       contest.participants[participantIndex].submissions.push(submission);
-      
+
       // Update questions completed count and final score
       const userSubmissions = contest.participants[participantIndex].submissions;
       const solvedProblems = new Set();
       let totalScore = 0;
-      
+
       userSubmissions.forEach(sub => {
         if (sub.testResults.passed === sub.testResults.total && sub.testResults.total > 0) {
           solvedProblems.add(sub.problemId);
@@ -263,7 +264,7 @@ router.post('/submit/:roomCode', auth, async (req, res) => {
 
     } catch (judgeError) {
       console.error('Judge0 execution error:', judgeError);
-      
+
       // Create failed submission
       const submission = {
         problemId,
@@ -298,6 +299,106 @@ router.post('/submit/:roomCode', auth, async (req, res) => {
     }
   } catch (error) {
     console.error('Submission error:', error);
+    res.status(500).json({ message: 'Server error', error: error.message });
+  }
+});
+
+// End contest route (MISSING - ADDED HERE)
+router.post('/end/:roomCode', auth, async (req, res) => {
+  try {
+    const { roomCode } = req.params;
+    const { forfeit = false } = req.body;
+
+    const room = await Room.findOne({ roomCode });
+    if (!room) {
+      return res.status(404).json({ message: 'Room not found' });
+    }
+
+    const contest = await Contest.findOne({ roomId: room._id })
+      .populate('participants.user', 'username email');
+
+    if (!contest) {
+      return res.status(404).json({ message: 'Contest not found' });
+    }
+
+    // Find participant
+    const participantIndex = contest.participants.findIndex(
+      p => p.user._id.toString() === req.user._id.toString()
+    );
+
+    if (participantIndex === -1) {
+      return res.status(403).json({ message: 'You are not a participant' });
+    }
+
+    if (forfeit) {
+      // Mark as forfeited and end contest
+      contest.participants[participantIndex].forfeited = true;
+      contest.participants[participantIndex].finishTime = new Date();
+      contest.status = 'completed';
+      contest.endTime = new Date();
+      
+      // Other participant wins
+      const otherParticipant = contest.participants.find((_, i) => i !== participantIndex);
+      if (otherParticipant) {
+        contest.winner = otherParticipant.user._id;
+      }
+      
+      await contest.save();
+      
+      return res.json({ 
+        message: 'Contest forfeited', 
+        contest,
+        waitingForOthers: false 
+      });
+    }
+
+    // Mark participant as finished
+    contest.participants[participantIndex].finished = true;
+    contest.participants[participantIndex].finishTime = new Date();
+
+    // Check if both participants are finished
+    const allFinished = contest.participants.every(p => p.finished || p.forfeited);
+    
+    if (allFinished) {
+      contest.status = 'completed';
+      contest.endTime = new Date();
+      
+      // Determine winner based on score, questions solved, and time
+      const sorted = [...contest.participants].sort((a, b) => {
+        if (a.forfeited && !b.forfeited) return 1;
+        if (!a.forfeited && b.forfeited) return -1;
+        
+        if (a.questionsCompleted !== b.questionsCompleted) {
+          return b.questionsCompleted - a.questionsCompleted;
+        }
+        
+        if (Math.abs(a.finalScore - b.finalScore) > 0.1) {
+          return b.finalScore - a.finalScore;
+        }
+        
+        return new Date(a.finishTime) - new Date(b.finishTime);
+      });
+      
+      contest.winner = sorted[0].user._id;
+      
+      await contest.save();
+      
+      return res.json({ 
+        message: 'Contest completed', 
+        contest,
+        waitingForOthers: false 
+      });
+    } else {
+      await contest.save();
+      return res.json({ 
+        message: 'Waiting for other participant',
+        contest,
+        waitingForOthers: true
+      });
+    }
+
+  } catch (error) {
+    console.error('End contest error:', error);
     res.status(500).json({ message: 'Server error', error: error.message });
   }
 });
