@@ -84,21 +84,34 @@ public class Solution {
   const handleEditorDidMount = (editor, monaco) => {
     editorRef.current = editor;
     monaco.editor.setTheme('vs-dark');
-
     editor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.Enter, handleSubmit);
 
-    // Scroll chaining: allow main page to scroll when editor hits limits
-    const editorElement = editor.getDomNode();
-    if (editorElement) {
-      editorElement.style.overflow = 'auto';
-      editorElement.addEventListener('wheel', (e) => {
-        const scrollable = e.target.closest('.monaco-scrollable-element') || e.target;
-        const { scrollTop, scrollHeight, clientHeight } = scrollable;
-        if ((scrollTop === 0 && e.deltaY < 0) ||
-            (scrollTop + clientHeight >= scrollHeight && e.deltaY > 0)) {
-          return; // allow bubbling
+    // Improved scroll chaining implementation
+    const editorContainer = editor.getContainerDomNode();
+    
+    if (editorContainer) {
+      // Use CSS overscroll-behavior for better scroll chaining
+      editorContainer.style.overscrollBehavior = 'contain';
+      
+      // Better wheel event handling
+      editorContainer.addEventListener('wheel', (e) => {
+        const scrollableElement = editor.getDomNode()?.querySelector('.monaco-scrollable-element');
+        
+        if (scrollableElement) {
+          const { scrollTop, scrollHeight, clientHeight } = scrollableElement;
+          const atTop = scrollTop <= 1; // Small threshold for better detection
+          const atBottom = Math.abs(scrollTop + clientHeight - scrollHeight) <= 1;
+          
+          // Allow page scroll when at editor boundaries
+          if ((atTop && e.deltaY < 0) || (atBottom && e.deltaY > 0)) {
+            // Don't prevent default - let it bubble to parent
+            return;
+          }
+          
+          // Prevent page scroll when editor can still scroll
+          e.stopPropagation();
         }
-      }, { passive: true });
+      }, { passive: false });
     }
   };
 
@@ -113,6 +126,7 @@ public class Solution {
   // Test Results Panel - always showing details
   const TestResultsPanel = ({ results }) => {
     if (!results || !results.details) return null;
+    
     return (
       <div className="mt-4 space-y-2">
         <h4 className="font-medium text-gray-900">Test Results</h4>
@@ -199,8 +213,6 @@ public class Solution {
       </div>
     );
   };
-
-  const formatStatement = (statement) => formatProblemText(statement);
 
   if (!problem) {
     return (

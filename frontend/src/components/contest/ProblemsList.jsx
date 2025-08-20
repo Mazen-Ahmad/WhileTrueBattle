@@ -2,11 +2,16 @@ import React from 'react';
 
 const ProblemsList = ({ problems, selectedProblem, onSelectProblem, userSubmissions }) => {
   const getProblemStatus = (problemId) => {
-    const submission = userSubmissions.find(s => s.problemId === problemId);
-    if (!submission) return 'unsolved';
+    // Get all submissions for this problem
+    const problemSubmissions = userSubmissions.filter(s => s.problemId === problemId);
+    if (problemSubmissions.length === 0) return 'unsolved';
     
-    // Check if last submission passed all tests
-    if (submission.testResults?.passed === submission.testResults?.total) {
+    // Check if any submission passed all tests
+    const hasSolvedSubmission = problemSubmissions.some(sub => 
+      sub.testResults?.passed === sub.testResults?.total && sub.testResults?.total > 0
+    );
+    
+    if (hasSolvedSubmission) {
       return 'solved';
     }
     return 'attempted';
@@ -53,6 +58,19 @@ const ProblemsList = ({ problems, selectedProblem, onSelectProblem, userSubmissi
   const truncateTitle = (title, maxLength = 25) => {
     return title.length > maxLength ? title.substring(0, maxLength) + '...' : title;
   };
+
+  // Calculate solved problems count
+  const getSolvedProblemsCount = () => {
+    const solvedProblemIds = new Set();
+    userSubmissions.forEach(submission => {
+      if (submission.testResults?.passed === submission.testResults?.total && submission.testResults?.total > 0) {
+        solvedProblemIds.add(submission.problemId);
+      }
+    });
+    return solvedProblemIds.size;
+  };
+
+  const solvedCount = getSolvedProblemsCount();
 
   return (
     <div className="bg-white rounded-lg shadow-md h-full flex flex-col">
@@ -135,22 +153,19 @@ const ProblemsList = ({ problems, selectedProblem, onSelectProblem, userSubmissi
         </div>
       </div>
 
-      {/* Progress indicator */}
+      {/* Progress indicator - Fixed to count only solved problems */}
       <div className="p-3 border-t border-gray-200 bg-gray-50">
         <div className="flex justify-between text-sm text-gray-600">
           <span>Progress:</span>
           <span>
-            {userSubmissions.length > 0 ? 
-              `${new Set(userSubmissions.map(s => s.problemId)).size}/${problems.length} solved` 
-              : `0/${problems.length} solved`
-            }
+            {solvedCount}/{problems.length} solved
           </span>
         </div>
         <div className="mt-2 w-full bg-gray-200 rounded-full h-2">
           <div 
             className="bg-gradient-to-r from-green-400 to-blue-500 h-2 rounded-full transition-all duration-300"
             style={{
-              width: `${problems.length > 0 ? (new Set(userSubmissions.map(s => s.problemId)).size / problems.length) * 100 : 0}%`
+              width: `${problems.length > 0 ? (solvedCount / problems.length) * 100 : 0}%`
             }}
           ></div>
         </div>
@@ -158,5 +173,4 @@ const ProblemsList = ({ problems, selectedProblem, onSelectProblem, userSubmissi
     </div>
   );
 };
-
 export default ProblemsList;
