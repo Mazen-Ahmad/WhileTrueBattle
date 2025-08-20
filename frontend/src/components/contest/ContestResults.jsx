@@ -302,14 +302,6 @@ const ContestResults = ({ contest, onBackToHome, currentUser }) => {
           >
             Back to Home
           </Button>
-          
-          <Button
-            variant="outline"
-            size="large"
-            onClick={() => window.location.reload()}
-          >
-            New Contest
-          </Button>
         </div>
       </div>
     </div>

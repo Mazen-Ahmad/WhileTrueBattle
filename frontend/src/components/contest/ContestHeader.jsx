@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../common/Button';
 
-const ContestHeader = ({ contest, timeLeft, onEndContest, onBackToHome, userFinished, waitingForOthers }) => {
+const ContestHeader = ({ contest, timeLeft, onEndContest, userFinished, waitingForOthers }) => {
   const formatTime = (seconds) => {
     const hours = Math.floor(seconds / 3600);
     const minutes = Math.floor((seconds % 3600) / 60);
@@ -58,31 +58,14 @@ const ContestHeader = ({ contest, timeLeft, onEndContest, onBackToHome, userFini
             {/* Action buttons */}
             <div className="flex items-center space-x-2">
               {!userFinished && !waitingForOthers && (
-                <>
-                  <Button
-                    onClick={() => onEndContest(false)}
-                    variant="primary"
-                    size="small"
-                  >
-                    Finish Contest
-                  </Button>
-                  <Button
-                    onClick={() => onEndContest(true)}
-                    variant="danger"
-                    size="small"
-                  >
-                    Forfeit
-                  </Button>
-                </>
+                <Button
+                  onClick={() => onEndContest(false)}
+                  variant="primary"
+                  size="small"
+                >
+                  Finish Contest
+                </Button>
               )}
-              
-              <Button
-                onClick={onBackToHome}
-                variant="secondary"
-                size="small"
-              >
-                Back to Home
-              </Button>
             </div>
           </div>
         </div>

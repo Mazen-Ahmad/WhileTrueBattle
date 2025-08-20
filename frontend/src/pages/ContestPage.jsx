@@ -26,7 +26,6 @@ const ContestPage = ({ roomCode, onBackToHome }) => {
     try {
       const response = await api.get(`/contests/${roomCode}`);
       const contestData = response.data.contest;
-      
       setContest(contestData);
 
       // Check user status
@@ -36,12 +35,12 @@ const ContestPage = ({ roomCode, onBackToHome }) => {
 
       if (userParticipant) {
         setUserFinished(userParticipant.finished || userParticipant.forfeited);
-        
-        // Check if waiting for others
+
+        // Check if waiting for opponents to finish
         const othersFinished = contestData.participants
           .filter(p => p.user._id !== user.id)
           .every(p => p.finished || p.forfeited);
-          
+
         setWaitingForOthers(userParticipant.finished && !othersFinished);
       }
 
@@ -65,6 +64,7 @@ const ContestPage = ({ roomCode, onBackToHome }) => {
 
   useEffect(() => {
     fetchContest();
+    // eslint-disable-next-line
   }, [roomCode]);
 
   // Timer countdown
@@ -79,7 +79,6 @@ const ContestPage = ({ roomCode, onBackToHome }) => {
           return prev - 1;
         });
       }, 1000);
-
       return () => clearInterval(timer);
     }
   }, [timeLeft, contestStatus]);
@@ -89,21 +88,10 @@ const ContestPage = ({ roomCode, onBackToHome }) => {
     if (socket) {
       socket.emit('join-contest', roomCode);
 
-      socket.on('contest-updated', (updatedContest) => {
-        setContest(updatedContest);
-      });
-
-      socket.on('contest-ended', () => {
-        setContestStatus('completed');
-      });
-
-      socket.on('submission-received', (data) => {
-        fetchContest();
-      });
-
-      socket.on('participant-finished', () => {
-        fetchContest();
-      });
+      socket.on('contest-updated', setContest);
+      socket.on('contest-ended', () => setContestStatus('completed'));
+      socket.on('submission-received', fetchContest);
+      socket.on('participant-finished', fetchContest);
 
       return () => {
         socket.off('contest-updated');
@@ -114,17 +102,16 @@ const ContestPage = ({ roomCode, onBackToHome }) => {
     }
   }, [socket, roomCode]);
 
+  // Submit code for a problem
   const handleCodeSubmit = async (code, language) => {
     if (!selectedProblem) return;
-
     try {
       const response = await api.post(`/contests/submit/${roomCode}`, {
         problemId: selectedProblem.id,
         code,
         language
       });
-
-      // Emit socket event for real-time updates
+      // Real-time update
       if (socket) {
         socket.emit('code-submitted', {
           roomCode,
@@ -132,17 +119,16 @@ const ContestPage = ({ roomCode, onBackToHome }) => {
           problemId: selectedProblem.id
         });
       }
-
       return response.data;
     } catch (err) {
       throw new Error(err.response?.data?.message || 'Submission failed');
     }
   };
 
+  // End contest — Only allows forfeit if user finished and waiting
   const handleEndContest = async (forfeit = false) => {
     try {
       const response = await api.post(`/contests/end/${roomCode}`, { forfeit });
-
       if (socket) {
         socket.emit('participant-finished', {
           roomCode,
@@ -150,14 +136,12 @@ const ContestPage = ({ roomCode, onBackToHome }) => {
           forfeit
         });
       }
-
       if (response.data.contest.status === 'completed') {
         setContestStatus('completed');
       } else {
         setUserFinished(true);
         setWaitingForOthers(response.data.waitingForOthers);
       }
-
       fetchContest();
     } catch (err) {
       setError(err.response?.data?.message || 'Failed to end contest');
@@ -196,7 +180,7 @@ const ContestPage = ({ roomCode, onBackToHome }) => {
     );
   }
 
-  // Show waiting screen when user finished but others haven't
+  // Waiting screen when user finished but others haven't
   if (userFinished && waitingForOthers) {
     return (
       <div className="min-h-screen bg-gray-100">
@@ -204,7 +188,6 @@ const ContestPage = ({ roomCode, onBackToHome }) => {
           contest={contest}
           timeLeft={timeLeft}
           onEndContest={handleEndContest}
-          onBackToHome={onBackToHome}
           userFinished={userFinished}
           waitingForOthers={waitingForOthers}
         />
@@ -264,11 +247,9 @@ const ContestPage = ({ roomCode, onBackToHome }) => {
         contest={contest}
         timeLeft={timeLeft}
         onEndContest={handleEndContest}
-        onBackToHome={onBackToHome}
         userFinished={userFinished}
         waitingForOthers={waitingForOthers}
       />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="grid grid-cols-12 gap-6 h-[calc(100vh-10rem)]">
           {/* Problems List */}
@@ -282,7 +263,6 @@ const ContestPage = ({ roomCode, onBackToHome }) => {
                 ?.submissions || []}
             />
           </div>
-
           {/* Code Editor */}
           <div className="col-span-9">
             <CodeEditor

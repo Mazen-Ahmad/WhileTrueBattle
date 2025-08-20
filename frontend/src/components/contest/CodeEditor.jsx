@@ -11,7 +11,6 @@ const CodeEditor = ({ problem, onSubmit, contestActive }) => {
   const [error, setError] = useState('');
   const [showProblemDetails, setShowProblemDetails] = useState(false);
   const [executionResults, setExecutionResults] = useState(null);
-  const [showDetailedResults, setShowDetailedResults] = useState(false);
   const editorRef = useRef(null);
 
   const languageTemplates = {
@@ -51,6 +50,7 @@ public class Solution {
     if (problem && !code) {
       setCode(languageTemplates[language]);
     }
+    // eslint-disable-next-line
   }, [problem, language]);
 
   const handleLanguageChange = (newLanguage) => {
@@ -66,11 +66,10 @@ public class Solution {
       setError('Please write some code before submitting');
       return;
     }
-
     setSubmitting(true);
     setError('');
     setExecutionResults(null);
-    
+
     try {
       const result = await onSubmit(code, language);
       setTestResults(result);
@@ -84,12 +83,23 @@ public class Solution {
 
   const handleEditorDidMount = (editor, monaco) => {
     editorRef.current = editor;
-    
-    // Set editor theme
     monaco.editor.setTheme('vs-dark');
-    
-    // Add keyboard shortcuts
+
     editor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.Enter, handleSubmit);
+
+    // Scroll chaining: allow main page to scroll when editor hits limits
+    const editorElement = editor.getDomNode();
+    if (editorElement) {
+      editorElement.style.overflow = 'auto';
+      editorElement.addEventListener('wheel', (e) => {
+        const scrollable = e.target.closest('.monaco-scrollable-element') || e.target;
+        const { scrollTop, scrollHeight, clientHeight } = scrollable;
+        if ((scrollTop === 0 && e.deltaY < 0) ||
+            (scrollTop + clientHeight >= scrollHeight && e.deltaY > 0)) {
+          return; // allow bubbling
+        }
+      }, { passive: true });
+    }
   };
 
   const getDifficultyColor = (rating) => {
@@ -100,22 +110,12 @@ public class Solution {
     return 'bg-red-100 text-red-800 border-red-300';
   };
 
-  // Test Results Panel Component
+  // Test Results Panel - always showing details
   const TestResultsPanel = ({ results }) => {
     if (!results || !results.details) return null;
-
     return (
       <div className="mt-4 space-y-2">
-        <div className="flex justify-between items-center">
-          <h4 className="font-medium text-gray-900">Test Results</h4>
-          <button
-            onClick={() => setShowDetailedResults(!showDetailedResults)}
-            className="text-blue-600 hover:text-blue-800 text-sm"
-          >
-            {showDetailedResults ? 'Hide Details' : 'Show Details'}
-          </button>
-        </div>
-
+        <h4 className="font-medium text-gray-900">Test Results</h4>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
           <div className="bg-green-50 p-3 rounded">
             <div className="text-lg font-bold text-green-600">
@@ -136,78 +136,71 @@ public class Solution {
             <div className="text-sm text-purple-600">Max Memory</div>
           </div>
         </div>
-
-        {showDetailedResults && results.details && (
-          <div className="space-y-2 max-h-60 overflow-y-auto custom-scrollbar">
-            {results.details.map((detail, index) => (
-              <div
-                key={index}
-                className={`p-3 rounded border-l-4 ${
-                  detail.passed
-                    ? 'border-green-500 bg-green-50'
-                    : 'border-red-500 bg-red-50'
-                }`}
-              >
-                <div className="flex justify-between items-start mb-2">
-                  <span className="font-medium">
-                    Test Case {index + 1}
+        <div className="space-y-2 max-h-60 overflow-y-auto custom-scrollbar">
+          {results.details.map((detail, index) => (
+            <div
+              key={index}
+              className={`p-3 rounded border-l-4 ${
+                detail.passed
+                  ? 'border-green-500 bg-green-50'
+                  : 'border-red-500 bg-red-50'
+              }`}
+            >
+              <div className="flex justify-between items-start mb-2">
+                <span className="font-medium">
+                  Test Case {index + 1}
+                </span>
+                <div className="flex items-center space-x-2">
+                  <span className={`px-2 py-1 rounded text-xs font-medium ${
+                    detail.passed
+                      ? 'bg-green-100 text-green-800'
+                      : 'bg-red-100 text-red-800'
+                  }`}>
+                    {detail.passed ? 'PASSED' : 'FAILED'}
                   </span>
-                  <div className="flex items-center space-x-2">
-                    <span className={`px-2 py-1 rounded text-xs font-medium ${
-                      detail.passed
-                        ? 'bg-green-100 text-green-800'
-                        : 'bg-red-100 text-red-800'
-                    }`}>
-                      {detail.passed ? 'PASSED' : 'FAILED'}
-                    </span>
-                    <span className="text-xs text-gray-500">
-                      {detail.executionTime?.toFixed(3) || '0.000'}s
-                    </span>
-                  </div>
-                </div>
-
-                {detail.error && (
-                  <div className="mb-2">
-                    <div className="text-sm font-medium text-red-700">Error:</div>
-                    <pre className="text-xs bg-red-100 p-2 rounded overflow-x-auto">
-                      {detail.error}
-                    </pre>
-                  </div>
-                )}
-
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-2 text-xs">
-                  <div>
-                    <div className="font-medium text-gray-700">Input:</div>
-                    <pre className="bg-gray-100 p-2 rounded overflow-x-auto">
-                      {detail.input || 'No input'}
-                    </pre>
-                  </div>
-                  <div>
-                    <div className="font-medium text-gray-700">Expected:</div>
-                    <pre className="bg-gray-100 p-2 rounded overflow-x-auto">
-                      {detail.expectedOutput}
-                    </pre>
-                  </div>
-                  <div>
-                    <div className="font-medium text-gray-700">Your Output:</div>
-                    <pre className={`p-2 rounded overflow-x-auto ${
-                      detail.passed ? 'bg-green-100' : 'bg-red-100'
-                    }`}>
-                      {detail.actualOutput || 'No output'}
-                    </pre>
-                  </div>
+                  <span className="text-xs text-gray-500">
+                    {detail.executionTime?.toFixed(3) || '0.000'}s
+                  </span>
                 </div>
               </div>
-            ))}
-          </div>
-        )}
+              {detail.error && (
+                <div className="mb-2">
+                  <div className="text-sm font-medium text-red-700">Error:</div>
+                  <pre className="text-xs bg-red-100 p-2 rounded overflow-x-auto">
+                    {detail.error}
+                  </pre>
+                </div>
+              )}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-2 text-xs">
+                <div>
+                  <div className="font-medium text-gray-700">Input:</div>
+                  <pre className="bg-gray-100 p-2 rounded overflow-x-auto">
+                    {detail.input || 'No input'}
+                  </pre>
+                </div>
+                <div>
+                  <div className="font-medium text-gray-700">Expected:</div>
+                  <pre className="bg-gray-100 p-2 rounded overflow-x-auto">
+                    {detail.expectedOutput}
+                  </pre>
+                </div>
+                <div>
+                  <div className="font-medium text-gray-700">Your Output:</div>
+                  <pre className={`p-2 rounded overflow-x-auto ${
+                    detail.passed ? 'bg-green-100' : 'bg-red-100'
+                  }`}>
+                    {detail.actualOutput || 'No output'}
+                  </pre>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     );
   };
 
-  const formatStatement = (statement) => {
-    return formatProblemText(statement);
-  };
+  const formatStatement = (statement) => formatProblemText(statement);
 
   if (!problem) {
     return (
@@ -235,15 +228,13 @@ public class Solution {
               onClick={() => setShowProblemDetails(!showProblemDetails)}
               className="text-xs px-2 py-1"
             >
-              {showProblemDetails ? 'Hide' : 'Details'}
+              {showProblemDetails ? 'Hide' : 'Problem Statement'}
             </Button>
           </div>
         </div>
-
         <div className="flex items-center justify-between text-sm text-gray-600">
           <span>⏱️ {problem.timeLimit}ms • 💾 {problem.memoryLimit}MB</span>
         </div>
-
         {/* Collapsible Problem Details */}
         {showProblemDetails && (
           <div className="mt-4 max-h-60 overflow-y-auto custom-scrollbar">
@@ -255,7 +246,6 @@ public class Solution {
                   {formatProblemText(problem.statement)}
                 </div>
               </div>
-
               {/* Input/Output Format */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 <div>
@@ -264,7 +254,6 @@ public class Solution {
                     {formatProblemText(problem.inputFormat)}
                   </div>
                 </div>
-                
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-1 text-sm">Output Format</h4>
                   <div className="text-gray-300 whitespace-pre-line bg-gray-800 p-4 rounded-lg">
@@ -272,7 +261,6 @@ public class Solution {
                   </div>
                 </div>
               </div>
-
               {/* Sample Test Cases */}
               {problem.sampleTests && problem.sampleTests.length > 0 && (
                 <div className="space-y-2">
@@ -298,7 +286,6 @@ public class Solution {
           </div>
         )}
       </div>
-
       {/* Editor Section - Takes up most space */}
       <div className="flex-1 flex flex-col min-h-0">
         {/* Language Selector and Submit Button */}
@@ -320,7 +307,6 @@ public class Solution {
               </button>
             ))}
           </div>
-
           <Button
             onClick={handleSubmit}
             loading={submitting}
@@ -332,7 +318,6 @@ public class Solution {
             {submitting ? 'Submitting...' : 'Submit'}
           </Button>
         </div>
-
         {/* Monaco Editor - Main area */}
         <div className="flex-1 min-h-0">
           <Editor
@@ -356,8 +341,7 @@ public class Solution {
             }}
           />
         </div>
-
-        {/* Results/Error Section - Expandable */}
+        {/* Results/Error Section */}
         {(testResults || error || executionResults) && (
           <div className="p-4 border-t border-gray-200 bg-gray-50 max-h-80 overflow-y-auto custom-scrollbar">
             {error && (
@@ -375,7 +359,6 @@ public class Solution {
                 </div>
               </div>
             )}
-            
             {testResults && (
               <div className="bg-green-50 border-l-4 border-green-400 p-4 mb-4">
                 <div className="flex">
@@ -394,7 +377,6 @@ public class Solution {
                 </div>
               </div>
             )}
-
             {executionResults && <TestResultsPanel results={executionResults} />}
           </div>
         )}
@@ -402,5 +384,4 @@ public class Solution {
     </div>
   );
 };
-
 export default CodeEditor;
