@@ -240,6 +240,8 @@ router.post('/submit/:roomCode', auth, async (req, res) => {
 
       await contest.save();
 
+      await contest.populate('participants.user', 'username email stats');
+
       res.json({
         message: 'Code submitted successfully',
         submission: {
