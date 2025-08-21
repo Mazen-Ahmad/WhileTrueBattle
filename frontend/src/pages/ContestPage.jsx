@@ -229,10 +229,10 @@ const ContestPage = ({ roomCode, onBackToHome }) => {
                 size="small"
                 className="w-full"
               >
-                Force End Contest
+                Forfeit Contest
               </Button>
               <p className="text-xs text-gray-500">
-                Or wait for them to finish naturally
+                Or wait for your opponent to finish
               </p>
             </div>
           </div>

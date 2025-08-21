@@ -7,12 +7,9 @@ const rateLimit = require('express-rate-limit');
 const http = require('http');
 const socketIo = require('socket.io');
 require('dotenv').config();
-// Add this line with other imports at the top
 const contestRoutes = require('./routes/contest');
-
 const authRoutes = require('./routes/auth');
 const roomRoutes = require('./routes/rooms');
-
 const app = express();
 const server = http.createServer(app);
 
@@ -121,6 +118,28 @@ socket.on('code-submitted', (data) => {
     console.log('User disconnected:', socket.id);
   });
 });
+
+const Contest = require('./models/Contest');
+const Room = require('./models/Room');
+
+// Background cleanup job: every hour, delete completed contests and completed/waiting rooms older than 24 hours
+setInterval(async () => {
+  const oneDayAgo = new Date(Date.now() - 24 * 60 * 60 * 1000);
+
+  // Delete completed contests older than 24 hours
+  await Contest.deleteMany({
+    status: 'completed',
+    endTime: { $lt: oneDayAgo }
+  });
+
+  // Delete completed rooms and waiting rooms older than 24 hours
+  await Room.deleteMany({
+    $or: [
+      { status: 'completed', updatedAt: { $lt: oneDayAgo } },
+      { status: 'waiting', createdAt: { $lt: oneDayAgo } }
+    ]
+  });
+}, 60 * 60 * 1000); // Run every hour
 
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, '0.0.0.0', () => {

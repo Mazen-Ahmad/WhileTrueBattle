@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { useSocket } from '../contexts/SocketContext';
 import Button from '../components/common/Button';
@@ -39,7 +39,45 @@ const handleBackToHome = () => {
   setCurrentRoom(null);
 };
 
+const typewriterText = "If you are someone testing my platform, please use 2 different browsers, e.g. Chrome & Edge and sign up with different accounts as 2 users are needed to start a contest. Thank you & I hope you like it ^_^";
+function TypewriterNote({ text, speed = 30 }) {
+  const [displayed, setDisplayed] = useState('');
 
+  useEffect(() => {
+    let currentIndex = 0;
+    let cancelled = false;
+
+    function type() {
+      if (cancelled) return;
+      if (currentIndex <= text.length) {
+        setDisplayed(text.slice(0, currentIndex));
+        currentIndex++;
+        setTimeout(type, speed);
+      }
+    }
+    type();
+    return () => { cancelled = true; };
+  }, [text, speed]);
+  return (
+    <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 text-center font-medium text-base text-yellow-800" style={{minHeight: '120px'}}>
+      <span>
+        {displayed}
+        <span className="animate-blink" style={{display: 'inline-block', width: '1em'}}>|</span>
+      </span>
+      <style>
+        {`
+          @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+          }
+          .animate-blink {
+            animation: blink 1s infinite;
+          }
+        `}
+      </style>
+    </div>
+  );
+}
 if (currentPage === 'room') {
   return (
     <RoomPage 
@@ -67,7 +105,7 @@ if (currentPage === 'contest') {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <h1 className="text-xl font-bold text-gray-900">
-                CP Arena
+                While(TRUE): battle
               </h1>
               <div className="ml-4 flex items-center">
                 <div className={`w-2 h-2 rounded-full ${connected ? 'bg-green-500' : 'bg-red-500'}`}></div>
@@ -117,30 +155,10 @@ if (currentPage === 'contest') {
                 </Button>
               </div>
 
-              {/* User Stats */}
-              <div className="mt-8 pt-6 border-t border-gray-200">
-                <h3 className="text-lg font-medium mb-4">Your Stats</h3>
-                <div className="grid grid-cols-2 gap-4 text-center">
-                  <div className="bg-green-50 p-3 rounded-lg">
-                    <div className="text-2xl font-bold text-green-600">{user?.stats?.wins || 0}</div>
-                    <div className="text-sm text-green-600">Wins</div>
-                  </div>
-                  <div className="bg-red-50 p-3 rounded-lg">
-                    <div className="text-2xl font-bold text-red-600">{user?.stats?.losses || 0}</div>
-                    <div className="text-sm text-red-600">Losses</div>
-                  </div>
-                  <div className="bg-blue-50 p-3 rounded-lg">
-                    <div className="text-2xl font-bold text-blue-600">{user?.stats?.totalContests || 0}</div>
-                    <div className="text-sm text-blue-600">Total</div>
-                  </div>
-                  <div className="bg-yellow-50 p-3 rounded-lg">
-                    <div className="text-2xl font-bold text-yellow-600">
-                      {user?.stats?.averageScore?.toFixed(1) || '0.0'}
-                    </div>
-                    <div className="text-sm text-yellow-600">Avg Score</div>
-                  </div>
-                </div>
-              </div>
+              {/* Platform Testing Note */}
+          <div className="mt-8 pt-6 border-t border-gray-200">
+            <TypewriterNote text={typewriterText} speed={45} />
+          </div>
             </div>
           </div>
 
