@@ -120,26 +120,22 @@ socket.on('code-submitted', (data) => {
 });
 
 const Contest = require('./models/Contest');
-const Room = require('./models/Room');
 
-// Background cleanup job: every hour, delete completed contests and completed/waiting rooms older than 24 hours
 setInterval(async () => {
   const oneDayAgo = new Date(Date.now() - 24 * 60 * 60 * 1000);
 
-  // Delete completed contests older than 24 hours
   await Contest.deleteMany({
     status: 'completed',
     endTime: { $lt: oneDayAgo }
   });
 
-  // Delete completed rooms and waiting rooms older than 24 hours
   await Room.deleteMany({
     $or: [
       { status: 'completed', updatedAt: { $lt: oneDayAgo } },
       { status: 'waiting', createdAt: { $lt: oneDayAgo } }
     ]
   });
-}, 60 * 60 * 1000); // Run every hour
+}, 60 * 60 * 1000);
 
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, '0.0.0.0', () => {
