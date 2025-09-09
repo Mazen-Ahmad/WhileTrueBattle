@@ -1,0 +1,24 @@
+{
+  "contestId": 1665,
+  "index": "A",
+  "name": "GCD vs LCM",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given a positive integer $$$n$$$. You have to find $$$4$$$ positive integers $$$a, b, c, d$$$ such that $$$a + b + c + d = n$$$, and $$$\\gcd(a, b) = \\operatorname{lcm}(c, d)$$$. If there are several possible answers you can output any of them. It is possible to show that the answer always exists. In this problem $$$\\gcd(a, b)$$$ denotes the greatest common divisor of $$$a$$$ and $$$b$$$, and $$$\\operatorname{lcm}(c, d)$$$ denotes the least common multiple of $$$c$$$ and $$$d$$$.",
+  "inputFormat": "The input consists of multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. Description of the test cases follows. Each test case contains a single line with integer $$$n$$$ ($$$4 \\le n \\le 10^9$$$) — the sum of $$$a$$$, $$$b$$$, $$$c$$$, and $$$d$$$.",
+  "outputFormat": "For each test case output $$$4$$$ positive integers $$$a$$$, $$$b$$$, $$$c$$$, $$$d$$$ such that $$$a + b + c + d = n$$$ and $$$\\gcd(a, b) = \\operatorname{lcm}(c, d)$$$.",
+  "sampleTests": [
+    {
+      "input": "5\n4\n7\n8\n9\n10",
+      "output": "1 1 1 1\n2 2 2 1\n2 2 2 2\n2 4 2 1\n3 5 1 1"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1665/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

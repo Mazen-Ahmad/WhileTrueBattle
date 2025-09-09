@@ -1,0 +1,24 @@
+{
+  "contestId": 1955,
+  "index": "D",
+  "name": "Inaccurate Subsequence Search",
+  "rating": 1400,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Maxim has an array $$$a$$$ of $$$n$$$ integers and an array $$$b$$$ of $$$m$$$ integers ($$$m \\le n$$$). Maxim considers an array $$$c$$$ of length $$$m$$$ to be good if the elements of array $$$c$$$ can be rearranged in such a way that at least $$$k$$$ of them match the elements of array $$$b$$$. For example, if $$$b = [1, 2, 3, 4]$$$ and $$$k = 3$$$, then the arrays $$$[4, 1, 2, 3]$$$ and $$$[2, 3, 4, 5]$$$ are good (they can be reordered as follows: $$$[1, 2, 3, 4]$$$ and $$$[5, 2, 3, 4]$$$), while the arrays $$$[3, 4, 5, 6]$$$ and $$$[3, 4, 3, 4]$$$ are not good. Maxim wants to choose every subsegment of array $$$a$$$ of length $$$m$$$ as the elements of array $$$c$$$. Help Maxim count how many selected arrays will be good. In other words, find the number of positions $$$1 \\le l \\le n - m + 1$$$ such that the elements $$$a_l, a_{l+1}, \\dots, a_{l + m - 1}$$$ form a good array.",
+  "inputFormat": "The first line contains an integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The first line of each test case contains three integers $$$n$$$, $$$m$$$, and $$$k$$$ ($$$1 \\le k \\le m \\le n \\le 2 \\cdot 10^5$$$) — the number of elements in arrays $$$a$$$ and $$$b$$$, the required number of matching elements. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$1 \\le a_i \\le 10^6$$$) — the elements of array $$$a$$$. Elements of the array $$$a$$$ are not necessarily unique. The third line of each test case contains $$$m$$$ integers $$$b_1, b_2, \\dots, b_m$$$ ($$$1 \\le b_i \\le 10^6$$$) — the elements of array $$$b$$$. Elements of the array $$$b$$$ are not necessarily unique. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$. Similarly, it is guaranteed that the sum of $$$m$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "outputFormat": "For each test case, output the number of good subsegments of array $$$a$$$ on a separate line.",
+  "sampleTests": [
+    {
+      "input": "5\n7 4 2\n4 1 2 3 4 5 6\n1 2 3 4\n7 4 3\n4 1 2 3 4 5 6\n1 2 3 4\n7 4 4\n4 1 2 3 4 5 6\n1 2 3 4\n11 5 3\n9 9 2 2 10 9 7 6 3 6 3\n6 9 7 8 10\n4 1 1\n4 1 5 6\n6",
+      "output": "4\n3\n2\n4\n1"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1955/D",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

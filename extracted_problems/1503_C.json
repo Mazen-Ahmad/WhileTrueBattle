@@ -1,0 +1,24 @@
+{
+  "contestId": 1503,
+  "index": "C",
+  "name": "Travelling Salesman Problem",
+  "rating": 2200,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "There are $$$n$$$ cities numbered from $$$1$$$ to $$$n$$$, and city $$$i$$$ has beauty $$$a_i$$$. A salesman wants to start at city $$$1$$$, visit every city exactly once, and return to city $$$1$$$. For all $$$i\\ne j$$$, a flight from city $$$i$$$ to city $$$j$$$ costs $$$\\max(c_i,a_j-a_i)$$$ dollars, where $$$c_i$$$ is the price floor enforced by city $$$i$$$. Note that there is no absolute value. Find the minimum total cost for the salesman to complete his trip.",
+  "inputFormat": "The first line contains a single integer $$$n$$$ ($$$2\\le n\\le 10^5$$$) — the number of cities. The $$$i$$$-th of the next $$$n$$$ lines contains two integers $$$a_i$$$, $$$c_i$$$ ($$$0\\le a_i,c_i\\le 10^9$$$) — the beauty and price floor of the $$$i$$$-th city.",
+  "outputFormat": "Output a single integer — the minimum total cost.",
+  "sampleTests": [
+    {
+      "input": "3\n1 9\n2 1\n4 1",
+      "output": "11"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1503/C",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

@@ -1,0 +1,24 @@
+{
+  "contestId": 1809,
+  "index": "A",
+  "name": "Garland",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You have a garland consisting of $$$4$$$ colored light bulbs, the color of the $$$i$$$-th light bulb is $$$s_i$$$. Initially, all the light bulbs are turned off. Your task is to turn all the light bulbs on. You can perform the following operation any number of times: select a light bulb and switch its state (turn it on if it was off, and turn it off if it was on). The only restriction on the above operation is that you can apply the operation to a light bulb only if the previous operation was applied to a light bulb of a different color (the first operation can be applied to any light bulb). Calculate the minimum number of operations to turn all the light bulbs on, or report that this is impossible.",
+  "inputFormat": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The single line of each test case contains $$$s$$$ — a sequence of $$$4$$$ characters, where each character is a decimal digit. The $$$i$$$-th character denotes the color of the $$$i$$$-th light bulb.",
+  "outputFormat": "For each test case, print one integer — the minimum number of operations to turn all the light bulbs on. If it is impossible to turn all the bulbs on, print -1 .",
+  "sampleTests": [
+    {
+      "input": "3\n9546\n0000\n3313",
+      "output": "4\n-1\n6"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1809/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

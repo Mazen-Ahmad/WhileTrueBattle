@@ -1,0 +1,24 @@
+{
+  "contestId": 1452,
+  "index": "C",
+  "name": "Two Brackets",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given a string $$$s$$$, consisting of brackets of two types: ' ( ', ' ) ', ' [ ' and ' ] '. A string is called a regular bracket sequence (RBS) if it's of one of the following types: empty string; ' ( ' + RBS + ' ) '; ' [ ' + RBS + ' ] '; RBS + RBS. where plus is a concatenation of two strings. In one move you can choose a non-empty subsequence of the string $$$s$$$ (not necessarily consecutive) that is an RBS, remove it from the string and concatenate the remaining parts without changing the order. What is the maximum number of moves you can perform?",
+  "inputFormat": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 1000$$$) — the number of testcases. Each of the next $$$t$$$ lines contains a non-empty string, consisting only of characters ' ( ', ' ) ', ' [ ' and ' ] '. The total length of the strings over all testcases doesn't exceed $$$2 \\cdot 10^5$$$.",
+  "outputFormat": "For each testcase print a single integer — the maximum number of moves you can perform on a given string $$$s$$$.",
+  "sampleTests": [
+    {
+      "input": "5\n()\n[]()\n([)]\n)]([\n)[(]",
+      "output": "1\n2\n2\n0\n1"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1452/C",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

@@ -1,0 +1,24 @@
+{
+  "contestId": 1688,
+  "index": "A",
+  "name": "Cirno's Perfect Bitmasks Classroom",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Even if it's a really easy question, she won't be able to answer it — Perfect Memento in Strict Sense Cirno's perfect bitmasks classroom has just started! Cirno gave her students a positive integer $$$x$$$. As an assignment, her students need to find the minimum positive integer $$$y$$$, which satisfies the following two conditions: $$$$$$x\\ \\texttt{and}\\ y > 0$$$$$$ $$$$$$x\\ \\texttt{xor}\\ y > 0$$$$$$ Where $$$\\texttt{and}$$$ is the bitwise AND operation , and $$$\\texttt{xor}$$$ is the bitwise XOR operation . Among the students was Mystia, who was truly baffled by all these new operators. Please help her!",
+  "inputFormat": "The first line of input contains a single integer $$$t$$$ ($$$1 \\leq t \\leq 10^3$$$) — the number of input test cases. For each test case, the only line of input contains one integer $$$x$$$ ($$$1 \\leq x \\leq 2^{30}$$$).",
+  "outputFormat": "For each test case, print a single integer — the minimum number of $$$y$$$.",
+  "sampleTests": [
+    {
+      "input": "7\n1\n2\n5\n9\n16\n114514\n1000000",
+      "output": "3\n3\n1\n1\n17\n2\n64"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1688/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

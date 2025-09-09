@@ -1,0 +1,24 @@
+{
+  "contestId": 2056,
+  "index": "A",
+  "name": "Shape Perimeter",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "There is an $$$m$$$ by $$$m$$$ square stamp on an infinite piece of paper. Initially, the bottom-left corner of the square stamp is aligned with the bottom-left corner of the paper. You are given two integer sequences $$$x$$$ and $$$y$$$, each of length $$$n$$$. For each step $$$i$$$ from $$$1$$$ to $$$n$$$, the following happens: Move the stamp $$$x_i$$$ units to the right and $$$y_i$$$ units upwards. Press the stamp onto the paper, leaving an $$$m$$$ by $$$m$$$ colored square at its current position. Note that the elements of sequences $$$x$$$ and $$$y$$$ have a special constraint: $$$1\\le x_i, y_i\\le m - 1$$$. Note that you do not press the stamp at the bottom-left corner of the paper. Refer to the notes section for better understanding. It can be proven that after all the operations, the colored shape on the paper formed by the stamp is a single connected region. Find the perimeter of this colored shape.",
+  "inputFormat": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 1000$$$). The description of the test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n \\le 100$$$, $$$2 \\le m \\le 100$$$) — the number of operations performed and the side length of the square stamp. The $$$i$$$-th of the next $$$n$$$ lines contains two integers $$$x_i$$$ and $$$y_i$$$ ($$$1 \\le x_i, y_i \\le m - 1$$$) — the distance that the stamp will be moved right and up during the $$$i$$$-th operation, respectively. Note that there are no constraints on the sum of $$$n$$$ over all test cases.",
+  "outputFormat": "For each test case, output a single integer representing the perimeter of the colored shape on the paper.",
+  "sampleTests": [
+    {
+      "input": "3\n4 3\n1 1\n2 2\n2 1\n1 2\n1 2\n1 1\n6 7\n3 6\n1 1\n3 1\n6 6\n5 4\n6 1",
+      "output": "32\n8\n96"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/2056/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

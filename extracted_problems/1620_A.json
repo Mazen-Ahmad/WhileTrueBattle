@@ -1,0 +1,24 @@
+{
+  "contestId": 1620,
+  "index": "A",
+  "name": "Equal or Not Equal",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You had $$$n$$$ positive integers $$$a_1, a_2, \\dots, a_n$$$ arranged in a circle . For each pair of neighboring numbers ($$$a_1$$$ and $$$a_2$$$, $$$a_2$$$ and $$$a_3$$$, ..., $$$a_{n - 1}$$$ and $$$a_n$$$, and $$$a_n$$$ and $$$a_1$$$), you wrote down: are the numbers in the pair equal or not. Unfortunately, you've lost a piece of paper with the array $$$a$$$. Moreover, you are afraid that even information about equality of neighboring elements may be inconsistent. So, you are wondering: is there any array $$$a$$$ which is consistent with information you have about equality or non-equality of corresponding pairs?",
+  "inputFormat": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 1000$$$) — the number of test cases. Next $$$t$$$ cases follow. The first and only line of each test case contains a non-empty string $$$s$$$ consisting of characters E and/or N . The length of $$$s$$$ is equal to the size of array $$$n$$$ and $$$2 \\le n \\le 50$$$. For each $$$i$$$ from $$$1$$$ to $$$n$$$: if $$$s_i =$$$ E then $$$a_i$$$ is equal to $$$a_{i + 1}$$$ ($$$a_n = a_1$$$ for $$$i = n$$$); if $$$s_i =$$$ N then $$$a_i$$$ is not equal to $$$a_{i + 1}$$$ ($$$a_n \\neq a_1$$$ for $$$i = n$$$).",
+  "outputFormat": "For each test case, print YES if it's possible to choose array $$$a$$$ that are consistent with information from $$$s$$$ you know. Otherwise, print NO . It can be proved, that if there exists some array $$$a$$$, then there exists an array $$$a$$$ of positive integers with values less or equal to $$$10^9$$$.",
+  "sampleTests": [
+    {
+      "input": "4\nEEE\nEN\nENNEENE\nNENN",
+      "output": "YES\nNO\nYES\nYES"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1620/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

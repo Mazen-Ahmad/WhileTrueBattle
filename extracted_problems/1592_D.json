@@ -1,0 +1,24 @@
+{
+  "contestId": 1592,
+  "index": "D",
+  "name": "Hemose in ICPC ?",
+  "rating": 2300,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "This is an interactive problem! In the last regional contest Hemose, ZeyadKhattab and YahiaSherif — members of the team Carpe Diem — did not qualify to ICPC because of some un known reasons. Hemose was very sad and had a bad day after the contest, but ZeyadKhattab is very wise and knows Hemose very well, and does not want to see him sad. Zeyad knows that Hemose loves tree problems, so he gave him a tree problem with a very special device. Hemose has a weighted tree with $$$n$$$ nodes and $$$n-1$$$ edges. Unfortunately, Hemose doesn't remember the weights of edges. Let's define $$$Dist(u, v)$$$ for $$$u\\neq v$$$ as the greatest common divisor of the weights of all edges on the path from node $$$u$$$ to node $$$v$$$. Hemose has a special device. Hemose can give the device a set of nodes, and the device will return the largest $$$Dist$$$ between any two nodes from the set. More formally, if Hemose gives the device a set $$$S$$$ of nodes, the device will return the largest value of $$$Dist(u, v)$$$ over all pairs $$$(u, v)$$$ with $$$u$$$, $$$v$$$ $$$\\in$$$ $$$S$$$ and $$$u \\neq v$$$. Hemose can use this Device at most $$$12$$$ times , and wants to find any two distinct nodes $$$a$$$, $$$b$$$, such that $$$Dist(a, b)$$$ is maximum possible. Can you help him?",
+  "inputFormat": "Input specification not found",
+  "outputFormat": "Output specification not found",
+  "sampleTests": [
+    {
+      "input": "6\n1 2\n2 3\n2 4\n1 5\n5 6\n\n10\n\n2\n\n10",
+      "output": "? 6 1 2 3 4 5 6\n\n? 3 3 1 5\n\n? 2 1 2\n\n! 1 2"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1592/D",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

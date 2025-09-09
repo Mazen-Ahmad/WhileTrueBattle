@@ -1,0 +1,24 @@
+{
+  "contestId": 1510,
+  "index": "D",
+  "name": "Digits",
+  "rating": 2100,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Diana loves playing with numbers. She's got $$$n$$$ cards with positive integer numbers $$$a_i$$$ written on them. She spends her free time multiplying the numbers on the cards. She picks a non-empty subset of the cards and multiplies all the numbers $$$a_i$$$ written on them. Diana is happy when the product of the numbers ends with her favorite digit $$$d$$$. Now she is curious what cards she should pick so that the product of the numbers on them is the largest possible and the last decimal digit of the product is $$$d$$$. Please, help her.",
+  "inputFormat": "The first line contains the integers $$$n$$$ and $$$d$$$ ($$$1\\le n\\le 10^5$$$, $$$0\\le d\\le 9$$$). The second line contains $$$n$$$ integers $$$a_i$$$ ($$$1\\le a_i\\le 1000$$$).",
+  "outputFormat": "On the first line, print the number of chosen cards $$$k$$$ ($$$1\\le k\\le n$$$). On the next line, print the numbers written on the chosen cards in any order. If it is impossible to choose a subset of cards with the product that ends with the digit $$$d$$$, print the single line with $$$-1$$$.",
+  "sampleTests": [
+    {
+      "input": "6 4\n4 11 8 2 1 13",
+      "output": "5\n1 2 4 11 13"
+    }
+  ],
+  "timeLimit": 3000,
+  "memoryLimit": 512,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1510/D",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

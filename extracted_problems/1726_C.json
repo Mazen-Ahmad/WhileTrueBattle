@@ -1,0 +1,24 @@
+{
+  "contestId": 1726,
+  "index": "C",
+  "name": "Jatayu's Balanced Bracket Sequence",
+  "rating": 1300,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Last summer, Feluda gifted Lalmohan-Babu a balanced bracket sequence $$$s$$$ of length $$$2 n$$$. Topshe was bored during his summer vacations, and hence he decided to draw an undirected graph of $$$2 n$$$ vertices using the balanced bracket sequence $$$s$$$. For any two distinct vertices $$$i$$$ and $$$j$$$ ($$$1 \\le i < j \\le 2 n$$$), Topshe draws an edge (undirected and unweighted) between these two nodes if and only if the subsegment $$$s[i \\ldots j]$$$ forms a balanced bracket sequence. Determine the number of connected components in Topshe's graph. See the Notes section for definitions of the underlined terms.",
+  "inputFormat": "Each test contains multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^5$$$) — the number of test cases. Description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 10^5$$$) — the number of opening brackets in string $$$s$$$. The second line of each test case contains a string $$$s$$$ of length $$$2 n$$$ — a balanced bracket sequence consisting of $$$n$$$ opening brackets \" ( \", and $$$n$$$ closing brackets \" ) \". It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^5$$$.",
+  "outputFormat": "For each test case, output a single integer — the number of connected components in Topshe's graph.",
+  "sampleTests": [
+    {
+      "input": "4\n1\n()\n3\n()(())\n3\n((()))\n4\n(())(())",
+      "output": "1\n2\n3\n3"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1726/C",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

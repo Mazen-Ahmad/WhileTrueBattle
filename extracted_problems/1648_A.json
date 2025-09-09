@@ -1,0 +1,24 @@
+{
+  "contestId": 1648,
+  "index": "A",
+  "name": "Weird Sum",
+  "rating": 1400,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Egor has a table of size $$$n \\times m$$$, with lines numbered from $$$1$$$ to $$$n$$$ and columns numbered from $$$1$$$ to $$$m$$$. Each cell has a color that can be presented as an integer from $$$1$$$ to $$$10^5$$$. Let us denote the cell that lies in the intersection of the $$$r$$$-th row and the $$$c$$$-th column as $$$(r, c)$$$. We define the manhattan distance between two cells $$$(r_1, c_1)$$$ and $$$(r_2, c_2)$$$ as the length of a shortest path between them where each consecutive cells in the path must have a common side. The path can go through cells of any color. For example, in the table $$$3 \\times 4$$$ the manhattan distance between $$$(1, 2)$$$ and $$$(3, 3)$$$ is $$$3$$$, one of the shortest paths is the following: $$$(1, 2) \\to (2, 2) \\to (2, 3) \\to (3, 3)$$$. Egor decided to calculate the sum of manhattan distances between each pair of cells of the same color. Help him to calculate this sum.",
+  "inputFormat": "The first line contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\leq n \\le m$$$, $$$n \\cdot m \\leq 100\\,000$$$) — number of rows and columns in the table. Each of next $$$n$$$ lines describes a row of the table. The $$$i$$$-th line contains $$$m$$$ integers $$$c_{i1}, c_{i2}, \\ldots, c_{im}$$$ ($$$1 \\le c_{ij} \\le 100\\,000$$$) — colors of cells in the $$$i$$$-th row.",
+  "outputFormat": "Print one integer — the the sum of manhattan distances between each pair of cells of the same color.",
+  "sampleTests": [
+    {
+      "input": "2 3\n1 2 3\n3 2 1",
+      "output": "7"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1648/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

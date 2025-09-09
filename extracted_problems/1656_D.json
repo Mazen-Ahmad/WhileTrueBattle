@@ -1,0 +1,24 @@
+{
+  "contestId": 1656,
+  "index": "D",
+  "name": "K-good",
+  "rating": 1900,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "We say that a positive integer $$$n$$$ is $$$k$$$-good for some positive integer $$$k$$$ if $$$n$$$ can be expressed as a sum of $$$k$$$ positive integers which give $$$k$$$ distinct remainders when divided by $$$k$$$. Given a positive integer $$$n$$$, find some $$$k \\geq 2$$$ so that $$$n$$$ is $$$k$$$-good or tell that such a $$$k$$$ does not exist.",
+  "inputFormat": "The input consists of multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\leq t \\leq 10^5$$$) — the number of test cases. Each test case consists of one line with an integer $$$n$$$ ($$$2 \\leq n \\leq 10^{18}$$$).",
+  "outputFormat": "For each test case, print a line with a value of $$$k$$$ such that $$$n$$$ is $$$k$$$-good ($$$k \\geq 2$$$), or $$$-1$$$ if $$$n$$$ is not $$$k$$$-good for any $$$k$$$. If there are multiple valid values of $$$k$$$, you can print any of them.",
+  "sampleTests": [
+    {
+      "input": "5\n2\n4\n6\n15\n20",
+      "output": "-1\n-1\n3\n3\n5"
+    }
+  ],
+  "timeLimit": 3000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1656/D",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

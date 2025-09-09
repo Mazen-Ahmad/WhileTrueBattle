@@ -1,0 +1,24 @@
+{
+  "contestId": 1937,
+  "index": "A",
+  "name": "Shuffle Party",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given an array $$$a_1, a_2, \\ldots, a_n$$$. Initially, $$$a_i=i$$$ for each $$$1 \\le i \\le n$$$. The operation $$$\\texttt{swap}(k)$$$ for an integer $$$k \\ge 2$$$ is defined as follows: Let $$$d$$$ be the largest divisor$$$^\\dagger$$$ of $$$k$$$ which is not equal to $$$k$$$ itself. Then swap the elements $$$a_d$$$ and $$$a_k$$$. Suppose you perform $$$\\texttt{swap}(i)$$$ for each $$$i=2,3,\\ldots, n$$$ in this exact order. Find the position of $$$1$$$ in the resulting array. In other words, find such $$$j$$$ that $$$a_j = 1$$$ after performing these operations. $$$^\\dagger$$$ An integer $$$x$$$ is a divisor of $$$y$$$ if there exists an integer $$$z$$$ such that $$$y = x \\cdot z$$$.",
+  "inputFormat": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The only line of each test case contains one integer $$$n$$$ ($$$1 \\le n \\le 10^9$$$) — the length of the array $$$a$$$.",
+  "outputFormat": "For each test case, output the position of $$$1$$$ in the resulting array.",
+  "sampleTests": [
+    {
+      "input": "4\n1\n4\n5\n120240229",
+      "output": "1\n4\n4\n67108864"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1937/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

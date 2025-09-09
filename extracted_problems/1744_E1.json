@@ -1,0 +1,24 @@
+{
+  "contestId": 1744,
+  "index": "E1",
+  "name": "Divisible Numbers (easy version)",
+  "rating": 1500,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "This is an easy version of the problem. The only difference between an easy and a hard version is the constraints on $$$a$$$, $$$b$$$, $$$c$$$ and $$$d$$$. You are given $$$4$$$ positive integers $$$a$$$, $$$b$$$, $$$c$$$, $$$d$$$ with $$$a < c$$$ and $$$b < d$$$. Find any pair of numbers $$$x$$$ and $$$y$$$ that satisfies the following conditions: $$$a < x \\leq c$$$, $$$b < y \\leq d$$$, $$$x \\cdot y$$$ is divisible by $$$a \\cdot b$$$. Note that required $$$x$$$ and $$$y$$$ may not exist.",
+  "inputFormat": "The first line of the input contains a single integer $$$t$$$ $$$(1 \\leq t \\leq 10$$$), the number of test cases. The descriptions of the test cases follow. The only line of each test case contains four integers $$$a$$$, $$$b$$$, $$$c$$$ and $$$d$$$ ($$$1 \\leq a < c \\leq 10^5$$$, $$$1 \\leq b < d \\leq 10^5$$$).",
+  "outputFormat": "For each test case print a pair of numbers $$$a < x \\leq c$$$ and $$$b < y \\leq d$$$ such that $$$x \\cdot y$$$ is divisible by $$$a \\cdot b$$$. If there are multiple answers, print any of them. If there is no such pair of numbers, then print -1 -1 .",
+  "sampleTests": [
+    {
+      "input": "5\n1 1 2 2\n3 4 5 7\n8 9 15 18\n12 21 14 24\n36 60 48 66",
+      "output": "2 2\n4 6\n12 12\n-1 -1\n-1 -1"
+    }
+  ],
+  "timeLimit": 4000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1744/E1",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

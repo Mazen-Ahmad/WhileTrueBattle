@@ -1,0 +1,24 @@
+{
+  "contestId": 1764,
+  "index": "G1",
+  "name": "Doremy's Perfect DS Class (Easy Version)",
+  "rating": 2900,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "The only difference between this problem and the other two versions is the maximum number of queries. In this version, you are allowed to ask at most $$$\\mathbf{30}$$$ queries. You can make hacks only if all versions of the problem are solved. This is an interactive problem . \"Everybody! Doremy's Perfect Data Structure Class is about to start! Come and do your best if you want to have as much IQ as me!\" In today's Data Structure class, Doremy is teaching everyone a powerful data structure — Doremy tree! Now she gives you a quiz to prove that you are paying attention in class. Given an array $$$a$$$ of length $$$m$$$, Doremy tree supports the query $$$Q(l,r,k)$$$, where $$$1 \\leq l \\leq r \\leq m$$$ and $$$1 \\leq k \\leq m$$$, which returns the number of distinct integers in the array $$$\\left[\\lfloor\\frac{a_l}{k} \\rfloor, \\lfloor\\frac{a_{l+1}}{k} \\rfloor, \\ldots, \\lfloor\\frac{a_r}{k} \\rfloor\\right]$$$. Doremy has a secret permutation $$$p$$$ of integers from $$$1$$$ to $$$n$$$. You can make queries, in one query, you give $$$3$$$ integers $$$l,r,k$$$ ($$$1 \\leq l \\leq r \\leq n$$$, $$$1 \\leq k \\leq n$$$) and receive the value of $$$Q(l,r,k)$$$ for the array $$$p$$$. Can you find the index $$$y$$$ ($$$1 \\leq y \\leq n$$$) such that $$$p_y=1$$$ in at most $$$\\mathbf{30}$$$ queries? Note that the permutation $$$p$$$ is fixed before any queries are made.",
+  "inputFormat": "Input specification not found",
+  "outputFormat": "Output specification not found",
+  "sampleTests": [
+    {
+      "input": "5\n\n2\n\n2\n\n1\n\n3",
+      "output": "? 1 3 4\n\n? 3 5 3\n\n? 3 4 5\n\n? 3 5 2\n\n! 4"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1764/G1",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

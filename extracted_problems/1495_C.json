@@ -1,0 +1,24 @@
+{
+  "contestId": 1495,
+  "index": "C",
+  "name": "Garden of the Sun",
+  "rating": 2300,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "There are many sunflowers in the Garden of the Sun. Garden of the Sun is a rectangular table with $$$n$$$ rows and $$$m$$$ columns, where the cells of the table are farmlands. All of the cells grow a sunflower on it. Unfortunately, one night, the lightning stroke some (possibly zero) cells, and sunflowers on those cells were burned into ashes. In other words, those cells struck by the lightning became empty. Magically, any two empty cells have no common points (neither edges nor corners). Now the owner wants to remove some (possibly zero) sunflowers to reach the following two goals: When you are on an empty cell, you can walk to any other empty cell. In other words, those empty cells are connected. There is exactly one simple path between any two empty cells. In other words, there is no cycle among the empty cells. You can walk from an empty cell to another if they share a common edge. Could you please give the owner a solution that meets all her requirements? Note that you are not allowed to plant sunflowers. You don't need to minimize the number of sunflowers you remove. It can be shown that the answer always exists.",
+  "inputFormat": "The input consists of multiple test cases. The first line contains a single integer $$$t$$$ ($$$1\\le t\\le 10^4$$$) — the number of test cases. The description of the test cases follows. The first line contains two integers $$$n$$$, $$$m$$$ ($$$1 \\le n,m \\le 500$$$) — the number of rows and columns. Each of the next $$$n$$$ lines contains $$$m$$$ characters. Each character is either ' X ' or ' . ', representing an empty cell and a cell that grows a sunflower, respectively. It is guaranteed that the sum of $$$n \\cdot m$$$ for all test cases does not exceed $$$250\\,000$$$.",
+  "outputFormat": "For each test case, print $$$n$$$ lines. Each should contain $$$m$$$ characters, representing one row of the table. Each character should be either ' X ' or ' . ', representing an empty cell and a cell with a sunflower, respectively. If there are multiple answers, you can print any. It can be shown that the answer always exists.",
+  "sampleTests": [
+    {
+      "input": "5\n3 3\nX.X\n...\nX.X\n4 4\n....\n.X.X\n....\n.X.X\n5 5\n.X...\n....X\n.X...\n.....\nX.X.X\n1 10\n....X.X.X.\n2 2\n..\n..",
+      "output": "XXX\n..X\nXXX\nXXXX\n.X.X\n.X..\n.XXX\n.X...\n.XXXX\n.X...\n.X...\nXXXXX\nXXXXXXXXXX\n..\n.."
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1495/C",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

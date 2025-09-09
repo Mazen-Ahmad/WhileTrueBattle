@@ -1,0 +1,24 @@
+{
+  "contestId": 1646,
+  "index": "E",
+  "name": "Power Board",
+  "rating": 2200,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You have a rectangular board of size $$$n\\times m$$$ ($$$n$$$ rows, $$$m$$$ columns). The $$$n$$$ rows are numbered from $$$1$$$ to $$$n$$$ from top to bottom, and the $$$m$$$ columns are numbered from $$$1$$$ to $$$m$$$ from left to right. The cell at the intersection of row $$$i$$$ and column $$$j$$$ contains the number $$$i^j$$$ ($$$i$$$ raised to the power of $$$j$$$). For example, if $$$n=3$$$ and $$$m=3$$$ the board is as follows: Find the number of distinct integers written on the board.",
+  "inputFormat": "The only line contains two integers $$$n$$$ and $$$m$$$ ($$$1\\le n,m\\le 10^6$$$) — the number of rows and columns of the board.",
+  "outputFormat": "Print one integer, the number of distinct integers on the board.",
+  "sampleTests": [
+    {
+      "input": "3 3",
+      "output": "7"
+    }
+  ],
+  "timeLimit": 1500,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1646/E",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

@@ -1,0 +1,24 @@
+{
+  "contestId": 1698,
+  "index": "B",
+  "name": "Rising Sand",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "There are $$$n$$$ piles of sand where the $$$i$$$-th pile has $$$a_i$$$ blocks of sand. The $$$i$$$-th pile is called too tall if $$$1 < i < n$$$ and $$$a_i > a_{i-1} + a_{i+1}$$$. That is, a pile is too tall if it has more sand than its two neighbours combined. (Note that piles on the ends of the array cannot be too tall.) You are given an integer $$$k$$$. An operation consists of picking $$$k$$$ consecutive piles of sand and adding one unit of sand to them all. Formally, pick $$$1 \\leq l,r \\leq n$$$ such that $$$r-l+1=k$$$. Then for all $$$l \\leq i \\leq r$$$, update $$$a_i \\gets a_i+1$$$. What is the maximum number of piles that can simultaneously be too tall after some (possibly zero) operations?",
+  "inputFormat": "The input consists of multiple test cases. The first line contains an integer $$$t$$$ ($$$1 \\leq t \\leq 1000$$$) — the number of test cases. The description of the test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$k$$$ ($$$3 \\leq n \\leq 2 \\cdot 10^5$$$; $$$1 \\leq k \\leq n$$$) — the number of piles of sand and the size of the operation, respectively. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 10^9$$$) — the sizes of the piles. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "outputFormat": "For each test case, output a single integer — the maximum number of piles that are simultaneously too tall after some (possibly zero) operations.",
+  "sampleTests": [
+    {
+      "input": "3\n5 2\n2 9 2 4 1\n4 4\n1 3 2 1\n3 1\n1 3 1",
+      "output": "2\n0\n1"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1698/B",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

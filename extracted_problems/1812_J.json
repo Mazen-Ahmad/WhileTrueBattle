@@ -1,0 +1,24 @@
+{
+  "contestId": 1812,
+  "index": "J",
+  "name": "Unmysterious Language",
+  "rating": null,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "There is an unmysterious language. You should make a submission in this language, and the judge will read your submission to determine whether it is accepted. You can only submit in the Mysterious Language we have provided. You can view the judge's response by clicking the submission ID on the \"My Submissions\" page.",
+  "inputFormat": "Input specification not found",
+  "outputFormat": "Output specification not found",
+  "sampleTests": [
+    {
+      "input": "",
+      "output": ""
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1812/J",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

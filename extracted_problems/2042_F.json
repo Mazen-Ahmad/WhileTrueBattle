@@ -1,0 +1,24 @@
+{
+  "contestId": 2042,
+  "index": "F",
+  "name": "Two Subarrays",
+  "rating": 2600,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given two integer arrays $$$a$$$ and $$$b$$$, both of size $$$n$$$. Let's define the cost of the subarray $$$[l, r]$$$ as $$$a_l + a_{l + 1} + \\cdots + a_{r - 1} + a_r + b_l + b_r$$$. If $$$l=r$$$, then the cost of the subarray is $$$a_l + 2 \\cdot b_l$$$. You have to perform queries of three types: \"$$$1$$$ $$$p$$$ $$$x$$$\" — assign $$$a_{p} := x$$$; \"$$$2$$$ $$$p$$$ $$$x$$$\" — assign $$$b_{p} := x$$$; \"$$$3$$$ $$$l$$$ $$$r$$$\" — find two non-empty non-overlapping subarrays within the segment $$$[l, r]$$$ with the maximum total cost and print their total cost.",
+  "inputFormat": "The first line contains a single integer $$$n$$$ ($$$2 \\le n \\le 2 \\cdot 10^5$$$). The second line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$-10^9 \\le a_i \\le 10^9$$$). The third line contains $$$n$$$ integers $$$b_1, b_2, \\dots, b_n$$$ ($$$-10^9 \\le b_i \\le 10^9$$$). The fourth line contains a single integer $$$q$$$ ($$$1 \\le q \\le 2 \\cdot 10^5$$$). The next $$$q$$$ lines contain the queries: one per line. Each query is of one of three types: \"$$$1$$$ $$$p$$$ $$$x$$$\" ($$$1 \\le p \\le n$$$; $$$-10^9 \\le x \\le 10^9$$$); \"$$$2$$$ $$$p$$$ $$$x$$$\" ($$$1 \\le p \\le n$$$; $$$-10^9 \\le x \\le 10^9$$$); \"$$$3$$$ $$$l$$$ $$$r$$$\" ($$$1 \\le l < r \\le n$$$). It is guaranteed that there is at least one query of the third type.",
+  "outputFormat": "For each query of the third type, print the maximum possible total cost of two non-empty non-overlapping subarrays within the segment $$$[l, r]$$$.",
+  "sampleTests": [
+    {
+      "input": "7\n3 -1 4 -3 2 4 0\n0 6 1 0 -3 -2 -1\n6\n3 1 7\n1 2 0\n3 3 6\n2 5 -3\n1 3 2\n3 1 5",
+      "output": "18\n7\n16"
+    }
+  ],
+  "timeLimit": 3000,
+  "memoryLimit": 512,
+  "sourceUrl": "https://codeforces.com/problemset/problem/2042/F",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

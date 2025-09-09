@@ -1,0 +1,24 @@
+{
+  "contestId": 1985,
+  "index": "B",
+  "name": "Maximum Multiple Sum",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Given an integer $$$n$$$, find an integer $$$x$$$ such that: $$$2 \\leq x \\leq n$$$. The sum of multiples of $$$x$$$ that are less than or equal to $$$n$$$ is maximized. Formally, $$$x + 2x + 3x + \\dots + kx$$$ where $$$kx \\leq n$$$ is maximized over all possible values of $$$x$$$.",
+  "inputFormat": "The first line contains $$$t$$$ ($$$1 \\leq t \\leq 100$$$) — the number of test cases. Each test case contains a single integer $$$n$$$ ($$$2 \\leq n \\leq 100$$$).",
+  "outputFormat": "For each test case, output an integer, the optimal value of $$$x$$$. It can be shown there is only one unique answer.",
+  "sampleTests": [
+    {
+      "input": "2\n3\n15",
+      "output": "3\n2"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1985/B",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

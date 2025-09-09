@@ -1,0 +1,24 @@
+{
+  "contestId": 2040,
+  "index": "A",
+  "name": "Game of Division",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given an array of integers $$$a_1, a_2, \\ldots, a_n$$$ of length $$$n$$$ and an integer $$$k$$$. Two players are playing a game. The first player chooses an index $$$1 \\le i \\le n$$$. Then the second player chooses a different index $$$1 \\le j \\le n, i \\neq j$$$. The first player wins if $$$|a_i - a_j|$$$ is not divisible by $$$k$$$. Otherwise, the second player wins. We play as the first player. Determine whether it is possible to win, and if so, which index $$$i$$$ should be chosen. The absolute value of a number $$$x$$$ is denoted by $$$|x|$$$ and is equal to $$$x$$$ if $$$x \\ge 0$$$, and $$$-x$$$ otherwise.",
+  "inputFormat": "Each test contains multiple test cases. The first line of input contains a single integer $$$t$$$ ($$$1 \\le t \\le 100$$$) — the number of test cases. The description of the test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le n \\le 100$$$; $$$1 \\le k \\le 100$$$) — the length of the array and the number $$$k$$$. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 100$$$) — the elements of the array $$$a$$$.",
+  "outputFormat": "For each test case, if it is impossible for the first player to win, print \" NO \" (without quotes). Otherwise, print \" YES \" (without quotes) and on the next line the appropriate index $$$1 \\le i \\le n$$$. If there are multiple solutions, print any of them. You can output each letter in any case (lowercase or uppercase). For example, the strings \" yEs \", \" yes \", \" Yes \" and \" YES \" will be recognized as a positive answer.",
+  "sampleTests": [
+    {
+      "input": "7\n3 2\n1 2 3\n4 2\n1 2 4 5\n5 3\n10 7 3 4 5\n5 3\n1 31 15 55 36\n2 1\n17 17\n2 2\n17 18\n1 3\n6",
+      "output": "YES\n2\nNO\nYES\n3\nNO\nNO\nYES\n2\nYES\n1"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/2040/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

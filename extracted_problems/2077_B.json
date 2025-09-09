@@ -1,0 +1,24 @@
+{
+  "contestId": 2077,
+  "index": "B",
+  "name": "Finding OR Sum",
+  "rating": 1900,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "ALTER EGO - Yuta Imai vs Qlarabelle This is an interactive problem. There are two hidden non-negative integers $$$x$$$ and $$$y$$$ ($$$0 \\leq x, y < 2^{30}$$$). You can ask no more than $$$2$$$ queries of the following form. Pick a non-negative integer $$$n$$$ ($$$0 \\leq n < 2^{30}$$$). The judge will respond with the value of $$$(n \\mathbin{|} x) + (n \\mathbin{|} y)$$$, where $$$|$$$ denotes the bitwise OR operation . After this, the judge will give you another non-negative integer $$$m$$$ ($$$0 \\leq m < 2^{30}$$$). You must answer the correct value of $$$(m \\mathbin{|} x) + (m \\mathbin{|} y)$$$.",
+  "inputFormat": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows.",
+  "outputFormat": "Output specification not found",
+  "sampleTests": [
+    {
+      "input": "2\n\n3\n\n4\n\n1\n\n0\n\n1",
+      "output": "0\n\n1\n\n!\n\n4\n\n0\n\n!\n\n2"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/2077/B",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

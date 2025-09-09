@@ -1,0 +1,24 @@
+{
+  "contestId": 1854,
+  "index": "F",
+  "name": "Mark and Spaceship",
+  "rating": 3500,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Mark loves to move fast. So he made a spaceship that works in $$$4$$$-dimensional space. He wants to use the spaceship to complete missions as fast as possible. In each mission, the spaceship starts at $$$(0, 0, 0, 0)$$$ and needs to end up at $$$(a, b, c, d)$$$. To do this, he instructs the spaceship's computer to execute a series of moves, where each move is a unit step in one of the eight cardinal directions: $$$(\\pm 1, 0, 0, 0)$$$, $$$(0, \\pm 1, 0, 0)$$$, $$$(0, 0, \\pm 1, 0)$$$, $$$(0, 0, 0, \\pm 1)$$$. Unfortunately, he also moved fast when building the spaceship, so there is a bug in the spaceship's code. The first move will be executed once, the second move will be executed twice, the third move will be executed thrice, and so on. In general, the $$$i$$$-th move will be executed $$$i$$$ times. For any four integers $$$a, b, c, d$$$, let $$$f(a, b, c, d)$$$ be the minimum number of moves of a mission that ends up at $$$(a, b, c, d)$$$. Compute the sum of $$$f(a, b, c, d)$$$ over all points (with integer coordinates) such that $$$-A\\le a\\le A$$$, $$$-B\\le b\\le B$$$, $$$-C\\le c\\le C$$$, $$$-D\\le d\\le D$$$.",
+  "inputFormat": "The only line of the input contains the four integers $$$A, B, C, D$$$ ($$$0\\le A,B,C,D\\le 1000$$$).",
+  "outputFormat": "Print the sum of $$$f(a, b, c, d)$$$ over the set of points described in the statement.",
+  "sampleTests": [
+    {
+      "input": "1 0 0 0",
+      "output": "2"
+    }
+  ],
+  "timeLimit": 3000,
+  "memoryLimit": 512,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1854/F",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

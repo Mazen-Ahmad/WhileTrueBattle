@@ -1,0 +1,24 @@
+{
+  "contestId": 1714,
+  "index": "C",
+  "name": "Minimum Varied Number",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Find the minimum number with the given sum of digits $$$s$$$ such that all digits in it are distinct (i.e. all digits are unique). For example, if $$$s=20$$$, then the answer is $$$389$$$. This is the minimum number in which all digits are different and the sum of the digits is $$$20$$$ ($$$3+8+9=20$$$). For the given $$$s$$$ print the required number.",
+  "inputFormat": "The first line contains an integer $$$t$$$ ($$$1 \\le t \\le 45$$$) — the number of test cases. Each test case is specified by a line that contains the only integer $$$s$$$ ($$$1 \\le s \\le 45$$$).",
+  "outputFormat": "Print $$$t$$$ integers — the answers to the given test cases.",
+  "sampleTests": [
+    {
+      "input": "4\n20\n8\n45\n10",
+      "output": "389\n8\n123456789\n19"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1714/C",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

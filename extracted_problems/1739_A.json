@@ -1,0 +1,24 @@
+{
+  "contestId": 1739,
+  "index": "A",
+  "name": "Immobile Knight",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "There is a chess board of size $$$n \\times m$$$. The rows are numbered from $$$1$$$ to $$$n$$$, the columns are numbered from $$$1$$$ to $$$m$$$. Let's call a cell isolated if a knight placed in that cell can't move to any other cell on the board. Recall that a chess knight moves two cells in one direction and one cell in a perpendicular direction: Find any isolated cell on the board. If there are no such cells, print any cell on the board.",
+  "inputFormat": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 64$$$) — the number of testcases. The only line of each testcase contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n, m \\le 8$$$) — the number of rows and columns of the board.",
+  "outputFormat": "For each testcase, print two integers — the row and the column of any isolated cell on the board. If there are no such cells, print any cell on the board.",
+  "sampleTests": [
+    {
+      "input": "3\n1 7\n8 8\n3 3",
+      "output": "1 7\n7 2\n2 2"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1739/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

@@ -1,0 +1,24 @@
+{
+  "contestId": 1552,
+  "index": "A",
+  "name": "Subsequence Permutation",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "A string $$$s$$$ of length $$$n$$$, consisting of lowercase letters of the English alphabet, is given. You must choose some number $$$k$$$ between $$$0$$$ and $$$n$$$. Then, you select $$$k$$$ characters of $$$s$$$ and permute them however you want. In this process, the positions of the other $$$n-k$$$ characters remain unchanged. You have to perform this operation exactly once. For example, if $$$s=\\texttt{\"andrea\"}$$$, you can choose the $$$k=4$$$ characters $$$\\texttt{\"a_d_ea\"}$$$ and permute them into $$$\\texttt{\"d_e_aa\"}$$$ so that after the operation the string becomes $$$\\texttt{\"dneraa\"}$$$. Determine the minimum $$$k$$$ so that it is possible to sort $$$s$$$ alphabetically (that is, after the operation its characters appear in alphabetical order).",
+  "inputFormat": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 1000$$$) — the number of test cases. Then $$$t$$$ test cases follow. The first line of each test case contains one integer $$$n$$$ ($$$1 \\le n \\le 40$$$) — the length of the string. The second line of each test case contains the string $$$s$$$. It is guaranteed that $$$s$$$ contains only lowercase letters of the English alphabet.",
+  "outputFormat": "For each test case, output the minimum $$$k$$$ that allows you to obtain a string sorted alphabetically, through the operation described above.",
+  "sampleTests": [
+    {
+      "input": "4\n3\nlol\n10\ncodeforces\n5\naaaaa\n4\ndcba",
+      "output": "2\n6\n0\n4"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1552/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

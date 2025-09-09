@@ -1,0 +1,24 @@
+{
+  "contestId": 1859,
+  "index": "B",
+  "name": "Olya and Game with Arrays",
+  "rating": 1000,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Artem suggested a game to the girl Olya. There is a list of $$$n$$$ arrays, where the $$$i$$$-th array contains $$$m_i \\ge 2$$$ positive integers $$$a_{i,1}, a_{i,2}, \\ldots, a_{i,m_i}$$$. Olya can move at most one (possibly $$$0$$$) integer from each array to another array. Note that integers can be moved from one array only once, but integers can be added to one array multiple times , and all the movements are done at the same time . The beauty of the list of arrays is defined as the sum $$$\\sum_{i=1}^n \\min_{j=1}^{m_i} a_{i,j}$$$. In other words, for each array, we find the minimum value in it and then sum up these values. The goal of the game is to maximize the beauty of the list of arrays. Help Olya win this challenging game!",
+  "inputFormat": "Each test consists of multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 25000$$$) — the number of test cases. The description of test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 25000$$$) — the number of arrays in the list. This is followed by descriptions of the arrays. Each array description consists of two lines. The first line contains a single integer $$$m_i$$$ ($$$2 \\le m_i \\le 50000$$$) — the number of elements in the $$$i$$$-th array. The next line contains $$$m_i$$$ integers $$$a_{i, 1}, a_{i, 2}, \\ldots, a_{i, m_i}$$$ ($$$1 \\le a_{i,j} \\le 10^9$$$) — the elements of the $$$i$$$-th array. It is guaranteed that the sum of $$$m_i$$$ over all test cases does not exceed $$$50000$$$.",
+  "outputFormat": "For each test case, output a single line containing a single integer — the maximum beauty of the list of arrays that Olya can achieve.",
+  "sampleTests": [
+    {
+      "input": "3\n2\n2\n1 2\n2\n4 3\n1\n3\n100 1 6\n3\n4\n1001 7 1007 5\n3\n8 11 6\n2\n2 9",
+      "output": "5\n1\n19"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1859/B",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

@@ -1,0 +1,24 @@
+{
+  "contestId": 1896,
+  "index": "H2",
+  "name": "Cyclic Hamming (Hard Version)",
+  "rating": 3500,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "This is the hard version of the problem. The only difference between the two versions is the constraint on $$$k$$$. You can make hacks only if all versions of the problem are solved. In this statement, all strings are $$$0$$$-indexed. For two strings $$$a$$$, $$$b$$$ of the same length $$$p$$$, we define the following definitions: The hamming distance between $$$a$$$ and $$$b$$$, denoted as $$$h(a, b)$$$, is defined as the number of positions $$$i$$$ such that $$$0 \\le i < p$$$ and $$$a_i \\ne b_i$$$. $$$b$$$ is a cyclic shift of $$$a$$$ if there exists some $$$0 \\leq k < p$$$ such that $$$b_{(i+k) \\bmod p} = a_i$$$ for all $$$0 \\le i < p$$$. Here $$$x \\bmod y$$$ denotes the remainder from dividing $$$x$$$ by $$$y$$$. You are given two binary strings $$$s$$$ and $$$t$$$ of length $$$2^{k+1}$$$ each. Both strings may contain missing characters (denoted by the character ' ? '). Your task is to count the number of ways to replace the missing characters in both strings with the characters ' 0 ' or ' 1 ' such that: Each string $$$s$$$ and $$$t$$$ contains exactly $$$2^k$$$ occurrences of each character ' 0 ' and ' 1 ' $$$h(s, c) \\ge 2^k$$$ for all strings $$$c$$$ that is a cyclic shift of $$$t$$$. As the result can be very large, you should print the value modulo $$$998\\,244\\,353$$$.",
+  "inputFormat": "The first line of the input contains a single integer $$$k$$$ ($$$1 \\le k \\le 12$$$). The second line of the input contains string $$$s$$$ of size $$$2^{k+1}$$$, consisting of the characters ' 0 ', ' 1 ' and ' ? '. The third line of the input contains string $$$t$$$ of size $$$2^{k+1}$$$, consisting of the characters ' 0 ', ' 1 ' and ' ? '. It is guaranteed that both strings $$$s$$$ and $$$t$$$ contains no more than $$$2^k$$$ character ' 0 ' or ' 1 '.",
+  "outputFormat": "Print a single integer — the answer to the problem modulo $$$998\\,244\\,353$$$.",
+  "sampleTests": [
+    {
+      "input": "1\n0011\n0101",
+      "output": "1"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1896/H2",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

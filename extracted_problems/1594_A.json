@@ -1,0 +1,24 @@
+{
+  "contestId": 1594,
+  "index": "A",
+  "name": "Consecutive Sum Riddle",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Theofanis has a riddle for you and if you manage to solve it, he will give you a Cypriot snack halloumi for free (Cypriot cheese). You are given an integer $$$n$$$. You need to find two integers $$$l$$$ and $$$r$$$ such that $$$-10^{18} \\le l < r \\le 10^{18}$$$ and $$$l + (l + 1) + \\ldots + (r - 1) + r = n$$$.",
+  "inputFormat": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The first and only line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 10^{18}$$$).",
+  "outputFormat": "For each test case, print the two integers $$$l$$$ and $$$r$$$ such that $$$-10^{18} \\le l < r \\le 10^{18}$$$ and $$$l + (l + 1) + \\ldots + (r - 1) + r = n$$$. It can be proven that an answer always exists. If there are multiple answers, print any.",
+  "sampleTests": [
+    {
+      "input": "7\n1\n2\n3\n6\n100\n25\n3000000000000",
+      "output": "0 1\n-1 2 \n1 2 \n1 3 \n18 22\n-2 7\n999999999999 1000000000001"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1594/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

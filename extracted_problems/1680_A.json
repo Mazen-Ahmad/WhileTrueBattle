@@ -1,0 +1,24 @@
+{
+  "contestId": 1680,
+  "index": "A",
+  "name": "Minimums and Maximums",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "An array is beautiful if both of the following two conditions meet: there are at least $$$l_1$$$ and at most $$$r_1$$$ elements in the array equal to its minimum; there are at least $$$l_2$$$ and at most $$$r_2$$$ elements in the array equal to its maximum. For example, the array $$$[2, 3, 2, 4, 4, 3, 2]$$$ has $$$3$$$ elements equal to its minimum ($$$1$$$-st, $$$3$$$-rd and $$$7$$$-th) and $$$2$$$ elements equal to its maximum ($$$4$$$-th and $$$5$$$-th). Another example: the array $$$[42, 42, 42]$$$ has $$$3$$$ elements equal to its minimum and $$$3$$$ elements equal to its maximum. Your task is to calculate the minimum possible number of elements in a beautiful array.",
+  "inputFormat": "The first line contains one integer $$$t$$$ ($$$1 \\le t \\le 5000$$$) — the number of test cases. Each test case consists of one line containing four integers $$$l_1$$$, $$$r_1$$$, $$$l_2$$$ and $$$r_2$$$ ($$$1 \\le l_1 \\le r_1 \\le 50$$$; $$$1 \\le l_2 \\le r_2 \\le 50$$$).",
+  "outputFormat": "For each test case, print one integer — the minimum possible number of elements in a beautiful array.",
+  "sampleTests": [
+    {
+      "input": "7\n3 5 4 6\n5 8 5 5\n3 3 10 12\n1 5 3 3\n1 1 2 2\n2 2 1 1\n6 6 6 6",
+      "output": "4\n5\n13\n3\n3\n3\n6"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 512,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1680/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

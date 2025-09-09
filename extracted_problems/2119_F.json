@@ -1,0 +1,24 @@
+{
+  "contestId": 2119,
+  "index": "F",
+  "name": "Volcanic Eruptions",
+  "rating": 3300,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "There is an undirected tree with root $$$1$$$ where each vertex has a weight $$$w_i\\in\\{1,-1\\}$$$. A volcano at the root erupts at time $$$0$$$. At time $$$t$$$, lava floods all vertices whose distance from the root is at most $$$t$$$, where the distance is the number of edges in the shortest path between the two vertices. At time $$$0$$$, you are at vertex $$$st$$$ with life value $$$S$$$, initially $$$S=1$$$. Starting at time $$$0$$$ (including time $$$0$$$), the following events happen in order at each time stamp: Let $$$u$$$ be the vertex you are currently at. Your life value increases by $$$w_u$$$, i.e., $$$S\\gets S+w_u$$$. If $$$S=0$$$ or if vertex $$$u$$$ is flooded with lava at this time, you die immediately. You must move to an adjacent vertex (includes father and sons; staying in place is not allowed). You arrive at the chosen vertex at the next time stamp. Find the maximum number of moves you can make before you die.",
+  "inputFormat": "Each test contains multiple test cases. The first line contains the number of test cases $$$T$$$ ($$$1 \\le T \\le 10^4$$$). The description of the test cases follows. For each test case, the first line contains two integers $$$n,st$$$ ($$$2 \\le st \\le n \\le 5\\cdot 10^5$$$), denoting the number of vertices and the vertex you start at at time stamp $$$0$$$. The second line contains $$$n$$$ integers $$$w_1, w_2, \\ldots, w_n$$$ ($$$w_i\\in\\{1,-1\\}$$$,$$$w_{st}=1$$$), where $$$w_i$$$ represents the weight of the vertex $$$i$$$. The next $$$n-1$$$ lines each contain two integers $$$u,v$$$ ($$$1\\le u,v \\le n$$$), which describe a pair of vertices connected by an edge. It is guaranteed that the given graph is a tree and the sum of $$$n$$$ over all test cases does not exceed $$$10^6$$$.",
+  "outputFormat": "For each test case, output a line with an integer indicating the maximum number of moves you can make.",
+  "sampleTests": [
+    {
+      "input": "6\n7 4\n-1 -1 -1 1 1 1 -1\n2 1\n3 2\n4 3\n5 4\n6 5\n7 6\n8 2\n-1 1 1 1 1 -1 1 1\n2 1\n6 2\n8 6\n3 8\n7 3\n5 7\n4 5\n8 2\n-1 1 -1 -1 -1 1 -1 -1\n2 1\n8 2\n4 1\n5 4\n3 4\n7 2\n6 8\n8 4\n1 1 1 1 1 -1 1 -1\n8 1\n3 1\n4 3\n5 4\n6 4\n7 6\n2 5\n8 4\n1 1 1 1 -1 -1 1 1\n2 1\n5 1\n4 5\n8 5\n3 8\n7 2\n6 2\n18 10\n-1 -1 -1 -1 -1 -1 -1 -1 -1 1 -1 1 1 -1 1 1 1 1\n1 2\n2 3\n3 4\n4 5\n5 6\n6 7\n7 8\n8 9\n9 10\n10 11\n11 12\n12 13\n9 14\n14 15\n15 16\n16 17\n17 18",
+      "output": "6\n7\n3\n3\n1\n13"
+    }
+  ],
+  "timeLimit": 3000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/2119/F",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

@@ -1,0 +1,24 @@
+{
+  "contestId": 1617,
+  "index": "A",
+  "name": "Forbidden Subsequence",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given strings $$$S$$$ and $$$T$$$, consisting of lowercase English letters. It is guaranteed that $$$T$$$ is a permutation of the string abc . Find string $$$S'$$$, the lexicographically smallest permutation of $$$S$$$ such that $$$T$$$ is not a subsequence of $$$S'$$$. String $$$a$$$ is a permutation of string $$$b$$$ if the number of occurrences of each distinct character is the same in both strings. A string $$$a$$$ is a subsequence of a string $$$b$$$ if $$$a$$$ can be obtained from $$$b$$$ by deletion of several (possibly, zero or all) elements. A string $$$a$$$ is lexicographically smaller than a string $$$b$$$ if and only if one of the following holds: $$$a$$$ is a prefix of $$$b$$$, but $$$a \\ne b$$$; in the first position where $$$a$$$ and $$$b$$$ differ, the string $$$a$$$ has a letter that appears earlier in the alphabet than the corresponding letter in $$$b$$$.",
+  "inputFormat": "Each test contains multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 1000$$$) — the number of test cases. Description of the test cases follows. The first line of each test case contains a string $$$S$$$ ($$$1 \\le |S| \\le 100$$$), consisting of lowercase English letters. The second line of each test case contains a string $$$T$$$ that is a permutation of the string abc . (Hence, $$$|T| = 3$$$). Note that there is no limit on the sum of $$$|S|$$$ across all test cases.",
+  "outputFormat": "For each test case, output a single string $$$S'$$$, the lexicographically smallest permutation of $$$S$$$ such that $$$T$$$ is not a subsequence of $$$S'$$$.",
+  "sampleTests": [
+    {
+      "input": "7\nabacaba\nabc\ncccba\nacb\ndbsic\nbac\nabracadabra\nabc\ndddddddddddd\ncba\nbbc\nabc\nac\nabc",
+      "output": "aaaacbb\nabccc\nbcdis\naaaaacbbdrr\ndddddddddddd\nbbc\nac"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1617/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

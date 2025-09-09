@@ -1,0 +1,24 @@
+{
+  "contestId": 1505,
+  "index": "F",
+  "name": "Math",
+  "rating": 2200,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "*The two images are equivalent, feel free to use either one.",
+  "inputFormat": "The input contains a single integer $$$a$$$ ($$$-100 \\le a \\le 100$$$).",
+  "outputFormat": "Output the result – an integer number.",
+  "sampleTests": [
+    {
+      "input": "1",
+      "output": "1"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1505/F",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

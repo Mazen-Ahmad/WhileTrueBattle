@@ -1,0 +1,24 @@
+{
+  "contestId": 1626,
+  "index": "A",
+  "name": "Equidistant Letters",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given a string $$$s$$$, consisting of lowercase Latin letters. Every letter appears in it no more than twice. Your task is to rearrange the letters in the string in such a way that for each pair of letters that appear exactly twice, the distance between the letters in the pair is the same. You are not allowed to add or remove letters. It can be shown that the answer always exists. If there are multiple answers, print any of them.",
+  "inputFormat": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^3$$$) — the number of testcases. Each testcase consists of a non-empty string $$$s$$$, consisting of lowercase Latin letters. Every letter appears in the string no more than twice. The length of the string doesn't exceed $$$52$$$.",
+  "outputFormat": "For each testcase, print a single string. Every letter should appear in it the same number of times as it appears in string $$$s$$$. For each pair of letters that appear exactly twice, the distance between the letters in the pair should be the same. If there are multiple answers, print any of them.",
+  "sampleTests": [
+    {
+      "input": "3\noelhl\nabcdcba\nac",
+      "output": "hello\nababcdc\nac"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1626/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

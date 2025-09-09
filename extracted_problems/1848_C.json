@@ -1,0 +1,24 @@
+{
+  "contestId": 1848,
+  "index": "C",
+  "name": "Vika and Price Tags",
+  "rating": 1800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Vika came to her favorite cosmetics store \"Golden Pear\". She noticed that the prices of $$$n$$$ items have changed since her last visit. She decided to analyze how much the prices have changed and calculated the difference between the old and new prices for each of the $$$n$$$ items. Vika enjoyed calculating the price differences and decided to continue this process. Let the old prices be represented as an array of non-negative integers $$$a$$$, and the new prices as an array of non-negative integers $$$b$$$. Both arrays have the same length $$$n$$$. In one operation, Vika constructs a new array $$$c$$$ according to the following principle: $$$c_i = |a_i - b_i|$$$. Then, array $$$c$$$ renamed into array $$$b$$$, and array $$$b$$$ renamed into array $$$a$$$ at the same time, after which Vika repeats the operation with them. For example, if $$$a = [1, 2, 3, 4, 5, 6, 7]$$$; $$$b = [7, 6, 5, 4, 3, 2, 1]$$$, then $$$c = [6, 4, 2, 0, 2, 4, 6]$$$. Then, $$$a = [7, 6, 5, 4, 3, 2, 1]$$$; $$$b = [6, 4, 2, 0, 2, 4, 6]$$$. Vika decided to call a pair of arrays $$$a$$$, $$$b$$$ dull if after some number of such operations all elements of array $$$a$$$ become zeros. Output \" YES \" if the original pair of arrays is dull, and \" NO \" otherwise.",
+  "inputFormat": "Each test consists of multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 10^5$$$) — the number of items whose prices have changed. The second line contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$0 \\le a_i \\le 10^9$$$) — the old prices of the items. The third line contains $$$n$$$ integers $$$b_1, b_2, \\ldots, b_n$$$ ($$$0 \\le b_i \\le 10^9$$$) — the new prices of the items. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^5$$$.",
+  "outputFormat": "For each test case, output \" YES \" if the pair of price arrays is dull, and \" NO \" otherwise. You can output each letter in any case (lowercase or uppercase). For example, the strings \" yEs \", \" yes \", \" Yes \", and \" YES \" will be accepted as a positive answer.",
+  "sampleTests": [
+    {
+      "input": "9\n4\n0 0 0 0\n1 2 3 4\n3\n1 2 3\n1 2 3\n2\n1 2\n2 1\n6\n100 23 53 11 56 32\n1245 31 12 6 6 6\n7\n1 2 3 4 5 6 7\n7 6 5 4 3 2 1\n3\n4 0 2\n4 0 2\n3\n2 5 2\n1 3 4\n2\n6 1\n4 2\n2\n0 0\n0 3",
+      "output": "YES\nYES\nNO\nNO\nYES\nYES\nNO\nYES\nYES"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1848/C",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

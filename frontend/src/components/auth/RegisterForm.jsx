@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { useAuth } from '../../contexts/AuthContext';
 import Button from '../common/Button';
 import Input from '../common/Input';
@@ -78,8 +79,20 @@ const RegisterForm = ({ onSwitchToLogin }) => {
   };
 
   return (
-    <div className="max-w-md mx-auto bg-white rounded-lg shadow-md p-6">
-      <h2 className="text-2xl font-bold text-center mb-6">Sign Up</h2>
+    <motion.div 
+      className="max-w-md mx-auto bg-white rounded-lg shadow-md p-6"
+      initial={{ scale: 0.9, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
+      <motion.h2 
+        className="text-2xl font-bold text-center mb-6"
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+      >
+        Sign Up
+      </motion.h2>
       
       <form onSubmit={handleSubmit}>
         {errors.general && (
@@ -128,27 +141,39 @@ const RegisterForm = ({ onSwitchToLogin }) => {
           required
         />
 
-        <Button
-          type="submit"
-          variant="primary"
-          size="large"
-          loading={loading}
-          className="w-full"
+        <motion.div
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
         >
-          Sign Up
-        </Button>
+          <Button
+            type="submit"
+            variant="primary"
+            size="large"
+            loading={loading}
+            className="w-full btn-primary"
+          >
+            Sign Up
+          </Button>
+        </motion.div>
       </form>
 
-      <p className="mt-4 text-center text-gray-600">
+      <motion.p 
+        className="mt-4 text-center text-gray-600"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+      >
         Already have an account?{' '}
-        <button
+        <motion.button
           onClick={onSwitchToLogin}
           className="text-blue-600 hover:text-blue-800 font-medium"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
         >
           Login
-        </button>
-      </p>
-    </div>
+        </motion.button>
+      </motion.p>
+    </motion.div>
   );
 };
 

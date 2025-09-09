@@ -1,0 +1,24 @@
+{
+  "contestId": 1811,
+  "index": "D",
+  "name": "Umka and a Long Flight",
+  "rating": 1600,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "The girl Umka loves to travel and participate in math olympiads. One day she was flying by plane to the next olympiad and out of boredom explored a huge checkered sheet of paper. Denote the $$$n$$$-th Fibonacci number as $$$F_n = \\begin{cases} 1, & n = 0; \\\\ 1, & n = 1; \\\\ F_{n-2} + F_{n-1}, & n \\ge 2. \\end{cases}$$$ A checkered rectangle with a height of $$$F_n$$$ and a width of $$$F_{n+1}$$$ is called a Fibonacci rectangle of order $$$n$$$. Umka has a Fibonacci rectangle of order $$$n$$$. Someone colored a cell in it at the intersection of the row $$$x$$$ and the column $$$y$$$. It is necessary to cut this rectangle exactly into $$$n+1$$$ squares in such way that the painted cell was in a square with a side of $$$1$$$; there was at most one pair of squares with equal sides; the side of each square was equal to a Fibonacci number. Will Umka be able to cut this rectangle in that way?",
+  "inputFormat": "The first line contains an integer $$$t$$$ ($$$1 \\le t \\le 2 \\cdot 10^5$$$) — number of test cases. For each test case the integers $$$n$$$, $$$x$$$, $$$y$$$ are given ($$$1 \\le n \\le 44$$$, $$$1 \\le x \\le F_n$$$, $$$1 \\le y \\le F_{n+1}$$$) — the order of the Fibonacci rectangle and the coordinates of the colored cell.",
+  "outputFormat": "For each test case, print \" YES \" if the answer is positive, and \" NO \" otherwise. You can print \" YES \" and \" NO \" in any case (for example, the strings \" yEs \", \" yes \" and \" Yes \" will be recognized as a positive answer).",
+  "sampleTests": [
+    {
+      "input": "12\n1 1 1\n2 1 2\n3 1 4\n3 3 2\n4 4 6\n4 3 3\n5 6 5\n5 4 12\n5 2 12\n4 2 1\n1 1 2\n44 758465880 1277583853",
+      "output": "YES\nNO\nYES\nYES\nYES\nNO\nYES\nNO\nNO\nYES\nYES\nNO"
+    }
+  ],
+  "timeLimit": 3000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1811/D",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

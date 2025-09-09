@@ -1,0 +1,24 @@
+{
+  "contestId": 2095,
+  "index": "F",
+  "name": "⅓ оf а Рrоblеm",
+  "rating": null,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "$$$$$$a\\qquad \\mathord{4}\\qquad \\mathord{+}\\qquad \\mathord{-}\\qquad \\mathord{+}\\qquad \\mathord{-}\\qquad \\mathord{)}\\qquad \\mathord{2}$$$$$$",
+  "inputFormat": "Input specification not found",
+  "outputFormat": "Output specification not found",
+  "sampleTests": [
+    {
+      "input": "0 1",
+      "output": "0"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/2095/F",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

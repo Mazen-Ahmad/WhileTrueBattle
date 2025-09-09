@@ -1,0 +1,24 @@
+{
+  "contestId": 1842,
+  "index": "H",
+  "name": "Tenzing and Random Real Numbers",
+  "rating": 3000,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "There are $$$n$$$ uniform random real variables between 0 and 1, inclusive, which are denoted as $$$x_1, x_2, \\ldots, x_n$$$. Tenzing has $$$m$$$ conditions. Each condition has the form of $$$x_i+x_j\\le 1$$$ or $$$x_i+x_j\\ge 1$$$. Tenzing wants to know the probability that all the conditions are satisfied, modulo $$$998~244~353$$$. Formally, let $$$M = 998~244~353$$$. It can be shown that the answer can be expressed as an irreducible fraction $$$\\frac{p}{q}$$$, where $$$p$$$ and $$$q$$$ are integers and $$$q \\not \\equiv 0 \\pmod{M}$$$. Output the integer equal to $$$p \\cdot q^{-1} \\bmod M$$$. In other words, output the integer $$$x$$$ that $$$0 \\le x < M$$$ and $$$x \\cdot q \\equiv p \\pmod{M}$$$.",
+  "inputFormat": "The first line contains two integers $$$n$$$ and $$$m$$$ ($$$1\\le n\\le 20$$$, $$$0\\le m\\le n^2+n$$$). Then following $$$m$$$ lines of input contains three integers $$$t$$$, $$$i$$$ and $$$j$$$ ($$$t \\in \\{0,1\\}$$$, $$$1\\le i\\le j\\le n$$$). If $$$t=0$$$, the condition is $$$x_i+x_j\\le 1$$$. If $$$t=1$$$, the condition is $$$x_i+x_j\\ge 1$$$. It is guaranteed that all conditions are pairwise distinct.",
+  "outputFormat": "Output the probability that all the conditions are satisfied, modulo $$$M = 998~244~353$$$.",
+  "sampleTests": [
+    {
+      "input": "3 2\n0 1 2\n1 3 3",
+      "output": "748683265"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 1024,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1842/H",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

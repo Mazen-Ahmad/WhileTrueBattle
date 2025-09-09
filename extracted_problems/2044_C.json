@@ -1,0 +1,24 @@
+{
+  "contestId": 2044,
+  "index": "C",
+  "name": "Hard Problem",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Ball is the teacher in Paperfold University. The seats of his classroom are arranged in $$$2$$$ rows with $$$m$$$ seats each. Ball is teaching $$$a + b + c$$$ monkeys, and he wants to assign as many monkeys to a seat as possible. Ball knows that $$$a$$$ of them only want to sit in row $$$1$$$, $$$b$$$ of them only want to sit in row $$$2$$$, and $$$c$$$ of them have no preference. Only one monkey may sit in each seat, and each monkey's preference must be followed if it is seated. What is the maximum number of monkeys that Ball can seat?",
+  "inputFormat": "The first line contains an integer $$$t$$$ ($$$1 \\leq t \\leq 10^4$$$) — the number of test cases. Each test case contains four integers $$$m$$$, $$$a$$$, $$$b$$$, and $$$c$$$ ($$$1 \\leq m, a, b, c \\leq 10^8$$$).",
+  "outputFormat": "For each test case, output the maximum number of monkeys you can seat.",
+  "sampleTests": [
+    {
+      "input": "5\n10 5 5 10\n3 6 1 1\n15 14 12 4\n1 1 1 1\n420 6 9 69",
+      "output": "20\n5\n30\n2\n84"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/2044/C",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

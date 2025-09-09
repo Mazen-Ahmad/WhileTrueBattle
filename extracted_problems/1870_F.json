@@ -1,0 +1,24 @@
+{
+  "contestId": 1870,
+  "index": "F",
+  "name": "Lazy Numbers",
+  "rating": 2900,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given positive integers $$$n$$$ and $$$k$$$. For each number from $$$1$$$ to $$$n$$$, we write its representation in the number system with base $$$k$$$ (without leading zeros) and then sort the resulting array in lexicographic order as strings. In the sorted array, we number the elements from $$$1$$$ to $$$n$$$ (i.e., indexing starts from $$$1$$$). Find the number of values $$$i$$$ such that the representation of number $$$i$$$ is at the $$$i$$$-th position in the sorted array of representations. Examples of representations: $$$1$$$ in any number system is equal to $$$1$$$, $$$7$$$ with $$$k = 3$$$ is written as $$$21$$$, and $$$81$$$ with $$$k = 9$$$ is written as $$$100$$$.",
+  "inputFormat": "The first line contains a single integer $$$t$$$ ($$$1 \\leq t \\leq 10^3$$$) — the number of test cases. This is followed by a description of the test cases. The only line of each test case contains integers $$$n$$$ and $$$k$$$ ($$$1 \\leq n \\leq 10^{18}$$$, $$$2 \\leq k \\leq 10^{18}$$$).",
+  "outputFormat": "For each test case, output a single integer — the number of values $$$1 \\leq i \\leq n$$$ such that the representation of number $$$i$$$ in the number system with base $$$k$$$ is at the $$$i$$$-th position after sorting.",
+  "sampleTests": [
+    {
+      "input": "8\n2 2\n4 2\n6 4\n33 2\n532 13\n780011804570805480 3788\n366364720306464627 4702032149561577\n293940402103595405 2",
+      "output": "2\n2\n1\n3\n1\n3789\n1\n7"
+    }
+  ],
+  "timeLimit": 3000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1870/F",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

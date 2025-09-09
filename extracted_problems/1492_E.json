@@ -1,0 +1,24 @@
+{
+  "contestId": 1492,
+  "index": "E",
+  "name": "Almost Fault-Tolerant Database",
+  "rating": 2500,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are storing an integer array of length $$$m$$$ in a database. To maintain internal integrity and protect data, the database stores $$$n$$$ copies of this array. Unfortunately, the recent incident may have altered the stored information in every copy in the database. It's believed, that the incident altered at most two elements in every copy. You need to recover the original array based on the current state of the database. In case there are multiple ways to restore the array, report any. If there is no array that differs from every copy in no more than two positions, report that as well.",
+  "inputFormat": "The first line contains integers $$$n$$$ and $$$m$$$ ($$$2 \\le n$$$; $$$1 \\le m$$$; $$$n \\cdot m \\le 250\\,000$$$) — the number of copies and the size of the array. Each of the following $$$n$$$ lines describes one of the currently stored copies in the database, it consists of $$$m$$$ integers $$$s_{i, 1}, s_{i, 2}, \\dots, s_{i, m}$$$ ($$$1 \\le s_{i, j} \\le 10^9$$$).",
+  "outputFormat": "If there is an array consistent with all given copies, print \" Yes \" and then the array itself. The array must have length $$$m$$$ and contain integers between $$$1$$$ and $$$10^9$$$ only. Otherwise, print \" No \". If there are multiple possible arrays, print any of them.",
+  "sampleTests": [
+    {
+      "input": "3 4\n1 10 10 100\n1 1 1 100\n10 100 1 100",
+      "output": "Yes\n1 10 1 100"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 512,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1492/E",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

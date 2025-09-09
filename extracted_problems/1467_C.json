@@ -1,0 +1,24 @@
+{
+  "contestId": 1467,
+  "index": "C",
+  "name": "Three Bags",
+  "rating": 1900,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given three bags. Each bag contains a non-empty multiset of numbers. You can perform a number of operations on these bags. In one operation, you can choose any two non-empty bags, and choose one number from each of the bags. Let's say that you choose number $$$a$$$ from the first bag and number $$$b$$$ from the second bag. Then, you remove $$$b$$$ from the second bag and replace $$$a$$$ with $$$a-b$$$ in the first bag. Note that if there are multiple occurrences of these numbers, then you shall only remove/replace exactly one occurrence. You have to perform these operations in such a way that you have exactly one number remaining in exactly one of the bags (the other two bags being empty). It can be shown that you can always apply these operations to receive such a configuration in the end. Among all these configurations, find the one which has the maximum number left in the end.",
+  "inputFormat": "The first line of the input contains three space-separated integers $$$n_1$$$, $$$n_2$$$ and $$$n_3$$$ ($$$1 \\le n_1, n_2, n_3 \\le 3\\cdot10^5$$$, $$$1 \\le n_1+n_2+n_3 \\le 3\\cdot10^5$$$) — the number of numbers in the three bags. The $$$i$$$-th of the next three lines contain $$$n_i$$$ space-separated integers $$$a_{{i,1}}$$$, $$$a_{{i,2}}$$$, ..., $$$a_{{i,{{n_i}}}}$$$ ($$$1 \\le a_{{i,j}} \\le 10^9$$$) — the numbers in the $$$i$$$-th bag.",
+  "outputFormat": "Print a single integer — the maximum number which you can achieve in the end.",
+  "sampleTests": [
+    {
+      "input": "2 4 1\n1 2\n6 3 4 5\n5",
+      "output": "20"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1467/C",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

@@ -1,0 +1,24 @@
+{
+  "contestId": 1822,
+  "index": "E",
+  "name": "Making Anti-Palindromes",
+  "rating": 1600,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given a string $$$s$$$, consisting of lowercase English letters. In one operation, you are allowed to swap any two characters of the string $$$s$$$. A string $$$s$$$ of length $$$n$$$ is called an anti-palindrome , if $$$s[i] \\ne s[n - i + 1]$$$ for every $$$i$$$ ($$$1 \\le i \\le n$$$). For example, the strings \"codeforces\" , \"string\" are anti-palindromes , but the strings \"abacaba\" , \"abc\" , \"test\" are not. Determine the minimum number of operations required to make the string $$$s$$$ an anti-palindrome , or output $$$-1$$$, if this is not possible.",
+  "inputFormat": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The description of the test cases follows. Each test case consists of two lines. The first line contains a single integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$) — the length of the string $$$s$$$. The second line contains the string $$$s$$$, consisting of $$$n$$$ lowercase English letters. The sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "outputFormat": "For each test case, output a single integer — the minimum number of operations required to make the string $$$s$$$ an anti-palindrome , or $$$-1$$$ if this is not possible.",
+  "sampleTests": [
+    {
+      "input": "10\n10\ncodeforces\n3\nabc\n10\ntaarrrataa\n10\ndcbdbdcccc\n4\nwwww\n12\ncabbaccabaac\n10\naadaaaaddc\n14\naacdaaaacadcdc\n6\nabccba\n12\ndcbcaebacccd",
+      "output": "0\n-1\n1\n1\n-1\n3\n-1\n2\n2\n2"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1822/E",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

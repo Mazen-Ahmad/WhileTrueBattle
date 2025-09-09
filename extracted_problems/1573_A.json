@@ -1,0 +1,24 @@
+{
+  "contestId": 1573,
+  "index": "A",
+  "name": "Countdown",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given a digital clock with $$$n$$$ digits. Each digit shows an integer from $$$0$$$ to $$$9$$$, so the whole clock shows an integer from $$$0$$$ to $$$10^n-1$$$. The clock will show leading zeroes if the number is smaller than $$$10^{n-1}$$$. You want the clock to show $$$0$$$ with as few operations as possible. In an operation, you can do one of the following: decrease the number on the clock by $$$1$$$, or swap two digits (you can choose which digits to swap, and they don't have to be adjacent). Your task is to determine the minimum number of operations needed to make the clock show $$$0$$$.",
+  "inputFormat": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^3$$$). The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 100$$$) — number of digits on the clock. The second line of each test case contains a string of $$$n$$$ digits $$$s_1, s_2, \\ldots, s_n$$$ ($$$0 \\le s_1, s_2, \\ldots, s_n \\le 9$$$) — the number on the clock. Note: If the number is smaller than $$$10^{n-1}$$$ the clock will show leading zeroes.",
+  "outputFormat": "For each test case, print one integer: the minimum number of operations needed to make the clock show $$$0$$$.",
+  "sampleTests": [
+    {
+      "input": "7\n3\n007\n4\n1000\n5\n00000\n3\n103\n4\n2020\n9\n123456789\n30\n001678294039710047203946100020",
+      "output": "7\n2\n0\n5\n6\n53\n115"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1573/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

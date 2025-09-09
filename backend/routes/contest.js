@@ -237,8 +237,33 @@ router.post('/submit/:roomCode', auth, async (req, res) => {
 
       contest.participants[participantIndex].questionsCompleted = solvedProblems.size;
       contest.participants[participantIndex].finalScore = totalScore / Math.max(1, solvedProblems.size);
+      
+      // Check if user has completed all problems
+      if (solvedProblems.size === contest.problems.length) {
+        contest.participants[participantIndex].finished = true;
+        contest.participants[participantIndex].finishTime = new Date();
+        
+        // Check if all participants are finished
+        const allFinished = contest.participants.every(p => p.finished || p.forfeited);
+        if (allFinished) {
+          contest.status = 'completed';
+          contest.endTime = new Date();
+        }
+      }
 
       await contest.save();
+
+      // Emit socket event if user has finished all problems
+      if (contest.participants[participantIndex].finished) {
+        const io = req.app.get('io');
+        if (io) {
+          io.to(`contest-${roomCode}`).emit('participant-finished', {
+            roomCode,
+            userId: req.user._id,
+            forfeit: false
+          });
+        }
+      }
 
       await contest.populate('participants.user', 'username email stats');
 
@@ -346,6 +371,16 @@ router.post('/end/:roomCode', auth, async (req, res) => {
       }
       
       await contest.save();
+      
+      // Emit socket event for forfeit
+      const io = req.app.get('io');
+      if (io) {
+        io.to(`contest-${roomCode}`).emit('participant-finished', {
+          roomCode,
+          userId: req.user._id,
+          forfeit: true
+        });
+      }
       
       return res.json({ 
         message: 'Contest forfeited', 

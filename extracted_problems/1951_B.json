@@ -1,0 +1,24 @@
+{
+  "contestId": 1951,
+  "index": "B",
+  "name": "Battle Cows",
+  "rating": 1200,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "The HU - Shireg Shireg ඞ There are $$$n$$$ cows participating in a coding tournament. Cow $$$i$$$ has a Cowdeforces rating of $$$a_i$$$ (all distinct), and is initially in position $$$i$$$. The tournament consists of $$$n-1$$$ matches as follows: The first match is between the cow in position $$$1$$$ and the cow in position $$$2$$$. Subsequently, each match $$$i$$$ is between the cow in position $$$i+1$$$ and the winner of match $$$i-1$$$. In each match, the cow with the higher Cowdeforces rating wins and proceeds to the next match. You are the owner of cow $$$k$$$. For you, winning the tournament is not important; rather, you want your cow to win in as many matches as possible. As an acquaintance of the tournament organizers, you can ask them to swap the position of your cow with another cow only once , or you can choose to do nothing. Find the maximum number of wins your cow can achieve.",
+  "inputFormat": "Each test contains multiple test cases. The first line contains an integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The description of the test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$k$$$ ($$$2 \\le n \\le 10^5, 1 \\le k \\le n$$$) — the number of cows and your cow's index. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 10^9$$$) — the Cowdeforces rating of the cows. It is guaranteed that $$$a_i$$$'s are pairwise different. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^5$$$.",
+  "outputFormat": "For each test case, print one integer: the maximum number of wins cow $$$k$$$ can achieve if you choose to swap (or do nothing) optimally.",
+  "sampleTests": [
+    {
+      "input": "3\n6 1\n12 10 14 11 8 3\n6 5\n7 2 727 10 12 13\n2 2\n1000000000 1",
+      "output": "1\n2\n0"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1951/B",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

@@ -1,0 +1,24 @@
+{
+  "contestId": 1647,
+  "index": "B",
+  "name": "Madoka and the Elegant Gift",
+  "rating": 1200,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Madoka's father just reached $$$1$$$ million subscribers on Mathub! So the website decided to send him a personalized award — The Mathhub's Bit Button! The Bit Button is a rectangular table with $$$n$$$ rows and $$$m$$$ columns with $$$0$$$ or $$$1$$$ in each cell. After exploring the table Madoka found out that: A subrectangle $$$A$$$ is contained in a subrectangle $$$B$$$ if there's no cell contained in $$$A$$$ but not contained in $$$B$$$. Two subrectangles intersect if there is a cell contained in both of them. A subrectangle is called black if there's no cell with value $$$0$$$ inside it. A subrectangle is called nice if it's black and it's not contained in another black subrectangle. The table is called elegant if there are no two nice intersecting subrectangles. For example, in the first illustration the red subrectangle is nice, but in the second one it's not, because it's contained in the purple subrectangle. Help Madoka to determine whether the table is elegant.",
+  "inputFormat": "Each test contains multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 200$$$) — the number of test cases. Description of the test cases follows. The first line of each test case contains two positive integers $$$n, m$$$ ($$$1 \\le n, m \\le 100$$$). The next $$$n$$$ lines contain strings of length $$$m$$$ consisting of zeros and ones — the description of the table. It is guaranteed that the sum of the values of $$$n$$$ and the sum of the values of $$$m$$$ for all test cases do not exceed $$$777$$$.",
+  "outputFormat": "For each test case print \" YES \" if its table is elegant or print \" NO \" otherwise. You may print each letter in any case (for example, \" YES \", \" Yes \", \" yes \", \" yEs \" will all be recognized as positive answer).",
+  "sampleTests": [
+    {
+      "input": "5\n3 3\n100\n011\n011\n3 3\n110\n111\n110\n1 5\n01111\n4 5\n11111\n01010\n01000\n01000\n3 2\n11\n00\n11",
+      "output": "YES\nNO\nYES\nNO\nYES"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1647/B",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

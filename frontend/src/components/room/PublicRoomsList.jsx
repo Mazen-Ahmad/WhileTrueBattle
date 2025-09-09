@@ -71,7 +71,7 @@ const PublicRoomsList = ({ onRoomJoined }) => {
           {rooms.map((room) => (
             <div
               key={room._id}
-              className="border border-gray-200 rounded-lg p-4 hover:bg-gray-50"
+              className="border border-gray-100 rounded-lg p-4 hover:bg-neutral-900 transition-colors duration-200"
             >
               <div className="flex justify-between items-start">
                 <div className="flex-1">

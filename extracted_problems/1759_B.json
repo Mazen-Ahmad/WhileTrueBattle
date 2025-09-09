@@ -1,0 +1,24 @@
+{
+  "contestId": 1759,
+  "index": "B",
+  "name": "Lost Permutation",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "A sequence of $$$n$$$ numbers is called a permutation if it contains all integers from $$$1$$$ to $$$n$$$ exactly once. For example, the sequences [$$$3, 1, 4, 2$$$], [$$$1$$$] and [$$$2,1$$$] are permutations, but [$$$1,2,1$$$], [$$$0,1$$$] and [$$$1,3,4$$$] — are not. Polycarp lost his favorite permutation and found only some of its elements — the numbers $$$b_1, b_2, \\dots b_m$$$. He is sure that the sum of the lost elements equals $$$s$$$. Determine whether one or more numbers can be appended to the given sequence $$$b_1, b_2, \\dots b_m$$$ such that the sum of the added numbers equals $$$s$$$, and the resulting new array is a permutation?",
+  "inputFormat": "The first line of input contains a single integer $$$t$$$ ($$$1 \\le t \\le 100$$$) —the number of test cases. Then the descriptions of the test cases follow. The first line of each test set contains two integers $$$m$$$ and $$$s$$$ ($$$1 \\le m \\le 50$$$, $$$1 \\le s \\le 1000$$$)—-the number of found elements and the sum of forgotten numbers. The second line of each test set contains $$$m$$$ different integers $$$b_1, b_2 \\dots b_m$$$ ($$$1 \\le b_i \\le 50$$$) — the elements Polycarp managed to find.",
+  "outputFormat": "Print $$$t$$$ lines, each of which is the answer to the corresponding test set. Print as the answer YES if you can append several elements to the array $$$b$$$, that their sum equals $$$s$$$ and the result will be a permutation. Output NO otherwise. You can output the answer in any case (for example, yEs , yes , Yes and YES will be recognized as positive answer).",
+  "sampleTests": [
+    {
+      "input": "5\n3 13\n3 1 4\n1 1\n1\n3 3\n1 4 2\n2 1\n4 3\n5 6\n1 2 3 4 5",
+      "output": "YES\nNO\nYES\nNO\nYES"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1759/B",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

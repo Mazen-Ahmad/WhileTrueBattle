@@ -1,0 +1,24 @@
+{
+  "contestId": 1837,
+  "index": "B",
+  "name": "Comparison String",
+  "rating": 900,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given a string $$$s$$$ of length $$$n$$$, where each character is either < or > . An array $$$a$$$ consisting of $$$n+1$$$ elements is compatible with the string $$$s$$$ if, for every $$$i$$$ from $$$1$$$ to $$$n$$$, the character $$$s_i$$$ represents the result of comparing $$$a_i$$$ and $$$a_{i+1}$$$, i. e.: $$$s_i$$$ is < if and only if $$$a_i < a_{i+1}$$$; $$$s_i$$$ is > if and only if $$$a_i > a_{i+1}$$$. For example, the array $$$[1, 2, 5, 4, 2]$$$ is compatible with the string <<>> . There are other arrays with are compatible with that string, for example, $$$[13, 37, 42, 37, 13]$$$. The cost of the array is the number of different elements in it. For example, the cost of $$$[1, 2, 5, 4, 2]$$$ is $$$4$$$; the cost of $$$[13, 37, 42, 37, 13]$$$ is $$$3$$$. You have to calculate the minimum cost among all arrays which are compatible with the given string $$$s$$$.",
+  "inputFormat": "The first line contains one integer $$$t$$$ ($$$1 \\le t \\le 500$$$) — the number of test cases. Each test case consists of two lines: the first line contains one integer $$$n$$$ ($$$1 \\le n \\le 100$$$); the second line contains the string $$$s$$$, consisting of $$$n$$$ characters. Each character of $$$s$$$ is either < or > .",
+  "outputFormat": "For each test case, print one integer — the minimum cost among all arrays which are compatible with the given string $$$s$$$.",
+  "sampleTests": [
+    {
+      "input": "4\n4\n<<>>\n4\n>><<\n5\n>>>>>\n7\n<><><><",
+      "output": "3\n3\n6\n2"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 512,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1837/B",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

@@ -1,0 +1,24 @@
+{
+  "contestId": 1670,
+  "index": "D",
+  "name": "Very Suspicious",
+  "rating": 1700,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Sehr Sus is an infinite hexagonal grid as pictured below, controlled by MennaFadali, ZerooCool and Hosssam. They love equilateral triangles and want to create $$$n$$$ equilateral triangles on the grid by adding some straight lines. The triangles must all be empty from the inside (in other words, no straight line or hexagon edge should pass through any of the triangles). You are allowed to add straight lines parallel to the edges of the hexagons. Given $$$n$$$, what is the minimum number of lines you need to add to create at least $$$n$$$ equilateral triangles as described? Adding two red lines results in two new yellow equilateral triangles.",
+  "inputFormat": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^5$$$) — the number of test cases. Then $$$t$$$ test cases follow. Each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 10^{9}$$$) — the required number of equilateral triangles.",
+  "outputFormat": "For each test case, print the minimum number of lines needed to have $$$n$$$ or more equilateral triangles.",
+  "sampleTests": [
+    {
+      "input": "4\n1\n2\n3\n4567",
+      "output": "2\n2\n3\n83"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1670/D",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

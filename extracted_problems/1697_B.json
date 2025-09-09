@@ -1,0 +1,24 @@
+{
+  "contestId": 1697,
+  "index": "B",
+  "name": "Promo",
+  "rating": 900,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "The store sells $$$n$$$ items, the price of the $$$i$$$-th item is $$$p_i$$$. The store's management is going to hold a promotion: if a customer purchases at least $$$x$$$ items, $$$y$$$ cheapest of them are free. The management has not yet decided on the exact values of $$$x$$$ and $$$y$$$. Therefore, they ask you to process $$$q$$$ queries: for the given values of $$$x$$$ and $$$y$$$, determine the maximum total value of items received for free, if a customer makes one purchase . Note that all queries are independent; they don't affect the store's stock.",
+  "inputFormat": "The first line contains two integers $$$n$$$ and $$$q$$$ ($$$1 \\le n, q \\le 2 \\cdot 10^5$$$) — the number of items in the store and the number of queries, respectively. The second line contains $$$n$$$ integers $$$p_1, p_2, \\dots, p_n$$$ ($$$1 \\le p_i \\le 10^6$$$), where $$$p_i$$$ — the price of the $$$i$$$-th item. The following $$$q$$$ lines contain two integers $$$x_i$$$ and $$$y_i$$$ each ($$$1 \\le y_i \\le x_i \\le n$$$) — the values of the parameters $$$x$$$ and $$$y$$$ in the $$$i$$$-th query.",
+  "outputFormat": "For each query, print a single integer — the maximum total value of items received for free for one purchase .",
+  "sampleTests": [
+    {
+      "input": "5 3\n5 3 1 5 2\n3 2\n1 1\n5 3",
+      "output": "8\n5\n6"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1697/B",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

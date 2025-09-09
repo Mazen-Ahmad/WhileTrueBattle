@@ -1,0 +1,24 @@
+{
+  "contestId": 1582,
+  "index": "F1",
+  "name": "Korney Korneevich and XOR (easy version)",
+  "rating": 1800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "This is an easier version of the problem with smaller constraints. Korney Korneevich dag up an array $$$a$$$ of length $$$n$$$. Korney Korneevich has recently read about the operation bitwise XOR , so he wished to experiment with it. For this purpose, he decided to find all integers $$$x \\ge 0$$$ such that there exists an increasing subsequence of the array $$$a$$$, in which the bitwise XOR of numbers is equal to $$$x$$$. It didn't take a long time for Korney Korneevich to find all such $$$x$$$, and he wants to check his result. That's why he asked you to solve this problem! A sequence $$$s$$$ is a subsequence of a sequence $$$b$$$ if $$$s$$$ can be obtained from $$$b$$$ by deletion of several (possibly, zero or all) elements. A sequence $$$s_1, s_2, \\ldots , s_m$$$ is called increasing if $$$s_1 < s_2 < \\ldots < s_m$$$.",
+  "inputFormat": "The first line contains a single integer $$$n$$$ ($$$1 \\le n \\le 10^5$$$). The second line contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$0 \\le a_i \\le 500$$$) — the elements of the array $$$a$$$.",
+  "outputFormat": "In the first line print a single integer $$$k$$$ — the number of found $$$x$$$ values. In the second line print $$$k$$$ integers in increasing order $$$x_1, x_2, \\ldots x_k$$$ ($$$0 \\le x_1 < \\ldots < x_k$$$) — found $$$x$$$ values.",
+  "sampleTests": [
+    {
+      "input": "4\n4 2 2 4",
+      "output": "4\n0 2 4 6"
+    }
+  ],
+  "timeLimit": 1500,
+  "memoryLimit": 512,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1582/F1",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

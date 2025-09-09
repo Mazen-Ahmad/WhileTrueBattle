@@ -1,0 +1,24 @@
+{
+  "contestId": 1768,
+  "index": "F",
+  "name": "Wonderful Jump",
+  "rating": 2900,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given an array of positive integers $$$a_1,a_2,\\ldots,a_n$$$ of length $$$n$$$. In one operation you can jump from index $$$i$$$ to index $$$j$$$ ($$$1 \\le i \\le j \\le n$$$) by paying $$$\\min(a_i, a_{i + 1}, \\ldots, a_j) \\cdot (j - i)^2$$$ eris. For all $$$k$$$ from $$$1$$$ to $$$n$$$, find the minimum number of eris needed to get from index $$$1$$$ to index $$$k$$$.",
+  "inputFormat": "The first line contains a single integer $$$n$$$ ($$$2 \\le n \\le 4 \\cdot 10^5$$$). The second line contains $$$n$$$ integers $$$a_1,a_2,\\ldots a_n$$$ ($$$1 \\le a_i \\le n$$$).",
+  "outputFormat": "Output $$$n$$$ integers — the $$$k$$$-th integer is the minimum number of eris needed to reach index $$$k$$$ if you start from index $$$1$$$.",
+  "sampleTests": [
+    {
+      "input": "3\n2 1 3",
+      "output": "0 1 2"
+    }
+  ],
+  "timeLimit": 4000,
+  "memoryLimit": 128,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1768/F",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

@@ -1,0 +1,24 @@
+{
+  "contestId": 1787,
+  "index": "B",
+  "name": "Number Factorization",
+  "rating": 1100,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Given an integer $$$n$$$. Consider all pairs of integer arrays $$$a$$$ and $$$p$$$ of the same length such that $$$n = \\prod a_i^{p_i}$$$ (i.e. $$$a_1^{p_1}\\cdot a_2^{p_2}\\cdot\\ldots$$$) ($$$a_i>1;p_i>0$$$) and $$$a_i$$$ is the product of some (possibly one) distinct prime numbers. For example, for $$$n = 28 = 2^2\\cdot 7^1 = 4^1 \\cdot 7^1$$$ the array pair $$$a = [2, 7]$$$, $$$p = [2, 1]$$$ is correct, but the pair of arrays $$$a = [4, 7]$$$, $$$p = [1, 1]$$$ is not, because $$$4=2^2$$$ is a product of non-distinct prime numbers. Your task is to find the maximum value of $$$\\sum a_i \\cdot p_i$$$ (i.e. $$$a_1\\cdot p_1 + a_2\\cdot p_2 + \\ldots$$$) over all possible pairs of arrays $$$a$$$ and $$$p$$$. Note that you do not need to minimize or maximize the length of the arrays.",
+  "inputFormat": "Each test contains multiple test cases. The first line contains an integer $$$t$$$ ($$$1 \\le t \\le 1000$$$) — the number of test cases. Each test case contains only one integer $$$n$$$ ($$$2 \\le n \\le 10^9$$$).",
+  "outputFormat": "For each test case, print the maximum value of $$$\\sum a_i \\cdot p_i$$$.",
+  "sampleTests": [
+    {
+      "input": "7\n100\n10\n864\n130056192\n1000000000\n2\n999999018",
+      "output": "20\n10\n22\n118\n90\n2\n333333009"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1787/B",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

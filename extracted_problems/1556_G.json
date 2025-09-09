@@ -1,0 +1,24 @@
+{
+  "contestId": 1556,
+  "index": "G",
+  "name": "Gates to Another World",
+  "rating": 3300,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "As mentioned previously William really likes playing video games. In one of his favorite games, the player character is in a universe where every planet is designated by a binary number from $$$0$$$ to $$$2^n - 1$$$. On each planet, there are gates that allow the player to move from planet $$$i$$$ to planet $$$j$$$ if the binary representations of $$$i$$$ and $$$j$$$ differ in exactly one bit. William wants to test you and see how you can handle processing the following queries in this game universe: Destroy planets with numbers from $$$l$$$ to $$$r$$$ inclusively. These planets cannot be moved to anymore. Figure out if it is possible to reach planet $$$b$$$ from planet $$$a$$$ using some number of planetary gates. It is guaranteed that the planets $$$a$$$ and $$$b$$$ are not destroyed.",
+  "inputFormat": "The first line contains two integers $$$n$$$, $$$m$$$ ($$$1 \\leq n \\leq 50$$$, $$$1 \\leq m \\leq 5 \\cdot 10^4$$$), which are the number of bits in binary representation of each planets' designation and the number of queries, respectively. Each of the next $$$m$$$ lines contains a query of two types: block l r — query for destruction of planets with numbers from $$$l$$$ to $$$r$$$ inclusively ($$$0 \\le l \\le r < 2^n$$$). It's guaranteed that no planet will be destroyed twice. ask a b — query for reachability between planets $$$a$$$ and $$$b$$$ ($$$0 \\le a, b < 2^n$$$). It's guaranteed that planets $$$a$$$ and $$$b$$$ hasn't been destroyed yet.",
+  "outputFormat": "For each query of type ask you must output \" 1 \" in a new line, if it is possible to reach planet $$$b$$$ from planet $$$a$$$ and \" 0 \" otherwise (without quotation marks).",
+  "sampleTests": [
+    {
+      "input": "3 3\nask 0 7\nblock 3 6\nask 0 7",
+      "output": "1\n0"
+    }
+  ],
+  "timeLimit": 4000,
+  "memoryLimit": 1024,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1556/G",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

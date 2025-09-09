@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { useAuth } from '../../contexts/AuthContext';
 import Button from '../common/Button';
 import Input from '../common/Input';
@@ -62,8 +63,20 @@ const LoginForm = ({ onSwitchToRegister }) => {
   };
 
   return (
-    <div className="max-w-md mx-auto bg-white rounded-lg shadow-md p-6">
-      <h2 className="text-2xl font-bold text-center mb-6">Login</h2>
+    <motion.div 
+      className="max-w-md mx-auto bg-white rounded-lg shadow-md p-6"
+      initial={{ scale: 0.9, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
+      <motion.h2 
+        className="text-2xl font-bold text-center mb-6"
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+      >
+        Login
+      </motion.h2>
       
       <form onSubmit={handleSubmit}>
         {errors.general && (
@@ -92,27 +105,39 @@ const LoginForm = ({ onSwitchToRegister }) => {
           required
         />
 
-        <Button
-          type="submit"
-          variant="primary"
-          size="large"
-          loading={loading}
-          className="w-full"
+        <motion.div
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
         >
-          Login
-        </Button>
+          <Button
+            type="submit"
+            variant="primary"
+            size="large"
+            loading={loading}
+            className="w-full btn-primary"
+          >
+            Login
+          </Button>
+        </motion.div>
       </form>
 
-      <p className="mt-4 text-center text-gray-600">
+      <motion.p 
+        className="mt-4 text-center text-gray-600"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+      >
         Don't have an account?{' '}
-        <button
+        <motion.button
           onClick={onSwitchToRegister}
           className="text-blue-600 hover:text-blue-800 font-medium"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
         >
           Sign up
-        </button>
-      </p>
-    </div>
+        </motion.button>
+      </motion.p>
+    </motion.div>
   );
 };
 

@@ -1,0 +1,24 @@
+{
+  "contestId": 1760,
+  "index": "B",
+  "name": "Atilla's Favorite Problem",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "In order to write a string, Atilla needs to first learn all letters that are contained in the string. Atilla needs to write a message which can be represented as a string $$$s$$$. He asks you what is the minimum alphabet size required so that one can write this message. The alphabet of size $$$x$$$ ($$$1 \\leq x \\leq 26$$$) contains only the first $$$x$$$ Latin letters. For example an alphabet of size $$$4$$$ contains only the characters $$$\\texttt{a}$$$, $$$\\texttt{b}$$$, $$$\\texttt{c}$$$ and $$$\\texttt{d}$$$.",
+  "inputFormat": "The first line contains a single integer $$$t$$$ ($$$1 \\leq t \\leq 1000$$$) — the number of test cases. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\leq n \\leq 100$$$) — the length of the string. The second line of each test case contains a string $$$s$$$ of length $$$n$$$, consisting of lowercase Latin letters.",
+  "outputFormat": "For each test case, output a single integer — the minimum alphabet size required to so that Atilla can write his message $$$s$$$.",
+  "sampleTests": [
+    {
+      "input": "5\n1\na\n4\ndown\n10\ncodeforces\n3\nbcf\n5\nzzzzz",
+      "output": "1\n23\n19\n6\n26"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1760/B",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

@@ -1,0 +1,24 @@
+{
+  "contestId": 2084,
+  "index": "E",
+  "name": "Blossom",
+  "rating": 2400,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given a permutation $$$a$$$ of length $$$n$$$$$$^{\\text{∗}}$$$ where some elements are missing and represented by $$$-1$$$. Define the value of a permutation as the sum of the MEX$$$^{\\text{†}}$$$ of all its non-empty subsegments$$$^{\\text{‡}}$$$. Find the sum of the value of all possible valid permutations that can be formed by filling in the missing elements of $$$a$$$ modulo $$$10^9 + 7$$$. $$$^{\\text{∗}}$$$ A permutation of length $$$n$$$ is an array consisting of $$$n$$$ distinct integers from $$$\\bf{0}$$$ to $$$\\bf{n - 1}$$$ in arbitrary order. For example, $$$[1,2,0,4,3]$$$ is a permutation, but $$$[0,1,1]$$$ is not a permutation ($$$1$$$ appears twice in the array), and $$$[0,2,3]$$$ is also not a permutation ($$$n=3$$$ but there is $$$3$$$ in the array). $$$^{\\text{†}}$$$The minimum excluded (MEX) of a collection of integers $$$c_1, c_2, \\ldots, c_k$$$ is defined as the smallest non-negative integer $$$x$$$ which does not occur in the collection $$$c$$$. $$$^{\\text{‡}}$$$A sequence $$$a$$$ is a subsegment of a sequence $$$b$$$ if $$$a$$$ can be obtained from $$$b$$$ by the deletion of several (possibly, zero or all) elements from the beginning and several (possibly, zero or all) elements from the end.",
+  "inputFormat": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 1000$$$). The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 5000$$$). The second line contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$-1 \\le a_i < n$$$). It is guaranteed that the elements of $$$a$$$ that are not $$$-1$$$ are distinct. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$5000$$$.",
+  "outputFormat": "For each test case, output a single integer — the sum of the value of all possible valid permutations modulo $$$10^9 + 7$$$.",
+  "sampleTests": [
+    {
+      "input": "5\n2\n0 -1\n2\n-1 -1\n3\n2 0 1\n3\n-1 2 -1\n5\n-1 0 -1 2 -1",
+      "output": "3\n6\n7\n10\n104"
+    }
+  ],
+  "timeLimit": 4000,
+  "memoryLimit": 512,
+  "sourceUrl": "https://codeforces.com/problemset/problem/2084/E",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

@@ -1,0 +1,24 @@
+{
+  "contestId": 1557,
+  "index": "A",
+  "name": "Ezzat and Two Subsequences",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Ezzat has an array of $$$n$$$ integers (maybe negative) . He wants to split it into two non-empty subsequences $$$a$$$ and $$$b$$$, such that every element from the array belongs to exactly one subsequence, and the value of $$$f(a) + f(b)$$$ is the maximum possible value, where $$$f(x)$$$ is the average of the subsequence $$$x$$$. A sequence $$$x$$$ is a subsequence of a sequence $$$y$$$ if $$$x$$$ can be obtained from $$$y$$$ by deletion of several (possibly, zero or all) elements. The average of a subsequence is the sum of the numbers of this subsequence divided by the size of the subsequence. For example, the average of $$$[1,5,6]$$$ is $$$(1+5+6)/3 = 12/3 = 4$$$, so $$$f([1,5,6]) = 4$$$.",
+  "inputFormat": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^3$$$)— the number of test cases. Each test case consists of two lines. The first line contains a single integer $$$n$$$ ($$$2 \\le n \\le 10^5$$$). The second line contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$-10^9 \\le a_i \\le 10^9$$$). It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$3\\cdot10^5$$$.",
+  "outputFormat": "For each test case, print a single value — the maximum value that Ezzat can achieve. Your answer is considered correct if its absolute or relative error does not exceed $$$10^{-6}$$$. Formally, let your answer be $$$a$$$, and the jury's answer be $$$b$$$. Your answer is accepted if and only if $$$\\frac{|a - b|}{\\max{(1, |b|)}} \\le 10^{-6}$$$.",
+  "sampleTests": [
+    {
+      "input": "4\n3\n3 1 2\n3\n-7 -6 -6\n3\n2 2 2\n4\n17 3 5 -3",
+      "output": "4.500000000\n-12.500000000\n4.000000000\n18.666666667"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1557/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

@@ -1,0 +1,24 @@
+{
+  "contestId": 1660,
+  "index": "A",
+  "name": "Vasya and Coins",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Vasya decided to go to the grocery store. He found in his wallet $$$a$$$ coins of $$$1$$$ burle and $$$b$$$ coins of $$$2$$$ burles. He does not yet know the total cost of all goods, so help him find out $$$s$$$ ($$$s > 0$$$): the minimum positive integer amount of money he cannot pay without change or pay at all using only his coins. For example, if $$$a=1$$$ and $$$b=1$$$ (he has one $$$1$$$-burle coin and one $$$2$$$-burle coin), then: he can pay $$$1$$$ burle without change, paying with one $$$1$$$-burle coin, he can pay $$$2$$$ burle without change, paying with one $$$2$$$-burle coin, he can pay $$$3$$$ burle without change by paying with one $$$1$$$-burle coin and one $$$2$$$-burle coin, he cannot pay $$$4$$$ burle without change (moreover, he cannot pay this amount at all). So for $$$a=1$$$ and $$$b=1$$$ the answer is $$$s=4$$$.",
+  "inputFormat": "The first line of the input contains an integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases in the test. The description of each test case consists of one line containing two integers $$$a_i$$$ and $$$b_i$$$ ($$$0 \\le a_i, b_i \\le 10^8$$$) — the number of $$$1$$$-burle coins and $$$2$$$-burles coins Vasya has respectively.",
+  "outputFormat": "For each test case, on a separate line print one integer $$$s$$$ ($$$s > 0$$$): the minimum positive integer amount of money that Vasya cannot pay without change or pay at all.",
+  "sampleTests": [
+    {
+      "input": "5\n1 1\n4 0\n0 2\n0 0\n2314 2374",
+      "output": "4\n5\n1\n1\n7063"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1660/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

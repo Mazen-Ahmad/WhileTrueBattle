@@ -1,0 +1,24 @@
+{
+  "contestId": 1609,
+  "index": "F",
+  "name": "Interesting Sections",
+  "rating": 2800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "William has an array of non-negative numbers $$$a_1, a_2, \\dots, a_n$$$. He wants you to find out how many segments $$$l \\le r$$$ pass the check. The check is performed in the following manner: The minimum and maximum numbers are found on the segment of the array starting at $$$l$$$ and ending at $$$r$$$. The check is considered to be passed if the binary representation of the minimum and maximum numbers have the same number of bits equal to 1.",
+  "inputFormat": "The first line contains a single integer $$$n$$$ ($$$1 \\le n \\le 10^6$$$), the size of array $$$a$$$. The second line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$0 \\le a_i \\le 10^{18}$$$), the contents of array $$$a$$$.",
+  "outputFormat": "Output a single number — the total number of segments that passed the check.",
+  "sampleTests": [
+    {
+      "input": "5\n1 2 3 4 5",
+      "output": "9"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1609/F",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

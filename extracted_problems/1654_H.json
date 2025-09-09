@@ -1,0 +1,24 @@
+{
+  "contestId": 1654,
+  "index": "H",
+  "name": "Three Minimums",
+  "rating": 3500,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Given a list of distinct values, we denote with first minimum , second minimum , and third minimum the three smallest values (in increasing order). A permutation $$$p_1, p_2, \\dots, p_n$$$ is good if the following statement holds for all pairs $$$(l,r)$$$ with $$$1\\le l < l+2 \\le r\\le n$$$. If $$$\\{p_l, p_r\\}$$$ are (not necessarily in this order) the first and second minimum of $$$p_l, p_{l+1}, \\dots, p_r$$$ then the third minimum of $$$p_l, p_{l+1},\\dots, p_r$$$ is either $$$p_{l+1}$$$ or $$$p_{r-1}$$$. You are given an integer $$$n$$$ and a string $$$s$$$ of length $$$m$$$ consisting of characters \" < \" and \" > \". Count the number of good permutations $$$p_1, p_2,\\dots, p_n$$$ such that, for all $$$1\\le i\\le m$$$, $$$p_i < p_{i+1}$$$ if $$$s_i =$$$ \" < \"; $$$p_i > p_{i+1}$$$ if $$$s_i =$$$ \" > \". As the result can be very large, you should print it modulo $$$998\\,244\\,353$$$.",
+  "inputFormat": "The first line contains two integers $$$n$$$ and $$$m$$$ ($$$2 \\le n \\le 2 \\cdot 10^5$$$, $$$1 \\leq m \\leq \\min(100, n-1)$$$). The second line contains a string $$$s$$$ of length $$$m$$$, consisting of characters \" < \" and \" > \".",
+  "outputFormat": "Print a single integer: the number of good permutations satisfying the constraints described in the statement, modulo $$$998\\,244\\,353$$$.",
+  "sampleTests": [
+    {
+      "input": "5 3\n>>>",
+      "output": "5"
+    }
+  ],
+  "timeLimit": 8000,
+  "memoryLimit": 1024,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1654/H",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

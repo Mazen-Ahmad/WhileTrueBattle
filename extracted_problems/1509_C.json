@@ -1,0 +1,24 @@
+{
+  "contestId": 1509,
+  "index": "C",
+  "name": "The Sports Festival",
+  "rating": 1800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "The student council is preparing for the relay race at the sports festival. The council consists of $$$n$$$ members. They will run one after the other in the race, the speed of member $$$i$$$ is $$$s_i$$$. The discrepancy $$$d_i$$$ of the $$$i$$$-th stage is the difference between the maximum and the minimum running speed among the first $$$i$$$ members who ran. Formally, if $$$a_i$$$ denotes the speed of the $$$i$$$-th member who participated in the race, then $$$d_i = \\max(a_1, a_2, \\dots, a_i) - \\min(a_1, a_2, \\dots, a_i)$$$. You want to minimize the sum of the discrepancies $$$d_1 + d_2 + \\dots + d_n$$$. To do this, you are allowed to change the order in which the members run. What is the minimum possible sum that can be achieved?",
+  "inputFormat": "The first line contains a single integer $$$n$$$ ($$$1 \\le n \\le 2000$$$) — the number of members of the student council. The second line contains $$$n$$$ integers $$$s_1, s_2, \\dots, s_n$$$ ($$$1 \\le s_i \\le 10^9$$$) – the running speeds of the members.",
+  "outputFormat": "Print a single integer — the minimum possible value of $$$d_1 + d_2 + \\dots + d_n$$$ after choosing the order of the members.",
+  "sampleTests": [
+    {
+      "input": "3\n3 1 2",
+      "output": "3"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1509/C",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

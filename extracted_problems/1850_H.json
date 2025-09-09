@@ -1,0 +1,24 @@
+{
+  "contestId": 1850,
+  "index": "H",
+  "name": "The Third Letter",
+  "rating": 1700,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "In order to win his toughest battle, Mircea came up with a great strategy for his army. He has $$$n$$$ soldiers and decided to arrange them in a certain way in camps. Each soldier has to belong to exactly one camp, and there is one camp at each integer point on the $$$x$$$-axis (at points $$$\\cdots, -2, -1, 0, 1, 2, \\cdots$$$). The strategy consists of $$$m$$$ conditions. Condition $$$i$$$ tells that soldier $$$a_i$$$ should belong to a camp that is situated $$$d_i$$$ meters in front of the camp that person $$$b_i$$$ belongs to. (If $$$d_i < 0$$$, then $$$a_i$$$'s camp should be $$$-d_i$$$ meters behind $$$b_i$$$'s camp.) Now, Mircea wonders if there exists a partition of soldiers that respects the condition and he asks for your help! Answer \" YES \" if there is a partition of the $$$n$$$ soldiers that satisfies all of the $$$m$$$ conditions and \" NO \" otherwise. Note that two different soldiers may be placed in the same camp.",
+  "inputFormat": "The first line contains a single integer $$$t$$$ ($$$1 \\leq t \\leq 100$$$) — the number of test cases. The first line of each test case contains two positive integers $$$n$$$ and $$$m$$$ ($$$2 \\leq n \\leq 2 \\cdot 10^5$$$; $$$1 \\leq m \\leq n$$$) — the number of soldiers, and the number of conditions respectively. Then $$$m$$$ lines follow, each of them containing $$$3$$$ integers: $$$a_i$$$, $$$b_i$$$, $$$d_i$$$ ($$$a_i \\neq b_i$$$; $$$1 \\leq a_i, b_i \\leq n$$$; $$$-10^9 \\leq d_i \\leq 10^9$$$) — denoting the conditions explained in the statement. Note that if $$$d_i$$$ is positive, $$$a_i$$$ should be $$$d_i$$$ meters in front of $$$b_i$$$ and if it is negative, $$$a_i$$$ should be $$$-d_i$$$ meters behind $$$b_i$$$. Note that the sum of $$$n$$$ over all test cases doesn't exceed $$$2 \\cdot 10^5$$$.",
+  "outputFormat": "For each test case, output \" YES \" if there is an arrangement of the $$$n$$$ soldiers that satisfies all of the $$$m$$$ conditions and \" NO \" otherwise.",
+  "sampleTests": [
+    {
+      "input": "4\n5 3\n1 2 2\n2 3 4\n4 2 -6\n6 5\n1 2 2\n2 3 4\n4 2 -6\n5 4 4\n3 5 100\n2 2\n1 2 5\n1 2 4\n4 1\n1 2 3",
+      "output": "YES\nNO\nNO\nYES"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1850/H",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

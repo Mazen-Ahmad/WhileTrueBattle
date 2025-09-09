@@ -1,0 +1,24 @@
+{
+  "contestId": 1685,
+  "index": "D1",
+  "name": "Permutation Weight (Easy Version)",
+  "rating": 2800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "This is an easy version of the problem. The difference between the easy and hard versions is that in this version, you can output any permutation with the smallest weight . You are given a permutation $$$p_1, p_2, \\ldots, p_n$$$ of integers from $$$1$$$ to $$$n$$$. Let's define the weight of the permutation $$$q_1, q_2, \\ldots, q_n$$$ of integers from $$$1$$$ to $$$n$$$ as $$$$$$|q_1 - p_{q_{2}}| + |q_2 - p_{q_{3}}| + \\ldots + |q_{n-1} - p_{q_{n}}| + |q_n - p_{q_{1}}|$$$$$$ You want your permutation to be as lightweight as possible. Find any permutation $$$q$$$ with the smallest possible weight.",
+  "inputFormat": "The first line of the input contains a single integer $$$t$$$ ($$$1 \\le t \\le 100$$$) — the number of test cases. The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$2 \\le n \\le 200$$$) — the size of the permutation. The second line of each test case contains $$$n$$$ integers $$$p_1, p_2, \\ldots, p_n$$$ ($$$1 \\le p_i \\le n$$$, all $$$p_i$$$ are distinct) — the elements of the permutation. The sum of $$$n$$$ over all test cases doesn't exceed $$$400$$$.",
+  "outputFormat": "For each test case, output $$$n$$$ integers $$$q_1, q_2, \\ldots, q_n$$$ ($$$1 \\le q_i \\le n$$$, all $$$q_i$$$ are distinct) — one of the permutations with the smallest weight.",
+  "sampleTests": [
+    {
+      "input": "3\n2\n2 1\n4\n2 3 1 4\n5\n5 4 3 2 1",
+      "output": "1 2 \n1 3 4 2 \n1 4 2 3 5"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1685/D1",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

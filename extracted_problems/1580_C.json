@@ -1,0 +1,24 @@
+{
+  "contestId": 1580,
+  "index": "C",
+  "name": "Train Maintenance",
+  "rating": 2200,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Kawasiro Nitori is excellent in engineering. Thus she has been appointed to help maintain trains. There are $$$n$$$ models of trains, and Nitori's department will only have at most one train of each model at any moment. In the beginning, there are no trains, at each of the following $$$m$$$ days, one train will be added, or one train will be removed. When a train of model $$$i$$$ is added at day $$$t$$$, it works for $$$x_i$$$ days (day $$$t$$$ inclusive), then it is in maintenance for $$$y_i$$$ days, then in work for $$$x_i$$$ days again, and so on until it is removed. In order to make management easier, Nitori wants you to help her calculate how many trains are in maintenance in each day. On a day a train is removed, it is not counted as in maintenance.",
+  "inputFormat": "The first line contains two integers $$$n$$$, $$$m$$$ ($$$1 \\le n,m \\le 2 \\cdot 10^5$$$). The $$$i$$$-th of the next $$$n$$$ lines contains two integers $$$x_i,y_i$$$ ($$$1 \\le x_i,y_i \\le 10^9$$$). Each of the next $$$m$$$ lines contains two integers $$$op$$$, $$$k$$$ ($$$1 \\le k \\le n$$$, $$$op = 1$$$ or $$$op = 2$$$). If $$$op=1$$$, it means this day's a train of model $$$k$$$ is added, otherwise the train of model $$$k$$$ is removed. It is guaranteed that when a train of model $$$x$$$ is added, there is no train of the same model in the department, and when a train of model $$$x$$$ is removed, there is such a train in the department.",
+  "outputFormat": "Print $$$m$$$ lines, The $$$i$$$-th of these lines contains one integers, denoting the number of trains in maintenance in the $$$i$$$-th day.",
+  "sampleTests": [
+    {
+      "input": "3 4\n10 15\n12 10\n1 1\n1 3\n1 1\n2 1\n2 3",
+      "output": "0\n1\n0\n0"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 512,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1580/C",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

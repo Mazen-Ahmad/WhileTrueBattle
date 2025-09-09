@@ -1,0 +1,24 @@
+{
+  "contestId": 1703,
+  "index": "B",
+  "name": "ICPC Balloons",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "In an ICPC contest, balloons are distributed as follows: Whenever a team solves a problem, that team gets a balloon. The first team to solve a problem gets an additional balloon. A contest has 26 problems, labelled $$$\\textsf{A}$$$, $$$\\textsf{B}$$$, $$$\\textsf{C}$$$, ..., $$$\\textsf{Z}$$$. You are given the order of solved problems in the contest, denoted as a string $$$s$$$, where the $$$i$$$-th character indicates that the problem $$$s_i$$$ has been solved by some team. No team will solve the same problem twice. Determine the total number of balloons that the teams received. Note that some problems may be solved by none of the teams.",
+  "inputFormat": "The first line of the input contains an integer $$$t$$$ ($$$1 \\leq t \\leq 100$$$) — the number of testcases. The first line of each test case contains an integer $$$n$$$ ($$$1 \\leq n \\leq 50$$$) — the length of the string. The second line of each test case contains a string $$$s$$$ of length $$$n$$$ consisting of uppercase English letters, denoting the order of solved problems.",
+  "outputFormat": "For each test case, output a single integer — the total number of balloons that the teams received.",
+  "sampleTests": [
+    {
+      "input": "6\n3\nABA\n1\nA\n3\nORZ\n5\nBAAAA\n4\nBKPT\n10\nCODEFORCES",
+      "output": "5\n2\n6\n7\n8\n17"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1703/B",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

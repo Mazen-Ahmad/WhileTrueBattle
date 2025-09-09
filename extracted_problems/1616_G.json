@@ -1,0 +1,24 @@
+{
+  "contestId": 1616,
+  "index": "G",
+  "name": "Just Add an Edge",
+  "rating": 3500,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given a directed acyclic graph with $$$n$$$ vertices and $$$m$$$ edges. For all edges $$$a \\to b$$$ in the graph, $$$a < b$$$ holds. You need to find the number of pairs of vertices $$$x$$$, $$$y$$$, such that $$$x > y$$$ and after adding the edge $$$x \\to y$$$ to the graph, it has a Hamiltonian path.",
+  "inputFormat": "The first line of input contains one integer $$$t$$$ ($$$1 \\leq t \\leq 5$$$): the number of test cases. The next lines contains the descriptions of the test cases. In the first line you are given two integers $$$n$$$ and $$$m$$$ ($$$1 \\leq n \\leq 150\\,000$$$, $$$0 \\leq m \\leq \\min(150\\,000, \\frac{n(n-1)}{2})$$$): the number of vertices and edges in the graph. Each of the next $$$m$$$ lines contains two integers $$$a$$$, $$$b$$$ ($$$1 \\leq a < b \\leq n$$$), specifying an edge $$$a \\to b$$$ in the graph. No edge $$$a \\to b$$$ appears more than once.",
+  "outputFormat": "For each test case, print one integer: the number of pairs of vertices $$$x$$$, $$$y$$$, $$$x > y$$$, such that after adding the edge $$$x \\to y$$$ to the graph, it has a Hamiltonian path.",
+  "sampleTests": [
+    {
+      "input": "3\n3 2\n1 2\n2 3\n4 3\n1 2\n3 4\n1 4\n4 4\n1 3\n1 4\n2 3\n3 4",
+      "output": "3\n1\n4"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1616/G",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

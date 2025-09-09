@@ -1,0 +1,24 @@
+{
+  "contestId": 1893,
+  "index": "A",
+  "name": "Anonymous Informant",
+  "rating": 1400,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given an array $$$b_1, b_2, \\ldots, b_n$$$. An anonymous informant has told you that the array $$$b$$$ was obtained as follows: initially, there existed an array $$$a_1, a_2, \\ldots, a_n$$$, after which the following two-component operation was performed $$$k$$$ times: A fixed point$$$^{\\dagger}$$$ $$$x$$$ of the array $$$a$$$ was chosen. Then, the array $$$a$$$ was cyclically shifted to the left$$$^{\\ddagger}$$$ exactly $$$x$$$ times. As a result of $$$k$$$ such operations, the array $$$b_1, b_2, \\ldots, b_n$$$ was obtained. You want to check if the words of the anonymous informant can be true or if they are guaranteed to be false. $$$^{\\dagger}$$$A number $$$x$$$ is called a fixed point of the array $$$a_1, a_2, \\ldots, a_n$$$ if $$$1 \\leq x \\leq n$$$ and $$$a_x = x$$$. $$$^{\\ddagger}$$$A cyclic left shift of the array $$$a_1, a_2, \\ldots, a_n$$$ is the array $$$a_2, \\ldots, a_n, a_1$$$.",
+  "inputFormat": "Each test contains multiple test cases. The first line contains an integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The description of the test cases follows. The first line of each test case contains two integers $$$n, k$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$, $$$1 \\le k \\le 10^9$$$) — the length of the array $$$b$$$ and the number of operations performed. The second line of each test case contains $$$n$$$ integers $$$b_1, b_2, \\ldots, b_n$$$ ($$$1 \\le b_i \\le 10^9$$$) — the elements of the array $$$b$$$. It is guaranteed that the sum of the values of $$$n$$$ for all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "outputFormat": "For each test case, output \" Yes \" if the words of the anonymous informant can be true, and \" No \" if they are guaranteed to be false.",
+  "sampleTests": [
+    {
+      "input": "6\n5 3\n4 3 3 2 3\n3 100\n7 2 1\n5 5\n6 1 1 1 1\n1 1000000000\n1\n8 48\n9 10 11 12 13 14 15 8\n2 1\n1 42",
+      "output": "Yes\nYes\nNo\nYes\nYes\nNo"
+    }
+  ],
+  "timeLimit": 3000,
+  "memoryLimit": 512,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1893/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

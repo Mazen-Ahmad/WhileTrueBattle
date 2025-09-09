@@ -1,0 +1,24 @@
+{
+  "contestId": 1944,
+  "index": "A",
+  "name": "Destroying Bridges",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "There are $$$n$$$ islands, numbered $$$1, 2, \\ldots, n$$$. Initially, every pair of islands is connected by a bridge. Hence, there are a total of $$$\\frac{n (n - 1)}{2}$$$ bridges. Everule lives on island $$$1$$$ and enjoys visiting the other islands using bridges. Dominater has the power to destroy at most $$$k$$$ bridges to minimize the number of islands that Everule can reach using (possibly multiple) bridges. Find the minimum number of islands (including island $$$1$$$) that Everule can visit if Dominater destroys bridges optimally.",
+  "inputFormat": "Each test contains multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\leq t \\leq 10^3$$$) — the number of test cases. The description of the test cases follows. The first and only line of each test case contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le n \\le 100$$$, $$$0 \\le k \\le \\frac{n \\cdot (n - 1)}{2}$$$).",
+  "outputFormat": "For each test case, output the minimum number of islands that Everule can visit if Dominater destroys bridges optimally.",
+  "sampleTests": [
+    {
+      "input": "6\n2 0\n2 1\n4 1\n5 10\n5 3\n4 4",
+      "output": "2\n1\n4\n1\n5\n1"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1944/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

@@ -1,0 +1,24 @@
+{
+  "contestId": 2087,
+  "index": "D",
+  "name": "Uppercase or Lowercase?",
+  "rating": null,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "This is an interactive problem. In a certain database, there are $$$n$$$ handles stored in the form of a numbered list. You are interested in one specific handle $$$h$$$, or more precisely, in its position in this list. You can ask the database for the position $$$i$$$ from the list, and it will return the handle at the $$$i$$$-th position. All handles are non-empty strings consisting of at most $$$20$$$ lowercase Latin letters, except the first one that can be either a lowercase or an uppercase Latin letter. You know that all handles are sorted in lexicographical order, but the problem is that it is unknown whether uppercase letters are considered less than lowercase ones. In other words, you do not know if it is true that all handles starting with uppercase letters come first, followed by those starting with lowercase letters — or vice versa, that all handles starting with lowercase letters come first, followed by those starting with uppercase letters. Lexicographical order is the order of standard string comparison, formally defined as follows: if strings $$$s$$$ and $$$t$$$ differ in some positions, the earliest of which is position $$$i$$$, then string $$$s$$$ comes before string $$$t$$$ in lexicographical order if and only if $$$s_i < t_i$$$ (for example, for the strings cats and current , the first position with different characters is $$$2$$$, and the character a is less than the character u , so cats is lexicographically less than current ); if strings $$$s$$$ and $$$t$$$ have no positions with different characters, then the shorter one comes first. For example, the string cat comes before the string cats . Due to restricted access to the database, you can make no more than $$$10$$$ queries to it. Determine the position of the handle you are interested in, knowing that it is definitely in the list.",
+  "inputFormat": "The first line contains the number $$$n$$$ and the string $$$h$$$ ($$$1 \\le n \\le 500$$$) — the total number of handles in the list and the handle you are searching for. It is guaranteed that all handles are non-empty strings of no more than $$$20$$$ characters, consisting only of lowercase Latin letters, except the first letter that may be an uppercase letter. It is also guaranteed that all handles are sorted, unique, and the given handle is in the list.",
+  "outputFormat": "Output specification not found",
+  "sampleTests": [
+    {
+      "input": "4 adedalic\n\nBleddest\n\nNeon\n\nadedalic\n\nawoo",
+      "output": "? 1\n\n? 2\n\n? 3\n\n? 4\n\n! 3"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 512,
+  "sourceUrl": "https://codeforces.com/problemset/problem/2087/D",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

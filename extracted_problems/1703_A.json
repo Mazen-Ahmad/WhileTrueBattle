@@ -1,0 +1,24 @@
+{
+  "contestId": 1703,
+  "index": "A",
+  "name": "YES or YES?",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "There is a string $$$s$$$ of length $$$3$$$, consisting of uppercase and lowercase English letters. Check if it is equal to \" YES \" (without quotes), where each letter can be in any case. For example, \" yES \", \" Yes \", \" yes \" are all allowable.",
+  "inputFormat": "The first line of the input contains an integer $$$t$$$ ($$$1 \\leq t \\leq 10^3$$$) — the number of testcases. The description of each test consists of one line containing one string $$$s$$$ consisting of three characters. Each character of $$$s$$$ is either an uppercase or lowercase English letter.",
+  "outputFormat": "For each test case, output \" YES \" (without quotes) if $$$s$$$ satisfies the condition, and \" NO \" (without quotes) otherwise. You can output \" YES \" and \" NO \" in any case (for example, strings \" yES \", \" yes \" and \" Yes \" will be recognized as a positive response).",
+  "sampleTests": [
+    {
+      "input": "10\nYES\nyES\nyes\nYes\nYeS\nNoo\norZ\nyEz\nYas\nXES",
+      "output": "YES\nYES\nYES\nYES\nYES\nNO\nNO\nNO\nNO\nNO"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1703/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

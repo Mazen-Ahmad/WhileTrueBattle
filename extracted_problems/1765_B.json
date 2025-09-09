@@ -1,0 +1,24 @@
+{
+  "contestId": 1765,
+  "index": "B",
+  "name": "Broken Keyboard",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Recently, Mishka started noticing that his keyboard malfunctions — maybe it's because he was playing rhythm games too much. Empirically, Mishka has found out that every other time he presses a key, it is registered as if the key was pressed twice. For example, if Mishka types text, the first time he presses a key, exactly one letter is printed; the second time he presses a key, two same letters are printed; the third time he presses a key, one letter is printed; the fourth time he presses a key, two same letters are printed, and so on. Note that the number of times a key was pressed is counted for the whole keyboard, not for each key separately. For example, if Mishka tries to type the word osu , it will be printed on the screen as ossu . You are given a word consisting of $$$n$$$ lowercase Latin letters. You have to determine if it can be printed on Mishka's keyboard or not. You may assume that Mishka cannot delete letters from the word, and every time he presses a key, the new letter (or letters) is appended to the end of the word.",
+  "inputFormat": "The first line of the input contains one integer $$$t$$$ ($$$1 \\le t \\le 100$$$) — the number of test cases. The first line of the test case contains one integer $$$n$$$ ($$$1 \\le n \\le 100$$$) — the length of the word. The second line of the test case contains a string $$$s$$$ consisting of $$$n$$$ lowercase Latin letters — the word that should be checked.",
+  "outputFormat": "For each test case, print YES if the word $$$s$$$ can be printed on Mishka's keyboard, and NO otherwise.",
+  "sampleTests": [
+    {
+      "input": "4\n4\nossu\n2\naa\n6\naddonn\n3\nqwe",
+      "output": "YES\nNO\nYES\nNO"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 512,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1765/B",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

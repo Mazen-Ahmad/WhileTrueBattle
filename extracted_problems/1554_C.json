@@ -1,0 +1,24 @@
+{
+  "contestId": 1554,
+  "index": "C",
+  "name": "Mikasa",
+  "rating": 1800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given two integers $$$n$$$ and $$$m$$$. Find the $$$\\operatorname{MEX}$$$ of the sequence $$$n \\oplus 0, n \\oplus 1, \\ldots, n \\oplus m$$$. Here, $$$\\oplus$$$ is the bitwise XOR operator . $$$\\operatorname{MEX}$$$ of the sequence of non-negative integers is the smallest non-negative integer that doesn't appear in this sequence. For example, $$$\\operatorname{MEX}(0, 1, 2, 4) = 3$$$, and $$$\\operatorname{MEX}(1, 2021) = 0$$$.",
+  "inputFormat": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 30\\,000$$$) — the number of test cases. The first and only line of each test case contains two integers $$$n$$$ and $$$m$$$ ($$$0 \\le n, m \\le 10^9$$$).",
+  "outputFormat": "For each test case, print a single integer — the answer to the problem.",
+  "sampleTests": [
+    {
+      "input": "5\n3 5\n4 6\n3 2\n69 696\n123456 654321",
+      "output": "4\n3\n0\n640\n530866"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1554/C",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

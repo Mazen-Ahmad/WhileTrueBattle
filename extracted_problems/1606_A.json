@@ -1,0 +1,24 @@
+{
+  "contestId": 1606,
+  "index": "A",
+  "name": "AB Balance",
+  "rating": 900,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given a string $$$s$$$ of length $$$n$$$ consisting of characters a and/or b . Let $$$\\operatorname{AB}(s)$$$ be the number of occurrences of string ab in $$$s$$$ as a substring . Analogically, $$$\\operatorname{BA}(s)$$$ is the number of occurrences of ba in $$$s$$$ as a substring . In one step, you can choose any index $$$i$$$ and replace $$$s_i$$$ with character a or b . What is the minimum number of steps you need to make to achieve $$$\\operatorname{AB}(s) = \\operatorname{BA}(s)$$$? Reminder: The number of occurrences of string $$$d$$$ in $$$s$$$ as substring is the number of indices $$$i$$$ ($$$1 \\le i \\le |s| - |d| + 1$$$) such that substring $$$s_i s_{i + 1} \\dots s_{i + |d| - 1}$$$ is equal to $$$d$$$. For example, $$$\\operatorname{AB}($$$ aabbbabaa $$$) = 2$$$ since there are two indices $$$i$$$: $$$i = 2$$$ where a ab bbabaa and $$$i = 6$$$ where aabbb ab aa .",
+  "inputFormat": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 1000$$$). Description of the test cases follows. The first and only line of each test case contains a single string $$$s$$$ ($$$1 \\le |s| \\le 100$$$, where $$$|s|$$$ is the length of the string $$$s$$$), consisting only of characters a and/or b .",
+  "outputFormat": "For each test case, print the resulting string $$$s$$$ with $$$\\operatorname{AB}(s) = \\operatorname{BA}(s)$$$ you'll get making the minimum number of steps. If there are multiple answers, print any of them.",
+  "sampleTests": [
+    {
+      "input": "4\nb\naabbbabaa\nabbb\nabbaab",
+      "output": "b\naabbbabaa\nbbbb\nabbaaa"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1606/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

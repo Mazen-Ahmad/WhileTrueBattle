@@ -1,0 +1,24 @@
+{
+  "contestId": 1681,
+  "index": "D",
+  "name": "Required Length",
+  "rating": 1700,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given two integer numbers, $$$n$$$ and $$$x$$$. You may perform several operations with the integer $$$x$$$. Each operation you perform is the following one: choose any digit $$$y$$$ that occurs in the decimal representation of $$$x$$$ at least once, and replace $$$x$$$ by $$$x \\cdot y$$$. You want to make the length of decimal representation of $$$x$$$ (without leading zeroes) equal to $$$n$$$. What is the minimum number of operations required to do that?",
+  "inputFormat": "The only line of the input contains two integers $$$n$$$ and $$$x$$$ ($$$2 \\le n \\le 19$$$; $$$1 \\le x < 10^{n-1}$$$).",
+  "outputFormat": "Print one integer — the minimum number of operations required to make the length of decimal representation of $$$x$$$ (without leading zeroes) equal to $$$n$$$, or $$$-1$$$ if it is impossible.",
+  "sampleTests": [
+    {
+      "input": "2 1",
+      "output": "-1"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 512,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1681/D",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

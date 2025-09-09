@@ -1,0 +1,24 @@
+{
+  "contestId": 1796,
+  "index": "C",
+  "name": "Maximum Set",
+  "rating": 1600,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "A set of positive integers $$$S$$$ is called beautiful if, for every two integers $$$x$$$ and $$$y$$$ from this set, either $$$x$$$ divides $$$y$$$ or $$$y$$$ divides $$$x$$$ (or both). You are given two integers $$$l$$$ and $$$r$$$. Consider all beautiful sets consisting of integers not less than $$$l$$$ and not greater than $$$r$$$. You have to print two numbers: the maximum possible size of a beautiful set where all elements are from $$$l$$$ to $$$r$$$; the number of beautiful sets consisting of integers from $$$l$$$ to $$$r$$$ with the maximum possible size. Since the second number can be very large, print it modulo $$$998244353$$$.",
+  "inputFormat": "The first line contains one integer $$$t$$$ ($$$1 \\le t \\le 2 \\cdot 10^4$$$) — the number of test cases. Each test case consists of one line containing two integers $$$l$$$ and $$$r$$$ ($$$1 \\le l \\le r \\le 10^6$$$).",
+  "outputFormat": "For each test case, print two integers — the maximum possible size of a beautiful set consisting of integers from $$$l$$$ to $$$r$$$, and the number of such sets with maximum possible size. Since the second number can be very large, print it modulo $$$998244353$$$.",
+  "sampleTests": [
+    {
+      "input": "4\n3 11\n13 37\n1 22\n4 100",
+      "output": "2 4\n2 6\n5 1\n5 7"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 512,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1796/C",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

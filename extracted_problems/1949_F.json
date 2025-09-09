@@ -1,0 +1,24 @@
+{
+  "contestId": 1949,
+  "index": "F",
+  "name": "Dating",
+  "rating": 2200,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are the developer of a dating app which ignores gender completely. The app has $$$n$$$ users, indexed from $$$1$$$ to $$$n$$$. Each user's profile features a list of the activities they enjoy doing. There are $$$m$$$ possible activities, indexed from $$$1$$$ to $$$m$$$. A match between two users is good if they share at least one activity and, at the same time, both of them like at least one activity that the other user does not like. Find a good match if it exists.",
+  "inputFormat": "The first line contains two integers $$$n$$$ and $$$m$$$ ($$$2 \\leq n \\leq 200\\,000$$$, $$$1 \\leq m \\leq 10^6$$$) — the number of users and the number of activities. Each of the following $$$n$$$ lines contains a number $$$k_i$$$ ($$$0 \\leq k_i \\leq m$$$) — the number of activities that user $$$i$$$ likes — followed by $$$k_i$$$ distinct integers from $$$1$$$ to $$$m$$$ — the activities user $$$i$$$ likes. It is guaranteed that $$$k_1+k_2+\\cdots+k_n$$$ does not exceed $$$10^6$$$.",
+  "outputFormat": "Print $$$\\texttt{YES}$$$ if a good match exists. Otherwise, print $$$\\texttt{NO}$$$. If a good match exists, on the next line print two integers — the indexes of two users that make a match.",
+  "sampleTests": [
+    {
+      "input": "3 5\n3 1 2 4\n5 1 2 3 4 5\n2 1 5",
+      "output": "YES\n3 1"
+    }
+  ],
+  "timeLimit": 3000,
+  "memoryLimit": 512,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1949/F",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

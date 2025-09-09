@@ -1,0 +1,24 @@
+{
+  "contestId": 1817,
+  "index": "E",
+  "name": "Half-sum",
+  "rating": 3400,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You're given a multiset of non-negative integers $$$\\{a_1, a_2, \\dots, a_n\\}$$$. In one step you take two elements $$$x$$$ and $$$y$$$ of the multiset, remove them and insert their mean value $$$\\frac{x + y}{2}$$$ back into the multiset. You repeat the step described above until you are left with only two numbers $$$A$$$ and $$$B$$$. What is the maximum possible value of their absolute difference $$$|A-B|$$$? Since the answer is not an integer number, output it modulo $$$10^9+7$$$.",
+  "inputFormat": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 100$$$). Description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$2 \\le n \\le 10^6$$$) — the size of the multiset. The second line contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$0 \\le a_i \\le 10^9$$$) — the elements of the multiset. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^6$$$.",
+  "outputFormat": "For each test case, output a single integer, the answer to the problem modulo $$$10^9+7$$$. Formally, let $$$M = 10^9+7$$$. It can be shown that the answer can be expressed as an irreducible fraction $$$\\frac{p}{q}$$$, where $$$p$$$ and $$$q$$$ are integers and $$$q \\not \\equiv 0 \\pmod{M}$$$. Output the integer equal to $$$p \\cdot q^{-1} \\bmod M$$$. In other words, output an integer $$$x$$$ such that $$$0 \\le x < M$$$ and $$$x \\cdot q \\equiv p \\pmod{M}$$$.",
+  "sampleTests": [
+    {
+      "input": "5\n2\n7 3\n4\n1 2 10 11\n3\n1 2 3\n6\n64 32 64 16 64 0\n4\n1 1 1 1",
+      "output": "4\n9\n500000005\n59\n0"
+    }
+  ],
+  "timeLimit": 4000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1817/E",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

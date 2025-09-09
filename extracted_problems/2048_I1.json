@@ -1,0 +1,24 @@
+{
+  "contestId": 2048,
+  "index": "I1",
+  "name": "Kevin and Puzzle (Easy Version)",
+  "rating": 3500,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "This is the easy version of the problem. The difference between the versions is that in this version, you need to find any one good array. You can hack only if you solved all versions of this problem. Kevin is visiting the Red Church, and he found a puzzle on the wall. For an array $$$ a $$$, let $$$ c(l,r) $$$ indicate how many distinct numbers are among $$$ a_l, a_{l+1}, \\ldots, a_r $$$. In particular, if $$$ l > r $$$, define $$$ c(l,r) = 0 $$$. You are given a string $$$ s $$$ of length $$$ n $$$ consisting of letters $$$ \\texttt{L} $$$ and $$$ \\texttt{R} $$$ only. Let a non-negative array $$$ a $$$ be called good , if the following conditions hold for $$$ 1 \\leq i \\leq n $$$: if $$$s_i=\\verb!L!$$$, then $$$c(1,i-1)=a_i$$$; if $$$s_i=\\verb!R!$$$, then $$$c(i+1,n)=a_i$$$. If there is a good array $$$a$$$, print any of the good arrays. Otherwise, report that no such arrays exists.",
+  "inputFormat": "Each test contains multiple test cases. The first line contains a single integer $$$t$$$ ($$$1\\le t \\le 10^4$$$) — the number of test cases. The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$2\\leq n\\leq 2\\cdot 10^5$$$) — the length of string $$$s$$$. The second line of each test case contains a string $$$s$$$ with a length $$$n$$$, containing only English uppercase letters $$$\\verb!L!$$$ and $$$\\verb!R!$$$. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2\\cdot 10^5$$$.",
+  "outputFormat": "For each test case, if a good array exists, print $$$n$$$ non-negative integers: a good array $$$a$$$. Otherwise, print a single integer $$$-1$$$. If there are multiple arrays $$$a$$$ satisfying the conditions, you can output any of them.",
+  "sampleTests": [
+    {
+      "input": "4\n3\nLLR\n3\nRRL\n4\nRRLR\n5\nLLRLR",
+      "output": "0 1 0\n2 1 2\n-1\n0 1 2 3 0"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 512,
+  "sourceUrl": "https://codeforces.com/problemset/problem/2048/I1",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

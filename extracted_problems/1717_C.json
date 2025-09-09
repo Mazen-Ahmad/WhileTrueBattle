@@ -1,0 +1,24 @@
+{
+  "contestId": 1717,
+  "index": "C",
+  "name": "Madoka and Formal Statement",
+  "rating": 1300,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Given an array of integer $$$a_1, a_2, \\ldots, a_n$$$. In one operation you can make $$$a_i := a_i + 1$$$ if $$$i < n$$$ and $$$a_i \\leq a_{i + 1}$$$, or $$$i = n$$$ and $$$a_i \\leq a_1$$$. You need to check whether the array $$$a_1, a_2, \\ldots, a_n$$$ can become equal to the array $$$b_1, b_2, \\ldots, b_n$$$ in some number of operations (possibly, zero). Two arrays $$$a$$$ and $$$b$$$ of length $$$n$$$ are called equal if $$$a_i = b_i$$$ for all integers $$$i$$$ from $$$1$$$ to $$$n$$$.",
+  "inputFormat": "The input consists of multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 4 \\cdot 10^4$$$) — the number of test cases. Description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$2 \\le n \\le 2 \\cdot 10^5$$$) – the length of the array. The second line of each test case contains $$$n$$$ integers $$$a_1, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 10^9$$$) – the elements of the array $$$a$$$. The third line of each test case contains $$$n$$$ integers $$$b_1, \\ldots, b_n$$$ ($$$1 \\le b_i \\le 10^9$$$) – the elements of the array $$$b$$$. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "outputFormat": "For each test case, output \" YES \" if you can get the array $$$b$$$, otherwise output \" NO \". You may print each letter in any case (for example, \" YES \", \" Yes \", \" yes \", \" yEs \" will all be recognized as positive answer).",
+  "sampleTests": [
+    {
+      "input": "5\n3\n1 2 5\n1 2 5\n2\n2 2\n1 3\n4\n3 4 1 2\n6 4 2 5\n3\n2 4 1\n4 5 3\n5\n1 2 3 4 5\n6 5 6 7 6",
+      "output": "YES\nNO\nNO\nNO\nYES"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1717/C",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

@@ -1,0 +1,24 @@
+{
+  "contestId": 1906,
+  "index": "K",
+  "name": "Deck-Building Game",
+  "rating": 2500,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are playing a deck-building game with your friend. There are $$$N$$$ cards, numbered from $$$1$$$ to $$$N$$$. Card $$$i$$$ has the value of $$$A_i$$$. You want to build two decks; one for you and one for your friend. A card cannot be inside both decks, and it is allowed to not use all $$$N$$$ cards. It is also allowed for a deck to be empty, i.e. does not contain any cards. The power of a deck is represented as the bitwise XOR of the value of the cards in the deck. The power of an empty deck is $$$0$$$. The game is balanced if both decks have the same power. Determine the number of ways to build two decks such that the game is balanced. Two ways are considered different if one of the decks contains at least one different card. Since the answer can be very large, calculate the answer modulo $$$998\\,244\\,353$$$.",
+  "inputFormat": "The first line consists of an integer $$$N$$$ ($$$2 \\le N \\le 100\\,000$$$). The following line consists of $$$N$$$ integers $$$A_i$$$ ($$$1 \\le A_i \\le 100\\,000$$$).",
+  "outputFormat": "Output an integer representing the number of ways to build two decks such that the game is balanced. Output the answer modulo $$$998\\,244\\,353$$$.",
+  "sampleTests": [
+    {
+      "input": "4\n16 12 4 8",
+      "output": "9"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 1024,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1906/K",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

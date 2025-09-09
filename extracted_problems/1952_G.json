@@ -1,0 +1,24 @@
+{
+  "contestId": 1952,
+  "index": "G",
+  "name": "Mathematician Takeover",
+  "rating": null,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "A mathematician grabbed my computer as I was preparing this problem, deleted the statement, and changed the samples to fit his liking. The model solution and input/output format are still correct, but the samples are wrong. I've partially fixed the problem so that when you submit, it will be tested against the correct version of the problem. However, I can't fix the samples below. As a computer scientist, can you solve the correct problem?",
+  "inputFormat": "The only line of input contains a real number $$$x$$$ ($$$1 \\leq x \\leq 100$$$), given to exactly three decimal places.",
+  "outputFormat": "Output one real number — the answer. Your answer is considered correct if its absolute or relative error does not exceed $$$10^{-4}$$$. Formally, let your answer be $$$a$$$, and the jury's answer be $$$b$$$. Your answer is accepted if and only if $$$\\frac{|a-b|}{\\max(1,|b|)} \\le 10^{-4}$$$.",
+  "sampleTests": [
+    {
+      "input": "1.234",
+      "output": "0.21026"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1952/G",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

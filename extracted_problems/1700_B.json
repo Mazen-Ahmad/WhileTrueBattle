@@ -1,0 +1,24 @@
+{
+  "contestId": 1700,
+  "index": "B",
+  "name": "Palindromic Numbers",
+  "rating": 1100,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "During a daily walk Alina noticed a long number written on the ground. Now Alina wants to find some positive number of same length without leading zeroes, such that the sum of these two numbers is a palindrome. Recall that a number is called a palindrome, if it reads the same right to left and left to right. For example, numbers $$$121, 66, 98989$$$ are palindromes, and $$$103, 239, 1241$$$ are not palindromes. Alina understands that a valid number always exist. Help her find one!",
+  "inputFormat": "The first line of input data contains an integer $$$t$$$ ($$$1 \\leq t \\leq 100$$$) — the number of test cases. Next, descriptions of $$$t$$$ test cases follow. The first line of each test case contains a single integer $$$n$$$ ($$$2 \\leq n \\leq 100\\,000$$$) — the length of the number that is written on the ground. The second line of contains the positive $$$n$$$-digit integer without leading zeroes — the number itself. It is guaranteed that the sum of the values $$$n$$$ over all test cases does not exceed $$$100\\,000$$$.",
+  "outputFormat": "For each of $$$t$$$ test cases print an answer — a positive $$$n$$$-digit integer without leading zeros, such that the sum of the input integer and this number is a palindrome. We can show that at least one number satisfying the constraints exists. If there are multiple solutions, you can output any of them.",
+  "sampleTests": [
+    {
+      "input": "3\n2\n99\n4\n1023\n3\n385",
+      "output": "32\n8646\n604"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1700/B",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

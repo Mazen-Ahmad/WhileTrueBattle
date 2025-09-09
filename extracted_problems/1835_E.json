@@ -1,0 +1,24 @@
+{
+  "contestId": 1835,
+  "index": "E",
+  "name": "Old Mobile",
+  "rating": 3500,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "During the latest mission of the starship U.S.S. Coder, Captain Jan Bitovsky was accidentally teleported to the surface of an unknown planet. Trying to find his way back, Jan found an artifact from planet Earth's ancient civilization — a mobile device capable of interstellar calls created by Byterola. Unfortunately, there was another problem. Even though Jan, as a representative of humans, knew perfectly the old notation of the cell phone numbers, the symbols on the device's keyboard were completely worn down and invisible to the human eye. The old keyboards had exactly $$$m + 1$$$ buttons, one for each digit from the base $$$m$$$ numerical system, and one single backspace button allowing one to erase the last written digit (if nothing was written on the screen, then this button does nothing, but it's still counted as pressed). Jan would like to communicate with his crew. He needs to type a certain number (also from the base $$$m$$$ numerical system, that is, digits from $$$0$$$ to $$$m - 1$$$). He wants to know the expected number of button presses necessary to contact the U.S.S. Coder. Jan always chooses the most optimal buttons based on his current knowledge. Buttons are indistinguishable until pressed. Help him!",
+  "inputFormat": "In the first line of input, there are two integer numbers $$$n$$$ and $$$m$$$ ($$$1 \\le n \\le 10^6$$$, $$$2 \\le m \\le 10^3$$$) — the length of the number to U.S.S. Coder and the base of the numerical system. In the next and the last input line, there are $$$n$$$ integers between $$$0$$$ and $$$m - 1$$$: the number to type in the base $$$m$$$ numerical system.",
+  "outputFormat": "Output the expected number of button presses modulo $$$1\\,000\\,000\\,007$$$. Formally, let $$$M = 1\\,000\\,000\\,007$$$. It can be shown that the answer can be expressed as an irreducible fraction $$$\\frac{p}{q}$$$, where $$$p$$$ and $$$q$$$ are integers and $$$q \\not \\equiv 0 \\pmod{M}$$$. Output the integer equal to $$$p \\cdot q^{-1} \\bmod M$$$. In other words, output such an integer $$$x$$$ that $$$0 \\le x < M$$$ and $$$x \\cdot q \\equiv p \\pmod{M}$$$.",
+  "sampleTests": [
+    {
+      "input": "1 2\n0",
+      "output": "666666674"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1835/E",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

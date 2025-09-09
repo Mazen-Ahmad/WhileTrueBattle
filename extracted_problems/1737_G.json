@@ -1,0 +1,24 @@
+{
+  "contestId": 1737,
+  "index": "G",
+  "name": "Ela Takes Dancing Class",
+  "rating": 3500,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "DTL engineers love partying in the weekend. Ela does, too! Unfortunately, she didn't know how to dance yet. Therefore, she decided to take a dancing class. There are $$$n$$$ students in the dancing class, including Ela. In the final project, $$$n$$$ students will participate in a choreography described below. $$$n$$$ students are positioned on the positive side of the $$$Ox$$$-axis. The $$$i$$$-th dancer is located at $$$a_i > 0$$$. Some dancers will change positions during the dance (we'll call them movable dancers ), and others will stay in the same place during a choreography (we'll call them immovable dancers ). We distinguish the dancers using a binary string $$$s$$$ of length $$$n$$$: if $$$s_i$$$ equals '1' , then the $$$i$$$-th dancer is movable, otherwise the $$$i$$$-th dancer is immovable. Let's call the \"positive energy value\" of the choreography $$$d > 0$$$. The dancers will perform \"movements\" based on this value. Each minute after the dance begins, the movable dancer with the smallest $$$x$$$-coordinate will start moving to the right and initiate a \"movement\" . At the beginning of the movement , the dancer's energy level will be initiated equally to the positive energy value of the choreography, which is $$$d$$$. Each time they move from some $$$y$$$ to $$$y+1$$$, the energy level will be decreased by $$$1$$$. At some point, the dancer might meet other fellow dancers in the same coordinates. If it happens, then the energy level of the dancer will be increased by $$$1$$$. A dancer will stop moving to the right when his energy level reaches $$$0$$$, and he doesn't share a position with another dancer. The dancers are very well-trained, and each \"movement\" will end before the next minute begins. To show her understanding of this choreography, Ela has to answer $$$q$$$ queries, each consisting of two integers $$$k$$$ and $$$m$$$. The answer to this query is the coordinate of the $$$m$$$-th dancer of both types from the left at $$$k$$$-th minute after the choreography begins. In other words, denote $$$x_{k, 1}, x_{k, 2}, \\dots, x_{k, n}$$$ as the sorted coordinates of the dancers at $$$k$$$-th minute from the beginning, you need to print $$$x_{k, m}$$$.",
+  "inputFormat": "The first line contains three integers $$$n$$$, $$$d$$$ and $$$q$$$ ($$$1 \\le n \\le 10^5$$$; $$$1 \\le d \\le 10^9$$$; $$$1 \\le q \\le 10^5$$$) — the number of dancers, the positive energy value of the choreography, and the number of queries. The second line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$1 \\le a_1 < a_2 < \\dots < a_n \\le 10^9$$$) — the coordinates of each dancer. The third line contains a binary string $$$s$$$ of length $$$n$$$ — the movability of each dancer. Each character is either '0' or '1' . It is guaranteed that $$$s$$$ contains at least one character '1' . Then $$$q$$$ lines follow, the $$$i$$$-th of them contains two integers $$$k_i$$$ and $$$m_i$$$ ($$$1 \\le k_i \\le 10^9$$$, $$$1 \\le m_i \\le n$$$) — the content of each query.",
+  "outputFormat": "Output $$$q$$$ lines, each contains a single integer — the answer for the corresponding query.",
+  "sampleTests": [
+    {
+      "input": "4 3 8\n1 3 6 7\n1011\n1 1\n1 2\n1 3\n1 4\n2 1\n2 2\n2 3\n2 4",
+      "output": "3\n5\n6\n7\n3\n6\n7\n10"
+    }
+  ],
+  "timeLimit": 4000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1737/G",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

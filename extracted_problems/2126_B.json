@@ -1,0 +1,24 @@
+{
+  "contestId": 2126,
+  "index": "B",
+  "name": "No Casino in the Mountains",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given an array $$$a$$$ of $$$n$$$ numbers and a number $$$k$$$. The value $$$a_i$$$ describes the weather on the $$$i$$$-th day: if it rains on the $$$i$$$-th day, then $$$a_i = 1$$$; otherwise, if the weather is good on the $$$i$$$-th day, then $$$a_i = 0$$$. Jean wants to visit as many peaks as possible. One hike to a peak takes exactly $$$k$$$ days, and during each of these days, the weather must be good ($$$a_i = 0$$$). That is, formally, he can start a hike on day $$$i$$$ only if all $$$a_j = 0$$$ for all $$$j$$$ $$$(i \\leq j \\leq i + k - 1)$$$. After each hike, before starting the next one, Jean must take a break of at least one day, meaning that on the day following a hike, he cannot go on another hike. Find the maximum number of peaks that Jean can visit.",
+  "inputFormat": "Each test consists of several test cases. The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The description of the test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le n \\le 10^5$$$, $$$1 \\le k \\le n$$$). The second line contains $$$n$$$ numbers $$$a_i$$$ ($$$a_i \\in \\{0, 1\\}$$$), where $$$a_i$$$ denotes the weather on the $$$i$$$-th day. It is guaranteed that the total value of $$$n$$$ across all test cases does not exceed $$$10^5$$$.",
+  "outputFormat": "For each test case, output a single integer: the maximum number of hikes that Jean can make.",
+  "sampleTests": [
+    {
+      "input": "5\n5 1\n0 1 0 0 0\n7 3\n0 0 0 0 0 0 0\n3 1\n1 1 1\n4 2\n0 1 0 1\n6 2\n0 0 1 0 0 0",
+      "output": "3\n2\n0\n0\n2"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/2126/B",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

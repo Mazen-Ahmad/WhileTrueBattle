@@ -1,0 +1,24 @@
+{
+  "contestId": 1692,
+  "index": "A",
+  "name": "Marathon",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given four distinct integers $$$a$$$, $$$b$$$, $$$c$$$, $$$d$$$. Timur and three other people are running a marathon. The value $$$a$$$ is the distance that Timur has run and $$$b$$$, $$$c$$$, $$$d$$$ correspond to the distances the other three participants ran. Output the number of participants in front of Timur.",
+  "inputFormat": "The first line contains a single integer $$$t$$$ ($$$1 \\leq t \\leq 10^4$$$) — the number of test cases. The description of each test case consists of four distinct integers $$$a$$$, $$$b$$$, $$$c$$$, $$$d$$$ ($$$0 \\leq a, b, c, d \\leq 10^4$$$).",
+  "outputFormat": "For each test case, output a single integer — the number of participants in front of Timur.",
+  "sampleTests": [
+    {
+      "input": "4\n2 3 4 1\n10000 0 1 2\n500 600 400 300\n0 9999 10000 9998",
+      "output": "2\n0\n1\n3"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1692/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

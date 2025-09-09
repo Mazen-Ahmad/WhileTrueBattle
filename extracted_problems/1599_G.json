@@ -1,0 +1,24 @@
+{
+  "contestId": 1599,
+  "index": "G",
+  "name": "Shortest path",
+  "rating": 2700,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given $$$N$$$ points on an infinite plane with the Cartesian coordinate system on it. $$$N-1$$$ points lay on one line, and one point isn't on that line. You are on point $$$K$$$ at the start, and the goal is to visit every point. You can move between any two points in a straight line, and you can revisit points. What is the minimum length of the path?",
+  "inputFormat": "The first line contains two integers: $$$N$$$ ($$$3 \\leq N \\leq 2*10^5$$$) - the number of points, and $$$K$$$ ($$$1 \\leq K \\leq N$$$) - the index of the starting point. Each of the next $$$N$$$ lines contain two integers, $$$A_i$$$, $$$B_i$$$ ($$$-10^6 \\leq A_i, B_i \\leq 10^6$$$) - coordinates of the $$$i-th$$$ point.",
+  "outputFormat": "The output contains one number - the shortest path to visit all given points starting from point $$$K$$$. The absolute difference between your solution and the main solution shouldn't exceed $$$10^-6$$$;",
+  "sampleTests": [
+    {
+      "input": "5 2\n0 0\n-1 1\n2 -2\n0 1\n-2 2",
+      "output": "7.478709"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1599/G",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

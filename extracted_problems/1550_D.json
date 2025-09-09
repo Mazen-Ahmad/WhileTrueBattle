@@ -1,0 +1,24 @@
+{
+  "contestId": 1550,
+  "index": "D",
+  "name": "Excellent Arrays",
+  "rating": 2300,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Let's call an integer array $$$a_1, a_2, \\dots, a_n$$$ good if $$$a_i \\neq i$$$ for each $$$i$$$. Let $$$F(a)$$$ be the number of pairs $$$(i, j)$$$ ($$$1 \\le i < j \\le n$$$) such that $$$a_i + a_j = i + j$$$. Let's say that an array $$$a_1, a_2, \\dots, a_n$$$ is excellent if: $$$a$$$ is good ; $$$l \\le a_i \\le r$$$ for each $$$i$$$; $$$F(a)$$$ is the maximum possible among all good arrays of size $$$n$$$. Given $$$n$$$, $$$l$$$ and $$$r$$$, calculate the number of excellent arrays modulo $$$10^9 + 7$$$.",
+  "inputFormat": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 1000$$$) — the number of test cases. The first and only line of each test case contains three integers $$$n$$$, $$$l$$$, and $$$r$$$ ($$$2 \\le n \\le 2 \\cdot 10^5$$$; $$$-10^9 \\le l \\le 1$$$; $$$n \\le r \\le 10^9$$$). It's guaranteed that the sum of $$$n$$$ doesn't exceed $$$2 \\cdot 10^5$$$.",
+  "outputFormat": "For each test case, print the number of excellent arrays modulo $$$10^9 + 7$$$.",
+  "sampleTests": [
+    {
+      "input": "4\n3 0 3\n4 -3 5\n42 -33 55\n69 -42 146",
+      "output": "4\n10\n143922563\n698570404"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1550/D",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

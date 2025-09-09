@@ -1,0 +1,24 @@
+{
+  "contestId": 1784,
+  "index": "F",
+  "name": "Minimums or Medians",
+  "rating": 3400,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Vika has a set of all consecutive positive integers from $$$1$$$ to $$$2n$$$, inclusive. Exactly $$$k$$$ times Vika will choose and perform one of the following two actions: take two smallest integers from her current set and remove them; take two median integers from her current set and remove them. Recall that medians are the integers located exactly in the middle of the set if you write down its elements in increasing order. Note that Vika's set always has an even size, thus the pair of median integers is uniquely defined. For example, two median integers of the set $$$\\{1, 5, 6, 10, 15, 16, 18, 23\\}$$$ are $$$10$$$ and $$$15$$$. How many different sets can Vika obtain in the end, after $$$k$$$ actions? Print this number modulo $$$998\\,244\\,353$$$. Two sets are considered different if some integer belongs to one of them but not to the other.",
+  "inputFormat": "The only line contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le k \\le n \\le 10^6$$$).",
+  "outputFormat": "Print a single integer — the number of sets Vika can obtain in the end, modulo $$$998\\,244\\,353$$$.",
+  "sampleTests": [
+    {
+      "input": "3 1",
+      "output": "2"
+    }
+  ],
+  "timeLimit": 4000,
+  "memoryLimit": 512,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1784/F",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

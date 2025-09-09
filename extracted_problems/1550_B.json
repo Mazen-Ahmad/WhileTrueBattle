@@ -1,0 +1,24 @@
+{
+  "contestId": 1550,
+  "index": "B",
+  "name": "Maximum Cost Deletion",
+  "rating": 1000,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given a string $$$s$$$ of length $$$n$$$ consisting only of the characters 0 and 1 . You perform the following operation until the string becomes empty: choose some consecutive substring of equal characters, erase it from the string and glue the remaining two parts together (any of them can be empty) in the same order. For example, if you erase the substring 111 from the string 1 111 10 , you will get the string 110 . When you delete a substring of length $$$l$$$, you get $$$a \\cdot l + b$$$ points. Your task is to calculate the maximum number of points that you can score in total, if you have to make the given string empty.",
+  "inputFormat": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 2000$$$) — the number of testcases. The first line of each testcase contains three integers $$$n$$$, $$$a$$$ and $$$b$$$ ($$$1 \\le n \\le 100; -100 \\le a, b \\le 100$$$) — the length of the string $$$s$$$ and the parameters $$$a$$$ and $$$b$$$. The second line contains the string $$$s$$$. The string $$$s$$$ consists only of the characters 0 and 1 .",
+  "outputFormat": "For each testcase, print a single integer — the maximum number of points that you can score.",
+  "sampleTests": [
+    {
+      "input": "3\n3 2 0\n000\n5 -2 5\n11001\n6 1 -4\n100111",
+      "output": "6\n15\n-2"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1550/B",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

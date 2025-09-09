@@ -1,0 +1,24 @@
+{
+  "contestId": 1738,
+  "index": "H",
+  "name": "Palindrome Addicts",
+  "rating": 3300,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Your task is to maintain a queue consisting of lowercase English letters as follows: \" push $$$c$$$\": insert a letter $$$c$$$ at the back of the queue; \" pop \": delete a letter from the front of the queue. Initially, the queue is empty. After each operation, you are asked to count the number of distinct palindromic substrings in the string that are obtained by concatenating the letters from the front to the back of the queue. Especially, the number of distinct palindromic substrings of the empty string is $$$0$$$. A string $$$s[1..n]$$$ of length $$$n$$$ is palindromic if $$$s[i] = s[n-i+1]$$$ for every $$$1 \\leq i \\leq n$$$. The string $$$s[l..r]$$$ is a substring of string $$$s[1..n]$$$ for every $$$1 \\leq l \\leq r \\leq n$$$. Two strings $$$s[1..n]$$$ and $$$t[1..m]$$$ are distinct, if at least one of the following holds. $$$n \\neq m$$$; $$$s[i] \\neq t[i]$$$ for some $$$1 \\leq i \\leq \\min\\{n,m\\}$$$.",
+  "inputFormat": "The first line is an integer $$$q$$$ ($$$1 \\leq q \\leq 10^6$$$), indicating the number of operations. Then $$$q$$$ lines follow. Each of the following lines contains one of the operations as follows. \" push $$$c$$$\": insert a letter $$$c$$$ at the back of the queue, where $$$c$$$ is a lowercase English letter; \" pop \": delete a letter from the front of the queue. It is guaranteed that no \" pop \" operation will be performed when the queue is empty.",
+  "outputFormat": "After each operation, print the number of distinct palindromic substrings in the string presented in the queue.",
+  "sampleTests": [
+    {
+      "input": "12\npush a\npop\npush a\npush a\npush b\npush b\npush a\npush a\npop\npop\npop\npush b",
+      "output": "1\n0\n1\n2\n3\n4\n5\n6\n5\n4\n3\n4"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 1024,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1738/H",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

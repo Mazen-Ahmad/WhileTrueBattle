@@ -1,0 +1,24 @@
+{
+  "contestId": 1635,
+  "index": "F",
+  "name": "Closest Pair",
+  "rating": 2800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "There are $$$n$$$ weighted points on the $$$OX$$$-axis. The coordinate and the weight of the $$$i$$$-th point is $$$x_i$$$ and $$$w_i$$$, respectively. All points have distinct coordinates and positive weights. Also, $$$x_i < x_{i + 1}$$$ holds for any $$$1 \\leq i < n$$$. The weighted distance between $$$i$$$-th point and $$$j$$$-th point is defined as $$$|x_i - x_j| \\cdot (w_i + w_j)$$$, where $$$|val|$$$ denotes the absolute value of $$$val$$$. You should answer $$$q$$$ queries, where the $$$i$$$-th query asks the following: Find the minimum weighted distance among all pairs of distinct points among the points in subarray $$$[l_i,r_i]$$$.",
+  "inputFormat": "The first line contains 2 integers $$$n$$$ and $$$q$$$ $$$(2 \\leq n \\leq 3 \\cdot 10^5; 1 \\leq q \\leq 3 \\cdot 10^5)$$$ — the number of points and the number of queries. Then, $$$n$$$ lines follows, the $$$i$$$-th of them contains two integers $$$x_i$$$ and $$$w_i$$$ $$$(-10^9 \\leq x_i \\leq 10^9; 1 \\leq w_i \\leq 10^9)$$$ — the coordinate and the weight of the $$$i$$$-th point. It is guaranteed that the points are given in the increasing order of $$$x$$$. Then, $$$q$$$ lines follows, the $$$i$$$-th of them contains two integers $$$l_i$$$ and $$$r_i$$$ $$$(1 \\leq l_i < r_i \\leq n)$$$ — the given subarray of the $$$i$$$-th query.",
+  "outputFormat": "For each query output one integer, the minimum weighted distance among all pair of distinct points in the given subarray.",
+  "sampleTests": [
+    {
+      "input": "5 5\n-2 2\n0 10\n1 1\n9 2\n12 7\n1 3\n2 3\n1 5\n3 5\n2 4",
+      "output": "9\n11\n9\n24\n11"
+    }
+  ],
+  "timeLimit": 3000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1635/F",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

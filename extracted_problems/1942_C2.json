@@ -1,0 +1,24 @@
+{
+  "contestId": 1942,
+  "index": "C2",
+  "name": "Bessie's Birthday Cake (Hard Version)",
+  "rating": 1700,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Proof Geometric Construction Can Solve All Love Affairs - manbo-p ⠀ This is the hard version of the problem. The only difference between the two versions is the constraint on $$$y$$$. In this version $$$0 \\leq y \\leq n - x$$$. You can make hacks only if both versions are solved. Bessie has received a birthday cake from her best friend Elsie, and it came in the form of a regular polygon with $$$n$$$ sides. The vertices of the cake are numbered from $$$1$$$ to $$$n$$$ clockwise. You and Bessie are going to choose some of those vertices to cut non-intersecting diagonals into the cake. In other words, the endpoints of the diagonals must be part of the chosen vertices. Bessie would only like to give out pieces of cake which result in a triangle to keep consistency. The size of the pieces doesn't matter, and the whole cake does not have to be separated into all triangles (other shapes are allowed in the cake, but those will not be counted). Bessie has already chosen $$$x$$$ of those vertices that can be used to form diagonals. She wants you to choose no more than $$$y$$$ other vertices such that the number of triangular pieces of cake she can give out is maximized. What is the maximum number of triangular pieces of cake Bessie can give out?",
+  "inputFormat": "The first line contains a single integer $$$t$$$ ($$$1 \\leq t \\leq 10^4$$$) — the number of test cases. The first line of each test case consists of three integers, $$$n$$$, $$$x$$$, and $$$y$$$ ($$$4 \\leq n \\leq 10^9$$$, $$$2 \\leq x \\leq \\min(n, 2 \\cdot 10^5)$$$, $$$0 \\leq y \\leq n - x$$$) — the number of sides of the polygon, number of vertices Bessie has chosen, and the maximum number of other vertices you can choose. The second line consists of $$$x$$$ distinct integers from $$$1$$$ to $$$n$$$, representing the vertices Bessie has chosen. It is guaranteed the sum of $$$x$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "outputFormat": "For each test case, output a single integer: the maximum number of non-intersecting triangular pieces of cake she can give out.",
+  "sampleTests": [
+    {
+      "input": "3\n8 4 2\n1 6 2 5\n7 3 1\n6 4 3\n4 2 2\n1 3",
+      "output": "6\n5\n2"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1942/C2",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

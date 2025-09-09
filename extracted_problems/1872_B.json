@@ -1,0 +1,24 @@
+{
+  "contestId": 1872,
+  "index": "B",
+  "name": "The Corridor or There and Back Again",
+  "rating": 900,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are in a corridor that extends infinitely to the right, divided into square rooms. You start in room $$$1$$$, proceed to room $$$k$$$, and then return to room $$$1$$$. You can choose the value of $$$k$$$. Moving to an adjacent room takes $$$1$$$ second. Additionally, there are $$$n$$$ traps in the corridor: the $$$i$$$-th trap is located in room $$$d_i$$$ and will be activated $$$s_i$$$ seconds after you enter the room $$$\\boldsymbol{d_i}$$$. Once a trap is activated, you cannot enter or exit a room with that trap. A schematic representation of a possible corridor and your path to room $$$k$$$ and back. Determine the maximum value of $$$k$$$ that allows you to travel from room $$$1$$$ to room $$$k$$$ and then return to room $$$1$$$ safely. For instance, if $$$n=1$$$ and $$$d_1=2, s_1=2$$$, you can proceed to room $$$k=2$$$ and return safely (the trap will activate at the moment $$$1+s_1=1+2=3$$$, it can't prevent you to return back). But if you attempt to reach room $$$k=3$$$, the trap will activate at the moment $$$1+s_1=1+2=3$$$, preventing your return (you would attempt to enter room $$$2$$$ on your way back at second $$$3$$$, but the activated trap would block you). Any larger value for $$$k$$$ is also not feasible. Thus, the answer is $$$k=2$$$.",
+  "inputFormat": "The first line of the input contains an integer $$$t$$$ ($$$1 \\le t \\le 1000$$$) — the number of test cases. The descriptions of the test cases follow. The first line of each test case description contains an integer $$$n$$$ ($$$1 \\le n \\le 100$$$) — the number of traps. The following $$$n$$$ lines of each test case description present two integers $$$d_i$$$ and $$$s_i$$$ ($$$1 \\le d_i, s_i \\le 200$$$) — the parameters of a trap (you must leave room $$$d_i$$$ strictly before $$$s_i$$$ seconds have passed since entering this room). It's possible for multiple traps to occupy a single room (the values of $$$d_i$$$ can be repeated).",
+  "outputFormat": "For each test case, print the maximum value of $$$k$$$ that allows you to travel to room $$$k$$$ and return to room $$$1$$$ without encountering an active trap.",
+  "sampleTests": [
+    {
+      "input": "7\n1\n2 2\n3\n2 8\n4 3\n5 2\n1\n200 200\n4\n1 20\n5 9\n3 179\n100 1\n2\n10 1\n1 18\n2\n1 1\n1 2\n3\n1 3\n1 1\n1 3",
+      "output": "2\n5\n299\n9\n9\n1\n1"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1872/B",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

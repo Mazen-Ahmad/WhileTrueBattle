@@ -36,7 +36,7 @@ const ContestHeader = ({ contest, timeLeft, onEndContest, userFinished, waitingF
             </span>
           </div>
 
-          <div className="flex items-center space-x-6">
+          <div className="flex space-x-5 mr-8">
             {/* Timer */}
             <div className="text-center">
               <div className={`text-2xl font-mono font-bold ${getTimeColor()}`}>

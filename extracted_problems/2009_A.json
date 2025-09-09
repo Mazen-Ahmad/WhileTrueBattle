@@ -1,0 +1,24 @@
+{
+  "contestId": 2009,
+  "index": "A",
+  "name": "Minimize!",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given two integers $$$a$$$ and $$$b$$$ ($$$a \\leq b$$$). Over all possible integer values of $$$c$$$ ($$$a \\leq c \\leq b$$$), find the minimum value of $$$(c - a) + (b - c)$$$.",
+  "inputFormat": "The first line contains $$$t$$$ ($$$1 \\leq t \\leq 55$$$) — the number of test cases. Each test case contains two integers $$$a$$$ and $$$b$$$ ($$$1 \\leq a \\leq b \\leq 10$$$).",
+  "outputFormat": "For each test case, output the minimum possible value of $$$(c - a) + (b - c)$$$ on a new line.",
+  "sampleTests": [
+    {
+      "input": "3\n1 2\n3 10\n5 5",
+      "output": "1\n7\n0"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/2009/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

@@ -1,0 +1,24 @@
+{
+  "contestId": 1557,
+  "index": "D",
+  "name": "Ezzat and Grid",
+  "rating": 2200,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Moamen was drawing a grid of $$$n$$$ rows and $$$10^9$$$ columns containing only digits $$$0$$$ and $$$1$$$. Ezzat noticed what Moamen was drawing and became interested in the minimum number of rows one needs to remove to make the grid beautiful. A grid is beautiful if and only if for every two consecutive rows there is at least one column containing $$$1$$$ in these two rows. Ezzat will give you the number of rows $$$n$$$, and $$$m$$$ segments of the grid that contain digits $$$1$$$. Every segment is represented with three integers $$$i$$$, $$$l$$$, and $$$r$$$, where $$$i$$$ represents the row number, and $$$l$$$ and $$$r$$$ represent the first and the last column of the segment in that row. For example, if $$$n = 3$$$, $$$m = 6$$$, and the segments are $$$(1,1,1)$$$, $$$(1,7,8)$$$, $$$(2,7,7)$$$, $$$(2,15,15)$$$, $$$(3,1,1)$$$, $$$(3,15,15)$$$, then the grid is: Your task is to tell Ezzat the minimum number of rows that should be removed to make the grid beautiful.",
+  "inputFormat": "The first line contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n, m \\le 3\\cdot10^5$$$). Each of the next $$$m$$$ lines contains three integers $$$i$$$, $$$l$$$, and $$$r$$$ ($$$1 \\le i \\le n$$$, $$$1 \\le l \\le r \\le 10^9$$$). Each of these $$$m$$$ lines means that row number $$$i$$$ contains digits $$$1$$$ in columns from $$$l$$$ to $$$r$$$, inclusive. Note that the segments may overlap .",
+  "outputFormat": "In the first line, print a single integer $$$k$$$ — the minimum number of rows that should be removed. In the second line print $$$k$$$ distinct integers $$$r_1, r_2, \\ldots, r_k$$$, representing the rows that should be removed ($$$1 \\le r_i \\le n$$$), in any order. If there are multiple answers, print any.",
+  "sampleTests": [
+    {
+      "input": "3 6\n1 1 1\n1 7 8\n2 7 7\n2 15 15\n3 1 1\n3 15 15",
+      "output": "0"
+    }
+  ],
+  "timeLimit": 2500,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1557/D",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

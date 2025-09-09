@@ -1,0 +1,24 @@
+{
+  "contestId": 1530,
+  "index": "A",
+  "name": "Binary Decimal",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Let's call a number a binary decimal if it's a positive integer and all digits in its decimal notation are either $$$0$$$ or $$$1$$$. For example, $$$1\\,010\\,111$$$ is a binary decimal, while $$$10\\,201$$$ and $$$787\\,788$$$ are not. Given a number $$$n$$$, you are asked to represent $$$n$$$ as a sum of some (not necessarily distinct) binary decimals. Compute the smallest number of binary decimals required for that.",
+  "inputFormat": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 1000$$$), denoting the number of test cases. The only line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 10^9$$$), denoting the number to be represented.",
+  "outputFormat": "For each test case, output the smallest number of binary decimals required to represent $$$n$$$ as a sum.",
+  "sampleTests": [
+    {
+      "input": "3\n121\n5\n1000000000",
+      "output": "2\n5\n1"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 512,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1530/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

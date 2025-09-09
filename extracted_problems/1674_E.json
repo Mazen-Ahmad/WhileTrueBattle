@@ -1,0 +1,24 @@
+{
+  "contestId": 1674,
+  "index": "E",
+  "name": "Breaking the Wall",
+  "rating": 2000,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Monocarp plays \"Rage of Empires II: Definitive Edition\" — a strategic computer game. Right now he's planning to attack his opponent in the game, but Monocarp's forces cannot enter the opponent's territory since the opponent has built a wall. The wall consists of $$$n$$$ sections, aligned in a row. The $$$i$$$-th section initially has durability $$$a_i$$$. If durability of some section becomes $$$0$$$ or less, this section is considered broken. To attack the opponent, Monocarp needs to break at least two sections of the wall (any two sections: possibly adjacent, possibly not). To do this, he plans to use an onager — a special siege weapon. The onager can be used to shoot any section of the wall; the shot deals $$$2$$$ damage to the target section and $$$1$$$ damage to adjacent sections. In other words, if the onager shoots at the section $$$x$$$, then the durability of the section $$$x$$$ decreases by $$$2$$$, and the durability of the sections $$$x - 1$$$ and $$$x + 1$$$ (if they exist) decreases by $$$1$$$ each. Monocarp can shoot at any sections any number of times, he can even shoot at broken sections . Monocarp wants to calculate the minimum number of onager shots needed to break at least two sections. Help him!",
+  "inputFormat": "The first line contains one integer $$$n$$$ ($$$2 \\le n \\le 2 \\cdot 10^5$$$) — the number of sections. The second line contains the sequence of integers $$$a_1, a_2, \\dots, a_n$$$ ($$$1 \\le a_i \\le 10^6$$$), where $$$a_i$$$ is the initial durability of the $$$i$$$-th section.",
+  "outputFormat": "Print one integer — the minimum number of onager shots needed to break at least two sections of the wall.",
+  "sampleTests": [
+    {
+      "input": "5\n20 10 30 10 20",
+      "output": "10"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1674/E",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

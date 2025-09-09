@@ -1,0 +1,24 @@
+{
+  "contestId": 2051,
+  "index": "C",
+  "name": "Preparing for the Exam",
+  "rating": 1000,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Monocarp is preparing for his first exam at the university. There are $$$n$$$ different questions which can be asked during the exam, numbered from $$$1$$$ to $$$n$$$. There are $$$m$$$ different lists of questions; each list consists of exactly $$$n-1$$$ different questions. Each list $$$i$$$ is characterized by one integer $$$a_i$$$, which is the index of the only question which is not present in the $$$i$$$-th list. For example, if $$$n = 4$$$ and $$$a_i = 3$$$, the $$$i$$$-th list contains questions $$$[1, 2, 4]$$$. During the exam, Monocarp will receive one of these $$$m$$$ lists of questions. Then, the professor will make Monocarp answer all questions from the list. So, Monocarp will pass only if he knows all questions from the list. Monocarp knows the answers for $$$k$$$ questions $$$q_1, q_2, \\dots, q_k$$$. For each list, determine if Monocarp will pass the exam if he receives that list.",
+  "inputFormat": "The first line contains one integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. Each test case consists of three lines: the first line contains three integers $$$n$$$, $$$m$$$ and $$$k$$$ ($$$2 \\le n \\le 3 \\cdot 10^5$$$; $$$1 \\le m, k \\le n$$$); the second line contains $$$m$$$ distinct integers $$$a_1, a_2, \\dots, a_m$$$ ($$$1 \\le a_i \\le n$$$; $$$a_i < a_{i+1}$$$); the third line contains $$$k$$$ distinct integers $$$q_1, q_2, \\dots, q_k$$$ ($$$1 \\le q_i \\le n$$$; $$$q_i < q_{i+1}$$$). Additional constraints on the input: the sum of $$$n$$$ over all test cases does not exceed $$$3 \\cdot 10^5$$$.",
+  "outputFormat": "For each test case, print a string of $$$m$$$ characters. The $$$i$$$-th character should be 1 if Monocarp passes the exam if he receives the $$$i$$$-th question list, 0 if Monocarp won't pass.",
+  "sampleTests": [
+    {
+      "input": "4\n4 4 3\n1 2 3 4\n1 3 4\n5 4 3\n1 2 3 4\n1 3 4\n4 4 4\n1 2 3 4\n1 2 3 4\n2 2 1\n1 2\n2",
+      "output": "0100\n0000\n1111\n10"
+    }
+  ],
+  "timeLimit": 1500,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/2051/C",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

@@ -1,0 +1,24 @@
+{
+  "contestId": 1948,
+  "index": "B",
+  "name": "Array Fix",
+  "rating": 1100,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given an integer array $$$a$$$ of length $$$n$$$. You can perform the following operation any number of times (possibly zero): take any element of the array $$$a$$$, which is at least $$$10$$$, delete it, and instead insert the digits that element consisted of in the same position, in order they appear in that element. For example: if we apply this operation to the $$$3$$$-rd element of the array $$$[12, 3, 45, 67]$$$, then the array becomes $$$[12, 3, 4, 5, 67]$$$. if we apply this operation to the $$$2$$$-nd element of the array $$$[2, 10]$$$, then the array becomes $$$[2, 1, 0]$$$. Your task is to determine whether it is possible to make $$$a$$$ sorted in non-descending order using the aforementioned operation any number of times (possibly zero) . In other words, you have to determine if it is possible to transform the array $$$a$$$ in such a way that $$$a_1 \\le a_2 \\le \\dots \\le a_k$$$, where $$$k$$$ is the current length of the array $$$a$$$.",
+  "inputFormat": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^3$$$) — the number of test cases. Each test case consists of two lines: the first line contains a single integer $$$n$$$ ($$$2 \\le n \\le 50$$$). the second line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$0 \\le a_i \\le 99$$$).",
+  "outputFormat": "For each test case, print YES if it is possible to make $$$a$$$ sorted in non-decreasing order using the aforementioned operation; otherwise, print NO . You can print each letter in any case. For example, yes , Yes , YeS will all be recognized as a positive answer.",
+  "sampleTests": [
+    {
+      "input": "3\n4\n12 3 45 67\n3\n12 28 5\n2\n0 0",
+      "output": "YES\nNO\nYES"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1948/B",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

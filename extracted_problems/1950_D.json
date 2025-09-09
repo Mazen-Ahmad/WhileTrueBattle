@@ -1,0 +1,24 @@
+{
+  "contestId": 1950,
+  "index": "D",
+  "name": "Product of Binary Decimals",
+  "rating": 1100,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Let's call a number a binary decimal if it is a positive integer and all digits in its decimal notation are either $$$0$$$ or $$$1$$$. For example, $$$1\\,010\\,111$$$ is a binary decimal, while $$$10\\,201$$$ and $$$787\\,788$$$ are not. Given a number $$$n$$$, you are asked whether or not it is possible to represent $$$n$$$ as a product of some (not necessarily distinct) binary decimals.",
+  "inputFormat": "The first line contains a single integer $$$t$$$ ($$$1 \\leq t \\leq 5 \\cdot 10^4$$$) — the number of test cases. The only line of each test case contains a single integer $$$n$$$ ($$$1 \\leq n \\leq 10^5$$$).",
+  "outputFormat": "For each test case, output \" YES \" (without quotes) if $$$n$$$ can be represented as a product of binary decimals, and \" NO \" (without quotes) otherwise. You can output \" YES \" and \" NO \" in any case (for example, strings \" yES \", \" yes \", and \" Yes \" will be recognized as a positive response).",
+  "sampleTests": [
+    {
+      "input": "11\n121\n1\n14641\n12221\n10110\n100000\n99\n112\n2024\n12421\n1001",
+      "output": "YES\nYES\nYES\nYES\nYES\nYES\nNO\nNO\nNO\nNO\nYES"
+    }
+  ],
+  "timeLimit": 3000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1950/D",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

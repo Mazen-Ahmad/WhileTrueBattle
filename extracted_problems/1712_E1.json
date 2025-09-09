@@ -1,0 +1,24 @@
+{
+  "contestId": 1712,
+  "index": "E1",
+  "name": "LCM Sum (easy version)",
+  "rating": 2300,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "We are sum for we are many Some Number This version of the problem differs from the next one only in the constraint on $$$t$$$. You can make hacks only if both versions of the problem are solved. You are given two positive integers $$$l$$$ and $$$r$$$. Count the number of distinct triplets of integers $$$(i, j, k)$$$ such that $$$l \\le i < j < k \\le r$$$ and $$$\\operatorname{lcm}(i,j,k) \\ge i + j + k$$$. Here $$$\\operatorname{lcm}(i, j, k)$$$ denotes the least common multiple (LCM) of integers $$$i$$$, $$$j$$$, and $$$k$$$.",
+  "inputFormat": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$\\bf{1 \\le t \\le 5}$$$). Description of the test cases follows. The only line for each test case contains two integers $$$l$$$ and $$$r$$$ ($$$1 \\le l \\le r \\le 2 \\cdot 10^5$$$, $$$l + 2 \\le r$$$).",
+  "outputFormat": "For each test case print one integer — the number of suitable triplets.",
+  "sampleTests": [
+    {
+      "input": "5\n1 4\n3 5\n8 86\n68 86\n6 86868",
+      "output": "3\n1\n78975\n969\n109229059713337"
+    }
+  ],
+  "timeLimit": 3500,
+  "memoryLimit": 512,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1712/E1",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

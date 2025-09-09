@@ -1,0 +1,24 @@
+{
+  "contestId": 1765,
+  "index": "M",
+  "name": "Minimum LCM",
+  "rating": 1000,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given an integer $$$n$$$. Your task is to find two positive (greater than $$$0$$$) integers $$$a$$$ and $$$b$$$ such that $$$a+b=n$$$ and the least common multiple (LCM) of $$$a$$$ and $$$b$$$ is the minimum among all possible values of $$$a$$$ and $$$b$$$. If there are multiple answers, you can print any of them.",
+  "inputFormat": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 100$$$) — the number of test cases. The first line of each test case contains a single integer $$$n$$$ ($$$2 \\le n \\le 10^9$$$).",
+  "outputFormat": "For each test case, print two positive integers $$$a$$$ and $$$b$$$ — the answer to the problem. If there are multiple answers, you can print any of them.",
+  "sampleTests": [
+    {
+      "input": "4\n2\n9\n5\n10",
+      "output": "1 1\n3 6\n1 4\n5 5"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 512,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1765/M",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

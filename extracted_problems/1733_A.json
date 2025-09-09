@@ -1,0 +1,24 @@
+{
+  "contestId": 1733,
+  "index": "A",
+  "name": "Consecutive Sum",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given an array $$$a$$$ with $$$n$$$ integers. You can perform the following operation at most $$$k$$$ times: Choose two indices $$$i$$$ and $$$j$$$, in which $$$i \\,\\bmod\\, k = j \\,\\bmod\\, k$$$ ($$$1 \\le i < j \\le n$$$). Swap $$$a_i$$$ and $$$a_j$$$. After performing all operations, you have to select $$$k$$$ consecutive elements, and the sum of the $$$k$$$ elements becomes your score. Find the maximum score you can get. Here $$$x \\bmod y$$$ denotes the remainder from dividing $$$x$$$ by $$$y$$$.",
+  "inputFormat": "The first line contains one integer $$$t$$$ ($$$1 \\le t \\le 600$$$) — the number of test cases. Each test case consists of two lines. The first line of each test case contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le k \\le n \\le 100$$$) — the length of the array and the number in the statement above. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$0 \\le a_i \\le 10^9$$$) — the array itself.",
+  "outputFormat": "For each test case, print the maximum score you can get, one per line.",
+  "sampleTests": [
+    {
+      "input": "5\n3 2\n5 6 0\n1 1\n7\n5 3\n7 0 4 0 4\n4 2\n2 7 3 4\n3 3\n1000000000 1000000000 999999997",
+      "output": "11\n7\n15\n10\n2999999997"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1733/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

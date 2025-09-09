@@ -1,0 +1,24 @@
+{
+  "contestId": 2013,
+  "index": "A",
+  "name": "Zhan's Blender",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Today, a club fair was held at \"NSPhM\". In order to advertise his pastry club, Zhan decided to demonstrate the power of his blender. To demonstrate the power of his blender, Zhan has $$$n$$$ fruits. The blender can mix up to $$$x$$$ fruits per second. In each second, Zhan can put up to $$$y$$$ fruits into the blender. After that, the blender will blend $$$\\min(x, c)$$$ fruits, where $$$c$$$ is the number of fruits inside the blender. After blending, blended fruits are removed from the blender. Help Zhan determine the minimum amount of time required for Zhan to blend all fruits.",
+  "inputFormat": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 1000$$$). The description of the test cases follows. The first line of each test case contains one integer $$$n$$$ ($$$0 \\le n \\le 10^9$$$) — the number of fruits Zhan has. The second line of each test case contains two integers $$$x$$$ and $$$y$$$ ($$$1 \\le x, y \\le 10^9$$$) — the number of fruits the blender can blend per second and the number of fruits Zhan can put into the blender per second.",
+  "outputFormat": "For each testcase, output a single integer — the minimum number of seconds to blend all fruits.",
+  "sampleTests": [
+    {
+      "input": "5\n5\n3 4\n3\n1 2\n6\n4 3\n100\n4 3\n9\n3 3",
+      "output": "2\n3\n2\n34\n3"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/2013/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

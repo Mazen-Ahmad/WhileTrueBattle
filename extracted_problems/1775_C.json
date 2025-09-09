@@ -1,0 +1,24 @@
+{
+  "contestId": 1775,
+  "index": "C",
+  "name": "Interesting Sequence",
+  "rating": 1600,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Petya and his friend, robot Petya++, like to solve exciting math problems. One day Petya++ came up with the numbers $$$n$$$ and $$$x$$$ and wrote the following equality on the board: $$$$$$n\\ \\&\\ (n+1)\\ \\&\\ \\dots\\ \\&\\ m = x,$$$$$$ where $$$\\&$$$ denotes the bitwise AND operation . Then he suggested his friend Petya find such a minimal $$$m$$$ ($$$m \\ge n$$$) that the equality on the board holds. Unfortunately, Petya couldn't solve this problem in his head and decided to ask for computer help. He quickly wrote a program and found the answer. Can you solve this difficult problem?",
+  "inputFormat": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 2000$$$). The description of the test cases follows. The only line of each test case contains two integers $$$n$$$, $$$x$$$ ($$$0\\le n, x \\le 10^{18}$$$).",
+  "outputFormat": "For every test case, output the smallest possible value of $$$m$$$ such that equality holds. If the equality does not hold for any $$$m$$$, print $$$-1$$$ instead. We can show that if the required $$$m$$$ exists, it does not exceed $$$5 \\cdot 10^{18}$$$.",
+  "sampleTests": [
+    {
+      "input": "5\n10 8\n10 10\n10 42\n20 16\n1000000000000000000 0",
+      "output": "12\n10\n-1\n24\n1152921504606846976"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1775/C",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

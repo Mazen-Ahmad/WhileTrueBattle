@@ -1,0 +1,24 @@
+{
+  "contestId": 1966,
+  "index": "B",
+  "name": "Rectangle Filling",
+  "rating": 1100,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "There is an $$$n \\times m$$$ grid of white and black squares. In one operation, you can select any two squares of the same color, and color all squares in the subrectangle between them that color. Formally, if you select positions $$$(x_1, y_1)$$$ and $$$(x_2, y_2)$$$, both of which are currently the same color $$$c$$$, set the color of all $$$(x, y)$$$ where $$$\\min(x_1, x_2) \\le x \\le \\max(x_1, x_2)$$$ and $$$\\min(y_1, y_2) \\le y \\le \\max(y_1, y_2)$$$ to $$$c$$$. This diagram shows a sequence of two possible operations on a grid: Is it possible for all squares in the grid to be the same color, after performing any number of operations (possibly zero)?",
+  "inputFormat": "The first line of the input contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The description of the test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n, m \\le 500$$$) — the number of rows and columns in the grid, respectively. Each of the next $$$n$$$ lines contains $$$m$$$ characters ' W ' and ' B ' — the initial colors of the squares of the grid. It is guaranteed that the sum of $$$n\\cdot m$$$ over all test cases does not exceed $$$3\\cdot 10^5$$$.",
+  "outputFormat": "For each test case, print \" YES \" if it is possible to make all squares in the grid the same color, and \" NO \" otherwise. You can output the answer in any case (upper or lower). For example, the strings \" yEs \", \" yes \", \" Yes \", and \" YES \" will be recognized as positive responses.",
+  "sampleTests": [
+    {
+      "input": "8\n2 1\nW\nB\n6 6\nWWWWBW\nWBWWWW\nBBBWWW\nBWWWBB\nWWBWBB\nBBBWBW\n1 1\nW\n2 2\nBB\nBB\n3 4\nBWBW\nWBWB\nBWBW\n4 2\nBB\nBB\nWW\nWW\n4 4\nWWBW\nBBWB\nWWBB\nBBBB\n1 5\nWBBWB",
+      "output": "NO\nYES\nYES\nYES\nYES\nNO\nYES\nNO"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1966/B",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

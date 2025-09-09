@@ -1,0 +1,24 @@
+{
+  "contestId": 2095,
+  "index": "J",
+  "name": "Premiere at a Wrong Time",
+  "rating": null,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "",
+  "inputFormat": "Input specification not found",
+  "outputFormat": "Output specification not found",
+  "sampleTests": [
+    {
+      "input": "Sample input not available",
+      "output": "Sample output not available"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/2095/J",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

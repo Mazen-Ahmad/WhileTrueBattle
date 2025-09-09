@@ -1,0 +1,24 @@
+{
+  "contestId": 1466,
+  "index": "F",
+  "name": "Euclid's nightmare",
+  "rating": 2100,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You may know that Euclid was a mathematician. Well, as it turns out, Morpheus knew it too. So when he wanted to play a mean trick on Euclid, he sent him an appropriate nightmare. In his bad dream Euclid has a set $$$S$$$ of $$$n$$$ $$$m$$$-dimensional vectors over the $$$\\mathbb{Z}_2$$$ field and can perform vector addition on them. In other words he has vectors with $$$m$$$ coordinates, each one equal either $$$0$$$ or $$$1$$$. Vector addition is defined as follows: let $$$u+v = w$$$, then $$$w_i = (u_i + v_i) \\bmod 2$$$. Euclid can sum any subset of $$$S$$$ and archive another $$$m$$$-dimensional vector over $$$\\mathbb{Z}_2$$$. In particular, he can sum together an empty subset; in such a case, the resulting vector has all coordinates equal $$$0$$$. Let $$$T$$$ be the set of all the vectors that can be written as a sum of some vectors from $$$S$$$. Now Euclid wonders the size of $$$T$$$ and whether he can use only a subset $$$S'$$$ of $$$S$$$ to obtain all the vectors from $$$T$$$. As it is usually the case in such scenarios, he will not wake up until he figures this out. So far, things are looking rather grim for the philosopher. But there is hope, as he noticed that all vectors in $$$S$$$ have at most $$$2$$$ coordinates equal $$$1$$$. Help Euclid and calculate $$$|T|$$$, the number of $$$m$$$-dimensional vectors over $$$\\mathbb{Z}_2$$$ that can be written as a sum of some vectors from $$$S$$$. As it can be quite large, calculate it modulo $$$10^9+7$$$. You should also find $$$S'$$$, the smallest such subset of $$$S$$$, that all vectors in $$$T$$$ can be written as a sum of vectors from $$$S'$$$. In case there are multiple such sets with a minimal number of elements, output the lexicographically smallest one with respect to the order in which their elements are given in the input. Consider sets $$$A$$$ and $$$B$$$ such that $$$|A| = |B|$$$. Let $$$a_1, a_2, \\dots a_{|A|}$$$ and $$$b_1, b_2, \\dots b_{|B|}$$$ be increasing arrays of indices elements of $$$A$$$ and $$$B$$$ correspondingly. $$$A$$$ is lexicographically smaller than $$$B$$$ iff there exists such $$$i$$$ that $$$a_j = b_j$$$ for all $$$j < i$$$ and $$$a_i < b_i$$$.",
+  "inputFormat": "In the first line of input, there are two integers $$$n$$$, $$$m$$$ ($$$1 \\leq n, m \\leq 5 \\cdot 10^5$$$) denoting the number of vectors in $$$S$$$ and the number of dimensions. Next $$$n$$$ lines contain the description of the vectors in $$$S$$$. In each of them there is an integer $$$k$$$ ($$$1 \\leq k \\leq 2$$$) and then follow $$$k$$$ distinct integers $$$x_1, \\dots x_k$$$ ($$$1 \\leq x_i \\leq m$$$). This encodes an $$$m$$$-dimensional vector having $$$1$$$s on coordinates $$$x_1, \\dots x_k$$$ and $$$0$$$s on the rest of them. Among the $$$n$$$ vectors, no two are the same.",
+  "outputFormat": "In the first line, output two integers: remainder modulo $$$10^9+7$$$ of $$$|T|$$$ and $$$|S'|$$$. In the second line, output $$$|S'|$$$ numbers, indices of the elements of $$$S'$$$ in ascending order. The elements of $$$S$$$ are numbered from $$$1$$$ in the order they are given in the input.",
+  "sampleTests": [
+    {
+      "input": "3 2\n1 1\n1 2\n2 2 1",
+      "output": "4 2\n1 2"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1466/F",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

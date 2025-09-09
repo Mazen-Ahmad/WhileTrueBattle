@@ -1,0 +1,24 @@
+{
+  "contestId": 1658,
+  "index": "D1",
+  "name": "388535 (Easy Version)",
+  "rating": 1600,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "This is the easy version of the problem. The difference in the constraints between both versions is colored below in red. You can make hacks only if all versions of the problem are solved. Marin and Gojou are playing hide-and-seek with an array. Gojou initially performs the following steps: First, Gojou chooses $$$2$$$ integers $$$l$$$ and $$$r$$$ such that $$$l \\leq r$$$. Then, Gojou makes an array $$$a$$$ of length $$$r-l+1$$$ which is a permutation of the array $$$[l,l+1,\\ldots,r]$$$. Finally, Gojou chooses a secret integer $$$x$$$ and sets $$$a_i$$$ to $$$a_i \\oplus x$$$ for all $$$i$$$ (where $$$\\oplus$$$ denotes the bitwise XOR operation ). Marin is then given the values of $$$l,r$$$ and the final array $$$a$$$. She needs to find the secret integer $$$x$$$ to win. Can you help her? Note that there may be multiple possible $$$x$$$ that Gojou could have chosen. Marin can find any possible $$$x$$$ that could have resulted in the final value of $$$a$$$.",
+  "inputFormat": "The first line contains a single integer $$$t$$$ ($$$1 \\leq t \\leq 10^5$$$) — the number of test cases. In the first line of each test case contains two integers $$$l$$$ and $$$r$$$ ($$$ \\color{red}{\\boldsymbol{0} \\boldsymbol{=} \\boldsymbol{l}} \\le r < 2^{17}$$$). The second line contains $$$r - l + 1$$$ integers of $$$a_1,a_2,\\ldots,a_{r-l+1}$$$ ($$$0 \\le a_i < 2^{17}$$$). It is guaranteed that $$$a$$$ can be generated using the steps performed by Gojou. It is guaranteed that the sum of $$$r - l + 1$$$ over all test cases does not exceed $$$2^{17}$$$.",
+  "outputFormat": "For each test case print an integer $$$x$$$. If there are multiple answers, print any.",
+  "sampleTests": [
+    {
+      "input": "3\n0 3\n3 2 1 0\n0 3\n4 7 6 5\n0 2\n1 2 3",
+      "output": "0\n4\n3"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1658/D1",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

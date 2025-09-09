@@ -1,0 +1,24 @@
+{
+  "contestId": 2019,
+  "index": "A",
+  "name": "Max Plus Size",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "EnV - Dynasty ⠀ You are given an array $$$a_1, a_2, \\ldots, a_n$$$ of positive integers. You can color some elements of the array red, but there cannot be two adjacent red elements (i.e., for $$$1 \\leq i \\leq n-1$$$, at least one of $$$a_i$$$ and $$$a_{i+1}$$$ must not be red). Your score is the maximum value of a red element plus the number of red elements. Find the maximum score you can get.",
+  "inputFormat": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 500$$$). The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 100$$$) — the length of the array. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 1000$$$) — the given array.",
+  "outputFormat": "For each test case, output a single integer: the maximum possible score you can get after coloring some elements red according to the statement.",
+  "sampleTests": [
+    {
+      "input": "4\n3\n5 4 5\n3\n4 5 4\n10\n3 3 3 3 4 1 2 3 4 5\n9\n17 89 92 42 29 92 14 70 45",
+      "output": "7\n6\n10\n97"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/2019/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

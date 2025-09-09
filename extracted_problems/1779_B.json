@@ -1,0 +1,24 @@
+{
+  "contestId": 1779,
+  "index": "B",
+  "name": "MKnez's ConstructiveForces Task",
+  "rating": 900,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "MKnez wants to construct an array $$$s_1,s_2, \\ldots , s_n$$$ satisfying the following conditions: Each element is an integer number different from $$$0$$$; For each pair of adjacent elements their sum is equal to the sum of the whole array. More formally, $$$s_i \\neq 0$$$ must hold for each $$$1 \\leq i \\leq n$$$. Moreover, it must hold that $$$s_1 + s_2 + \\cdots + s_n = s_i + s_{i+1}$$$ for each $$$1 \\leq i < n$$$. Help MKnez to construct an array with these properties or determine that it does not exist.",
+  "inputFormat": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\leq t \\leq 100$$$). The description of the test cases follows. The only line of each test case contains a single integer $$$n$$$ ($$$2 \\leq n \\leq 1000$$$) — the length of the array.",
+  "outputFormat": "For each test case, print \" YES \" if an array of length $$$n$$$ satisfying the conditions exists. Otherwise, print \" NO \". If the answer is \" YES \", on the next line print a sequence $$$s_1,s_2, \\ldots, s_n$$$ satisfying the conditions. Each element should be a non-zero integer in the range $$$[-5000,5000]$$$, i. e. $$$-5000 \\leq s_i \\leq 5000$$$ and $$$s_i \\neq 0$$$ should hold for each $$$1 \\leq i \\leq n$$$. It can be proved that if a solution exists then there also exists one which satisfies the additional constraints on the range. If there are several correct answers, print any of them.",
+  "sampleTests": [
+    {
+      "input": "2\n2\n3",
+      "output": "YES\n9 5\nNO"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1779/B",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

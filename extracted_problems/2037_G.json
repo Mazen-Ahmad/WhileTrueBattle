@@ -1,0 +1,24 @@
+{
+  "contestId": 2037,
+  "index": "G",
+  "name": "Natlan Exploring",
+  "rating": 2000,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are exploring the stunning region of Natlan! This region consists of $$$n$$$ cities, and each city is rated with an attractiveness $$$a_i$$$. A directed edge exists from City $$$i$$$ to City $$$j$$$ if and only if $$$i < j$$$ and $$$\\gcd(a_i,a_j)\\neq 1$$$, where $$$\\gcd(x, y)$$$ denotes the greatest common divisor (GCD) of integers $$$x$$$ and $$$y$$$. Starting from City $$$1$$$, your task is to determine the total number of distinct paths you can take to reach City $$$n$$$, modulo $$$998\\,244\\,353$$$. Two paths are different if and only if the set of cities visited is different.",
+  "inputFormat": "The first line contains an integer $$$n$$$ ($$$2 \\leq n \\leq 2 \\cdot 10^5$$$) — the number of cities. The second line contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$2 \\leq a_i \\leq 10^6$$$) — the attractiveness of each city.",
+  "outputFormat": "Output the total number of distinct paths you can take to reach City $$$n$$$, modulo $$$998\\,244\\,353$$$.",
+  "sampleTests": [
+    {
+      "input": "5\n2 6 3 4 6",
+      "output": "5"
+    }
+  ],
+  "timeLimit": 4000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/2037/G",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

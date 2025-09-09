@@ -1,0 +1,24 @@
+{
+  "contestId": 1978,
+  "index": "A",
+  "name": "Alice and Books",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Alice has $$$n$$$ books. The $$$1$$$-st book contains $$$a_1$$$ pages, the $$$2$$$-nd book contains $$$a_2$$$ pages, $$$\\ldots$$$, the $$$n$$$-th book contains $$$a_n$$$ pages. Alice does the following: She divides all the books into two non-empty piles. Thus, each book ends up in exactly one of the two piles. Alice reads one book with the highest number in each pile. Alice loves reading very much. Help her find the maximum total number of pages she can read by dividing the books into two piles.",
+  "inputFormat": "Each test consists of multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 500$$$) — the number of test cases. The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$2 \\le n \\le 100$$$) — the number of books Alice has. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 10^9$$$) — the number of pages in each book.",
+  "outputFormat": "For each test case, output a single integer — the maximum number of pages Alice can read.",
+  "sampleTests": [
+    {
+      "input": "5\n2\n1 1\n4\n2 3 3 1\n5\n2 2 3 2 2\n2\n10 3\n3\n1 2 3",
+      "output": "2\n4\n5\n13\n5"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1978/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

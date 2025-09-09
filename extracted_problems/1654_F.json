@@ -1,0 +1,24 @@
+{
+  "contestId": 1654,
+  "index": "F",
+  "name": "Minimal String Xoration",
+  "rating": 2800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given an integer $$$n$$$ and a string $$$s$$$ consisting of $$$2^n$$$ lowercase letters of the English alphabet. The characters of the string $$$s$$$ are $$$s_0s_1s_2\\cdots s_{2^n-1}$$$. A string $$$t$$$ of length $$$2^n$$$ (whose characters are denoted by $$$t_0t_1t_2\\cdots t_{2^n-1}$$$) is a xoration of $$$s$$$ if there exists an integer $$$j$$$ ($$$0\\le j \\leq 2^n-1$$$) such that, for each $$$0 \\leq i \\leq 2^n-1$$$, $$$t_i = s_{i \\oplus j}$$$ (where $$$\\oplus$$$ denotes the operation bitwise XOR ). Find the lexicographically minimal xoration of $$$s$$$. A string $$$a$$$ is lexicographically smaller than a string $$$b$$$ if and only if one of the following holds: $$$a$$$ is a prefix of $$$b$$$, but $$$a \\ne b$$$; in the first position where $$$a$$$ and $$$b$$$ differ, the string $$$a$$$ has a letter that appears earlier in the alphabet than the corresponding letter in $$$b$$$.",
+  "inputFormat": "The first line contains a single integer $$$n$$$ ($$$1 \\le n \\le 18$$$). The second line contains a string $$$s$$$ consisting of $$$2^n$$$ lowercase letters of the English alphabet.",
+  "outputFormat": "Print a single line containing the lexicographically minimal xoration of $$$s$$$.",
+  "sampleTests": [
+    {
+      "input": "2\nacba",
+      "output": "abca"
+    }
+  ],
+  "timeLimit": 3000,
+  "memoryLimit": 512,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1654/F",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

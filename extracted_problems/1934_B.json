@@ -1,0 +1,24 @@
+{
+  "contestId": 1934,
+  "index": "B",
+  "name": "Yet Another Coin Problem",
+  "rating": 1200,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You have $$$5$$$ different types of coins, each with a value equal to one of the first $$$5$$$ triangular numbers: $$$1$$$, $$$3$$$, $$$6$$$, $$$10$$$, and $$$15$$$. These coin types are available in abundance. Your goal is to find the minimum number of these coins required such that their total value sums up to exactly $$$n$$$. We can show that the answer always exists.",
+  "inputFormat": "The first line contains one integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The description of the test cases follows. The first line of each test case contains an integer $$$n$$$ ($$$1 \\leq n \\leq 10^9$$$) — the target value.",
+  "outputFormat": "For each test case, output a single number — the minimum number of coins required.",
+  "sampleTests": [
+    {
+      "input": "14\n1\n2\n3\n5\n7\n11\n12\n14\n16\n17\n18\n20\n98\n402931328",
+      "output": "1\n2\n1\n3\n2\n2\n2\n3\n2\n3\n2\n2\n8\n26862090"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1934/B",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

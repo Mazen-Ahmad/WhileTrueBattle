@@ -1,0 +1,24 @@
+{
+  "contestId": 1770,
+  "index": "F",
+  "name": "Koxia and Sequence",
+  "rating": 3100,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Mari has three integers $$$n$$$, $$$x$$$, and $$$y$$$. Call an array $$$a$$$ of $$$n$$$ non-negative integers good if it satisfies the following conditions: $$$a_1+a_2+\\ldots+a_n=x$$$, and $$$a_1 \\, | \\, a_2 \\, | \\, \\ldots \\, | \\, a_n=y$$$, where $$$|$$$ denotes the bitwise OR operation . The score of a good array is the value of $$$a_1 \\oplus a_2 \\oplus \\ldots \\oplus a_n$$$, where $$$\\oplus$$$ denotes the bitwise XOR operation . Koxia wants you to find the total bitwise XOR of the scores of all good arrays. If there are no good arrays, output $$$0$$$ instead.",
+  "inputFormat": "The first line of input contains three integers $$$n$$$, $$$x$$$ and $$$y$$$ ($$$1 \\leq n < 2^{40}$$$, $$$0 \\leq x < 2^{60}$$$, $$$0 \\leq y < 2^{20}$$$).",
+  "outputFormat": "Output a single integer — the total bitwise XOR of the scores of all good arrays.",
+  "sampleTests": [
+    {
+      "input": "3 5 3",
+      "output": "2"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1770/F",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

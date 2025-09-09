@@ -1,0 +1,24 @@
+{
+  "contestId": 2111,
+  "index": "A",
+  "name": "Energy Crystals",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "There are three energy crystals numbered $$$1$$$, $$$2$$$, and $$$3$$$; let's denote the energy level of the $$$i$$$-th crystal as $$$a_i$$$. Initially, all of them are discharged, meaning their energy levels are equal to $$$0$$$. Each crystal needs to be charged to level $$$x$$$ (exactly $$$x$$$, not greater) . In one action, you can increase the energy level of any one crystal by any positive amount; however, the energy crystals are synchronized with each other, so an action can only be performed if the following condition is met afterward: for each pair of crystals $$$i$$$, $$$j$$$, it must hold that $$$a_{i} \\ge \\lfloor\\frac{a_{j}}{2}\\rfloor$$$. What is the minimum number of actions required to charge all the crystals?",
+  "inputFormat": "Each test consists of several test cases. The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^{4}$$$) — the number of test cases. The description of the test cases follows. The only line of each test case contains a single integer $$$x$$$ ($$$1 \\le x \\le 10^{9}$$$).",
+  "outputFormat": "For each test case, output a single integer — the minimum number of actions required to charge all energy crystals to level $$$x$$$.",
+  "sampleTests": [
+    {
+      "input": "7\n1\n5\n14\n2025\n31415\n536870910\n1000000000",
+      "output": "3\n7\n9\n23\n31\n59\n61"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 512,
+  "sourceUrl": "https://codeforces.com/problemset/problem/2111/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

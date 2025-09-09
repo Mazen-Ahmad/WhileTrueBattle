@@ -1,0 +1,24 @@
+{
+  "contestId": 2011,
+  "index": "C",
+  "name": "Split the Expression",
+  "rating": null,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given a string $$$s$$$ of the form <block of digits>+<block of digits>+...+<block of digits> . Every block of digits consists of at least $$$2$$$ and at most $$$13$$$ digits; every digit is from $$$1$$$ to $$$9$$$. You have to split this string into expressions of the form <integer>+<integer> . Every expression must be a contiguous part of the given string, and every character of the given string must belong to exactly one expression. For example, if you have a string 123+456+789+555 , then: you are allowed to split it into 123+4 , 56+7 and 89+555 ; you are not allowed to split it into 123+456 and +789+555 , since the second part begins with a + sign; you are not allowed to split it into 123+4 , 56+7 , 8 and 9+555 , since the third part does not contain a + sign; you are not allowed to split it into 123+456+78 and 9+555 , since the first part contains two + signs. Among all allowed ways to split the string, find one which maximizes the sum of results of all expressions you get, and print this sum.",
+  "inputFormat": "The first line contains one integer $$$t$$$ ($$$1 \\le t \\le 100$$$) — the number of test cases. Each test case consists of one line containing the string $$$s$$$ ($$$5 \\le |s| \\le 1000$$$) of the form <block of digits>+<block of digits>+...+<block of digits> . The string contains at least one ' + ' sign. Every block of digits consists of at least $$$2$$$ and at most $$$13$$$ digits; every digit is from $$$1$$$ to $$$9$$$.",
+  "outputFormat": "For each test case, print one integer — the maximum possible sum of results of all expressions you get after splitting the string.",
+  "sampleTests": [
+    {
+      "input": "3\n123+456+789+555\n13+37\n9999999999999+1111111111111+9999999999999",
+      "output": "834\n50\n20111111111110"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 512,
+  "sourceUrl": "https://codeforces.com/problemset/problem/2011/C",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

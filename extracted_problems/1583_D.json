@@ -1,0 +1,24 @@
+{
+  "contestId": 1583,
+  "index": "D",
+  "name": "Omkar and the Meaning of Life",
+  "rating": 1800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "It turns out that the meaning of life is a permutation $$$p_1, p_2, \\ldots, p_n$$$ of the integers $$$1, 2, \\ldots, n$$$ ($$$2 \\leq n \\leq 100$$$). Omkar, having created all life, knows this permutation, and will allow you to figure it out using some queries. A query consists of an array $$$a_1, a_2, \\ldots, a_n$$$ of integers between $$$1$$$ and $$$n$$$. $$$a$$$ is not required to be a permutation. Omkar will first compute the pairwise sum of $$$a$$$ and $$$p$$$, meaning that he will compute an array $$$s$$$ where $$$s_j = p_j + a_j$$$ for all $$$j = 1, 2, \\ldots, n$$$. Then, he will find the smallest index $$$k$$$ such that $$$s_k$$$ occurs more than once in $$$s$$$, and answer with $$$k$$$. If there is no such index $$$k$$$, then he will answer with $$$0$$$. You can perform at most $$$2n$$$ queries. Figure out the meaning of life $$$p$$$.",
+  "inputFormat": "Input specification not found",
+  "outputFormat": "Output specification not found",
+  "sampleTests": [
+    {
+      "input": "5\n\n2\n\n0\n\n1",
+      "output": "? 4 4 2 3 2\n\n? 3 5 1 5 5\n\n? 5 2 4 3 1\n\n! 3 2 1 5 4"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1583/D",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

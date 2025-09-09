@@ -1,0 +1,24 @@
+{
+  "contestId": 2101,
+  "index": "F",
+  "name": "Shoo Shatters the Sunshine",
+  "rating": 3300,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given a tree with $$$n$$$ vertices, where each vertex can be colored red, blue, or white. The coolness of a coloring is defined as the maximum distance$$$^{\\text{∗}}$$$ between a red and a blue vertex. Formally, if we denote the color of the $$$i$$$-th vertex as $$$c_i$$$, the coolness of a coloring is $$$\\max d(u, v)$$$ over all pairs of vertices $$$1\\le u, v\\le n$$$ where $$$c_u$$$ is red and $$$c_v$$$ is blue . If there are no red or no blue vertices, the coolness is zero. Your task is to calculate the sum of coolness over all $$$3^n$$$ possible colorings of the tree, modulo $$$998\\,244\\,353$$$. $$$^{\\text{∗}}$$$The distance between two vertices $$$a$$$ and $$$b$$$ in a tree is equal to the number of edges on the unique simple path between vertex $$$a$$$ and vertex $$$b$$$.",
+  "inputFormat": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 50$$$). The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$2\\le n\\le 3000$$$) — the number of vertices in the tree. Each of the next $$$n - 1$$$ lines contains two integers $$$u$$$ and $$$v$$$ ($$$1\\le u, v\\le n$$$) — the endpoints of the edges of the tree. It is guaranteed that the given edges form a tree. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$3000$$$.",
+  "outputFormat": "For each test case, output the sum of coolness over all $$$3^n$$$ possible colorings of the tree, modulo $$$998\\,244\\,353$$$.",
+  "sampleTests": [
+    {
+      "input": "3\n3\n1 2\n2 3\n6\n1 2\n1 3\n1 4\n3 5\n5 6\n17\n1 2\n1 3\n1 4\n1 5\n2 6\n2 7\n2 8\n3 9\n3 10\n7 11\n7 12\n11 13\n13 14\n14 15\n10 16\n16 17",
+      "output": "18\n1920\n78555509"
+    }
+  ],
+  "timeLimit": 7000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/2101/F",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

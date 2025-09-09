@@ -1,0 +1,24 @@
+{
+  "contestId": 1605,
+  "index": "E",
+  "name": "Array Equalizer",
+  "rating": 2400,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Jeevan has two arrays $$$a$$$ and $$$b$$$ of size $$$n$$$. He is fond of performing weird operations on arrays. This time, he comes up with two types of operations: Choose any $$$i$$$ ($$$1 \\le i \\le n$$$) and increment $$$a_j$$$ by $$$1$$$ for every $$$j$$$ which is a multiple of $$$i$$$ and $$$1 \\le j \\le n$$$. Choose any $$$i$$$ ($$$1 \\le i \\le n$$$) and decrement $$$a_j$$$ by $$$1$$$ for every $$$j$$$ which is a multiple of $$$i$$$ and $$$1 \\le j \\le n$$$. He wants to convert array $$$a$$$ into an array $$$b$$$ using the minimum total number of operations. However, Jeevan seems to have forgotten the value of $$$b_1$$$. So he makes some guesses. He will ask you $$$q$$$ questions corresponding to his $$$q$$$ guesses, the $$$i$$$-th of which is of the form: If $$$b_1 = x_i$$$, what is the minimum number of operations required to convert $$$a$$$ to $$$b$$$? Help him by answering each question.",
+  "inputFormat": "The first line contains a single integer $$$n$$$ $$$(1 \\le n \\le 2 \\cdot 10^{5})$$$ — the size of arrays $$$a$$$ and $$$b$$$. The second line contains $$$n$$$ integers $$$a_1, a_2, ..., a_n$$$ $$$(1 \\le a_i \\le 10^6)$$$. The third line contains $$$n$$$ integers $$$b_1, b_2, ..., b_n$$$ $$$(1 \\le b_i \\le 10^6$$$ for $$$i \\neq 1$$$; $$$b_1 = -1$$$, representing that the value of $$$b_1$$$ is unknown$$$)$$$. The fourth line contains a single integer $$$q$$$ $$$(1 \\le q \\le 2 \\cdot 10^{5})$$$ — the number of questions. Each of the following $$$q$$$ lines contains a single integer $$$x_i$$$ $$$(1 \\le x_i \\le 10^6)$$$ — representing the $$$i$$$-th question.",
+  "outputFormat": "Output $$$q$$$ integers — the answers to each of his $$$q$$$ questions.",
+  "sampleTests": [
+    {
+      "input": "2\n3 7\n-1 5\n3\n1\n4\n3",
+      "output": "2\n4\n2"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1605/E",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

@@ -1,0 +1,24 @@
+{
+  "contestId": 1946,
+  "index": "A",
+  "name": "Median of an Array",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given an array $$$a$$$ of $$$n$$$ integers. The median of an array $$$q_1, q_2, \\ldots, q_k$$$ is the number $$$p_{\\lceil \\frac{k}{2} \\rceil}$$$, where $$$p$$$ is the array $$$q$$$ sorted in non-decreasing order. For example, the median of the array $$$[9, 5, 1, 2, 6]$$$ is $$$5$$$, as in the sorted array $$$[1, 2, 5, 6, 9]$$$, the number at index $$$\\lceil \\frac{5}{2} \\rceil = 3$$$ is $$$5$$$, and the median of the array $$$[9, 2, 8, 3]$$$ is $$$3$$$, as in the sorted array $$$[2, 3, 8, 9]$$$, the number at index $$$\\lceil \\frac{4}{2} \\rceil = 2$$$ is $$$3$$$. You are allowed to choose an integer $$$i$$$ ($$$1 \\le i \\le n$$$) and increase $$$a_i$$$ by $$$1$$$ in one operation. Your task is to find the minimum number of operations required to increase the median of the array. Note that the array $$$a$$$ may not necessarily contain distinct numbers.",
+  "inputFormat": "Each test consists of multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. Then follows the description of the test cases. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 10^5$$$) — the length of the array $$$a$$$. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 10^9$$$) — the array $$$a$$$. It is guaranteed that the sum of the values of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "outputFormat": "For each test case, output a single integer — the minimum number of operations required to increase the median of the array.",
+  "sampleTests": [
+    {
+      "input": "8\n3\n2 2 8\n4\n7 3 3 1\n1\n1000000000\n5\n5 5 5 4 5\n6\n2 1 2 3 1 4\n2\n1 2\n2\n1 1\n4\n5 5 5 5",
+      "output": "1\n2\n1\n3\n2\n1\n2\n3"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1946/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

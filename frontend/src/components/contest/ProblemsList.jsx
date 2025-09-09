@@ -73,8 +73,8 @@ const ProblemsList = ({ problems, selectedProblem, onSelectProblem, userSubmissi
   const solvedCount = getSolvedProblemsCount();
 
   return (
-    <div className="bg-white rounded-lg shadow-md h-full flex flex-col">
-      <div className="p-4 border-b border-gray-200 bg-gradient-to-r from-purple-50 to-blue-50">
+    <div className="bg-gray-50 rounded-t-3xl rounded-b-2xl shadow-md h-full flex flex-col">
+      <div className="p-4 border-b border-gray-200 bg-gray-50 rounded-t-3xl">
         <h2 className="text-lg font-bold text-gray-900 flex items-center">
           <span className="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
           Problems ({problems.length})
@@ -92,10 +92,10 @@ const ProblemsList = ({ problems, selectedProblem, onSelectProblem, userSubmissi
                 key={problem.id}
                 onClick={() => onSelectProblem(problem)}
                 className={`
-                  relative p-3 rounded-lg border-2 cursor-pointer transition-all duration-200 hover:shadow-md
+                  relative p-3 rounded-lg border-2 cursor-pointer transition-all duration-200 hover:shadow-md bg-gray-50
                   ${isSelected 
                     ? 'border-purple-500 bg-purple-50 shadow-lg transform scale-[1.02]' 
-                    : `${getStatusColor(status)} hover:border-gray-400 hover:bg-opacity-80`
+                    : 'border-gray-200 hover:bg-gray-200'
                   }
                 `}
               >
@@ -154,7 +154,7 @@ const ProblemsList = ({ problems, selectedProblem, onSelectProblem, userSubmissi
       </div>
 
       {/* Progress indicator - Fixed to count only solved problems */}
-      <div className="p-3 border-t border-gray-200 bg-gray-50">
+      <div className="p-3 border-t border-gray-200 bg-gray-50 rounded-2xl">
         <div className="flex justify-between text-sm text-gray-600">
           <span>Progress:</span>
           <span>

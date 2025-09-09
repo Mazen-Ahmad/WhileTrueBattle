@@ -1,0 +1,24 @@
+{
+  "contestId": 1616,
+  "index": "D",
+  "name": "Keep the Average High",
+  "rating": 2000,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given an array of integers $$$a_1, a_2, \\ldots, a_n$$$ and an integer $$$x$$$. You need to select the maximum number of elements in the array, such that for every subsegment $$$a_l, a_{l + 1}, \\ldots, a_r$$$ containing strictly more than one element $$$(l < r)$$$, either: At least one element on this subsegment is not selected, or $$$a_l + a_{l+1} + \\ldots + a_r \\geq x \\cdot (r - l + 1)$$$.",
+  "inputFormat": "The first line of input contains one integer $$$t$$$ ($$$1 \\leq t \\leq 10$$$): the number of test cases. The descriptions of $$$t$$$ test cases follow, three lines per test case. In the first line you are given one integer $$$n$$$ ($$$1 \\leq n \\leq 50\\,000$$$): the number of integers in the array. The second line contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$-100\\,000 \\leq a_i \\leq 100\\,000$$$). The third line contains one integer $$$x$$$ ($$$-100\\,000 \\leq x \\leq 100\\,000$$$).",
+  "outputFormat": "For each test case, print one integer: the maximum number of elements that you can select.",
+  "sampleTests": [
+    {
+      "input": "4\n5\n1 2 3 4 5\n2\n10\n2 4 2 4 2 4 2 4 2 4\n3\n3\n-10 -5 -10\n-8\n3\n9 9 -3\n5",
+      "output": "4\n8\n2\n2"
+    }
+  ],
+  "timeLimit": 1500,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1616/D",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

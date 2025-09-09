@@ -1,0 +1,24 @@
+{
+  "contestId": 1866,
+  "index": "L",
+  "name": "Lihmuf Balling",
+  "rating": 2400,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "After working at a factory (Lihmuf Sorting), Lihmuf wants to play a game with his good friend, Pak Chanek. There are $$$N$$$ boxes numbered from $$$1$$$ to $$$N$$$. The $$$i$$$-th box contains $$$i$$$ balls. Pak Chanek and Lihmuf will play a game using those boxes. There will be $$$N$$$ turns numbered from $$$1$$$ to $$$N$$$. On each turn, Pak Chanek chooses one box and takes all balls from that box, then Lihmuf does the same thing for one box he chooses (it is possible that the two chosen boxes are the same). Given an integer $$$M$$$. Before the game begins, Lihmuf must choose an integer $$$K$$$ satisfying $$$1 \\leq K \\leq M$$$. It is known that on the $$$j$$$-th turn, Pak Chanek will choose the $$$j$$$-th box, while Lihmuf will choose the $$$y$$$-th box, with $$$y=((j \\times K - 1) \\bmod N) + 1$$$. Help Lihmuf choose the correct value of $$$K$$$ so that he will get as many balls as possible! If there are more than one possible values of $$$K$$$ that result in the maximum total balls, find the minimum such value of $$$K$$$. Keep in mind that each box can be chosen more than once, but after a box is chosen for the first time, the box becomes empty.",
+  "inputFormat": "The only line contains two integers $$$N$$$ and $$$M$$$ ($$$1 \\leq N \\leq 10^9$$$; $$$1 \\leq M \\leq 2000$$$) — the number of boxes and the maximum limit for the value of $$$K$$$.",
+  "outputFormat": "An integer representing the value of $$$K$$$ that will make Lihmuf get as many balls as possible. If there are more than one possible value of $$$K$$$ that result in the maximum total balls, find the minimum such value of $$$K$$$.",
+  "sampleTests": [
+    {
+      "input": "3 1",
+      "output": "1"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1866/L",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

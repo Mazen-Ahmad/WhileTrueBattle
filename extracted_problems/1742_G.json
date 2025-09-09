@@ -1,0 +1,24 @@
+{
+  "contestId": 1742,
+  "index": "G",
+  "name": "Orray",
+  "rating": 1500,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given an array $$$a$$$ consisting of $$$n$$$ nonnegative integers. Let's define the prefix OR array $$$b$$$ as the array $$$b_i = a_1~\\mathsf{OR}~a_2~\\mathsf{OR}~\\dots~\\mathsf{OR}~a_i$$$, where $$$\\mathsf{OR}$$$ represents the bitwise OR operation . In other words, the array $$$b$$$ is formed by computing the $$$\\mathsf{OR}$$$ of every prefix of $$$a$$$. You are asked to rearrange the elements of the array $$$a$$$ in such a way that its prefix OR array is lexicographically maximum. An array $$$x$$$ is lexicographically greater than an array $$$y$$$ if in the first position where $$$x$$$ and $$$y$$$ differ, $$$x_i > y_i$$$.",
+  "inputFormat": "The first line of the input contains a single integer $$$t$$$ ($$$1 \\le t \\le 100$$$) — the number of test cases. The description of test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\leq n \\leq 2 \\cdot 10^5$$$) — the length of the array $$$a$$$. The second line of each test case contains $$$n$$$ nonnegative integers $$$a_1, \\ldots, a_n$$$ ($$$0 \\leq a_i \\leq 10^9$$$). It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "outputFormat": "For each test case print $$$n$$$ integers — any rearrangement of the array $$$a$$$ that obtains the lexicographically maximum prefix OR array.",
+  "sampleTests": [
+    {
+      "input": "5\n4\n1 2 4 8\n7\n5 1 2 3 4 5 5\n2\n1 101\n6\n2 3 4 2 3 4\n8\n1 4 2 3 4 5 7 1",
+      "output": "8 4 2 1 \n5 2 1 3 4 5 5 \n101 1 \n4 3 2 2 3 4 \n7 1 4 2 3 4 5 1"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1742/G",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

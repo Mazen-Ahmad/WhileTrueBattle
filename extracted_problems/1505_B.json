@@ -1,0 +1,24 @@
+{
+  "contestId": 1505,
+  "index": "B",
+  "name": "DMCA",
+  "rating": 1600,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Many people are aware of DMCA – Digital Millennium Copyright Act. But another recently proposed DMCA – Digital Millennium Calculation Act – is much less known. In this problem you need to find a root of a number according to this new DMCA law.",
+  "inputFormat": "The input contains a single integer $$$a$$$ ($$$1 \\le a \\le 1000000$$$).",
+  "outputFormat": "Output the result – an integer number.",
+  "sampleTests": [
+    {
+      "input": "1",
+      "output": "1"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1505/B",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

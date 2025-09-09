@@ -1,0 +1,24 @@
+{
+  "contestId": 1844,
+  "index": "G",
+  "name": "Tree Weights",
+  "rating": 3000,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given a tree with $$$n$$$ nodes labelled $$$1,2,\\dots,n$$$. The $$$i$$$-th edge connects nodes $$$u_i$$$ and $$$v_i$$$ and has an unknown positive integer weight $$$w_i$$$. To help you figure out these weights, you are also given the distance $$$d_i$$$ between the nodes $$$i$$$ and $$$i+1$$$ for all $$$1 \\le i \\le n-1$$$ (the sum of the weights of the edges on the simple path between the nodes $$$i$$$ and $$$i+1$$$ in the tree). Find the weight of each edge. If there are multiple solutions, print any of them. If there are no weights $$$w_i$$$ consistent with the information, print a single integer $$$-1$$$.",
+  "inputFormat": "The first line contains a single integer $$$n$$$ ($$$2 \\le n \\le 10^5$$$). The $$$i$$$-th of the next $$$n-1$$$ lines contains two integers $$$u_i$$$ and $$$v_i$$$ ($$$1 \\le u_i,v_i \\le n$$$, $$$u_i \\ne v_i$$$). The last line contains $$$n-1$$$ integers $$$d_1,\\dots,d_{n-1}$$$ ($$$1 \\le d_i \\le 10^{12}$$$). It is guaranteed that the given edges form a tree.",
+  "outputFormat": "If there is no solution, print a single integer $$$-1$$$. Otherwise, output $$$n-1$$$ lines containing the weights $$$w_1,\\dots,w_{n-1}$$$. If there are multiple solutions, print any of them.",
+  "sampleTests": [
+    {
+      "input": "5\n1 2\n1 3\n2 4\n2 5\n31 41 59 26",
+      "output": "31\n10\n18\n8"
+    }
+  ],
+  "timeLimit": 5000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1844/G",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

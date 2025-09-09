@@ -1,0 +1,24 @@
+{
+  "contestId": 1486,
+  "index": "C2",
+  "name": "Guessing the Greatest (hard version)",
+  "rating": 1900,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "The only difference between the easy and the hard version is the limit to the number of queries . This is an interactive problem. There is an array $$$a$$$ of $$$n$$$ different numbers. In one query you can ask the position of the second maximum element in a subsegment $$$a[l..r]$$$. Find the position of the maximum element in the array in no more than 20 queries. A subsegment $$$a[l..r]$$$ is all the elements $$$a_l, a_{l + 1}, ..., a_r$$$. After asking this subsegment you will be given the position of the second maximum from this subsegment in the whole array.",
+  "inputFormat": "The first line contains a single integer $$$n$$$ $$$(2 \\leq n \\leq 10^5)$$$ — the number of elements in the array.",
+  "outputFormat": "Output specification not found",
+  "sampleTests": [
+    {
+      "input": "5\n\n3\n\n4",
+      "output": "? 1 5\n\n? 4 5\n\n! 1"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1486/C2",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

@@ -1,0 +1,24 @@
+{
+  "contestId": 2074,
+  "index": "C",
+  "name": "XOR and Triangle",
+  "rating": 1100,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "This time, the pink soldiers have given you an integer $$$x$$$ ($$$x \\ge 2$$$). Please determine if there exists a positive integer $$$y$$$ that satisfies the following conditions. $$$y$$$ is strictly less than $$$x$$$. There exists a non-degenerate triangle $$$^{\\text{∗}}$$$ with side lengths $$$x$$$, $$$y$$$, $$$x \\oplus y$$$. Here, $$$\\oplus$$$ denotes the bitwise XOR operation . Additionally, if there exists such an integer $$$y$$$, output any. $$$^{\\text{∗}}$$$A triangle with side lengths $$$a$$$, $$$b$$$, $$$c$$$ is non-degenerate when $$$a+b > c$$$, $$$a+c > b$$$, $$$b+c > a$$$.",
+  "inputFormat": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 2000$$$). The description of the test cases follows. The only line of each test case contains a single integer $$$x$$$ ($$$2 \\le x \\le 10^9$$$).",
+  "outputFormat": "For each test case, print one integer on a separate line. The integer you must output is as follows: If there exists an integer $$$y$$$ satisfying the conditions, output the value of $$$y$$$ ($$$1 \\le y < x$$$); Otherwise, output $$$-1$$$. If there exist multiple integers that satisfy the conditions, you may output any.",
+  "sampleTests": [
+    {
+      "input": "7\n5\n2\n6\n3\n69\n4\n420",
+      "output": "3\n-1\n5\n-1\n66\n-1\n320"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/2074/C",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

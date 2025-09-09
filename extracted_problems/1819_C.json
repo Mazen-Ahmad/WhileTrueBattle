@@ -1,0 +1,24 @@
+{
+  "contestId": 1819,
+  "index": "C",
+  "name": "The Fox and the Complete Tree Traversal",
+  "rating": 2400,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "The fox Yae climbed the tree of the Sacred Sakura. A tree is a connected undirected graph that does not contain cycles. The fox uses her magical powers to move around the tree. Yae can jump from vertex $$$v$$$ to another vertex $$$u$$$ if and only if the distance between these vertices does not exceed $$$2$$$. In other words, in one jump Yae can jump from vertex $$$v$$$ to vertex $$$u$$$ if vertices $$$v$$$ and $$$u$$$ are connected by an edge, or if there exists such vertex $$$w$$$ that vertices $$$v$$$ and $$$w$$$ are connected by an edge, and also vertices $$$u$$$ and $$$w$$$ are connected by an edge. After Yae was able to get the sakura petal, she wondered if there was a cyclic route in the tree $$$v_1, v_2, \\ldots, v_n$$$ such that: the fox can jump from vertex $$$v_i$$$ to vertex $$$v_{i + 1}$$$, the fox can jump from vertex $$$v_n$$$ to vertex $$$v_1$$$, all $$$v_i$$$ are pairwise distinct. Help the fox determine if the required traversal exists.",
+  "inputFormat": "The first line contains one integer $$$n$$$ ($$$2 \\le n \\le 2 \\cdot 10^5$$$) —the number of vertices of the tree. Each of the following $$$n - 1$$$ lines contains two integers $$$u$$$ and $$$v$$$ ($$$1 \\le u, v \\le n$$$, $$$u \\ne v$$$) — vertices connected by an edge. It is guaranteed that these edges form a tree.",
+  "outputFormat": "On the first line, print \" Yes \" (without quotes) if the required route of the tree exists, or \" No \" (without quotes) otherwise. If the required tree traversal exists, on the second line print $$$n$$$ integers of different integers $$$v_1, v_2, \\ldots, v_n$$$ ($$$1 \\le v_i \\le n$$$) — the vertices of the tree in traversal order. If there are several correct traversals, output any of them.",
+  "sampleTests": [
+    {
+      "input": "5\n1 2\n1 3\n3 4\n3 5",
+      "output": "Yes\n4 5 1 2 3"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1819/C",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

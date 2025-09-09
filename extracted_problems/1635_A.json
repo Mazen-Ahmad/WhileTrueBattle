@@ -1,0 +1,24 @@
+{
+  "contestId": 1635,
+  "index": "A",
+  "name": "Min Or Sum",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given an array $$$a$$$ of size $$$n$$$. You can perform the following operation on the array: Choose two different integers $$$i, j$$$ $$$(1 \\leq i < j \\leq n$$$), replace $$$a_i$$$ with $$$x$$$ and $$$a_j$$$ with $$$y$$$. In order not to break the array, $$$a_i | a_j = x | y$$$ must be held, where $$$|$$$ denotes the bitwise OR operation . Notice that $$$x$$$ and $$$y$$$ are non-negative integers. Please output the minimum sum of the array you can get after using the operation above any number of times.",
+  "inputFormat": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ $$$(1 \\leq t \\leq 1000)$$$. Description of the test cases follows. The first line of each test case contains an integer $$$n$$$ $$$(2 \\leq n \\leq 100)$$$ — the size of array $$$a$$$. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots ,a_n$$$ $$$(0 \\leq a_i < 2^{30})$$$.",
+  "outputFormat": "For each test case, print one number in a line — the minimum possible sum of the array.",
+  "sampleTests": [
+    {
+      "input": "4\n3\n1 3 2\n5\n1 2 4 8 16\n2\n6 6\n3\n3 5 6",
+      "output": "3\n31\n6\n7"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1635/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

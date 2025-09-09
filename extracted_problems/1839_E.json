@@ -1,0 +1,24 @@
+{
+  "contestId": 1839,
+  "index": "E",
+  "name": "Decreasing Game",
+  "rating": 2400,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "This is an interactive problem. Consider the following game for two players: Initially, an array of integers $$$a_1, a_2, \\ldots, a_n$$$ of length $$$n$$$ is written on blackboard. Game consists of rounds . On each round, the following happens: The first player selects any $$$i$$$ such that $$$a_i \\gt 0$$$. If there is no such $$$i$$$, the first player loses the game (the second player wins) and game ends. The second player selects any $$$j \\neq i$$$ such that $$$a_j \\gt 0$$$. If there is no such $$$j$$$, the second player loses the game (the first player wins) and game ends. Let $$$d = \\min(a_i, a_j)$$$. The values of $$$a_i$$$ and $$$a_j$$$ are simultaneously decreased by $$$d$$$ and the next round starts. It can be shown that game always ends after the finite number of rounds. You have to select which player you will play for (first or second) and win the game.",
+  "inputFormat": "The first line contains a single integer $$$n$$$ ($$$1 \\le n \\le 300$$$) — the length of array $$$a$$$. The second line contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 300$$$) — array $$$a$$$.",
+  "outputFormat": "Output specification not found",
+  "sampleTests": [
+    {
+      "input": "4\n10 4 6 3\n\n\n3\n\n1\n\n0",
+      "output": "First\n1\n\n2\n\n4"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1839/E",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

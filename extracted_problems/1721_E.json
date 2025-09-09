@@ -1,0 +1,24 @@
+{
+  "contestId": 1721,
+  "index": "E",
+  "name": "Prefix Function Queries",
+  "rating": 2200,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given a string $$$s$$$, consisting of lowercase Latin letters. You are asked $$$q$$$ queries about it: given another string $$$t$$$, consisting of lowercase Latin letters, perform the following steps: concatenate $$$s$$$ and $$$t$$$; calculate the prefix function of the resulting string $$$s+t$$$; print the values of the prefix function on positions $$$|s|+1, |s|+2, \\dots, |s|+|t|$$$ ($$$|s|$$$ and $$$|t|$$$ denote the lengths of strings $$$s$$$ and $$$t$$$, respectively); revert the string back to $$$s$$$. The prefix function of a string $$$a$$$ is a sequence $$$p_1, p_2, \\dots, p_{|a|}$$$, where $$$p_i$$$ is the maximum value of $$$k$$$ such that $$$k < i$$$ and $$$a[1..k]=a[i-k+1..i]$$$ ($$$a[l..r]$$$ denotes a contiguous substring of a string $$$a$$$ from a position $$$l$$$ to a position $$$r$$$, inclusive). In other words, it's the longest proper prefix of the string $$$a[1..i]$$$ that is equal to its suffix of the same length.",
+  "inputFormat": "The first line contains a non-empty string $$$s$$$ ($$$1 \\le |s| \\le 10^6$$$), consisting of lowercase Latin letters. The second line contains a single integer $$$q$$$ ($$$1 \\le q \\le 10^5$$$) — the number of queries. Each of the next $$$q$$$ lines contains a query: a non-empty string $$$t$$$ ($$$1 \\le |t| \\le 10$$$), consisting of lowercase Latin letters.",
+  "outputFormat": "For each query, print the values of the prefix function of a string $$$s+t$$$ on positions $$$|s|+1, |s|+2, \\dots, |s|+|t|$$$.",
+  "sampleTests": [
+    {
+      "input": "aba\n6\ncaba\naba\nbababa\naaaa\nb\nforces",
+      "output": "0 1 2 3 \n1 2 3 \n2 3 4 5 6 7 \n1 1 1 1 \n2 \n0 0 0 0 0 0"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1721/E",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

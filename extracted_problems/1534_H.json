@@ -1,0 +1,24 @@
+{
+  "contestId": 1534,
+  "index": "H",
+  "name": "Lost Nodes",
+  "rating": 3500,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "This is an interactive problem. As he qualified for IOI this year, Little Ericyi was given a gift from all his friends: a tree of $$$n$$$ nodes! On the flight to IOI Little Ericyi was very bored, so he decided to play a game with Little Yvonne with his new tree. First, Little Yvonne selects two (not necessarily different) nodes $$$a$$$ and $$$b$$$ on the tree (without telling Ericyi), and then gives him a hint $$$f$$$ (which is some node on the path from $$$a$$$ to $$$b$$$). Then, Little Ericyi is able to ask the following question repeatedly: If I rooted the tree at node $$$r$$$ (Ericyi gets to choose $$$r$$$), what would be the Lowest Common Ancestor of $$$a$$$ and $$$b$$$? Little Ericyi's goal is to find the nodes $$$a$$$ and $$$b$$$, and report them to Little Yvonne. However, Little Yvonne thought this game was too easy, so before he gives the hint $$$f$$$ to Little Ericyi, he also wants him to first find the maximum number of queries required to determine $$$a$$$ and $$$b$$$ over all possibilities of $$$a$$$, $$$b$$$, and $$$f$$$ assuming Little Ericyi plays optimally. Little Ericyi defines an optimal strategy as one that makes the minimum number of queries. Of course, once Little Ericyi replies with the maximum number of queries, Little Yvonne will only let him use that many queries in the game. The tree, $$$a$$$, $$$b$$$, and $$$f$$$ are all fixed before the start of the game and do not change as queries are made.",
+  "inputFormat": "Input specification not found",
+  "outputFormat": "Output specification not found",
+  "sampleTests": [
+    {
+      "input": "4\n3 2\n2 1\n2 4\n\n1\n\n1\n\n2\n\n2",
+      "output": "3\n\n? 1\n\n? 2\n\n? 3\n\n! 4 1"
+    }
+  ],
+  "timeLimit": 4000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1534/H",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

@@ -1,0 +1,24 @@
+{
+  "contestId": 1601,
+  "index": "B",
+  "name": "Frog Traveler",
+  "rating": 1900,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Frog Gorf is traveling through Swamp kingdom. Unfortunately, after a poor jump, he fell into a well of $$$n$$$ meters depth. Now Gorf is on the bottom of the well and has a long way up. The surface of the well's walls vary in quality: somewhere they are slippery, but somewhere have convenient ledges. In other words, if Gorf is on $$$x$$$ meters below ground level, then in one jump he can go up on any integer distance from $$$0$$$ to $$$a_x$$$ meters inclusive. (Note that Gorf can't jump down, only up). Unfortunately, Gorf has to take a break after each jump (including jump on $$$0$$$ meters). And after jumping up to position $$$x$$$ meters below ground level, he'll slip exactly $$$b_x$$$ meters down while resting. Calculate the minimum number of jumps Gorf needs to reach ground level.",
+  "inputFormat": "The first line contains a single integer $$$n$$$ ($$$1 \\le n \\le 300\\,000$$$) — the depth of the well. The second line contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$0 \\le a_i \\le i$$$), where $$$a_i$$$ is the maximum height Gorf can jump from $$$i$$$ meters below ground level. The third line contains $$$n$$$ integers $$$b_1, b_2, \\ldots, b_n$$$ ($$$0 \\le b_i \\le n - i$$$), where $$$b_i$$$ is the distance Gorf will slip down if he takes a break on $$$i$$$ meters below ground level.",
+  "outputFormat": "If Gorf can't reach ground level, print $$$-1$$$. Otherwise, firstly print integer $$$k$$$ — the minimum possible number of jumps. Then print the sequence $$$d_1,\\,d_2,\\,\\ldots,\\,d_k$$$ where $$$d_j$$$ is the depth Gorf'll reach after the $$$j$$$-th jump, but before he'll slip down during the break. Ground level is equal to $$$0$$$. If there are multiple answers, print any of them.",
+  "sampleTests": [
+    {
+      "input": "3\n0 2 2\n1 1 0",
+      "output": "2\n1 0"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 512,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1601/B",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

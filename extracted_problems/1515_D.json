@@ -1,0 +1,24 @@
+{
+  "contestId": 1515,
+  "index": "D",
+  "name": "Phoenix and Socks",
+  "rating": 1500,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "To satisfy his love of matching socks, Phoenix has brought his $$$n$$$ socks ($$$n$$$ is even) to the sock store. Each of his socks has a color $$$c_i$$$ and is either a left sock or right sock. Phoenix can pay one dollar to the sock store to either: recolor a sock to any color $$$c'$$$ $$$(1 \\le c' \\le n)$$$ turn a left sock into a right sock turn a right sock into a left sock The sock store may perform each of these changes any number of times. Note that the color of a left sock doesn't change when it turns into a right sock, and vice versa. A matching pair of socks is a left and right sock with the same color. What is the minimum cost for Phoenix to make $$$n/2$$$ matching pairs? Each sock must be included in exactly one matching pair.",
+  "inputFormat": "The input consists of multiple test cases. The first line contains an integer $$$t$$$ ($$$1 \\le t \\le 1000$$$) — the number of test cases. The first line of each test case contains three integers $$$n$$$, $$$l$$$, and $$$r$$$ ($$$2 \\le n \\le 2 \\cdot 10^5$$$; $$$n$$$ is even; $$$0 \\le l, r \\le n$$$; $$$l+r=n$$$) — the total number of socks, and the number of left and right socks, respectively. The next line contains $$$n$$$ integers $$$c_i$$$ ($$$1 \\le c_i \\le n$$$) — the colors of the socks. The first $$$l$$$ socks are left socks, while the next $$$r$$$ socks are right socks. It is guaranteed that the sum of $$$n$$$ across all the test cases will not exceed $$$2 \\cdot 10^5$$$.",
+  "outputFormat": "For each test case, print one integer — the minimum cost for Phoenix to make $$$n/2$$$ matching pairs. Each sock must be included in exactly one matching pair.",
+  "sampleTests": [
+    {
+      "input": "4\n6 3 3\n1 2 3 2 2 2\n6 2 4\n1 1 2 2 2 2\n6 5 1\n6 5 4 3 2 1\n4 0 4\n4 4 4 3",
+      "output": "2\n3\n5\n3"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1515/D",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

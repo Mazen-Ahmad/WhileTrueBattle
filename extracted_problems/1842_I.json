@@ -1,0 +1,24 @@
+{
+  "contestId": 1842,
+  "index": "I",
+  "name": "Tenzing and Necklace",
+  "rating": 3500,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "bright, sunny and innocent...... Tenzing has a beautiful necklace. The necklace consists of $$$n$$$ pearls numbered from $$$1$$$ to $$$n$$$ with a string connecting pearls $$$i$$$ and $$$(i \\text{ mod } n)+1$$$ for all $$$1 \\leq i \\leq n$$$. One day Tenzing wants to cut the necklace into several parts by cutting some strings. But for each connected part of the necklace, there should not be more than $$$k$$$ pearls. The time needed to cut each string may not be the same. Tenzing needs to spend $$$a_i$$$ minutes cutting the string between pearls $$$i$$$ and $$$(i \\text{ mod } n)+1$$$. Tenzing wants to know the minimum time in minutes to cut the necklace such that each connected part will not have more than $$$k$$$ pearls.",
+  "inputFormat": "Each test contains multiple test cases. The first line of input contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^5$$$) — the number of test cases. The description of test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$k$$$ ($$$2\\leq n\\leq 5\\cdot 10^5$$$, $$$1\\leq k <n$$$). The second line of each test case contains $$$n$$$ integers $$$a_1,a_2,\\ldots,a_n$$$ ($$$1\\leq a_i\\leq 10^9$$$). It is guaranteed that the sum of $$$n$$$ of all test cases does not exceed $$$5 \\cdot 10^5$$$.",
+  "outputFormat": "For each test case, output the minimum total time in minutes required.",
+  "sampleTests": [
+    {
+      "input": "4\n5 2\n1 1 1 1 1\n5 2\n1 2 3 4 5\n6 3\n4 2 5 1 3 3\n10 3\n2 5 6 5 2 1 7 9 7 2",
+      "output": "3\n7\n5\n15"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 1024,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1842/I",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

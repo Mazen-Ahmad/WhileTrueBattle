@@ -1,0 +1,24 @@
+{
+  "contestId": 1838,
+  "index": "F",
+  "name": "Stuck Conveyor",
+  "rating": 3000,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "This is an interactive problem. There is an $$$n$$$ by $$$n$$$ grid of conveyor belts, in positions $$$(1, 1)$$$ through $$$(n, n)$$$ of a coordinate plane. Every other square in the plane is empty. Each conveyor belt can be configured to move boxes up (' ^ '), down (' v '), left (' < '), or right (' > '). If a box moves onto an empty square, it stops moving. However, one of the $$$n^2$$$ belts is stuck, and will always move boxes in the same direction, no matter how it is configured. Your goal is to perform a series of tests to determine which conveyor belt is stuck, and the direction in which it sends items. To achieve this, you can perform up to $$$25$$$ tests. In each test, you assign a direction to all $$$n^2$$$ belts, place a box on top of one of them, and then turn all of the conveyors on. One possible result of a query with $$$n=4$$$. In this case, the box starts at $$$(2, 2)$$$. If there were no stuck conveyor, it would end up at $$$(5, 4)$$$, but because of the stuck ' > ' conveyor at $$$(3, 3)$$$, it enters an infinite loop. The conveyors move the box around too quickly for you to see, so the only information you receive from a test is whether the box eventually stopped moving, and if so, the coordinates of its final position.",
+  "inputFormat": "Input specification not found",
+  "outputFormat": "Output specification not found",
+  "sampleTests": [
+    {
+      "input": "3\n\n\n\n\n-1 -1\n\n\n\n\n0 2",
+      "output": "? 2 2\n>><\n>>v\n^<<\n\n? 1 1\n>><\n>>v\n^<<\n\n! 1 2 ^"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1838/F",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

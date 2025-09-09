@@ -1,0 +1,24 @@
+{
+  "contestId": 2072,
+  "index": "D",
+  "name": "For Wizards, the Exam Is Easy, but I Couldn't Handle It",
+  "rating": 1300,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Akito got tired of being a simple locksmith at a bank, so he decided to enroll in the Magical Academy and become the best wizard in the world! However, to enroll, he needed to solve a single problem on the exam, which the ambitious hero could not manage. In the problem, he was given an array $$$a$$$ of length $$$n$$$. He needed to minimize the number of inversions$$$^{\\text{∗}}$$$ in the array after applying the spell exactly once . The spell was simple; to apply it, Akito had to choose two numbers $$$l$$$ and $$$r$$$ such that $$$1 \\le l \\le r \\le n$$$ and perform a cyclic shift of the subarray from $$$l$$$ to $$$r$$$ one position to the left. More formally, Akito selects the subarray $$$[l, r]$$$ and modifies the array as follows: From the original array $$$[a_1, a_2, \\ldots, a_{l - 1}, \\mathbf{ a_l }, \\mathbf{ a_{l + 1} } , \\mathbf{ \\ldots }, \\mathbf{ a_{r - 1} }, \\mathbf{ a_r }, a_{r + 1}, \\ldots, a_{n - 1}, a_n]$$$, he obtains the array $$$[a_1, a_2, \\ldots, a_{l - 1}, \\mathbf{ a_{l + 1} }, \\mathbf{ a_{l + 2} }, \\mathbf{ \\ldots }, \\mathbf{ a_{r - 1} }, \\mathbf{ a_{r} }, \\mathbf{ a_{l} }, a_{r + 1}, \\ldots, a_{n - 1}, a_{n}]$$$. Akito is eager to start his studies, but he still hasn't passed the exam. Help him enroll and solve the problem! $$$^{\\text{∗}}$$$An inversion in an array $$$b$$$ of length $$$m$$$ is defined as a pair of indices $$$(i, j)$$$ such that $$$1 \\le i < j \\le m$$$ and $$$b_i > b_j$$$. For example, in the array $$$b = [3, 1, 4, 1, 5]$$$, the inversions are the pairs of indices $$$(1, 2)$$$, $$$(1, 4)$$$, $$$(3, 4)$$$.",
+  "inputFormat": "The first line of input contains a number $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. In the first line of each test case, there is a number $$$n$$$ ($$$1 \\le n \\le 2000$$$) — the length of the array $$$a$$$. In the second line of each test case, there are $$$n$$$ numbers $$$a_i$$$ ($$$1 \\le a_i \\le 2000$$$) — the elements of the array $$$a$$$. It is guaranteed that the sum of $$$n^2$$$ across all test cases does not exceed $$$4 \\cdot 10^6$$$.",
+  "outputFormat": "For each test case, output two numbers $$$l$$$ and $$$r$$$ ($$$1 \\le l \\le r \\le n$$$) — the boundaries of the subarray that should be chosen so that after applying the spell, the number of inversions in the array is minimized. If there are multiple suitable pairs of boundaries, you may output any of them.",
+  "sampleTests": [
+    {
+      "input": "9\n7\n1 4 3 2 5 3 3\n6\n1 4 3 2 5 3\n8\n7 6 5 8 4 3 2 1\n10\n1 1 1 5 1 1 5 6 7 8\n2\n1337 69\n4\n2 1 2 1\n3\n998 244 353\n3\n1 2 1\n9\n1 1 2 3 5 8 13 21 34",
+      "output": "2 7\n2 4\n1 8\n4 6\n1 2\n1 4\n1 3\n2 3\n5 5"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/2072/D",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

@@ -1,0 +1,24 @@
+{
+  "contestId": 1505,
+  "index": "D",
+  "name": "Xenolith? Hippodrome?",
+  "rating": 1800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Input The input contains two integers $$$N$$$, $$$M$$$ ($$$1 \\le N \\le 1024, 2 \\le M \\le 16$$$), separated by a single space. Output Output \" YES \" or \" NO \". Examples Input 2 3 Output YES Input 3 2 Output NO Input 33 16 Output YES Input 26 5 Output NO",
+  "inputFormat": "The input contains two integers $$$N$$$, $$$M$$$ ($$$1 \\le N \\le 1024, 2 \\le M \\le 16$$$), separated by a single space.",
+  "outputFormat": "Output \" YES \" or \" NO \".",
+  "sampleTests": [
+    {
+      "input": "2 3",
+      "output": "YES"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1505/D",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

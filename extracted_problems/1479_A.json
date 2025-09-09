@@ -1,0 +1,24 @@
+{
+  "contestId": 1479,
+  "index": "A",
+  "name": "Searching Local Minimum",
+  "rating": 1700,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "This is an interactive problem . Homer likes arrays a lot and he wants to play a game with you. Homer has hidden from you a permutation $$$a_1, a_2, \\dots, a_n$$$ of integers $$$1$$$ to $$$n$$$. You are asked to find any index $$$k$$$ ($$$1 \\leq k \\leq n$$$) which is a local minimum. For an array $$$a_1, a_2, \\dots, a_n$$$, an index $$$i$$$ ($$$1 \\leq i \\leq n$$$) is said to be a local minimum if $$$a_i < \\min\\{a_{i-1},a_{i+1}\\}$$$, where $$$a_0 = a_{n+1} = +\\infty$$$. An array is said to be a permutation of integers $$$1$$$ to $$$n$$$, if it contains all integers from $$$1$$$ to $$$n$$$ exactly once. Initially, you are only given the value of $$$n$$$ without any other information about this permutation. At each interactive step, you are allowed to choose any $$$i$$$ ($$$1 \\leq i \\leq n$$$) and make a query with it. As a response, you will be given the value of $$$a_i$$$. You are asked to find any index $$$k$$$ which is a local minimum after at most $$$100$$$ queries .",
+  "inputFormat": "Input specification not found",
+  "outputFormat": "Output specification not found",
+  "sampleTests": [
+    {
+      "input": "5\n3\n2\n1\n4\n5",
+      "output": "? 1\n? 2\n? 3\n? 4\n? 5\n! 3"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 512,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1479/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

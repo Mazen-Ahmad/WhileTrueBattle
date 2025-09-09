@@ -1,0 +1,24 @@
+{
+  "contestId": 1712,
+  "index": "C",
+  "name": "Sort Zero",
+  "rating": 1100,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "An array is sorted if it has no inversions A Young Boy You are given an array of $$$n$$$ positive integers $$$a_1,a_2,\\ldots,a_n$$$. In one operation you do the following: Choose any integer $$$x$$$. For all $$$i$$$ such that $$$a_i = x$$$, do $$$a_i := 0$$$ (assign $$$0$$$ to $$$a_i$$$). Find the minimum number of operations required to sort the array in non-decreasing order.",
+  "inputFormat": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). Description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 10^5$$$). The second line of each test case contains $$$n$$$ positive integers $$$a_1,a_2,\\ldots,a_n$$$ ($$$1 \\le a_i \\le n$$$). It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^5$$$.",
+  "outputFormat": "For each test case print one integer — the minimum number of operations required to sort the array in non-decreasing order.",
+  "sampleTests": [
+    {
+      "input": "5\n3\n3 3 2\n4\n1 3 1 3\n5\n4 1 5 3 2\n4\n2 4 1 2\n1\n1",
+      "output": "1\n2\n4\n3\n0"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1712/C",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

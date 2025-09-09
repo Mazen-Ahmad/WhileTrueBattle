@@ -1,0 +1,24 @@
+{
+  "contestId": 2013,
+  "index": "C",
+  "name": "Password Cracking",
+  "rating": 1400,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Dimash learned that Mansur wrote something very unpleasant about him to a friend, so he decided to find out his password at all costs and discover what exactly he wrote. Believing in the strength of his password, Mansur stated that his password — is a binary string of length $$$n$$$. He is also ready to answer Dimash's questions of the following type: Dimash says a binary string $$$t$$$, and Mansur replies whether it is true that $$$t$$$ is a substring of his password. Help Dimash find out the password in no more than $$$2n$$$ operations; otherwise, Mansur will understand the trick and stop communicating with him.",
+  "inputFormat": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 100$$$). The description of the test cases follows.",
+  "outputFormat": "Output specification not found",
+  "sampleTests": [
+    {
+      "input": "4\n3\n\n0\n\n0\n\n1\n\n4\n\n4\n\n2",
+      "output": "? 00\n\n? 000\n\n? 010\n\n! 010\n\n! 1100\n\n! 0110\n\n! 10"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/2013/C",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

@@ -1,0 +1,24 @@
+{
+  "contestId": 1528,
+  "index": "F",
+  "name": "AmShZ Farm",
+  "rating": 3300,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "To AmShZ, all arrays are equal, but some arrays are more-equal than others. Specifically, the arrays consisting of $$$n$$$ elements from $$$1$$$ to $$$n$$$ that can be turned into permutations of numbers from $$$1$$$ to $$$n$$$ by adding a non-negative integer to each element. Mashtali who wants to appear in every problem statement thinks that an array $$$b$$$ consisting of $$$k$$$ elements is compatible with a more-equal array $$$a$$$ consisting of $$$n$$$ elements if for each $$$1 \\le i \\le k$$$ we have $$$1 \\le b_i \\le n$$$ and also $$$a_{b_1} = a_{b_2} = \\ldots = a_{b_k}$$$. Find the number of pairs of arrays $$$a$$$ and $$$b$$$ such that $$$a$$$ is a more-equal array consisting of $$$n$$$ elements and $$$b$$$ is an array compatible with $$$a$$$ consisting of $$$k$$$ elements modulo $$$998244353$$$. Note that the elements of $$$b$$$ are not necessarily distinct , same holds for $$$a$$$.",
+  "inputFormat": "The first line of input contains two integers $$$n$$$ and $$$k$$$ $$$(1 \\le n \\le 10^9 , 1 \\le k \\le 10^5)$$$.",
+  "outputFormat": "Print a single integer — the answer to the problem modulo $$$998244353$$$.",
+  "sampleTests": [
+    {
+      "input": "1 1",
+      "output": "1"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1528/F",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

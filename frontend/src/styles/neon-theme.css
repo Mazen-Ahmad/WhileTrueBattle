@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+/* Neon Dark Theme Variables */
+[data-theme="neon"] {
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #1a1a25;
+  --bg-tertiary: #2a2a35;
+  --text-primary: #e0e0ff;
+  --text-secondary: #b0b0d0;
+  --text-muted: #808090;
+  --neon-red: #cc0000;
+  --neon-blue: #0066cc;
+  --neon-purple: #7700cc;
+  --neon-pink: #cc0099;
+  --neon-yellow: #ccaa00;
+  --neon-green: #00cc66;
+  --border-color: #3a3a45;
+  --shadow-neon: 0 0 20px rgba(0, 102, 204, 0.4);
+}
+
+/* Base styles for neon theme */
+[data-theme="neon"] body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Background patterns */
+[data-theme="neon"] .bg-gray-50,
+[data-theme="neon"] .bg-gradient-to-br {
+  background: var(--bg-primary) !important;
+  background-image: 
+    linear-gradient(rgba(0, 102, 204, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 102, 204, 0.1) 1px, transparent 1px),
+    radial-gradient(circle at 25% 25%, rgba(0, 102, 204, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(204, 0, 0, 0.15) 0%, transparent 50%) !important;
+  background-size: 50px 50px, 50px 50px, 100% 100%, 100% 100% !important;
+}
+
+[data-theme="neon"] .bg-gray-100 {
+  background: var(--bg-secondary) !important;
+  background-image: 
+    linear-gradient(rgba(0, 102, 204, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 102, 204, 0.08) 1px, transparent 1px),
+    radial-gradient(circle at 30% 70%, rgba(204, 0, 0, 0.1) 0%, transparent 60%) !important;
+  background-size: 40px 40px, 40px 40px, 100% 100% !important;
+}
+
+/* Default theme grid patterns */
+.bg-gray-50 {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.bg-gray-100 {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+  background-size: 25px 25px;
+}
+
+[data-theme="neon"] .bg-white {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="neon"] .bg-blue-50 {
+  background: linear-gradient(135deg, rgba(0, 102, 204, 0.15) 0%, rgba(119, 0, 204, 0.15) 100%);
+  border-color: var(--neon-blue);
+}
+
+[data-theme="neon"] .bg-yellow-50 {
+  background: linear-gradient(135deg, rgba(255, 238, 0, 0.1) 0%, rgba(255, 0, 229, 0.1) 100%);
+  border-color: var(--neon-yellow);
+}
+
+/* Text colors */
+[data-theme="neon"] .text-gray-900,
+[data-theme="neon"] .text-gray-800,
+[data-theme="neon"] .text-gray-700 {
+  color: var(--text-primary);
+}
+
+[data-theme="neon"] .text-gray-600 {
+  color: var(--text-secondary);
+}
+
+[data-theme="neon"] .text-blue-900,
+[data-theme="neon"] .text-blue-700 {
+  color: var(--text-primary);
+  text-shadow: 0 0 12px rgba(224, 224, 224, 0.5);
+}
+
+[data-theme="neon"] .text-yellow-800 {
+  color: var(--neon-yellow);
+  text-shadow: 0 0 10px rgba(255, 238, 0, 0.5);
+}
+
+/* Border colors */
+[data-theme="neon"] .border-gray-200,
+[data-theme="neon"] .border-blue-200,
+[data-theme="neon"] .border-yellow-200 {
+  border-color: var(--border-color);
+}
+
+/* Buttons */
+[data-theme="neon"] .btn-primary {
+  background: linear-gradient(135deg, var(--neon-red) 0%, var(--neon-blue) 100%);
+  border: none;
+  color: white;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 25px rgba(204, 0, 0, 0.6), 0 0 50px rgba(0, 102, 204, 0.4);
+  transition: all 0.3s ease;
+}
+
+[data-theme="neon"] .btn-primary:hover {
+  box-shadow: 0 0 35px rgba(204, 0, 0, 0.8), 0 0 70px rgba(0, 102, 204, 0.6);
+  transform: translateY(-2px);
+}
+
+[data-theme="neon"] .btn-outline {
+  background: transparent;
+  border: 2px solid var(--neon-blue);
+  color: var(--neon-blue);
+  text-shadow: 0 0 12px rgba(0, 102, 204, 0.9);
+  box-shadow: inset 0 0 25px rgba(0, 102, 204, 0.15);
+  transition: all 0.3s ease;
+}
+
+[data-theme="neon"] .btn-outline:hover {
+  background: rgba(0, 102, 204, 0.15);
+  box-shadow: 0 0 25px rgba(0, 102, 204, 0.6), inset 0 0 25px rgba(0, 102, 204, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Cards and containers */
+[data-theme="neon"] .shadow-md,
+[data-theme="neon"] .shadow-sm {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 40px rgba(0, 243, 255, 0.1);
+}
+
+[data-theme="neon"] .rounded-lg {
+  border-radius: 12px;
+}
+
+/* Status indicators */
+[data-theme="neon"] .bg-green-500 {
+  background: var(--neon-green);
+  box-shadow: 0 0 12px rgba(0, 204, 102, 0.8);
+}
+
+[data-theme="neon"] .bg-red-500 {
+  background: var(--neon-red);
+  box-shadow: 0 0 12px rgba(204, 0, 0, 0.8);
+}
+
+/* Typography enhancements */
+[data-theme="neon"] h1,
+[data-theme="neon"] h2,
+[data-theme="neon"] h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  text-shadow: 0 0 25px rgba(0, 102, 204, 0.5);
+}
+
+[data-theme="neon"] .font-mono {
+  font-family: 'Fira Code', monospace;
+  color: var(--neon-green);
+  text-shadow: 0 0 12px rgba(0, 204, 102, 0.7);
+}
+
+/* Animations */
+@keyframes neon-pulse {
+  0%, 100% {
+    text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
+  }
+  50% {
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+  }
+}
+
+[data-theme="neon"] .animate-pulse {
+  animation: neon-pulse 2s ease-in-out infinite;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: linear-gradient(135deg, var(--neon-red, #cc0000) 0%, var(--neon-blue, #0066cc) 100%);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="neon"] .theme-toggle {
+  box-shadow: 0 0 25px rgba(204, 0, 0, 0.6), 0 0 50px rgba(0, 102, 204, 0.4);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 35px rgba(204, 0, 0, 0.8), 0 0 70px rgba(0, 102, 204, 0.6);
+}
+
+/* Scrollbar styling for neon theme */
+[data-theme="neon"] .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, var(--neon-red), var(--neon-blue));
+  box-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+}
+
+[data-theme="neon"] .custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+/* Input fields */
+[data-theme="neon"] input,
+[data-theme="neon"] textarea,
+[data-theme="neon"] select {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  border-radius: 8px;
+}
+
+[data-theme="neon"] input:focus,
+[data-theme="neon"] textarea:focus,
+[data-theme="neon"] select:focus {
+  border-color: var(--neon-blue);
+  box-shadow: 0 0 20px rgba(0, 243, 255, 0.3);
+  outline: none;
+}
+
+/* Logo glow effect */
+[data-theme="neon"] .logo-glow {
+  filter: drop-shadow(0 0 25px rgba(0, 102, 204, 0.8));
+  transition: filter 0.3s ease;
+}
+
+[data-theme="neon"] .logo-glow:hover {
+  filter: drop-shadow(0 0 35px rgba(0, 102, 204, 1));
+}

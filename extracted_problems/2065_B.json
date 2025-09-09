@@ -1,0 +1,24 @@
+{
+  "contestId": 2065,
+  "index": "B",
+  "name": "Skibidus and Ohio",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Skibidus is given a string $$$s$$$ that consists of lowercase Latin letters. If $$$s$$$ contains more than $$$1$$$ letter, he can: Choose an index $$$i$$$ ($$$1 \\leq i \\leq |s| - 1$$$, $$$|s|$$$ denotes the current length of $$$s$$$) such that $$$s_i = s_{i+1}$$$. Replace $$$s_i$$$ with any lowercase Latin letter of his choice. Remove $$$s_{i+1}$$$ from the string. Skibidus must determine the minimum possible length he can achieve through any number of operations.",
+  "inputFormat": "The first line contains an integer $$$t$$$ ($$$1 \\leq t \\leq 100$$$) — the number of test cases. The only line of each test case contains a string $$$s$$$ ($$$1 \\leq |s| \\leq 100$$$). It is guaranteed $$$s$$$ only contains lowercase Latin letters.",
+  "outputFormat": "For each test case, output an integer on the new line, the minimum achievable length of $$$s$$$.",
+  "sampleTests": [
+    {
+      "input": "4\nbaa\nskibidus\ncc\nohio",
+      "output": "1\n8\n1\n4"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/2065/B",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

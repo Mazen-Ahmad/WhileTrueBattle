@@ -1,0 +1,24 @@
+{
+  "contestId": 1604,
+  "index": "A",
+  "name": "Era",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Shohag has an integer sequence $$$a_1, a_2, \\ldots, a_n$$$. He can perform the following operation any number of times (possibly, zero): Select any positive integer $$$k$$$ (it can be different in different operations). Choose any position in the sequence (possibly the beginning or end of the sequence, or in between any two elements) and insert $$$k$$$ into the sequence at this position. This way, the sequence $$$a$$$ changes, and the next operation is performed on this changed sequence. For example, if $$$a=[3,3,4]$$$ and he selects $$$k = 2$$$, then after the operation he can obtain one of the sequences $$$[\\underline{2},3,3,4]$$$, $$$[3,\\underline{2},3,4]$$$, $$$[3,3,\\underline{2},4]$$$, or $$$[3,3,4,\\underline{2}]$$$. Shohag wants this sequence to satisfy the following condition: for each $$$1 \\le i \\le |a|$$$, $$$a_i \\le i$$$. Here, $$$|a|$$$ denotes the size of $$$a$$$. Help him to find the minimum number of operations that he has to perform to achieve this goal. We can show that under the constraints of the problem it's always possible to achieve this goal in a finite number of operations.",
+  "inputFormat": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 200$$$) — the number of test cases. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 100$$$) — the initial length of the sequence. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 10^9$$$) — the elements of the sequence.",
+  "outputFormat": "For each test case, print a single integer — the minimum number of operations needed to perform to achieve the goal mentioned in the statement.",
+  "sampleTests": [
+    {
+      "input": "4\n3\n1 3 4\n5\n1 2 5 7 4\n1\n1\n3\n69 6969 696969",
+      "output": "1\n3\n0\n696966"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1604/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

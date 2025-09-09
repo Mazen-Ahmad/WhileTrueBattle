@@ -1,0 +1,24 @@
+{
+  "contestId": 1661,
+  "index": "B",
+  "name": "Getting Zero",
+  "rating": 1300,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Suppose you have an integer $$$v$$$. In one operation, you can: either set $$$v = (v + 1) \\bmod 32768$$$ or set $$$v = (2 \\cdot v) \\bmod 32768$$$. You are given $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$. What is the minimum number of operations you need to make each $$$a_i$$$ equal to $$$0$$$?",
+  "inputFormat": "The first line contains the single integer $$$n$$$ ($$$1 \\le n \\le 32768$$$) — the number of integers. The second line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$0 \\le a_i < 32768$$$).",
+  "outputFormat": "Print $$$n$$$ integers. The $$$i$$$-th integer should be equal to the minimum number of operations required to make $$$a_i$$$ equal to $$$0$$$.",
+  "sampleTests": [
+    {
+      "input": "4\n19 32764 10240 49",
+      "output": "14 4 4 15"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1661/B",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

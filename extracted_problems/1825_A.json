@@ -1,0 +1,24 @@
+{
+  "contestId": 1825,
+  "index": "A",
+  "name": "LuoTianyi and the Palindrome String",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "LuoTianyi gives you a palindrome $$$^{\\dagger}$$$ string $$$s$$$, and she wants you to find out the length of the longest non-empty subsequence$$$^{\\ddagger}$$$ of $$$s$$$ which is not a palindrome string. If there is no such subsequence, output $$$-1$$$ instead. $$$^{\\dagger}$$$ A palindrome is a string that reads the same backward as forward. For example, strings \" z \", \" aaa \", \" aba \", \" abccba \" are palindromes, but strings \" codeforces \", \" reality \", \" ab \" are not. $$$^{\\ddagger}$$$ A string $$$a$$$ is a subsequence of a string $$$b$$$ if $$$a$$$ can be obtained from $$$b$$$ by deletion of several (possibly, zero or all) characters from $$$b$$$. For example, strings \" a \", \" aaa \", \" bab \" are subsequences of string \" abaab \", but strings \" codeforces \", \" bbb \", \" h \" are not.",
+  "inputFormat": "Each test consists of multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 1000$$$) — the number of test cases. The description of test cases follows. The first and the only line of each test case contains a single string $$$s$$$ ($$$1 \\le |s| \\le 50$$$) consisting of lowercase English letters — the string that LuoTianyi gives you. It's guaranteed that $$$s$$$ is a palindrome string.",
+  "outputFormat": "For each test case, output a single integer — the length of the longest non-empty subsequence which is not a palindrome string. If there is no such subsequence, output $$$-1$$$.",
+  "sampleTests": [
+    {
+      "input": "4\nabacaba\naaa\ncodeforcesecrofedoc\nlol",
+      "output": "6\n-1\n18\n2"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1825/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

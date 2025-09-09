@@ -1,0 +1,24 @@
+{
+  "contestId": 2096,
+  "index": "G",
+  "name": "Wonderful Guessing Game",
+  "rating": 3200,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "This is an interactive problem. You are a proud teacher at the Millennium Science School. Today, a student named Alice challenges you to a guessing game. Alice is thinking of an integer from $$$1$$$ to $$$n$$$, and you must guess it by asking her some queries. To make things harder, she says you must ask all the queries first , and she will ignore exactly $$$1$$$ query. For each query, you choose an array of $$$k$$$ distinct integers from $$$1$$$ to $$$n$$$, where $$$k$$$ is even. Then, Alice will respond with one of the following: $$$\\texttt{L}$$$: the number is one of the first $$$\\frac{k}{2}$$$ elements of the array; $$$\\texttt{R}$$$: the number is one of the last $$$\\frac{k}{2}$$$ elements of the array; $$$\\texttt{N}$$$: the number is not in the array; $$$\\texttt{?}$$$: this query is ignored. Alice is impatient, so you must find a strategy that minimizes the number of queries. Can you do it? Formally, let $$$f(n)$$$ be the minimum number of queries required to determine Alice's number. Then you must find a strategy that uses exactly $$$f(n)$$$ queries. Note that the interactor is adaptive , which means Alice's number is not fixed at the beginning and may depend on your queries. However, it is guaranteed that there exists at least one number that is consistent with Alice's responses. We can show that $$$f(n) \\leq 20$$$ for all $$$n$$$ such that $$$2 \\le n \\le 2 \\cdot 10^5$$$.",
+  "inputFormat": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The only line of each test case contains a single integer $$$n$$$ ($$$2 \\le n \\le 2 \\cdot 10^5$$$) — the maximum possible value of Alice's number. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "outputFormat": "Output specification not found",
+  "sampleTests": [
+    {
+      "input": "2\n3\n\n\n\n?N\n\n5\n\n\n\n\nR?L",
+      "output": "2\n2 1 2\n2 1 2\n\n3\n\n3\n4 3 2 4 1\n4 5 4 3 1\n4 1 5 3 4\n\n1"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/2096/G",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

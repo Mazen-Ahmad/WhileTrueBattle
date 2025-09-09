@@ -1,0 +1,24 @@
+{
+  "contestId": 1520,
+  "index": "F2",
+  "name": "Guess the K-th Zero (Hard version)",
+  "rating": 2200,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "This is an interactive problem. This is a hard version of the problem. The difference from the easy version is that in the hard version $$$1 \\le t \\le \\min(n, 10^4)$$$ and the total number of queries is limited to $$$6 \\cdot 10^4$$$. Polycarp is playing a computer game. In this game, an array consisting of zeros and ones is hidden. Polycarp wins if he guesses the position of the $$$k$$$-th zero from the left $$$t$$$ times. Polycarp can make no more than $$$6 \\cdot 10^4$$$ requests totally of the following type: ? $$$l$$$ $$$r$$$ — find out the sum of all elements in positions from $$$l$$$ to $$$r$$$ ($$$1 \\le l \\le r \\le n$$$) inclusive. To make the game more interesting, each guessed zero turns into one and the game continues on the changed array. More formally, if the position of the $$$k$$$-th zero was $$$x$$$, then after Polycarp guesses this position, the $$$x$$$-th element of the array will be replaced from $$$0$$$ to $$$1$$$. Help Polycarp win the game.",
+  "inputFormat": "Input specification not found",
+  "outputFormat": "Output specification not found",
+  "sampleTests": [
+    {
+      "input": "6 2\n\n2\n\n2\n\n1\n\n1\n\n0\n\n1\n\n0",
+      "output": "? 4 6\n\n? 1 1\n\n? 1 2\n\n? 5 5\n\n! 5\n\n? 2 2\n\n! 2"
+    }
+  ],
+  "timeLimit": 4000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1520/F2",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

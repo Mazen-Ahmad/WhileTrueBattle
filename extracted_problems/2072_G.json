@@ -1,0 +1,24 @@
+{
+  "contestId": 2072,
+  "index": "G",
+  "name": "I've Been Flipping Numbers for 300 Years and Calculated the Sum",
+  "rating": 2200,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "After three hundred years of slime farming, Akito finally obtained the magical number $$$n$$$. Upon reaching the merchant, he wanted to exchange the number for gold, but the merchant gave the hero a quest. The merchant said that for the quest, the skill $$$\\text{rev}(n, p)$$$ would be required, which Akito, by happy coincidence, had recently learned. $$$\\text{rev}(n, p)$$$ represents the following procedure: Write the number $$$n$$$ in base $$$p$$$, let this representation be $$$n = \\overline{n_{\\ell - 1} \\ldots n_1 n_0}$$$, where $$$\\ell$$$ is the length of the base $$$p$$$ representation of the number $$$n$$$. Reverse the base $$$p$$$ representation, let this be $$$m = \\overline{n_0 n_1 \\ldots n_{\\ell - 1}}$$$. Convert the number $$$m$$$ back to decimal and return it as the result. The merchant's quest was to calculate the sum $$$x = \\sum\\limits_{p = 2}^{k} \\text{rev}(n, p)$$$. Since this number can be quite large, only the remainder of $$$x$$$ when divided by $$$10^9 + 7$$$ is required. The merchant also mentioned that the previous traveler had been calculating this sum for three hundred years and had not finished it. But you will help Akito finish it faster, right?",
+  "inputFormat": "The first line contains the number $$$t$$$ ($$$1 \\le t \\le 5000$$$) — the number of test cases. In the only line of each test case, two numbers $$$n$$$ and $$$k$$$ are given ($$$1 \\le n \\le 3 \\cdot 10^5, 2 \\le k \\le 10^{18}$$$) — the magical number and the upper limit for summation. Note that the sum of $$$n$$$ across all test cases is not bounded .",
+  "outputFormat": "For each test case, you need to output a single number — the remainder of $$$x = \\sum\\limits_{p = 2}^{k} \\text{rev}(n, p)$$$ when divided by $$$10^9 + 7$$$.",
+  "sampleTests": [
+    {
+      "input": "12\n3 2\n42 52\n1 10\n4 4\n16 2\n69 69\n9 3\n19 84\n9982 44353\n100000 1000000007\n17 30\n777 1000000000000000000",
+      "output": "3\n7594\n9\n6\n1\n33471\n10\n2006\n120792461\n584502117\n775\n46058362"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/2072/G",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

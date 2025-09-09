@@ -1,0 +1,24 @@
+{
+  "contestId": 1601,
+  "index": "F",
+  "name": "Two Sorts",
+  "rating": 3400,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Integers from $$$1$$$ to $$$n$$$ (inclusive) were sorted lexicographically (considering integers as strings). As a result, array $$$a_1, a_2, \\dots, a_n$$$ was obtained. Calculate value of $$$(\\sum_{i = 1}^n ((i - a_i) \\mod 998244353)) \\mod 10^9 + 7$$$. $$$x \\mod y$$$ here means the remainder after division $$$x$$$ by $$$y$$$. This remainder is always non-negative and doesn't exceed $$$y - 1$$$. For example, $$$5 \\mod 3 = 2$$$, $$$(-1) \\mod 6 = 5$$$.",
+  "inputFormat": "The first line contains the single integer $$$n$$$ ($$$1 \\leq n \\leq 10^{12}$$$).",
+  "outputFormat": "Print one integer — the required sum.",
+  "sampleTests": [
+    {
+      "input": "3",
+      "output": "0"
+    }
+  ],
+  "timeLimit": 4000,
+  "memoryLimit": 512,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1601/F",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

@@ -1,0 +1,24 @@
+{
+  "contestId": 1795,
+  "index": "B",
+  "name": "Ideal Point",
+  "rating": 900,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given $$$n$$$ one-dimensional segments (each segment is denoted by two integers — its endpoints). Let's define the function $$$f(x)$$$ as the number of segments covering point $$$x$$$ (a segment covers the point $$$x$$$ if $$$l \\le x \\le r$$$, where $$$l$$$ is the left endpoint and $$$r$$$ is the right endpoint of the segment). An integer point $$$x$$$ is called ideal if it belongs to more segments than any other integer point, i. e. $$$f(y) < f(x)$$$ is true for any other integer point $$$y$$$. You are given an integer $$$k$$$. Your task is to determine whether it is possible to remove some (possibly zero) segments, so that the given point $$$k$$$ becomes ideal .",
+  "inputFormat": "The first line contains one integer $$$t$$$ ($$$1 \\le t \\le 1000$$$) — the number of test cases. The first line of each test case contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le n, k \\le 50$$$). Then $$$n$$$ lines follow, $$$i$$$-th line of them contains two integers $$$l_i$$$ and $$$r_i$$$ ($$$1 \\le l_i, r_i \\le 50$$$; $$$l_i \\le r_i$$$) — the endpoints of the $$$i$$$-th segment.",
+  "outputFormat": "For each test case, print YES if it is possible to remove some (possibly zero) segments, so that the given point $$$k$$$ becomes ideal , otherwise print NO . You may print each letter in any case ( YES , yes , Yes will all be recognized as positive answer, NO , no and nO will all be recognized as negative answer).",
+  "sampleTests": [
+    {
+      "input": "4\n4 3\n1 3\n7 9\n2 5\n3 6\n2 9\n1 4\n3 7\n1 3\n2 4\n3 5\n1 4\n6 7\n5 5",
+      "output": "YES\nNO\nNO\nYES"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1795/B",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

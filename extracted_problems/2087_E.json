@@ -1,0 +1,24 @@
+{
+  "contestId": 2087,
+  "index": "E",
+  "name": "Color the Arrows",
+  "rating": null,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "There are $$$n$$$ arrows drawn in a row on a strip of paper, numbered from $$$1$$$ to $$$n$$$. Each arrow points either to the left or to the right. Initially, all arrows are painted blue. In one operation, you can repaint a blue arrow into red . For the first operation, you can choose any arrow. For each subsequent operation, you are only allowed to choose such an arrow that the arrow repainted on the previous operation points in its direction. That is, if the arrow repainted in the previous operation is a left arrow, then, for the current operation, you have to choose an arrow at a smaller index than the previous one. Similarly, if the previous arrow was a right arrow, the current one has to be at a greater index than it. Note that the arrows don't have to be adjacent. Each arrow has an integer reward for repainting it into red (which can be negative, positive, or zero). The final score is the sum of the rewards for the repainted arrows. What is the maximum score that can be achieved if you are allowed to perform any number of operations (including zero)?",
+  "inputFormat": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. In the first line of each test case, there is a single integer $$$n$$$ ($$$1 \\le n \\le 3 \\cdot 10^5$$$) — the number of arrows. In the second line, there is a string consisting of $$$n$$$ characters ' < ' and/or ' > ' (ASCII codes 60 and 62, respectively). In the third line, there are $$$n$$$ integers $$$c_1, c_2, \\dots, c_n$$$ ($$$-10^9 \\le c_i \\le 10^9$$$) — the reward for repainting each arrow. An additional constraint on the input: the sum of $$$n$$$ over all test cases does not exceed $$$3 \\cdot 10^5$$$.",
+  "outputFormat": "For each test case, print a single integer — the maximum score that can be achieved if you are allowed to perform any number of operations (including zero).",
+  "sampleTests": [
+    {
+      "input": "5\n3\n<>>\n5 4 6\n5\n<><>>\n5 -2 4 -3 7\n2\n>>\n-1 -2\n8\n>>>><<<<\n1 -1 1 -1 1 -1 1 -1\n5\n><<<>\n-1 100 100 100 100",
+      "output": "10\n9\n0\n4\n399"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 512,
+  "sourceUrl": "https://codeforces.com/problemset/problem/2087/E",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

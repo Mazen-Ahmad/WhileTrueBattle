@@ -1,0 +1,24 @@
+{
+  "contestId": 1477,
+  "index": "D",
+  "name": "Nezzar and Hidden Permutations",
+  "rating": 2800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Nezzar designs a brand new game \"Hidden Permutations\" and shares it with his best friend, Nanako. At the beginning of the game, Nanako and Nezzar both know integers $$$n$$$ and $$$m$$$. The game goes in the following way: Firstly, Nezzar hides two permutations $$$p_1,p_2,\\ldots,p_n$$$ and $$$q_1,q_2,\\ldots,q_n$$$ of integers from $$$1$$$ to $$$n$$$, and Nanako secretly selects $$$m$$$ unordered pairs $$$(l_1,r_1),(l_2,r_2),\\ldots,(l_m,r_m)$$$; After that, Nanako sends his chosen pairs to Nezzar; On receiving those $$$m$$$ unordered pairs, Nezzar checks if there exists $$$1 \\le i \\le m$$$, such that $$$(p_{l_i}-p_{r_i})$$$ and $$$(q_{l_i}-q_{r_i})$$$ have different signs. If so, Nezzar instantly loses the game and gets a score of $$$-1$$$. Otherwise, the score Nezzar gets is equal to the number of indices $$$1 \\le i \\le n$$$ such that $$$p_i \\neq q_i$$$. However, Nezzar accidentally knows Nanako's unordered pairs and decides to take advantage of them. Please help Nezzar find out two permutations $$$p$$$ and $$$q$$$ such that the score is maximized.",
+  "inputFormat": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 5 \\cdot 10^5$$$) — the number of test cases. The first line of each test case contains two integers $$$n,m$$$ ($$$1 \\le n \\le 5 \\cdot 10^5, 0 \\le m \\le \\min(\\frac{n(n-1)}{2},5 \\cdot 10^5)$$$). Then $$$m$$$ lines follow, $$$i$$$-th of them contains two integers $$$l_i,r_i$$$ ($$$1 \\le l_i,r_i \\le n$$$, $$$l_i \\neq r_i$$$), describing the $$$i$$$-th unordered pair Nanako chooses. It is guaranteed that all $$$m$$$ unordered pairs are distinct. It is guaranteed that the sum of $$$n$$$ for all test cases does not exceed $$$5 \\cdot 10^5$$$, and the sum of $$$m$$$ for all test cases does not exceed $$$5\\cdot 10^5$$$.",
+  "outputFormat": "For each test case, print two permutations $$$p_1,p_2,\\ldots,p_n$$$ and $$$q_1,q_2,\\ldots,q_n$$$ such that the score Nezzar gets is maximized.",
+  "sampleTests": [
+    {
+      "input": "3\n4 2\n1 2\n3 4\n6 4\n1 2\n1 3\n3 5\n3 6\n2 1\n1 2",
+      "output": "1 2 3 4\n3 4 1 2\n2 3 4 1 6 5\n1 4 3 2 5 6\n1 2\n1 2"
+    }
+  ],
+  "timeLimit": 5000,
+  "memoryLimit": 512,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1477/D",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

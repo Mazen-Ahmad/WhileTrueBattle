@@ -1,0 +1,24 @@
+{
+  "contestId": 1776,
+  "index": "N",
+  "name": "Count Permutations",
+  "rating": 3500,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given a string $$$s$$$ with length $$$n-1$$$ whose characters are either $$$\\texttt{<}$$$ or $$$\\texttt{>}$$$. Count the permutations $$$p_1, \\, p_2, \\, \\dots, \\, p_n$$$ of $$$1, \\, 2, \\, \\dots, \\, n$$$ such that, for all $$$i = 1, \\, 2, \\, \\dots, \\, n - 1$$$, if $$$s_i$$$ is $$$\\texttt{<}$$$ then $$$p_i < p_{i+1}$$$ and if $$$s_i$$$ is $$$\\texttt{>}$$$ then $$$p_i > p_{i+1}$$$. Since this number can be very large, compute its logarithm in base $$$2$$$.",
+  "inputFormat": "The first line contains a single integer $$$n$$$ ($$$2 \\le n \\le 100\\,000$$$). The second line contains a string $$$s$$$ of length $$$n-1$$$; each character of $$$s$$$ is either $$$\\texttt{<}$$$ or $$$\\texttt{>}$$$.",
+  "outputFormat": "Print the logarithm in base $$$2$$$ of the number of permutations satisfying the constraints described in the statement. Your answer is considered correct if its absolute or relative error does not exceed $$$10^{-6}$$$. Formally, let your answer be $$$x$$$ and let the correct answer be $$$y$$$. Your answer is accepted if and only if $$$\\frac{|x - y|}{\\max{(1, |y|)}} \\le 10^{-6}$$$.",
+  "sampleTests": [
+    {
+      "input": "2\n<",
+      "output": "0.0000000000"
+    }
+  ],
+  "timeLimit": 5000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1776/N",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

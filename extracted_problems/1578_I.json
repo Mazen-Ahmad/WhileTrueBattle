@@ -1,0 +1,24 @@
+{
+  "contestId": 1578,
+  "index": "I",
+  "name": "Interactive Rays",
+  "rating": 3300,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "This is an interactive problem. Your goal is to find a circle on a plane by shooting rays and getting the distance to the circle as a result. Interactor has three hidden integer parameters that are determined in advance for each test, but which you don't know — $$$x_c$$$, $$$y_c$$$, and $$$r_c$$$. $$$(x_c, y_c)$$$ are coordinates of the circle's center and $$$r_c$$$ is its radius. The absolute values of $$$x_c$$$, $$$y_c$$$, and $$$r_c$$$ do not exceed $$$10^5$$$, and $$$1 \\leq r_c \\leq \\sqrt{x_c^2 + y_c^2} - 1$$$. You can shoot rays that extend from the origin $$$(0,0)$$$ and go via a point $$$(x_q,y_q)$$$ with the integer coordinates you specify. For each ray, you get a distance from the ray to the circle or $$$0$$$ if the ray intersects the circle.",
+  "inputFormat": "Input specification not found",
+  "outputFormat": "Output specification not found",
+  "sampleTests": [
+    {
+      "input": "? 0 -10\n\n? 10 -10\n\n? 10 0\n\n? 10 10\n\n? 10 20\n\n? 10 30\n\n! 20 10 10",
+      "output": "12.360679775\n\n11.2132034356\n\n0.0\n\n0.0\n\n3.416407865\n\n5.8113883008"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 1024,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1578/I",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

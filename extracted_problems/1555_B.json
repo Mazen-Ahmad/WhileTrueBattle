@@ -1,0 +1,24 @@
+{
+  "contestId": 1555,
+  "index": "B",
+  "name": "Two Tables",
+  "rating": 1300,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You have an axis-aligned rectangle room with width $$$W$$$ and height $$$H$$$, so the lower left corner is in point $$$(0, 0)$$$ and the upper right corner is in $$$(W, H)$$$. There is a rectangular table standing in this room. The sides of the table are parallel to the walls, the lower left corner is in $$$(x_1, y_1)$$$, and the upper right corner in $$$(x_2, y_2)$$$. You want to place another rectangular table in this room with width $$$w$$$ and height $$$h$$$ with the width of the table parallel to the width of the room. The problem is that sometimes there is not enough space to place the second table without intersecting with the first one (there are no problems with tables touching, though). You can't rotate any of the tables, but you can move the first table inside the room. Example of how you may move the first table. What is the minimum distance you should move the first table to free enough space for the second one?",
+  "inputFormat": "The first line contains the single integer $$$t$$$ ($$$1 \\le t \\le 5000$$$) — the number of the test cases. The first line of each test case contains two integers $$$W$$$ and $$$H$$$ ($$$1 \\le W, H \\le 10^8$$$) — the width and the height of the room. The second line contains four integers $$$x_1$$$, $$$y_1$$$, $$$x_2$$$ and $$$y_2$$$ ($$$0 \\le x_1 < x_2 \\le W$$$; $$$0 \\le y_1 < y_2 \\le H$$$) — the coordinates of the corners of the first table. The third line contains two integers $$$w$$$ and $$$h$$$ ($$$1 \\le w \\le W$$$; $$$1 \\le h \\le H$$$) — the width and the height of the second table.",
+  "outputFormat": "For each test case, print the minimum distance you should move the first table, or $$$-1$$$ if there is no way to free enough space for the second table. Your answer will be considered correct if its absolute or relative error doesn't exceed $$$10^{-6}$$$.",
+  "sampleTests": [
+    {
+      "input": "5\n8 5\n2 1 7 4\n4 2\n5 4\n2 2 5 4\n3 3\n1 8\n0 3 1 6\n1 5\n8 1\n3 0 6 1\n5 1\n8 10\n4 5 7 8\n8 5",
+      "output": "1.000000000\n-1\n2.000000000\n2.000000000\n0.000000000"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1555/B",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

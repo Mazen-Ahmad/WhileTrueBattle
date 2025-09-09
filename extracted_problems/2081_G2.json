@@ -1,0 +1,24 @@
+{
+  "contestId": 2081,
+  "index": "G2",
+  "name": "Hard Formula (Hard Version)",
+  "rating": 3400,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "This is the hard version of the problem. The difference between the versions is that in this version, the limit on $$$n$$$ and the time limit are higher. You can hack only if you solved all versions of this problem. You are given an integer $$$n$$$, and you need to compute $$$(\\sum_{k=1}^n k\\bmod\\varphi(k))\\bmod 2^{32}$$$, where $$$\\varphi(k)$$$ equals the number of positive integers no greater than $$$k$$$ that are coprime with $$$k$$$.",
+  "inputFormat": "The only line contains a single integer $$$n$$$ ($$$1 \\le n \\le 10^{12}$$$).",
+  "outputFormat": "Print a single integer, representing $$$(\\sum_{k=1}^n k\\bmod\\varphi(k))\\bmod 2^{32}$$$.",
+  "sampleTests": [
+    {
+      "input": "5",
+      "output": "2"
+    }
+  ],
+  "timeLimit": 10000,
+  "memoryLimit": 1024,
+  "sourceUrl": "https://codeforces.com/problemset/problem/2081/G2",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

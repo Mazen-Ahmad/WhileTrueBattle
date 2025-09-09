@@ -1,0 +1,24 @@
+{
+  "contestId": 1667,
+  "index": "E",
+  "name": "Centroid Probabilities",
+  "rating": 3000,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Consider every tree (connected undirected acyclic graph) with $$$n$$$ vertices ( $$$n$$$ is odd , vertices numbered from $$$1$$$ to $$$n$$$), and for each $$$2 \\le i \\le n$$$ the $$$i$$$-th vertex is adjacent to exactly one vertex with a smaller index. For each $$$i$$$ ($$$1 \\le i \\le n$$$) calculate the number of trees for which the $$$i$$$-th vertex will be the centroid. The answer can be huge, output it modulo $$$998\\,244\\,353$$$. A vertex is called a centroid if its removal splits the tree into subtrees with at most $$$(n-1)/2$$$ vertices each.",
+  "inputFormat": "The first line contains an odd integer $$$n$$$ ($$$3 \\le n < 2 \\cdot 10^5$$$, $$$n$$$ is odd) — the number of the vertices in the tree.",
+  "outputFormat": "Print $$$n$$$ integers in a single line, the $$$i$$$-th integer is the answer for the $$$i$$$-th vertex (modulo $$$998\\,244\\,353$$$).",
+  "sampleTests": [
+    {
+      "input": "3",
+      "output": "1 1 0"
+    }
+  ],
+  "timeLimit": 3000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1667/E",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

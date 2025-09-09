@@ -1,0 +1,24 @@
+{
+  "contestId": 1814,
+  "index": "B",
+  "name": "Long Legs",
+  "rating": 1700,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "A robot is placed in a cell $$$(0, 0)$$$ of an infinite grid. This robot has adjustable length legs. Initially, its legs have length $$$1$$$. Let the robot currently be in the cell $$$(x, y)$$$ and have legs of length $$$m$$$. In one move, it can perform one of the following three actions: jump into the cell $$$(x + m, y)$$$; jump into the cell $$$(x, y + m)$$$; increase the length of the legs by $$$1$$$, i. e. set it to $$$m + 1$$$. What's the smallest number of moves robot has to make to reach a cell $$$(a, b)$$$?",
+  "inputFormat": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 100$$$) — the number of test cases. The only line of each test case contains two integers $$$a$$$ and $$$b$$$ ($$$1 \\le a, b \\le 10^9$$$) — the ending cell.",
+  "outputFormat": "For each test case, print a single integer — the smallest number of moves the robot is required to make to reach a cell $$$(a, b)$$$ from a cell $$$(0, 0)$$$.",
+  "sampleTests": [
+    {
+      "input": "3\n1 1\n1 6\n8 4",
+      "output": "2\n5\n6"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1814/B",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

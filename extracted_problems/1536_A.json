@@ -1,0 +1,24 @@
+{
+  "contestId": 1536,
+  "index": "A",
+  "name": "Omkar and Bad Story",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Omkar has received a message from Anton saying \"Your story for problem A is confusing. Just make a formal statement.\" Because of this, Omkar gives you an array $$$a = [a_1, a_2, \\ldots, a_n]$$$ of $$$n$$$ distinct integers. An array $$$b = [b_1, b_2, \\ldots, b_k]$$$ is called nice if for any two distinct elements $$$b_i, b_j$$$ of $$$b$$$, $$$|b_i-b_j|$$$ appears in $$$b$$$ at least once. In addition, all elements in $$$b$$$ must be distinct. Can you add several (maybe, $$$0$$$) integers to $$$a$$$ to create a nice array $$$b$$$ of size at most $$$300$$$ ? If $$$a$$$ is already nice , you don't have to add any elements. For example, array $$$[3, 6, 9]$$$ is nice , as $$$|6-3|=|9-6| = 3$$$, which appears in the array, and $$$|9-3| = 6$$$, which appears in the array, while array $$$[4, 2, 0, 6, 9]$$$ is not nice , as $$$|9-4| = 5$$$ is not present in the array. For integers $$$x$$$ and $$$y$$$, $$$|x-y| = x-y$$$ if $$$x > y$$$ and $$$|x-y| = y-x$$$ otherwise.",
+  "inputFormat": "Each test contains multiple test cases. The first line contains $$$t$$$ ($$$1 \\leq t \\leq 50$$$), the number of test cases. Description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$2 \\leq n \\leq 100$$$) — the length of the array $$$a$$$. The second line of each test case contains $$$n$$$ distinct integers $$$a_1, a_2, \\cdots, a_n$$$ ($$$-100 \\leq a_i \\leq 100$$$) — the elements of the array $$$a$$$.",
+  "outputFormat": "For each test case, output one line containing YES if Omkar can create a nice array $$$b$$$ by adding elements to $$$a$$$ and NO otherwise. The case of each letter does not matter, so yEs and nO will also be accepted. If the first line is YES , output a second line containing a single integer $$$k$$$ ($$$n \\leq k \\leq 300$$$). Then output one line containing $$$k$$$ distinct integers $$$b_1, b_2, \\cdots, b_k$$$ ($$$-10^9 \\leq b_i \\leq 10^9$$$), the elements of the nice array $$$b$$$. $$$b_1, b_2, \\cdots, b_k$$$ can be in any order. For each $$$a_i$$$ in $$$a$$$, $$$a_i$$$ must appear at least once in $$$b$$$. It can be proved that if Omkar can create such an array $$$b$$$, then he can also do so in a way that satisfies the above constraints. If multiple solutions exist, you can print any.",
+  "sampleTests": [
+    {
+      "input": "4\n3\n3 0 9\n2\n3 4\n5\n-7 3 13 -2 8\n4\n4 8 12 6",
+      "output": "yes\n4\n6 0 3 9\nyEs\n5\n5 3 1 2 4\nNO\nYes\n6\n8 12 6 2 4 10"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1536/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

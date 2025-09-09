@@ -1,0 +1,24 @@
+{
+  "contestId": 1989,
+  "index": "B",
+  "name": "Substring and Subsequence",
+  "rating": 1200,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given two strings $$$a$$$ and $$$b$$$, both consisting of lowercase Latin letters. A subsequence of a string is a string which can be obtained by removing several (possibly zero) characters from the original string. A substring of a string is a contiguous subsequence of that string. For example, consider the string abac : a , b , c , ab , aa , ac , ba , bc , aba , abc , aac , bac and abac are its subsequences; a , b , c , ab , ba , ac , aba , bac and abac are its substrings. Your task is to calculate the minimum possible length of the string that contains $$$a$$$ as a substring and $$$b$$$ as a subsequence.",
+  "inputFormat": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^3$$$) — the number of test cases. The first line of each test case contains a string $$$a$$$ ($$$1 \\le |a| \\le 100$$$), consisting of lowercase Latin letters. The second line of each test case contains a string $$$b$$$ ($$$1 \\le |b| \\le 100$$$), consisting of lowercase Latin letters.",
+  "outputFormat": "For each test case, print a single integer — the minimum possible length of the string that contains $$$a$$$ as a substring and $$$b$$$ as a subsequence.",
+  "sampleTests": [
+    {
+      "input": "5\naba\ncb\ner\ncf\nmmm\nmmm\ncontest\ntest\ncde\nabcefg",
+      "output": "4\n4\n3\n7\n7"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1989/B",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

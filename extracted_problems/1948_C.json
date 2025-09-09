@@ -1,0 +1,24 @@
+{
+  "contestId": 1948,
+  "index": "C",
+  "name": "Arrow Path",
+  "rating": 1300,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "There is a grid, consisting of $$$2$$$ rows and $$$n$$$ columns. The rows are numbered from $$$1$$$ to $$$2$$$ from top to bottom. The columns are numbered from $$$1$$$ to $$$n$$$ from left to right. Each cell of the grid contains an arrow pointing either to the left or to the right. No arrow points outside the grid. There is a robot that starts in a cell $$$(1, 1)$$$. Every second, the following two actions happen one after another: Firstly, the robot moves left, right, down or up ( it can't try to go outside the grid, and can't skip a move ); then it moves along the arrow that is placed in the current cell (the cell it ends up after its move). Your task is to determine whether the robot can reach the cell $$$(2, n)$$$.",
+  "inputFormat": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The first line of each test case contains a single integer ($$$2 \\le n \\le 2 \\cdot 10^5$$$). The second line contains a string consisting of exactly $$$n$$$ characters < and/or > — the first row of the grid. The third line contains a string consisting of exactly $$$n$$$ characters < and/or > — the second row of the grid. Additional constraints on the input: $$$n$$$ is even; there are no arrows pointing outside the grid; the sum of $$$n$$$ over all test cases doesn't exceed $$$2 \\cdot 10^5$$$.",
+  "outputFormat": "For each test case, print YES if the robot can reach the cell $$$(2, n)$$$; otherwise, print NO . You can print each letter in any case. For example, yes , Yes , YeS will all be recognized as positive answer.",
+  "sampleTests": [
+    {
+      "input": "4\n4\n>><<\n>>><\n2\n><\n><\n4\n>>><\n>><<\n6\n>><<><\n><>>><",
+      "output": "YES\nYES\nNO\nYES"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1948/C",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

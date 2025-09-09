@@ -1,0 +1,24 @@
+{
+  "contestId": 2092,
+  "index": "A",
+  "name": "Kamilka and the Sheep",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Kamilka has a flock of $$$n$$$ sheep, the $$$i$$$-th of which has a beauty level of $$$a_i$$$. All $$$a_i$$$ are distinct. Morning has come, which means they need to be fed. Kamilka can choose a non-negative integer $$$d$$$ and give each sheep $$$d$$$ bunches of grass. After that, the beauty level of each sheep increases by $$$d$$$. In the evening, Kamilka must choose exactly two sheep and take them to the mountains. If the beauty levels of these two sheep are $$$x$$$ and $$$y$$$ (after they have been fed), then Kamilka's pleasure from the walk is equal to $$$\\gcd(x, y)$$$, where $$$\\gcd(x, y)$$$ denotes the greatest common divisor (GCD) of integers $$$x$$$ and $$$y$$$. The task is to find the maximum possible pleasure that Kamilka can get from the walk.",
+  "inputFormat": "Each test consists of several test cases. The first line contains one integer $$$t$$$ ($$$1 \\le t \\le 500$$$), the number of test cases. The description of the test cases follows. The first line of each test case contains one integer $$$n$$$ ($$$2 \\leq n \\leq 100$$$), the number of sheep Kamilka has. The second line of each test case contains $$$n$$$ distinct integers $$$a_1, a_2, \\ldots, a_n \\ (1 \\le a_i \\le 10^9)$$$ — the beauty levels of the sheep. It is guaranteed that all $$$a_i$$$ are distinct.",
+  "outputFormat": "For each test case, output a single integer: the maximum possible pleasure that Kamilka can get from the walk.",
+  "sampleTests": [
+    {
+      "input": "4\n2\n1 3\n5\n5 4 3 2 1\n3\n5 6 7\n3\n1 11 10",
+      "output": "2\n4\n2\n10"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/2092/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

@@ -1,0 +1,24 @@
+{
+  "contestId": 1971,
+  "index": "A",
+  "name": "My First Sorting Problem",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given two integers $$$x$$$ and $$$y$$$. Output two integers: the minimum of $$$x$$$ and $$$y$$$, followed by the maximum of $$$x$$$ and $$$y$$$.",
+  "inputFormat": "The first line contains a single integer $$$t$$$ ($$$1 \\leq t \\leq 100$$$) — the number of test cases. The only line of each test case contains two space-separated integers $$$x$$$ and $$$y$$$ ($$$0 \\leq x, y \\leq 9$$$).",
+  "outputFormat": "For each test case, output two integers: the minimum of $$$x$$$ and $$$y$$$, followed by the maximum of $$$x$$$ and $$$y$$$.",
+  "sampleTests": [
+    {
+      "input": "10\n1 9\n8 4\n1 4\n3 4\n2 0\n2 4\n6 9\n3 3\n0 0\n9 9",
+      "output": "1 9\n4 8\n1 4\n3 4\n0 2\n2 4\n6 9\n3 3\n0 0\n9 9"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1971/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

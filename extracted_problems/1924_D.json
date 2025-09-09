@@ -1,0 +1,24 @@
+{
+  "contestId": 1924,
+  "index": "D",
+  "name": "Balanced Subsequences",
+  "rating": 2700,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "A sequence of brackets is called balanced if one can turn it into a valid math expression by adding characters '+' and '1' . For example, sequences '(())()', '()', and '(()(()))' are balanced, while ')(', '(()', and '(()))(' are not. A subsequence is a sequence that can be derived from the given sequence by deleting zero or more elements without changing the order of the remaining elements. You are given three integers $$$n$$$, $$$m$$$ and $$$k$$$. Find the number of sequences consisting of $$$n$$$ '(' and $$$m$$$ ')' , such that the longest balanced subsequence is of length $$$2 \\cdot k$$$. Since the answer can be large calculate it modulo $$$1\\,000\\,000\\,007$$$ ($$$10^9 + 7$$$).",
+  "inputFormat": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 3 \\cdot 10^3$$$). Description of the test cases follows. The first line of each test case contains three integers $$$n$$$, $$$m$$$ and $$$k$$$ ($$$1 \\le n, m, k \\le 2 \\cdot 10^3$$$)",
+  "outputFormat": "For each test case, print one integer — the answer to the problem.",
+  "sampleTests": [
+    {
+      "input": "3\n2 2 2\n3 2 3\n3 2 1",
+      "output": "2\n0\n4"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1924/D",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

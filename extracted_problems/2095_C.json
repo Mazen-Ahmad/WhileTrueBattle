@@ -1,0 +1,24 @@
+{
+  "contestId": 2095,
+  "index": "C",
+  "name": "Would It Be Unrated?",
+  "rating": null,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "It's a disaster. During the last April fools round, Codeforces crashed and consequentially, the round was unrated. No one knows what happened to some of the poor authors afterwards. After careful investigation, the Codeforces team has found out the reason behind this catastrophe. Apparently, authors added too many tests as they forgot the pretests were equal to system tests. We don't want to repeat this unfortunate incident and cause this round to be unrated as well. That's why we ask you for your help. Could you please help us check how many tests this problem has?",
+  "inputFormat": "The question — how many tests does the problem have?",
+  "outputFormat": "A single integer. The right one.",
+  "sampleTests": [
+    {
+      "input": "Hello! Can you please tell me how many tests does this problem have?",
+      "output": "25"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/2095/C",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

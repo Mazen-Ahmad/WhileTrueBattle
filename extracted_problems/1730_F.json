@@ -1,0 +1,24 @@
+{
+  "contestId": 1730,
+  "index": "F",
+  "name": "Almost Sorted",
+  "rating": 2700,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given a permutation $$$p$$$ of length $$$n$$$ and a positive integer $$$k$$$. Consider a permutation $$$q$$$ of length $$$n$$$ such that for any integers $$$i$$$ and $$$j$$$, where $$$1 \\le i < j \\le n$$$, we have $$$$$$p_{q_i} \\le p_{q_j} + k.$$$$$$ Find the minimum possible number of inversions in a permutation $$$q$$$. A permutation is an array consisting of $$$n$$$ distinct integers from $$$1$$$ to $$$n$$$ in arbitrary order. For example, $$$[2,3,1,5,4]$$$ is a permutation, but $$$[1,2,2]$$$ is not a permutation ($$$2$$$ appears twice in the array) and $$$[1,3,4]$$$ is also not a permutation ($$$n=3$$$ but there is $$$4$$$ in the array). An inversion in a permutation $$$a$$$ is a pair of indices $$$i$$$ and $$$j$$$ ($$$1 \\le i, j \\le n$$$) such that $$$i < j$$$, but $$$a_i > a_j$$$.",
+  "inputFormat": "The first line contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le n \\le 5000$$$, $$$1 \\le k \\le 8$$$). The second line contains $$$n$$$ distinct integers $$$p_1, p_2, \\ldots, p_n$$$ ($$$1 \\le p_i \\le n$$$).",
+  "outputFormat": "Print the minimum possible number of inversions in the permutation $$$q$$$.",
+  "sampleTests": [
+    {
+      "input": "1 1\n1",
+      "output": "0"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1730/F",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

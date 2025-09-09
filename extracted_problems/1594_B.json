@@ -1,0 +1,24 @@
+{
+  "contestId": 1594,
+  "index": "B",
+  "name": "Special Numbers",
+  "rating": 1100,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Theofanis really likes sequences of positive integers, thus his teacher (Yeltsa Kcir) gave him a problem about a sequence that consists of only special numbers. Let's call a positive number special if it can be written as a sum of different non-negative powers of $$$n$$$. For example, for $$$n = 4$$$ number $$$17$$$ is special, because it can be written as $$$4^0 + 4^2 = 1 + 16 = 17$$$, but $$$9$$$ is not. Theofanis asks you to help him find the $$$k$$$-th special number if they are sorted in increasing order. Since this number may be too large, output it modulo $$$10^9+7$$$.",
+  "inputFormat": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The first and only line of each test case contains two integers $$$n$$$ and $$$k$$$ ($$$2 \\le n \\le 10^9$$$; $$$1 \\le k \\le 10^9$$$).",
+  "outputFormat": "For each test case, print one integer — the $$$k$$$-th special number in increasing order modulo $$$10^9+7$$$.",
+  "sampleTests": [
+    {
+      "input": "3\n3 4\n2 12\n105 564",
+      "output": "9\n12\n3595374"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1594/B",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

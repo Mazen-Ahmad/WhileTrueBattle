@@ -1,0 +1,24 @@
+{
+  "contestId": 1680,
+  "index": "B",
+  "name": "Robots",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "There is a field divided into $$$n$$$ rows and $$$m$$$ columns. Some cells are empty (denoted as E ), other cells contain robots (denoted as R ). You can send a command to all robots at the same time. The command can be of one of the four types: move up; move right; move down; move left. When you send a command, all robots at the same time attempt to take one step in the direction you picked. If a robot tries to move outside the field, it explodes; otherwise, every robot moves to an adjacent cell in the chosen direction. You can send as many commands as you want (possibly, zero), in any order. Your goal is to make at least one robot reach the upper left corner of the field. Can you do this without forcing any of the robots to explode?",
+  "inputFormat": "The first line contains one integer $$$t$$$ ($$$1 \\le t \\le 5000$$$) — the number of test cases. Each test case starts with a line containing two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n, m \\le 5$$$) — the number of rows and the number of columns, respectively. Then $$$n$$$ lines follow; each of them contains a string of $$$m$$$ characters. Each character is either E (empty cell} or R (robot). Additional constraint on the input: in each test case, there is at least one robot on the field.",
+  "outputFormat": "If it is possible to make at least one robot reach the upper left corner of the field so that no robot explodes, print YES . Otherwise, print NO .",
+  "sampleTests": [
+    {
+      "input": "6\n1 3\nERR\n2 2\nER\nRE\n2 2\nER\nER\n1 1\nR\n4 3\nEEE\nEEE\nERR\nEER\n3 3\nEEE\nEER\nREE",
+      "output": "YES\nNO\nYES\nYES\nYES\nNO"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 512,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1680/B",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

@@ -1,0 +1,24 @@
+{
+  "contestId": 1978,
+  "index": "B",
+  "name": "New Bakery",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Bob decided to open a bakery. On the opening day, he baked $$$n$$$ buns that he can sell. The usual price of a bun is $$$a$$$ coins, but to attract customers, Bob organized the following promotion: Bob chooses some integer $$$k$$$ ($$$0 \\le k \\le \\min(n, b)$$$). Bob sells the first $$$k$$$ buns at a modified price. In this case, the price of the $$$i$$$-th ($$$1 \\le i \\le k$$$) sold bun is $$$(b - i + 1)$$$ coins. The remaining $$$(n - k)$$$ buns are sold at $$$a$$$ coins each. Note that $$$k$$$ can be equal to $$$0$$$. In this case, Bob will sell all the buns at $$$a$$$ coins each. Help Bob determine the maximum profit he can obtain by selling all $$$n$$$ buns.",
+  "inputFormat": "Each test consists of multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The description of the test cases follows. The only line of each test case contains three integers $$$n$$$, $$$a$$$, and $$$b$$$ ($$$1 \\le n, a, b \\le 10^9$$$) — the number of buns, the usual price of a bun, and the price of the first bun to be sold at a modified price.",
+  "outputFormat": "For each test case, output a single integer — the maximum profit that Bob can obtain.",
+  "sampleTests": [
+    {
+      "input": "7\n4 4 5\n5 5 9\n10 10 5\n5 5 11\n1000000000 1000000000 1000000000\n1000000000 1000000000 1\n1000 1 1000",
+      "output": "17\n35\n100\n45\n1000000000000000000\n1000000000000000000\n500500"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1978/B",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

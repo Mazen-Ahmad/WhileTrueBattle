@@ -1,0 +1,24 @@
+{
+  "contestId": 1647,
+  "index": "A",
+  "name": "Madoka and Math Dad",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Madoka finally found the administrator password for her computer. Her father is a well-known popularizer of mathematics, so the password is the answer to the following problem. Find the maximum decimal number without zeroes and with no equal digits in a row, such that the sum of its digits is $$$n$$$. Madoka is too tired of math to solve it herself, so help her to solve this problem!",
+  "inputFormat": "Each test contains multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 1000$$$) — the number of test cases. Description of the test cases follows. The only line of each test case contains an integer $$$n$$$ ($$$1 \\le n \\le 1000$$$) — the required sum of the digits.",
+  "outputFormat": "For each test case print the maximum number you can obtain.",
+  "sampleTests": [
+    {
+      "input": "5\n1\n2\n3\n4\n5",
+      "output": "1\n2\n21\n121\n212"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1647/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

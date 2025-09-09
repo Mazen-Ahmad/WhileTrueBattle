@@ -1,0 +1,24 @@
+{
+  "contestId": 1469,
+  "index": "A",
+  "name": "Regular Bracket Sequence",
+  "rating": 1000,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "A bracket sequence is called regular if it is possible to obtain correct arithmetic expression by inserting characters + and 1 into this sequence. For example, sequences (())() , () and (()(())) are regular, while )( , (() and (()))( are not. Let's call a regular bracket sequence \"RBS\". You are given a sequence $$$s$$$ of $$$n$$$ characters ( , ) , and/or ? . There is exactly one character ( and exactly one character ) in this sequence. You have to replace every character ? with either ) or ( (different characters ? can be replaced with different brackets). You cannot reorder the characters, remove them, insert other characters, and each ? must be replaced . Determine if it is possible to obtain an RBS after these replacements.",
+  "inputFormat": "The first line contains one integer $$$t$$$ ($$$1 \\le t \\le 1000$$$) — the number of test cases. Each test case consists of one line containing $$$s$$$ ($$$2 \\le |s| \\le 100$$$) — a sequence of characters ( , ) , and/or ? . There is exactly one character ( and exactly one character ) in this sequence.",
+  "outputFormat": "For each test case, print YES if it is possible to obtain a regular bracket sequence, or NO otherwise}. You may print each letter in any case (for example, YES , Yes , yes , yEs will all be recognized as positive answer).",
+  "sampleTests": [
+    {
+      "input": "5\n()\n(?)\n(??)\n??()\n)?(?",
+      "output": "YES\nNO\nYES\nYES\nNO"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 512,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1469/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

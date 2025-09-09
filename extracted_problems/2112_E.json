@@ -1,0 +1,24 @@
+{
+  "contestId": 2112,
+  "index": "E",
+  "name": "Tree Colorings",
+  "rating": 2200,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Consider a rooted undirected tree. Each vertex can be colored blue, green, or yellow. A coloring is called beautiful if it meets these conditions: the root of the tree is green; if you consider all blue and green vertices , they are reachable from each other without passing through any yellow vertices; if you consider all yellow and green vertices , they are reachable from each other without passing through any blue vertices; You are given an integer $$$m$$$. Your task is to calculate the minimum number of vertices in a tree with exactly $$$m$$$ beautiful colorings.",
+  "inputFormat": "The first line contains a single integer ($$$1 \\le t \\le 10^5$$$) — the number of test cases. The only line of each test case contains a single integer $$$m$$$ ($$$1 \\le m \\le 5 \\cdot 10^5$$$).",
+  "outputFormat": "For each test case, print a single integer — the minimum number of vertices in a tree with exactly $$$m$$$ beautiful colorings. If such a tree does not exist, print $$$-1$$$.",
+  "sampleTests": [
+    {
+      "input": "5\n1\n3\n5\n7\n9",
+      "output": "1\n2\n3\n4\n3"
+    }
+  ],
+  "timeLimit": 4000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/2112/E",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

@@ -1,0 +1,24 @@
+{
+  "contestId": 1988,
+  "index": "D",
+  "name": "The Omnipotent Monster Killer",
+  "rating": 2000,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You, the monster killer, want to kill a group of monsters. The monsters are on a tree with $$$n$$$ vertices. On vertex with number $$$i$$$ ($$$1\\le i\\le n$$$), there is a monster with $$$a_i$$$ attack points. You want to battle with monsters for $$$10^{100}$$$ rounds. In each round, the following happens in order: All living monsters attack you. Your health decreases by the sum of attack points of all living monsters. You select some (possibly all or none) monsters and kill them. After being killed, the monster will not be able to do any attacks in the future. There is a restriction: in one round, you cannot kill two monsters that are directly connected by an edge. If you choose what monsters to attack optimally, what is the smallest health decrement you can have after all rounds?",
+  "inputFormat": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). Description of the test cases follows. The first line of each test case contains an integer $$$n$$$ ($$$1\\le n\\le 3\\cdot 10^5$$$). The second line of each test case contains $$$n$$$ integers $$$a_1,\\ldots,a_n$$$ ($$$1\\le a_i\\le 10^{12}$$$). The following $$$n-1$$$ lines each contain two integers $$$x,y$$$ ($$$1\\le x,y\\le n$$$), denoting an edge on the tree connecting vertex $$$x$$$ and $$$y$$$. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$3\\cdot 10^5$$$.",
+  "outputFormat": "For each test case, print one integer: the minimum possible health decrement.",
+  "sampleTests": [
+    {
+      "input": "3\n1\n1000000000000\n5\n47 15 32 29 23\n1 2\n1 3\n2 4\n2 5\n7\n8 10 2 3 5 7 4\n1 2\n1 4\n3 2\n5 3\n6 2\n7 5",
+      "output": "1000000000000\n193\n57"
+    }
+  ],
+  "timeLimit": 3000,
+  "memoryLimit": 512,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1988/D",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

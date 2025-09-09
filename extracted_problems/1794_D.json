@@ -1,0 +1,24 @@
+{
+  "contestId": 1794,
+  "index": "D",
+  "name": "Counting Factorizations",
+  "rating": 1900,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "The prime factorization of a positive integer $$$m$$$ is the unique way to write it as $$$\\displaystyle m=p_1^{e_1}\\cdot p_2^{e_2}\\cdot \\ldots \\cdot p_k^{e_k}$$$, where $$$p_1, p_2, \\ldots, p_k$$$ are prime numbers, $$$p_1 < p_2 < \\ldots < p_k$$$ and $$$e_1, e_2, \\ldots, e_k$$$ are positive integers. For each positive integer $$$m$$$, $$$f(m)$$$ is defined as the multiset of all numbers in its prime factorization, that is $$$f(m)=\\{p_1,e_1,p_2,e_2,\\ldots,p_k,e_k\\}$$$. For example, $$$f(24)=\\{2,3,3,1\\}$$$, $$$f(5)=\\{1,5\\}$$$ and $$$f(1)=\\{\\}$$$. You are given a list consisting of $$$2n$$$ integers $$$a_1, a_2, \\ldots, a_{2n}$$$. Count how many positive integers $$$m$$$ satisfy that $$$f(m)=\\{a_1, a_2, \\ldots, a_{2n}\\}$$$. Since this value may be large, print it modulo $$$998\\,244\\,353$$$.",
+  "inputFormat": "The first line contains one integer $$$n$$$ ($$$1\\le n \\le 2022$$$). The second line contains $$$2n$$$ integers $$$a_1, a_2, \\ldots, a_{2n}$$$ ($$$1\\le a_i\\le 10^6$$$) — the given list.",
+  "outputFormat": "Print one integer, the number of positive integers $$$m$$$ satisfying $$$f(m)=\\{a_1, a_2, \\ldots, a_{2n}\\}$$$ modulo $$$998\\,244\\,353$$$.",
+  "sampleTests": [
+    {
+      "input": "2\n1 3 2 3",
+      "output": "2"
+    }
+  ],
+  "timeLimit": 4000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1794/D",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

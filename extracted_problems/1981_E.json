@@ -1,0 +1,24 @@
+{
+  "contestId": 1981,
+  "index": "E",
+  "name": "Turtle and Intersected Segments",
+  "rating": 2600,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Turtle just received $$$n$$$ segments and a sequence $$$a_1, a_2, \\ldots, a_n$$$. The $$$i$$$-th segment is $$$[l_i, r_i]$$$. Turtle will create an undirected graph $$$G$$$. If segment $$$i$$$ and segment $$$j$$$ intersect, then Turtle will add an undirected edge between $$$i$$$ and $$$j$$$ with a weight of $$$|a_i - a_j|$$$, for every $$$i \\ne j$$$. Turtle wants you to calculate the sum of the weights of the edges of the minimum spanning tree of the graph $$$G$$$, or report that the graph $$$G$$$ has no spanning tree. We say two segments $$$[l_1, r_1]$$$ and $$$[l_2, r_2]$$$ intersect if and only if $$$\\max(l_1, l_2) \\le \\min(r_1, r_2)$$$.",
+  "inputFormat": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^5$$$). The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$2 \\le n \\le 5 \\cdot 10^5$$$) — the number of segments. The $$$i$$$-th of the following $$$n$$$ lines contains three integers $$$l_i, r_i, a_i$$$ ($$$1 \\le l_i \\le r_i \\le 10^9, 1 \\le a_i \\le 10^9$$$) — the $$$i$$$-th segment and the $$$i$$$-th element of the sequence. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$5 \\cdot 10^5$$$.",
+  "outputFormat": "For each test case, output a single integer — the sum of the weights of the edges of the minimum spanning tree of the graph $$$G$$$. If the graph $$$G$$$ has no spanning tree, output $$$-1$$$.",
+  "sampleTests": [
+    {
+      "input": "4\n5\n1 7 3\n2 4 6\n3 5 5\n6 7 9\n3 4 4\n5\n2 7 3\n1 3 6\n4 5 5\n6 7 9\n1 1 4\n4\n1 4 3\n1 2 1\n3 4 5\n1 4 4\n3\n1 3 1\n2 3 3\n4 5 8",
+      "output": "9\n13\n4\n-1"
+    }
+  ],
+  "timeLimit": 5000,
+  "memoryLimit": 512,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1981/E",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

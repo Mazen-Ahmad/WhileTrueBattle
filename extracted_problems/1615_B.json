@@ -1,0 +1,24 @@
+{
+  "contestId": 1615,
+  "index": "B",
+  "name": "And It's Non-Zero",
+  "rating": 1300,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given an array consisting of all integers from $$$[l, r]$$$ inclusive. For example, if $$$l = 2$$$ and $$$r = 5$$$, the array would be $$$[2, 3, 4, 5]$$$. What's the minimum number of elements you can delete to make the bitwise AND of the array non-zero? A bitwise AND is a binary operation that takes two equal-length binary representations and performs the AND operation on each pair of the corresponding bits.",
+  "inputFormat": "The first line contains one integer $$$t$$$ ($$$1 \\leq t \\leq 10^4$$$) — the number of test cases. Then $$$t$$$ cases follow. The first line of each test case contains two integers $$$l$$$ and $$$r$$$ ($$$1 \\leq l \\leq r \\leq 2 \\cdot 10^5$$$) — the description of the array.",
+  "outputFormat": "For each test case, output a single integer — the answer to the problem.",
+  "sampleTests": [
+    {
+      "input": "5\n1 2\n2 8\n4 5\n1 5\n100000 200000",
+      "output": "1\n3\n0\n2\n31072"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1615/B",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

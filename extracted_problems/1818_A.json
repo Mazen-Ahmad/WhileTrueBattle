@@ -1,0 +1,24 @@
+{
+  "contestId": 1818,
+  "index": "A",
+  "name": "Politics",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "In a debate club with $$$n$$$ members, including yourself (member $$$1$$$), there are $$$k$$$ opinions to be discussed in sequence. During each discussion, members express their agreement or disagreement with the opinion. Let's define $$$Y$$$ as the number of members who agree and $$$N$$$ as the number of members who disagree. After each discussion, members leave the club based on the following criteria: If more members agree than disagree ($$$Y > N$$$), all members who disagreed leave the club. If more members disagree than agree ($$$Y < N$$$), all members who agreed leave the club. If there is a tie ($$$Y = N$$$), all members leave the club. As the club president, your goal is to stay in the club and maximize the number of members remaining after the meeting. You have access to each member's stance on all $$$k$$$ opinions before the meeting starts, and you can expel any number of members (excluding yourself) before the meeting begins. Determine the maximum number of members, including yourself, who can remain in the club after the meeting. You don't need to provide the specific expulsion strategy but only the maximum number of members that can stay. Ensure that you remain in the club after the meeting as well.",
+  "inputFormat": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 1000$$$). Description of the test cases follows. The first line of each test case contains two positive integers $$$n$$$ and $$$k$$$ ($$$1 \\le n, k \\le 100$$$) — the number of members and the number of discussions. The $$$i$$$-th of the following $$$n$$$ lines contains a string $$$t_i$$$ of length $$$k$$$. The $$$j$$$-th character in the string $$$t_i$$$ indicates whether the $$$i$$$-th member agrees or disagrees with the $$$j$$$-th opinion if they are present during that discussion. A \" + \" symbol means the member agrees, while a \" - \" symbol means the member disagrees. It is guaranteed that the sum of $$$n \\cdot k$$$ over all test cases does not exceed $$$5 \\cdot 10^4$$$.",
+  "outputFormat": "For each test case, output the maximum number of members, including yourself, who can remain in the club after the meeting.",
+  "sampleTests": [
+    {
+      "input": "5\n2 2\n++\n+-\n1 3\n+-+\n4 1\n+\n-\n-\n+\n5 4\n++++\n+--+\n++-+\n+-++\n++++\n4 2\n++\n--\n--\n-+",
+      "output": "1\n1\n2\n2\n1"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1818/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

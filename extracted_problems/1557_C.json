@@ -1,0 +1,24 @@
+{
+  "contestId": 1557,
+  "index": "C",
+  "name": "Moamen and XOR",
+  "rating": 1700,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Moamen and Ezzat are playing a game. They create an array $$$a$$$ of $$$n$$$ non-negative integers where every element is less than $$$2^k$$$. Moamen wins if $$$a_1 \\,\\&\\, a_2 \\,\\&\\, a_3 \\,\\&\\, \\ldots \\,\\&\\, a_n \\ge a_1 \\oplus a_2 \\oplus a_3 \\oplus \\ldots \\oplus a_n$$$. Here $$$\\&$$$ denotes the bitwise AND operation , and $$$\\oplus$$$ denotes the bitwise XOR operation . Please calculate the number of winning for Moamen arrays $$$a$$$. As the result may be very large, print the value modulo $$$1\\,000\\,000\\,007$$$ ($$$10^9 + 7$$$).",
+  "inputFormat": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 5$$$)— the number of test cases. Each test case consists of one line containing two integers $$$n$$$ and $$$k$$$ ($$$1 \\le n\\le 2\\cdot 10^5$$$, $$$0 \\le k \\le 2\\cdot 10^5$$$).",
+  "outputFormat": "For each test case, print a single value — the number of different arrays that Moamen wins with. Print the result modulo $$$1\\,000\\,000\\,007$$$ ($$$10^9 + 7$$$).",
+  "sampleTests": [
+    {
+      "input": "3\n3 1\n2 1\n4 0",
+      "output": "5\n2\n1"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1557/C",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

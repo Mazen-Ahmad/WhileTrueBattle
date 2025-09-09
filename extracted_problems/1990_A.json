@@ -1,0 +1,24 @@
+{
+  "contestId": 1990,
+  "index": "A",
+  "name": "Submission Bait",
+  "rating": 900,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Alice and Bob are playing a game in an array $$$a$$$ of size $$$n$$$. They take turns to do operations, with Alice starting first. The player who can not operate will lose. At first, a variable $$$mx$$$ is set to $$$0$$$. In one operation, a player can do: Choose an index $$$i$$$ ($$$1 \\le i \\le n$$$) such that $$$a_{i} \\geq mx$$$ and set $$$mx$$$ to $$$a_{i}$$$. Then, set $$$a_{i}$$$ to $$$0$$$. Determine whether Alice has a winning strategy.",
+  "inputFormat": "The first line contains an integer $$$t$$$ ($$$1 \\leq t \\leq 10^3$$$) — the number of test cases. For each test case: The first line contains an integer $$$n$$$ ($$$2 \\leq n \\leq 50$$$) — the size of the array. The second line contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\leq a_i \\leq n$$$) — the elements of the array.",
+  "outputFormat": "For each test case, if Alice has a winning strategy, output \" YES \". Otherwise, output \" NO \". You can output the answer in any case (upper or lower). For example, the strings \" yEs \", \" yes \", \" Yes \", and \" YES \" will be recognized as positive responses.",
+  "sampleTests": [
+    {
+      "input": "5\n2\n2 1\n2\n1 1\n3\n3 3 3\n4\n3 3 4 4\n4\n1 2 2 2",
+      "output": "YES\nNO\nYES\nNO\nYES"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1990/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

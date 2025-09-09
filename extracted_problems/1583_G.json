@@ -1,0 +1,24 @@
+{
+  "contestId": 1583,
+  "index": "G",
+  "name": "Omkar and Time Travel",
+  "rating": 3000,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "El Psy Kongroo. Omkar is watching Steins;Gate . In Steins;Gate , Okabe Rintarou needs to complete $$$n$$$ tasks ($$$1 \\leq n \\leq 2 \\cdot 10^5$$$). Unfortunately, he doesn't know when he needs to complete the tasks. Initially, the time is $$$0$$$. Time travel will now happen according to the following rules: For each $$$k = 1, 2, \\ldots, n$$$, Okabe will realize at time $$$b_k$$$ that he was supposed to complete the $$$k$$$-th task at time $$$a_k$$$ ($$$a_k < b_k$$$). When he realizes this, if $$$k$$$-th task was already completed at time $$$a_k$$$, Okabe keeps the usual flow of time. Otherwise, he time travels to time $$$a_k$$$ then immediately completes the task. If Okabe time travels to time $$$a_k$$$, all tasks completed after this time will become incomplete again. That is, for every $$$j$$$, if $$$a_j>a_k$$$, the $$$j$$$-th task will become incomplete, if it was complete (if it was incomplete, nothing will change). Okabe has bad memory, so he can time travel to time $$$a_k$$$ only immediately after getting to time $$$b_k$$$ and learning that he was supposed to complete the $$$k$$$-th task at time $$$a_k$$$. That is, even if Okabe already had to perform $$$k$$$-th task before, he wouldn't remember it before stumbling on the info about this task at time $$$b_k$$$ again. Please refer to the notes for an example of time travelling. There is a certain set $$$s$$$ of tasks such that the first moment that all of the tasks in $$$s$$$ are simultaneously completed (regardless of whether any other tasks are currently completed), a funny scene will take place. Omkar loves this scene and wants to know how many times Okabe will time travel before this scene takes place. Find this number modulo $$$10^9 + 7$$$. It can be proven that eventually all $$$n$$$ tasks will be completed and so the answer always exists.",
+  "inputFormat": "The first line contains an integer $$$n$$$ ($$$1 \\leq n \\leq 2 \\cdot 10^5$$$) — the number of tasks that Okabe needs to complete. $$$n$$$ lines follow. The $$$k$$$-th of these lines contain two integers $$$a_k$$$ and $$$b_k$$$ ($$$1 \\leq a_k < b_k \\leq 2n$$$) — the time at which Okabe needs to complete the $$$k$$$-th task and the time that he realizes this respectively. All $$$2n$$$ of these times are distinct (so every time from $$$1$$$ to $$$2n$$$ inclusive appears exactly once in the input). The next line contains a single integer $$$t$$$ ($$$1 \\leq t \\leq n$$$) — the size of the set $$$s$$$ of tasks that lead to the funny scene. The last line contains $$$t$$$ integers $$$s_1, s_2, \\ldots, s_t$$$ — ($$$1 \\leq s_k \\leq n$$$, the numbers $$$s_1, s_2, \\ldots, s_t$$$ are distinct) — the set $$$s$$$ of tasks.",
+  "outputFormat": "Output a single integer — the number of times that Okabe time travels until all tasks in the set $$$s$$$ are simultaneously completed, modulo $$$10^9 + 7$$$.",
+  "sampleTests": [
+    {
+      "input": "2\n1 4\n2 3\n2\n1 2",
+      "output": "3"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1583/G",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

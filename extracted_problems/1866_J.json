@@ -1,0 +1,24 @@
+{
+  "contestId": 1866,
+  "index": "J",
+  "name": "Jackets and Packets",
+  "rating": 2800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Pak Chanek has $$$N$$$ jackets that are stored in a wardrobe. Pak Chanek's wardrobe has enough room for two stacks of jackets, namely the left stack and the right stack. Initially, all $$$N$$$ jackets are in the left stack, while the right stack is empty. Initially, the $$$i$$$-th jacket from the top of the left stack has colour $$$C_i$$$. Pak Chanek wants to pack all of those jackets into some packets, such that the jackets in the same packet has the same colour. However, it is possible for two jackets with the same colour to be in different packets. Pak Chanek can do two kinds of operations: Pak Chanek can pick any number of jackets from the top from one stack as long as the colour is the same, then take those jackets out of the stack and pack them into a packet. This packing operation takes $$$X$$$ minutes, no matter how many jackets are packed. Pak Chanek can move one topmost jacket from one stack to the top of the other stack ( possibly right to left or left to right ). This moving operation takes $$$Y$$$ minutes. Determine the minimum time to pack all jackets!",
+  "inputFormat": "The first line contains three integers $$$N$$$, $$$X$$$, and $$$Y$$$ ($$$1 \\leq N \\leq 400$$$; $$$1\\leq X,Y\\leq10^9$$$) — the number of jackets, the time to do a packing operation, and the time to do a movement operation. The second line contains $$$N$$$ integers $$$C_1, C_2, C_3, \\ldots, C_N$$$ ($$$1 \\leq C_i \\leq N$$$) — the colour of each jacket.",
+  "outputFormat": "An integer representing the minimum time to pack all jackets.",
+  "sampleTests": [
+    {
+      "input": "8 7 2\n4 4 2 4 1 2 2 1",
+      "output": "38"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 512,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1866/J",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

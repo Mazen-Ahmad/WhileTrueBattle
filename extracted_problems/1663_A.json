@@ -1,0 +1,24 @@
+{
+  "contestId": 1663,
+  "index": "A",
+  "name": "Who Tested?",
+  "rating": null,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "",
+  "inputFormat": "Input specification not found",
+  "outputFormat": "Output specification not found",
+  "sampleTests": [
+    {
+      "input": "Sample input not available",
+      "output": "Sample output not available"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1663/A",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

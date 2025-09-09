@@ -1,0 +1,24 @@
+{
+  "contestId": 1663,
+  "index": "B",
+  "name": "Mike's Sequence",
+  "rating": null,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You won't find this sequence on OEIS.",
+  "inputFormat": "One integer $$$r$$$ ($$$-45 \\le r \\le 2999$$$).",
+  "outputFormat": "One integer.",
+  "sampleTests": [
+    {
+      "input": "2999",
+      "output": "3000"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1663/B",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

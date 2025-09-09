@@ -1,0 +1,24 @@
+{
+  "contestId": 1623,
+  "index": "B",
+  "name": "Game on Ranges",
+  "rating": 1100,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "Alice and Bob play the following game. Alice has a set $$$S$$$ of disjoint ranges of integers, initially containing only one range $$$[1, n]$$$. In one turn, Alice picks a range $$$[l, r]$$$ from the set $$$S$$$ and asks Bob to pick a number in the range. Bob chooses a number $$$d$$$ ($$$l \\le d \\le r$$$). Then Alice removes $$$[l, r]$$$ from $$$S$$$ and puts into the set $$$S$$$ the range $$$[l, d - 1]$$$ (if $$$l \\le d - 1$$$) and the range $$$[d + 1, r]$$$ (if $$$d + 1 \\le r$$$). The game ends when the set $$$S$$$ is empty. We can show that the number of turns in each game is exactly $$$n$$$. After playing the game, Alice remembers all the ranges $$$[l, r]$$$ she picked from the set $$$S$$$, but Bob does not remember any of the numbers that he picked. But Bob is smart, and he knows he can find out his numbers $$$d$$$ from Alice's ranges, and so he asks you for help with your programming skill. Given the list of ranges that Alice has picked ($$$[l, r]$$$), for each range, help Bob find the number $$$d$$$ that Bob has picked. We can show that there is always a unique way for Bob to choose his number for a list of valid ranges picked by Alice.",
+  "inputFormat": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 1000$$$). Description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 1000$$$). Each of the next $$$n$$$ lines contains two integers $$$l$$$ and $$$r$$$ ($$$1 \\le l \\le r \\le n$$$), denoting the range $$$[l, r]$$$ that Alice picked at some point. Note that the ranges are given in no particular order . It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$1000$$$, and the ranges for each test case are from a valid game.",
+  "outputFormat": "For each test case print $$$n$$$ lines. Each line should contain three integers $$$l$$$, $$$r$$$, and $$$d$$$, denoting that for Alice's range $$$[l, r]$$$ Bob picked the number $$$d$$$. You can print the lines in any order . We can show that the answer is unique. It is not required to print a new line after each test case. The new lines in the output of the example are for readability only.",
+  "sampleTests": [
+    {
+      "input": "4\n1\n1 1\n3\n1 3\n2 3\n2 2\n6\n1 1\n3 5\n4 4\n3 6\n4 5\n1 6\n5\n1 5\n1 2\n4 5\n2 2\n4 4",
+      "output": "1 1 1\n\n1 3 1\n2 2 2\n2 3 3\n\n1 1 1\n3 5 3\n4 4 4\n3 6 6\n4 5 5\n1 6 2\n\n1 5 3\n1 2 1\n4 5 5\n2 2 2\n4 4 4"
+    }
+  ],
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1623/B",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

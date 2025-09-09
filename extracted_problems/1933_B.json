@@ -1,0 +1,24 @@
+{
+  "contestId": 1933,
+  "index": "B",
+  "name": "Turtle Math: Fast Three Task",
+  "rating": 800,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given an array $$$a_1, a_2, \\ldots, a_n$$$. In one move, you can perform either of the following two operations: Choose an element from the array and remove it from the array. As a result, the length of the array decreases by $$$1$$$; Choose an element from the array and increase its value by $$$1$$$. You can perform any number of moves. If the current array becomes empty, then no more moves can be made. Your task is to find the minimum number of moves required to make the sum of the elements of the array $$$a$$$ divisible by $$$3$$$. It is possible that you may need $$$0$$$ moves. Note that the sum of the elements of an empty array (an array of length $$$0$$$) is equal to $$$0$$$.",
+  "inputFormat": "The first line of the input contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 10^5$$$). The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 10^4$$$). The sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "outputFormat": "For each test case, output a single integer: the minimum number of moves.",
+  "sampleTests": [
+    {
+      "input": "8\n4\n2 2 5 4\n3\n1 3 2\n4\n3 7 6 8\n1\n1\n4\n2 2 4 2\n2\n5 5\n7\n2 4 8 1 9 3 4\n2\n4 10",
+      "output": "1\n0\n0\n1\n1\n2\n1\n1"
+    }
+  ],
+  "timeLimit": 2000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1933/B",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}

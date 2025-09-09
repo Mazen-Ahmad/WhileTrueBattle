@@ -1,10 +1,13 @@
 import React from 'react';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 import { SocketProvider } from './contexts/SocketContext';
+import { ThemeProvider } from './contexts/ThemeContext';
 import AuthPage from './pages/AuthPage';
 import HomePage from './pages/HomePage';
 import LoadingSpinner from './components/common/LoadingSpinner';
+import ThemeToggle from './components/common/ThemeToggle';
 import './App.css';
+import './styles/neon-theme.css';
 
 function AppContent() {
   const { user, loading } = useAuth();
@@ -22,11 +25,13 @@ function AppContent() {
 
 function App() {
   return (
-    <AuthProvider>
-      <SocketProvider>
-        <AppContent />
-      </SocketProvider>
-    </AuthProvider>
+    <ThemeProvider>
+      <AuthProvider>
+        <SocketProvider>
+          <AppContent />
+        </SocketProvider>
+      </AuthProvider>
+    </ThemeProvider>
   );
 }
 

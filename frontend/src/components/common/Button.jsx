@@ -12,13 +12,13 @@ const Button = ({
   className = '',
   ...props 
 }) => {
-  const baseClasses = 'font-medium rounded-lg focus:outline-none focus:ring-2 transition-colors duration-200';
+  const baseClasses = 'font-medium rounded-lg focus:outline-none transition-colors duration-200';
   
   const variants = {
-    primary: 'bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-500',
-    secondary: 'bg-gray-600 hover:bg-gray-700 text-white focus:ring-gray-500',
-    outline: 'border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white focus:ring-blue-500',
-    danger: 'bg-red-600 hover:bg-red-700 text-white focus:ring-red-500',
+    primary: 'bg-blue-600 hover:bg-blue-700 text-white',
+    secondary: 'bg-gray-600 hover:bg-gray-700 text-white',
+    outline: 'border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white',
+    danger: 'bg-red-600 hover:bg-red-700 text-white',
   };
 
   const sizes = {

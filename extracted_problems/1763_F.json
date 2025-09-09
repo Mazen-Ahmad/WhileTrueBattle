@@ -1,0 +1,24 @@
+{
+  "contestId": 1763,
+  "index": "F",
+  "name": "Edge Queries",
+  "rating": 3000,
+  "tags": [
+    "implementation"
+  ],
+  "statement": "You are given an undirected, connected graph of $$$n$$$ nodes and $$$m$$$ edges. All nodes $$$u$$$ of the graph satisfy the following: Let $$$S_u$$$ be the set of vertices in the longest simple cycle starting and ending at $$$u$$$. Let $$$C_u$$$ be the union of the sets of vertices in any simple cycle starting and ending at $$$u$$$. $$$S_u = C_u$$$. You need to answer $$$q$$$ queries. For each query, you will be given node $$$a$$$ and node $$$b$$$. Out of all the edges that belong to any simple path from $$$a$$$ to $$$b$$$, count the number of edges such that if you remove that edge, $$$a$$$ and $$$b$$$ are reachable from each other.",
+  "inputFormat": "The first line contains two integers $$$n$$$ and $$$m$$$ ($$$2 \\le n \\le 2 \\cdot 10^5$$$, $$$1 \\le m \\le \\min$$$($$$2 \\cdot 10^5$$$, $$$(n \\cdot (n-1))/2$$$)) — the total number of nodes and edges in the graph, respectively. The next $$$m$$$ lines contain two integers $$$u$$$ and $$$v$$$ ($$$1 \\le$$$ $$$u$$$, $$$v$$$ $$$\\le n$$$, $$$u \\neq v$$$) — describing an edge, implying that nodes $$$u$$$ and $$$v$$$ are connected to each other. It is guaranteed that there is at most one edge between any pair of vertices in the graph and the given graph is connected. The next line contains a single integer $$$q$$$ ($$$1 \\le q \\le 2 \\cdot 10^5$$$) — the number of queries. Then $$$q$$$ lines follow, each representing a query. Each query contains two integers $$$a$$$ and $$$b$$$ ($$$1 \\le$$$ $$$a$$$, $$$b$$$ $$$\\le n$$$).",
+  "outputFormat": "For each query, output a single integer — answer to the query.",
+  "sampleTests": [
+    {
+      "input": "10 11\n1 2\n2 3\n3 4\n4 5\n5 3\n2 7\n7 9\n9 10\n10 6\n6 7\n1 8\n5\n1 4\n5 10\n3 5\n2 8\n7 10",
+      "output": "3\n7\n3\n0\n4"
+    }
+  ],
+  "timeLimit": 3000,
+  "memoryLimit": 256,
+  "sourceUrl": "https://codeforces.com/problemset/problem/1763/F",
+  "verified": true,
+  "qualityScore": 4.0,
+  "source": "codeforces-scraped"
+}
