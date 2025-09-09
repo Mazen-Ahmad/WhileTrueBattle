@@ -4,3 +4,9 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+extracted_problems/
+problems/
+cfKIgandMARU.py
+codeforces_problem_links.csv
+scrape.py
+update_samples.py
