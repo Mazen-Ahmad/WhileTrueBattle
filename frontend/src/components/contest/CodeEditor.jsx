@@ -3,6 +3,107 @@ import Editor from '@monaco-editor/react';
 import Button from '../common/Button';
 import { formatProblemText } from '../../utils/textFormatter';
 
+// Test Results Panel - moved outside to prevent re-creation
+const TestResultsPanel = React.memo(({ results }) => {
+  const testCaseScrollPosition = useRef(0);
+  const scrollRef = React.useCallback((node) => {
+    if (node) {
+      node.scrollTop = testCaseScrollPosition.current;
+      node.addEventListener('scroll', () => {
+        testCaseScrollPosition.current = node.scrollTop;
+      }, { passive: true });
+    }
+  }, []);
+  
+  if (!results || !results.details) return null;
+  
+  return (
+    <div className="mt-4 space-y-2">
+      <h4 className="font-medium text-gray-900">Test Results</h4>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+        <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-3 rounded">
+          <div className="text-lg font-bold text-green-400">
+            {results.passed}/{results.total}
+          </div>
+          <div className="text-sm text-green-300">Tests Passed</div>
+        </div>
+        <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-3 rounded">
+          <div className="text-lg font-bold text-blue-400">
+            {results.executionTime?.toFixed(3) || '0.000'}s
+          </div>
+          <div className="text-sm text-blue-300">Max Time</div>
+        </div>
+        <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-3 rounded">
+          <div className="text-lg font-bold text-purple-400">
+            {(results.memoryUsed / 1024).toFixed(1)}KB
+          </div>
+          <div className="text-sm text-purple-300">Max Memory</div>
+        </div>
+      </div>
+      <div ref={scrollRef} className="space-y-2 max-h-60 overflow-y-auto custom-scrollbar">
+        {results.details.map((detail, index) => (
+          <div
+            key={index}
+            className={`p-3 rounded border-l-4 ${
+              detail.passed
+                ? 'border-green-500 bg-gray-50'
+                : 'border-red-500 bg-gray-50'
+            }`}
+          >
+            <div className="flex justify-between items-start mb-2">
+              <span className="font-medium">
+                Test Case {index + 1}
+              </span>
+              <div className="flex items-center space-x-2">
+                <span className={`px-2 py-1 rounded text-xs font-bold ${
+                  detail.passed
+                    ? 'bg-green-500 text-white shadow-lg'
+                    : 'bg-red-500 text-white shadow-lg'
+                }`}>
+                  {detail.passed ? 'PASSED' : 'FAILED'}
+                </span>
+                <span className="text-xs text-gray-500">
+                  {detail.executionTime?.toFixed(3) || '0.000'}s
+                </span>
+              </div>
+            </div>
+            {detail.error && (
+              <div className="mb-2">
+                <div className="text-sm font-medium text-red-700">Error:</div>
+                <pre className="text-xs bg-red-100 p-2 rounded overflow-x-auto">
+                  {detail.error}
+                </pre>
+              </div>
+            )}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-2 text-xs">
+              <div>
+                <div className="font-medium text-gray-700">Input:</div>
+                <pre className="bg-gray-100 p-2 rounded overflow-x-auto">
+                  {detail.input || 'No input'}
+                </pre>
+              </div>
+              <div>
+                <div className="font-medium text-gray-700">Expected:</div>
+                <pre className="bg-gray-100 p-2 rounded overflow-x-auto">
+                  {detail.expectedOutput}
+                </pre>
+              </div>
+              <div>
+                <div className="font-medium text-gray-700">Your Output:</div>
+                <pre className={`p-2 rounded overflow-x-auto ${
+                  detail.passed ? 'bg-gray-100' : 'bg-gray-100'
+                }`}>
+                  {detail.actualOutput || 'No output'}
+                </pre>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+});
+
 const CodeEditor = ({ problem, onSubmit, contestActive }) => {
   const [language, setLanguage] = useState('cpp');
   const [code, setCode] = useState('');
@@ -12,6 +113,15 @@ const CodeEditor = ({ problem, onSubmit, contestActive }) => {
   const [showProblemDetails, setShowProblemDetails] = useState(false);
   const [executionResults, setExecutionResults] = useState(null);
   const editorRef = useRef(null);
+  const scrollPosition = useRef(0);
+  const resultsScrollRef = React.useCallback((node) => {
+    if (node) {
+      node.scrollTop = scrollPosition.current;
+      node.addEventListener('scroll', () => {
+        scrollPosition.current = node.scrollTop;
+      }, { passive: true });
+    }
+  }, []);
 
   const languageTemplates = {
     cpp: `#include <iostream>
@@ -52,6 +162,8 @@ public class Solution {
     }
     // eslint-disable-next-line
   }, [problem, language]);
+
+
 
   const handleLanguageChange = (newLanguage) => {
     setLanguage(newLanguage);
@@ -123,96 +235,7 @@ public class Solution {
     return 'bg-red-100 text-red-800 border-red-300';
   };
 
-  // Test Results Panel - always showing details
-  const TestResultsPanel = ({ results }) => {
-    if (!results || !results.details) return null;
-    
-    return (
-      <div className="mt-4 space-y-2">
-        <h4 className="font-medium text-gray-900">Test Results</h4>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-          <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-3 rounded">
-            <div className="text-lg font-bold text-green-400">
-              {results.passed}/{results.total}
-            </div>
-            <div className="text-sm text-green-300">Tests Passed</div>
-          </div>
-          <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-3 rounded">
-            <div className="text-lg font-bold text-blue-400">
-              {results.executionTime?.toFixed(3) || '0.000'}s
-            </div>
-            <div className="text-sm text-blue-300">Max Time</div>
-          </div>
-          <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-3 rounded">
-            <div className="text-lg font-bold text-purple-400">
-              {(results.memoryUsed / 1024).toFixed(1)}KB
-            </div>
-            <div className="text-sm text-purple-300">Max Memory</div>
-          </div>
-        </div>
-        <div className="space-y-2 max-h-60 overflow-y-auto custom-scrollbar">
-          {results.details.map((detail, index) => (
-            <div
-              key={index}
-              className={`p-3 rounded border-l-4 ${
-                detail.passed
-                  ? 'border-green-500 bg-gray-50'
-                  : 'border-red-500 bg-gray-50'
-              }`}
-            >
-              <div className="flex justify-between items-start mb-2">
-                <span className="font-medium">
-                  Test Case {index + 1}
-                </span>
-                <div className="flex items-center space-x-2">
-                  <span className={`px-2 py-1 rounded text-xs font-medium ${
-                    detail.passed
-                      ? 'bg-green-100 text-green-800'
-                      : 'bg-red-100 text-red-800'
-                  }`}>
-                    {detail.passed ? 'PASSED' : 'FAILED'}
-                  </span>
-                  <span className="text-xs text-gray-500">
-                    {detail.executionTime?.toFixed(3) || '0.000'}s
-                  </span>
-                </div>
-              </div>
-              {detail.error && (
-                <div className="mb-2">
-                  <div className="text-sm font-medium text-red-700">Error:</div>
-                  <pre className="text-xs bg-red-100 p-2 rounded overflow-x-auto">
-                    {detail.error}
-                  </pre>
-                </div>
-              )}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-2 text-xs">
-                <div>
-                  <div className="font-medium text-gray-700">Input:</div>
-                  <pre className="bg-gray-100 p-2 rounded overflow-x-auto">
-                    {detail.input || 'No input'}
-                  </pre>
-                </div>
-                <div>
-                  <div className="font-medium text-gray-700">Expected:</div>
-                  <pre className="bg-gray-100 p-2 rounded overflow-x-auto">
-                    {detail.expectedOutput}
-                  </pre>
-                </div>
-                <div>
-                  <div className="font-medium text-gray-700">Your Output:</div>
-                  <pre className={`p-2 rounded overflow-x-auto ${
-                    detail.passed ? 'bg-grat-100' : 'bg-gray-100'
-                  }`}>
-                    {detail.actualOutput || 'No output'}
-                  </pre>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    );
-  };
+
 
   if (!problem) {
     return (
@@ -355,7 +378,10 @@ public class Solution {
         </div>
         {/* Results/Error Section */}
         {(testResults || error || executionResults) && (
-          <div className="p-4 border-t border-gray-200 bg-gray-100 max-h-80 overflow-y-auto custom-scrollbar">
+          <div 
+            ref={resultsScrollRef}
+            className="p-4 border-t border-gray-200 bg-gray-100 max-h-80 overflow-y-auto custom-scrollbar"
+          >
             {error && (
               <div className="bg-gradient-to-br from-gray-800 to-gray-900 border-l-4 border-red-400 p-4 mb-4 rounded">
                 <div className="flex">

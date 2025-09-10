@@ -63,6 +63,9 @@ mongoose.connect(process.env.MONGODB_URI)
 .catch(err => console.error('MongoDB connection error:', err));
 
 // Routes
+// Make io available to routes
+app.set('io', io);
+
 app.use('/api/auth', authRoutes);
 app.use('/api/rooms', roomRoutes);
 app.use('/api/contests', contestRoutes);
@@ -100,6 +103,7 @@ socket.on('start-contest', (roomCode) => {
 });
 
 socket.on('join-contest', (roomCode) => {
+  console.log(`Socket ${socket.id} joining contest-${roomCode}`);
   socket.join(`contest-${roomCode}`);
 });
 

@@ -253,14 +253,24 @@ router.post('/submit/:roomCode', auth, async (req, res) => {
 
       await contest.save();
 
-      // Emit socket event if user has finished all problems
-      if (contest.participants[participantIndex].finished) {
-        const io = req.app.get('io');
-        if (io) {
+      // Emit socket events
+      const io = req.app.get('io');
+      if (io) {
+        // If user finished all problems, emit participant-finished
+        if (contest.participants[participantIndex].finished) {
           io.to(`contest-${roomCode}`).emit('participant-finished', {
             roomCode,
             userId: req.user._id,
             forfeit: false
+          });
+        }
+        
+        // If contest is completed, emit contest-ended to all participants
+        if (contest.status === 'completed') {
+          console.log(`Emitting contest-ended to contest-${roomCode}`);
+          io.to(`contest-${roomCode}`).emit('contest-ended', {
+            roomCode,
+            contest
           });
         }
       }
@@ -372,13 +382,20 @@ router.post('/end/:roomCode', auth, async (req, res) => {
       
       await contest.save();
       
-      // Emit socket event for forfeit
+      // Emit socket events for forfeit
       const io = req.app.get('io');
       if (io) {
         io.to(`contest-${roomCode}`).emit('participant-finished', {
           roomCode,
           userId: req.user._id,
           forfeit: true
+        });
+        
+        // Contest is completed due to forfeit, emit contest-ended
+        console.log(`Emitting contest-ended (forfeit) to contest-${roomCode}`);
+        io.to(`contest-${roomCode}`).emit('contest-ended', {
+          roomCode,
+          contest
         });
       }
       
@@ -419,6 +436,16 @@ router.post('/end/:roomCode', auth, async (req, res) => {
       contest.winner = sorted[0].user._id;
       
       await contest.save();
+      
+      // Emit contest-ended event when contest completes normally
+      const io = req.app.get('io');
+      if (io) {
+        console.log(`Emitting contest-ended (normal) to contest-${roomCode}`);
+        io.to(`contest-${roomCode}`).emit('contest-ended', {
+          roomCode,
+          contest
+        });
+      }
       
       return res.json({ 
         message: 'Contest completed', 

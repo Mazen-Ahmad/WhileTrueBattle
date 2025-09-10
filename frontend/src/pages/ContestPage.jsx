@@ -90,19 +90,32 @@ const ContestPage = ({ roomCode, onBackToHome }) => {
 
   // Socket event listeners
   useEffect(() => {
-    if (socket) {
+    if (socket && socket.connected) {
       socket.emit('join-contest', roomCode);
 
       socket.on('contest-updated', setContest);
-      socket.on('contest-ended', () => setContestStatus('completed'));
+      socket.on('contest-ended', (data) => {
+        console.log('Received contest-ended event:', data);
+        setContestStatus('completed');
+        if (data.contest) {
+          setContest(data.contest);
+        }
+      });
       socket.on('submission-received', fetchContest);
       socket.on('participant-finished', fetchContest);
+
+      // Re-join contest room on reconnect
+      socket.on('connect', () => {
+        console.log('Socket reconnected, rejoining contest room');
+        socket.emit('join-contest', roomCode);
+      });
 
       return () => {
         socket.off('contest-updated');
         socket.off('contest-ended');
         socket.off('submission-received');
         socket.off('participant-finished');
+        socket.off('connect');
       };
     }
   }, [socket, roomCode]);
